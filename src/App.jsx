@@ -10,7 +10,6 @@ import './App.css'
 function App() {
   return (
     <>
-      <div className="px-162 w-100 h-100 d-flex align-items-center justify-content-center bg-dark text-light">elin</div>
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/about' element={<About />} />
