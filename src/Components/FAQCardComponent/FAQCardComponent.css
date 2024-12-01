@@ -1,0 +1,93 @@
+/* Main card container styling */
+.MR-FAQ-Card {
+  background-color: var(--gray15-color);
+  border: 1px #363636 solid;
+  border-radius: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  width: 49.059%;
+  padding: 50px 50px 50px 50px;
+}
+
+/* Styling for title elements inside the card */
+.MR-FAQ-Card span {
+  color: var(--white-color);
+  line-height: 25px;
+}
+
+/* Horizontal line styling for separating sections */
+.MR-line {
+  height: 1px;
+  background-color: #ffffff2d;
+}
+
+/* Paragraph styling inside the card */
+.MR-FAQ-Card p {
+  color: var(--gray70-color);
+  margin-bottom: 0 !important;
+}
+
+/* Responsive styles for medium-large screens (1201px to 1440px) */
+@media (min-width: 1201px) and (max-width: 1440px) {
+  .MR-FAQ-Card {
+    border-radius: 10px;
+    gap: 24px;
+    padding: 40px;
+  }
+  .MR-FAQ-Card span {
+    font-size: 18px;
+    line-height: 22.5px;
+    font-weight: 500;
+  }
+  .MR-FAQ-Card p {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 300;
+  }
+}
+
+/* Responsive styles for medium screens (769px to 1200px) */
+@media (min-width: 769px) and (max-width: 1200px) {
+  .MR-FAQ-Card {
+    width: 100%;
+  }
+}
+
+/* Responsive styles for small screens (390px to 768px) */
+@media (min-width: 390px) and (max-width: 768px) {
+  .MR-FAQ-Card {
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 30px;
+    border-radius: 10px;
+    gap: 20px;
+  }
+  .MR-FAQ-Card p {
+    font-size: 14px !important;
+    line-height: 21px;
+    font-weight: 300;
+  }
+  .MR-FAQ-Card span {
+    font-weight: 500;
+    width: 297px;
+  }
+}
+
+/* Responsive styles for extra-small screens (less than 389px) */
+@media (max-width: 389px) {
+  .MR-FAQ-Card {
+    width: 100%;
+    padding: 20px;
+    gap: 15px;
+  }
+  .MR-FAQ-Card p {
+    font-size: 10px !important;
+    line-height: 18px;
+    font-weight: 200;
+  }
+  .MR-FAQ-Card span {
+    font-size: 12px;
+    font-weight: 400;
+  }
+}
