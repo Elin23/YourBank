@@ -16,7 +16,7 @@ export default function FAQSectionComponent() {
 
   return (
     <>
-      <div className="MR-FAQ-card-container px-162 mb-150">
+      <div className="MR-FAQ-card-container px-162 pb-150">
         <div className="MR-Upper-FAQ-Card">
           {FAQCardData.map((data, index) => (
             <FAQCardComponent

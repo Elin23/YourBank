@@ -7,9 +7,9 @@ import UseCasesSectionComponent from '../../Components/UseCasesSectionComponent/
 export default function Home() {
   return (
     <>
+      <UseCasesSectionComponent />
+      <FAQSectionComponent mode="Home" />
 
-      <FAQSectionComponent mode="Home"/>
-      <UseCasesSectionComponent/>
 
     </>
   )
