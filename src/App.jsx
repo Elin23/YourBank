@@ -10,7 +10,6 @@ import './App.css'
 function App() {
   return (
     <>
-    <p>elin testing branch</p>
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/about' element={<About />} />
