@@ -39,8 +39,8 @@
   --gray70-color: #B3B3B3;
   --gray75-color: #BFBFBF;
 }
-.mb-150 {
-  margin-bottom: 150px;
+.pb-150 {
+  padding-bottom: 7.8125%;
 }
 .me-100{
   margin-right: 6.265%;
@@ -58,8 +58,8 @@
   padding: 80px;
 }
 .px-162 {
-  padding-left: 10.15%;
-  padding-right: 10.15%;
+  padding-left: 8.4375%;
+  padding-right: 8.4375%;
 }
 .f-18{
   font-size: 18px;
@@ -94,7 +94,25 @@
 .fs-40{
   font-size: 40px;
 }
-
+@media (min-width: 1440px) and (max-width: 1919px){
+  .pb-150{
+    padding-bottom: 8.334%;
+  } 
+  .px-162{
+    padding-left: 5.55556%;
+    padding-right: 5.55556%;
+  }
+  
+}
+@media (min-width: 390px) and (max-width: 768px){
+  .pb-150{
+    padding-bottom: 20.495%;
+  }
+  .px-162{
+    padding-left: 4.101%;
+    padding-right: 4.101%;
+  }
+}
 /* 
 @media (min-width: 1440px) and (max-width: 1919px){ // figma design
 }
