@@ -31,15 +31,12 @@ export const UseCaseData = [
         },
         rating:[
             {
-                number: "78%",
                 desc:'Secure Retirement Planning'
             },
             {
-                number: "63%",
                 desc:'Manageable Debt Consolidation'
             },
             {
-                number: "91%",
                 desc:'Reducing financial burdens'
             }
         ]
@@ -69,15 +66,12 @@ export const UseCaseData = [
         },
         rating:[
             {
-                number: "65%",
                 desc:'Cash Flow Management'
             },
             {
-                number: "70%",
                 desc:'Drive Business Expansion'
             },
             {
-                number: "45%",
                 desc:'Streamline payroll processing'
             }
         ]
