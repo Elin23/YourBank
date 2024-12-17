@@ -25,7 +25,7 @@ export default function FeaturesSectionComponent() {
   }
 
   return (
-    <section className="features px-162 mb-150">
+    <section className="features px-162 pb-150">
 
       <div className="features-content">
         <div className="et-btns p-50">
