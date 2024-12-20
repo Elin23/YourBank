@@ -64,6 +64,10 @@
 /* media query */
 
 @media (max-width: 1919px) {
+    .AM-product-sec .active-content {
+        gap: 40px;
+    }
+
     .AM-title-comp .desc-product {
         max-width: 831px;
     }
@@ -90,6 +94,12 @@
         justify-content: center;
         text-align: center;
     }
+
+    .AM-product-sec .title-tabs {
+        flex-direction: column;
+        flex-wrap: nowrap;
+    }
+
 }
 
 @media (max-width: 540px) {

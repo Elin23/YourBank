@@ -18,11 +18,9 @@
   display: flex;
   gap: 30px;
   margin-bottom: 30px;
-  -webkit-mask-image: linear-gradient(
-    to bottom,
-    rgba(0, 0, 0, 1),
-    rgba(0, 0, 0, 0)
-  );
+  -webkit-mask-image: linear-gradient(to bottom,
+      rgba(0, 0, 0, 1),
+      rgba(0, 0, 0, 0));
   mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
   -webkit-mask-repeat: no-repeat;
   mask-repeat: no-repeat;
@@ -48,6 +46,7 @@
     width: 100%;
     flex-wrap: wrap;
   }
+
   .MR-Lower-FAQ-Card {
     width: 100%;
     flex-wrap: wrap;
