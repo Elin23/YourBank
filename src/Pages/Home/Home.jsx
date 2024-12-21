@@ -10,8 +10,6 @@ export default function Home() {
       <HeaderComponent/>
       <UseCasesSectionComponent />
       <FAQSectionComponent mode="Home" />
-
-
     </>
   )
 }

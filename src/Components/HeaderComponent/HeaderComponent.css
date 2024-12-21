@@ -1,6 +1,7 @@
 header{
     background-color: var(--black10-color);
     position: relative;
+    overflow: hidden;
 }
 header::before{
     content: url('../../assets/imgs/Abstract Design5.png');

@@ -10,6 +10,7 @@ import DollarSign from '../../assets/imgs/Home icons/Shape.png'
 import EuroSign from '../../assets/imgs/Home icons/euro-currency-symbol.png'
 import Bitcoin from '../../assets/imgs/Home icons/Shape2.png'
 import ethereum from '../../assets/imgs/Home icons/Group.png'
+import plus from '../../assets/imgs/Home icons/Vector3.png'
 export default function HeroComponent() {
   return (
     <>
@@ -30,9 +31,15 @@ export default function HeroComponent() {
           </div>
         </div>
         <div className="es-right-side">
-        <div className="es-monthly-income">
-          
-        </div>
+          <div className="es-monthly-income">
+            <div className="es-icon">
+              <img src={plus} alt="plus Icon" />
+            </div>
+            <div className="es-plus-info">
+              <span className='fw-400'>+ $5000,00</span>
+              <span className='fw-300'>Monthly Income</span>
+            </div>
+          </div>
           <div className='es-hero-right-content'>
             <img src={imgScreen} className='bg-img' alt="imgScreen" />
             <div className="es-your-trans">
@@ -134,7 +141,6 @@ export default function HeroComponent() {
             </div>
           </div>
         </div>
-
       </div>
     </>
   )
