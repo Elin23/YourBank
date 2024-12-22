@@ -45,13 +45,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    /* flex-wrap: wrap; */
     gap: 10px;
 }
 .Af-cardBottom{
     width: 86.63%;
     display: flex;
-    /* flex-wrap: wrap; */
     justify-content: center;
     align-items: center;
     gap: 10px;
@@ -148,9 +146,6 @@
     padding: 18px 24px;
 }
 @media (max-width:1440px){
-    /* .Af-UseCasesComponent{
-        flex-direction: column;
-    } */
     .Af-UseCasesComponentSide-2{
         margin-top: 20px;
     }
