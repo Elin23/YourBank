@@ -11,6 +11,10 @@
     align-items: center;
     justify-content:space-between;
     position: relative;
+    border-width: 0.87px;
+    border-style: solid;
+    border-image-source: linear-gradient(214.24deg, rgba(202, 255, 51, 0.2) 0%, rgba(202, 255, 51, 0) 11.24%, rgba(202, 255, 51, 0) 91.73%, rgba(202, 255, 51, 0.2) 99.95%);
+    border-image-slice: 1;
 }
 .hw-AdSecBg{
     position: absolute;
@@ -20,7 +24,7 @@
     left: 0;
     opacity: 50%;
     z-index: 1;
-    object-fit: cover;
+    /* object-fit: cover; */
     mix-blend-mode: screen;
 }
 .hw-AdSectionContent::before{

@@ -18,16 +18,16 @@ export default function FooterComponent() {
         </div>
         <ul className="hw-footerLinks">
             <li>
-                <Link to={''}>Home</Link>
+                <Link to={'/'}>Home</Link>
             </li>
             <li>
-                <Link to={''}>Careers</Link>
+                <Link to={'/careers'}>Careers</Link>
             </li>
             <li>
-                <Link to={''}>About</Link>
+                <Link to={'/about'}>About</Link>
             </li>
             <li>
-                <Link to={''}>Security</Link>
+                <Link to={'/security'}>Security</Link>
             </li>
         </ul>
         <span className="hw-lineGray"></span>
@@ -68,9 +68,9 @@ export default function FooterComponent() {
             </div>
             <span>YourBank All Rights Reserved</span>
             <div className="hw-footerPrivacy">
-                <a href="">Privacy Policy</a>
+                <Link to={''} >Privacy Policy</Link>
                 <span className="lineF"></span>
-                <a href="">Terms Of Service</a>
+                <Link to={''}>Terms Of Service</Link>
             </div>
         </div>
     </footer>
