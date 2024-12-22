@@ -6,17 +6,18 @@ import FAQSectionComponent from './../../Components/FAQSectionComponent/FAQSecti
 import FeaturesSectionComponent from './../../Components/FeaturesSectionComponent/FeaturesSectionComponent'
 import AdSectionComponent from './../../Components/AdSectionComponent/AdSectionComponent'
 import AdSecData from './../../Data/AdSectionData'
+import './Home.css'
 
 export default function Home() {
   return (
-    <>
+    <div className='Home'>
       <HeaderComponent/>
       <ProductSectionComponent />
       <UseCasesSectionComponent />
       <FeaturesSectionComponent />
       <FAQSectionComponent mode="Home" />
       <AdSectionComponent DATA={AdSecData[0]} />
-    </>
+    </div>
   )
 }
 
