@@ -39,7 +39,7 @@ export const TestimonialsData = [
     {
         image: img,
         userName: "Asmmaa M",
-        opinion: "The sweetest, most accommodating, professional, proficient bank in these United States. I have never encountered a bank that totally helps as well as understands their customers. Always welcoming and eager to help you."
+        opinion: "The sweetest, most accommodating, professional, proficient bank in these United States. I have never encountered a bank that totally helps as well as understands their customers."
     },
     {
         image: img,
