@@ -1,0 +1,34 @@
+.Press-Card-Component {
+  width: 49.060%;
+  background-color: var(--black11-color);
+  border: 1px solid var(--gray15-color);
+  border-radius: 40px 40px 16px 16px;
+  padding: 30px 30px 57px 30px;
+}
+.Press-Card-Component img {
+  width: 100%;
+}
+.Press-Card-Content {
+  width: 92.337%;
+  margin: 51px auto 0 auto;
+}
+.Press-Card-Content h5 {
+  color: var(--white-color);
+  margin-bottom: 0;
+}
+.Press-Card-Content .et-card-info {
+  margin-top: 20px;
+}
+.Press-Card-Content span {
+  background-color: var(--black11-color);
+  color: var(--gray70-color);
+  border-radius: 68px;
+  border: 1px solid var(--gray15-color);
+  padding: 8px 16px;
+  margin-right: 10px;
+}
+.Press-Card-Content p {
+  color: var(--gray70-color);
+  margin-bottom: 0;
+  margin-top: 30px;
+}

@@ -8,7 +8,6 @@
   align-items: start;
   flex-wrap: wrap;
   column-gap: 30px;
-  padding-top: 80px;
 }
 
 .features-content .et-btns {
@@ -51,7 +50,6 @@
 @media (max-width: 1919px) {
   .features-content {
     column-gap: 20px;
-    padding-top: 60px;
   }
 
   .features-content .et-btns {
@@ -121,10 +119,6 @@
 @media (max-width: 768px) {
   .features {
     padding: 0 12px 80px 12px;
-  }
-
-  .features-content {
-    padding-top: 50px;
   }
 
   .features-content .et-btns {

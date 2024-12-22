@@ -1,0 +1,9 @@
+.press-releases {
+  background-color: var(--black10-color);
+}
+.press-cards {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 30px;
+}
