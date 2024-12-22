@@ -18,7 +18,10 @@ export default function ProductSectionComponent() {
 
   return (
     <section className="AM-product-sec pb-150">
-      <div className="title-tabs  px-162 title-product mb-100">
+      <div
+        className="title-tabs  px-162 title-product mb-100
+      "
+      >
         <TitleComponent
           titleLeft="Our "
           span="Products"
