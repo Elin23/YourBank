@@ -1,0 +1,35 @@
+.AM-title-comp .span {
+    color: var(--green60-color);
+}
+
+.AM-title-comp .title {
+    color: var(--white-color);
+}
+
+.AM-title-comp .desc {
+    color: var(--gray70-color);
+}
+
+/* media query */
+
+@media (max-width: 1919px) {
+    .AM-title-comp .title {
+        font-size: 38px;
+    }
+
+    .AM-title-comp .desc {
+        font-size: 16px;
+        line-height: 24px;
+    }
+}
+
+@media (max-width: 540px) {
+    .AM-title-comp .title {
+        font-size: 28px;
+    }
+
+    .AM-title-comp .desc {
+        font-size: 14px;
+        line-height: 21px;
+    }
+}

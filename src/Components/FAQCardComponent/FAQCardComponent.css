@@ -36,11 +36,13 @@
     gap: 24px;
     padding: 40px;
   }
+
   .MR-FAQ-Card span {
     font-size: 18px;
     line-height: 22.5px;
     font-weight: 500;
   }
+
   .MR-FAQ-Card p {
     font-size: 16px;
     line-height: 24px;
@@ -64,11 +66,13 @@
     padding: 30px;
     gap: 20px;
   }
+
   .MR-FAQ-Card p {
     font-size: 14px;
     line-height: 21px;
     font-weight: 300;
   }
+
   .MR-FAQ-Card span {
     font-weight: 500;
   }

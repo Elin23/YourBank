@@ -14,7 +14,7 @@
 }
 
 /* Styling for the lower FAQ card section */
-.MR-Lower-FAQ-Card {
+.MR-Lower-FAQ-Card {                                                                                                                    
   display: flex;
   gap: 30px;
   margin-bottom: 30px;
@@ -64,6 +64,7 @@
     width: 100%;
     flex-wrap: wrap;
   }
+
   .MR-Lower-FAQ-Card {
     width: 100%;
     flex-wrap: wrap;

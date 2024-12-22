@@ -5,7 +5,7 @@ import Home from './Pages/Home/Home'
 import Login from './Pages/Login/Login'
 import Security from './Pages/Security/Security'
 import SignUp from './Pages/SignUp/SignUp'
-import './App.css'
+import "./App.css";
 
 function App() {
   return (
@@ -19,7 +19,7 @@ function App() {
         <Route path='/signUp' element={<SignUp />} />
       </Routes>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
