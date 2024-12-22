@@ -10,6 +10,7 @@ import {
 
 export default function FAQSectionComponent() {
   const [isVisible, setIsVisible] = useState(false);
+
   const toggleFAQs = () => {
     setIsVisible((prevState) => !prevState);
   };
@@ -27,7 +28,11 @@ export default function FAQSectionComponent() {
           ))}
         </div>
 
-        <div className="MR-Lower-FAQ-Card">
+        <div
+          className={`MR-Lower-FAQ-Card ${
+            !isVisible ? "MR-FAQ-Gradient1" : ""
+          }`}
+        >
           {FAQCardData2.map((data, index) => (
             <FAQCardComponent
               key={index}
@@ -38,31 +43,48 @@ export default function FAQSectionComponent() {
         </div>
 
         {isVisible && (
-          <div className="MR-Upper-FAQ-Card">
-            {FAQCardData3.map((data, index) => (
-              <FAQCardComponent
-                key={index}
-                Qustion={data.Qustion}
-                Answer={data.Answer}
-              />
-            ))}
-          </div>
+          <>
+            <div
+              className={`MR-Upper-FAQ-Card 
+              }`}
+            >
+              {FAQCardData3.map((data, index) => (
+                <FAQCardComponent
+                  key={index}
+                  Qustion={data.Qustion}
+                  Answer={data.Answer}
+                />
+              ))}
+            </div>
+
+            <div
+              className={`MR-Lower-FAQ-Card ${
+                isVisible ? "MR-FAQ-Gradient1" : ""
+              }`}
+            >
+              {FAQCardData4.map((data, index) => (
+                <FAQCardComponent
+                  key={index}
+                  Qustion={data.Qustion}
+                  Answer={data.Answer}
+                />
+              ))}
+            </div>
+          </>
         )}
-        {isVisible && (
-          <div className="MR-Lower-FAQ-Card">
-            {FAQCardData4.map((data, index) => (
-              <FAQCardComponent
-                key={index}
-                Qustion={data.Qustion}
-                Answer={data.Answer}
-              />
-            ))}
-          </div>
+
+        {!isVisible && (
+          <button
+            className={`MR-FAQ-Button fw-400`}
+            onClick={toggleFAQs}
+          >
+            Load All FAQ's
+            <img
+              src="./src/assets/imgs/Home icons/Vector 9.png"
+              alt="vector"
+            />
+          </button>
         )}
-        <button className="MR-FAQ-Button fw-400" onClick={toggleFAQs}>
-          {isVisible ? "Hide FAQ's" : "Load All FAQ's"}{" "}
-          <img src="./src/assets/imgs/Home icons/Vector 9.png" alt="vector" />
-        </button>
       </div>
     </>
   );
