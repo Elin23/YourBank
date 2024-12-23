@@ -5,7 +5,8 @@ import Home from './Pages/Home/Home'
 import Login from './Pages/Login/Login'
 import Security from './Pages/Security/Security'
 import SignUp from './Pages/SignUp/SignUp'
-import './App.css'
+import "./App.css";
+import FooterComponent from './Components/FooterComponent/FooterComponent';
 
 function App() {
   return (
@@ -18,8 +19,9 @@ function App() {
         <Route path='/login' element={<Login />} />
         <Route path='/signUp' element={<SignUp />} />
       </Routes>
+      <FooterComponent/>
     </>
-  )
+  );
 }
 
-export default App
+export default App;

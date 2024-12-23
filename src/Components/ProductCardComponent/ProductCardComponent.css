@@ -1,0 +1,121 @@
+.AM-product-card {
+    background-color: var(--black10-color);
+    text-align: center;
+    width: 29.156%;
+}
+
+.AM-product-card:nth-child(2) {
+    padding: 0 50px;
+    width: calc(29.156% + 100px);
+    border-left: 1px solid var(--gray15-color);
+    border-right: 1px solid var(--gray15-color);
+}
+
+.AM-card-info {
+    min-height: 170px;
+}
+
+.AM-product-card .title {
+    color: var(--white-color);
+    margin-bottom: 20px;
+}
+
+.AM-product-card .desc {
+    color: var(--gray70-color);
+    margin: 0 auto;
+}
+
+.AM-product-card .icon {
+    width: 74px;
+    height: 74px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    background-image: linear-gradient(180deg, rgba(202, 255, 51, 0.1) -66.22%, rgba(202, 255, 51, 0) 85.46%);
+    border: 1px solid;
+
+}
+
+.AM-product-card .border-icon {
+    width: 98px;
+    height: 98px;
+    padding: 12px;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    border-radius: 70px;
+    background-image: linear-gradient(180deg, rgba(202, 255, 51, 0.2) -173.65%, rgba(202, 255, 51, 0) 87.22%);
+}
+
+/* media query */
+@media (max-width: 1919px) {
+    .AM-product-card {
+        width: 29.1%;
+    }
+
+    .AM-product-card:nth-child(2) {
+        padding: 0 40px;
+        width: calc(27.73% + 100px);
+    }
+
+    .AM-card-info {
+        min-height: 166px;
+    }
+
+    .AM-product-card .icon {
+        width: 56px;
+        height: 56px;
+        padding: 14px;
+    }
+
+    .AM-product-card .border-icon {
+        width: 72px;
+        height: 72px;
+        padding: 8px;
+    }
+
+    .AM-product-card .title {
+        font-size: 20px;
+        line-height: 30px;
+    }
+
+    .AM-product-card .desc {
+        font-size: 16px;
+        line-height: 24px;
+        max-width: 373.33px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .AM-product-card {
+        width: 86.66%;
+    }
+
+    .AM-product-card:nth-child(2) {
+        width: 86.66%;
+        padding: 30px 0px;
+        border-top: 1px solid var(--gray15-color);
+        border-bottom: 1px solid var(--gray15-color);
+        border-left: none;
+        border-right: none;
+    }
+}
+
+@media (max-width: 540px) {
+
+    .AM-product-card,
+    .AM-product-card:nth-child(2) {
+        width: 338px;
+    }
+
+    .AM-card-info {
+        min-height: 126px;
+    }
+
+    .AM-product-card .desc {
+        font-size: 14px;
+        line-height: 21px;
+        max-width: 338px;
+    }
+}

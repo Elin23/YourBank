@@ -2,27 +2,29 @@
 @import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&family=Jaro:opsz@6..72&family=Lexend:wght@100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Rajdhani:wght@300;400;500;600;700&display=swap');
 
 /* Start Global */
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "Lexend", sans-serif;
 }
+
 :root {
-  --white-color:#fff;
-  --black-color:#000;
+  --white-color: #fff;
+  --black-color: #000;
 
-  --green60-color:#caff33;
-  --green65-color:#d1ff4c;
-  --green70-color:#d8ff66;
-  --green80-color:#e5ff99;
+  --green60-color: #caff33;
+  --green65-color: #d1ff4c;
+  --green70-color: #d8ff66;
+  --green80-color: #e5ff99;
+  --green-heavy: rgba(34, 37, 27, 1);
 
-  --light-green-90-color:#f2ffcc;
-  --light-green-95-color:#f2ffe5;
-  --light-green-97-color:#fbfff0;
-  --light-green-99-color:#fefffa;
+  --light-green-90-color: #f2ffcc;
+  --light-green-95-color: #f2ffe5;
+  --light-green-97-color: #fbfff0;
+  --light-green-99-color: #fefffa;
 
-  --offwhite-90-color :#E4E4E7;
+  --offwhite-90-color: #E4E4E7;
   --offwhite-95-color: #F1F1F3;
   --offwhite-97-color: #F7F7F8;
   --offwhite-99-color: #FCFCFD;
@@ -39,80 +41,107 @@
   --gray70-color: #B3B3B3;
   --gray75-color: #BFBFBF;
 }
+
 .pb-150 {
   padding-bottom: 7.8125%;
 }
-.me-100{
+
+.me-100 {
   margin-right: 6.265%;
 }
-.mb-100{
-  margin-bottom: 16.69%;
+
+.me-100 {
+  margin-right: 5.2085%;
+  /*Edited*/
 }
-.mb-80{
-  margin-bottom: 80px;
+
+.mb-100 {
+  margin-bottom: 5.2085%;
+  /*Edited*/
 }
-.p-50{
+
+.mb-80 {
+  margin-bottom: 5.0253%;
+}
+
+.p-50 {
   padding: 50px;
 }
-.p-80{
+
+.p-80 {
   padding: 80px;
 }
+
 .px-162 {
   padding-left: 8.4375%;
   padding-right: 8.4375%;
 }
-.f-18{
+
+.f-18 {
   font-size: 18px;
   line-height: 27px;
 }
-.fw-300{
+
+.fw-300 {
   font-weight: 300;
 }
-.fw-400{
+
+.fw-400 {
   font-weight: 400;
 }
-.fw-500{
+
+.fw-500 {
   font-weight: 500;
 }
-.f-58{
+
+.f-58 {
   font-size: 58px;
   line-height: 75.4px;
 }
-.fs-48{
+
+.fs-48 {
   font-size: 48px;
 }
-.fs-20{
+
+.fs-20 {
   font-size: 20px;
 }
-.fs-24{
+
+.fs-24 {
   font-size: 24px;
   line-height: 36px;
 }
-.fs-30{
+
+.fs-30 {
   font-size: 30px;
 }
-.fs-40{
+
+.fs-40 {
   font-size: 40px;
 }
-@media (min-width: 1440px) and (max-width: 1919px){
-  .pb-150{
+
+@media (max-width: 1919px) {
+  .pb-150 {
     padding-bottom: 8.334%;
-  } 
-  .px-162{
+  }
+
+  .px-162 {
     padding-left: 5.55556%;
     padding-right: 5.55556%;
   }
-  
 }
-@media (min-width: 390px) and (max-width: 768px){
-  .pb-150{
+
+@media (max-width: 768px) {
+  .pb-150 {
     padding-bottom: 20.495%;
   }
-  .px-162{
+
+  .px-162 {
     padding-left: 4.101%;
     padding-right: 4.101%;
   }
 }
+
 /* 
 @media (min-width: 1440px) and (max-width: 1919px){ // figma design
 }

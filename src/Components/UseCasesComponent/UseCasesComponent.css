@@ -1,11 +1,12 @@
-.Af-UseCasesComponent{
+.Af-UseCasesComponent {
     display: flex;
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
     width: 100%;
 }
-.Af-UseCasesComponentReverse{
+
+.Af-UseCasesComponentReverse {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -13,7 +14,8 @@
     flex-direction: row-reverse;
     width: 100%;
 }
-.Af-UseCasesComponentSide-1{
+
+.Af-UseCasesComponentSide-1 {
     width: 46.86%;
     display: flex;
     align-items: center;
@@ -26,7 +28,8 @@
     background-position: top left;
     border-radius: 20px;
 }
-.Af-UseCasesComponentSide-1Reverse{
+
+.Af-UseCasesComponentSide-1Reverse {
     width: 46.86%;
     display: flex;
     align-items: center;
@@ -39,25 +42,26 @@
     background-position: top right;
     border-radius: 20px;
 }
-.Af-cardTop{
+
+.Af-cardTop {
     margin-top: 50px;
     width: 86.63%;
     display: flex;
     justify-content: center;
     align-items: center;
-    /* flex-wrap: wrap; */
     gap: 10px;
 }
-.Af-cardBottom{
+
+.Af-cardBottom {
     width: 86.63%;
     display: flex;
-    /* flex-wrap: wrap; */
     justify-content: center;
     align-items: center;
     gap: 10px;
     margin-bottom: 50px;
 }
-.Af-UseCasesComponentSide-1-card{
+
+.Af-UseCasesComponentSide-1-card {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -70,23 +74,25 @@
 
 }
 
-.Af-UseCasesComponentSide-1-card span{
+.Af-UseCasesComponentSide-1-card span {
     color: var(--white-color);
     padding: 24px 30px 30px;
     text-align: center;
     font-size: 20px;
 }
-.Af-UseCasesComponentSide-1-card-img{
+
+.Af-UseCasesComponentSide-1-card-img {
     margin-top: 30px;
     padding: 10px;
     width: 78px;
     height: 78px;
-    background-image: linear-gradient(to bottom, rgba(202, 255, 51, 0.05) ,rgba(202, 255, 51, 0)) ;
+    background-image: linear-gradient(to bottom, rgba(202, 255, 51, 0.05), rgba(202, 255, 51, 0));
     border-radius: 50%;
-    
+
 }
-.Af-UseCasesComponentSide-1-card-img div{
-    background-image: linear-gradient(to bottom, rgba(202, 255, 51, 0.05) ,rgba(202, 255, 51, 0)) ;
+
+.Af-UseCasesComponentSide-1-card-img div {
+    background-image: linear-gradient(to bottom, rgba(202, 255, 51, 0.05), rgba(202, 255, 51, 0));
     width: 58px;
     height: 58px;
     border-radius: 50%;
@@ -95,21 +101,26 @@
     align-items: center;
     border: 1px solid var(--gray20-color);
 }
-.Af-UseCasesComponentSide-2{
+
+.Af-UseCasesComponentSide-2 {
     width: 46.86%;
 }
-.Af-UseCasesComponentSide-2-title{
+
+.Af-UseCasesComponentSide-2-title {
     padding-bottom: 62px;
 }
-.Af-UseCasesComponentSide-2-title h4{
+
+.Af-UseCasesComponentSide-2-title h4 {
     color: var(--white-color);
 }
-.Af-UseCasesComponentSide-2-title p{
+
+.Af-UseCasesComponentSide-2-title p {
     color: var(--gray70-color);
     font-size: 18px;
     font-weight: 300;
 }
-.Af-UseCasesComponentSide-2-secondDiv{
+
+.Af-UseCasesComponentSide-2-secondDiv {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -117,29 +128,34 @@
     gap: 10px;
     width: 100%;
 }
-.Af-divBorder{
+
+.Af-divBorder {
     border-right: 1px dashed var(--gray15-color);
 }
-.Af-UseCasesComponentSide-2-secondDiv .Af-rate{
+
+.Af-UseCasesComponentSide-2-secondDiv .Af-rate {
     width: 24.42%;
     text-align: left;
 }
-.Af-UseCasesComponentSide-2-secondDiv .Af-rate h3{
+
+.Af-UseCasesComponentSide-2-secondDiv .Af-rate h3 {
     color: var(--green60-color);
     font-size: 48px;
 }
 
-.Af-UseCasesComponentSide-2-secondDiv .Af-rate p{
+.Af-UseCasesComponentSide-2-secondDiv .Af-rate p {
     color: var(--gray70-color);
     font-size: 18px;
     font-weight: 300;
     line-height: 27px;
 }
-.Af-UseCasesComponentSide-2-button{
+
+.Af-UseCasesComponentSide-2-button {
     width: 100%;
 
 }
-.Btn{
+
+.Btn {
     margin-top: 62px;
     background-color: var(--black11-color);
     color: rgba(255, 255, 255, 1);
@@ -147,80 +163,95 @@
     border-radius: 82px;
     padding: 18px 24px;
 }
-@media (max-width:1440px){
-    /* .Af-UseCasesComponent{
-        flex-direction: column;
-    } */
-    .Af-UseCasesComponentSide-2{
+
+@media (max-width:1440px) {
+    .Af-UseCasesComponentSide-2 {
         margin-top: 20px;
     }
-    .Af-UseCasesComponentSide-2-secondDiv{
+
+    .Af-UseCasesComponentSide-2-secondDiv {
         justify-content: center;
     }
-    .Af-UseCasesComponentSide-2-button{
+
+    .Af-UseCasesComponentSide-2-button {
         display: flex;
         justify-content: center;
     }
-    .Af-UseCasesComponentSide-1-card span{
+
+    .Af-UseCasesComponentSide-1-card span {
         font-size: 16px;
     }
 }
-@media (max-width:1280px){
-    .Af-UseCasesComponentSide-1-card span{
+
+@media (max-width:1280px) {
+    .Af-UseCasesComponentSide-1-card span {
         font-size: 14px;
     }
-    .Af-UseCasesComponentSide-1-card-img{
+
+    .Af-UseCasesComponentSide-1-card-img {
         width: 64px;
         height: 64px;
         padding: 8px;
     }
-    .Af-UseCasesComponentSide-1-card-img div{
+
+    .Af-UseCasesComponentSide-1-card-img div {
         width: 48px;
         height: 48px;
     }
-    
+
     .Af-cardTop,
-    .Af-cardBottom{
+    .Af-cardBottom {
         width: 86.88%;
     }
-    .Af-UseCasesComponentSide-1-card{
+
+    .Af-UseCasesComponentSide-1-card {
         width: 49.05%;
         height: 174px;
     }
-    .Af-UseCasesComponentSide-2-secondDiv div p{
+
+    .Af-UseCasesComponentSide-2-secondDiv div p {
         font-size: 15px;
     }
 }
-@media (max-width:992px){
+
+@media (max-width:992px) {
+
     .Af-UseCasesComponent,
-    .Af-UseCasesComponentReverse{
+    .Af-UseCasesComponentReverse {
         flex-direction: column;
         padding-bottom: 40px;
     }
+
     .Af-UseCasesComponentSide-1,
     .Af-UseCasesComponentSide-1Reverse,
-    .Af-UseCasesComponentSide-2{
+    .Af-UseCasesComponentSide-2 {
         width: 100%;
     }
-    .Af-UseCasesComponentSide-1-card{
+
+    .Af-UseCasesComponentSide-1-card {
         height: 160px;
     }
-    .Af-UseCasesComponentSide-1-card span{
+
+    .Af-UseCasesComponentSide-1-card span {
         font-size: 12px;
         padding: 12px 15px 15px;
     }
-    .Af-UseCasesComponentSide-2-secondDiv div p{
+
+    .Af-UseCasesComponentSide-2-secondDiv div p {
         font-size: 14px;
     }
-    .Af-UseCasesComponentSide-2-secondDiv .Af-rate{
+
+    .Af-UseCasesComponentSide-2-secondDiv .Af-rate {
         width: 72.06%;
         text-align: center;
     }
-    .Af-divBorder{
+
+    .Af-divBorder {
         border-right: none;
         border-bottom: 1px dashed var(--gray15-color);
     }
-    .Af-UseCasesComponentSide-2-title{
+
+    .Af-UseCasesComponentSide-2-title {
         text-align: center;
     }
 }
