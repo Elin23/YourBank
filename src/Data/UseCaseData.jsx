@@ -1,11 +1,11 @@
-import icon1 from '../assets/imgs/Home icons/Icon (5).png'
-import icon2 from '../assets/imgs/Home icons/Frame.png'
-import icon3 from '../assets/imgs/Home icons/Union.png'
-import icon4 from '../assets/imgs/Home icons/Icon (6).png'
-import icon5 from '../assets/imgs/Home icons/Icon (7).png'
-import icon6 from '../assets/imgs/Home icons/Icon (4).png'
-import icon7 from '../assets/imgs/Home icons/Icon (9).png'
-import icon8 from '../assets/imgs/Home icons/Subtract.png'
+import icon1 from "../assets/imgs/Home icons/Icon (5).png";
+import icon2 from "../assets/imgs/Home icons/Frame.png";
+import icon3 from "../assets/imgs/Home icons/Union.png";
+import icon4 from "../assets/imgs/Home icons/Icon (6).png";
+import icon5 from "../assets/imgs/Home icons/Icon (7).png";
+import icon6 from "../assets/imgs/Home icons/Icon (4).png";
+import icon7 from "../assets/imgs/Home icons/Icon (9).png";
+import icon8 from "../assets/imgs/Home icons/Subtract.png";
 export const UseCaseData = [
     {
         properities : [
@@ -31,15 +31,12 @@ export const UseCaseData = [
         },
         rating:[
             {
-                number: "78%",
                 desc:'Secure Retirement Planning'
             },
             {
-                number: "63%",
                 desc:'Manageable Debt Consolidation'
             },
             {
-                number: "91%",
                 desc:'Reducing financial burdens'
             }
         ]
@@ -69,15 +66,12 @@ export const UseCaseData = [
         },
         rating:[
             {
-                number: "65%",
                 desc:'Cash Flow Management'
             },
             {
-                number: "70%",
                 desc:'Drive Business Expansion'
             },
             {
-                number: "45%",
                 desc:'Streamline payroll processing'
             }
         ]

@@ -1,0 +1,345 @@
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 22px 34px;
+    border-radius: 100px;
+    width: 83.125%;
+    /* height: 95px; */
+    position: fixed;
+    top: 50px;
+    z-index: 1000;
+    left: 8.4375%;
+    background-color: var(--black11-color);
+    border: 1px solid var(--gray15-color);
+    transition: top 0.8s ease, width 0.8s ease;
+}
+
+nav.scrolled {
+    padding: 22px 8.5%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    border-radius: 0px;
+}
+
+nav .JS-logo .js-logo-img {
+    width: 40px;
+    height: 40px;
+}
+
+nav .JS-logo .js-yourbank {
+    width: 111.67px;
+    height: 18.33px;
+    margin-left: 4.17px;
+}
+
+nav .js-menu {
+    width: 56px;
+    height: 40px;
+    border-radius: 82px;
+    background-color: var(--green60-color);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    z-index: 10;
+    right: 14px;
+}
+
+nav .js-menu img {
+    width: 28px;
+    height: 28px;
+}
+
+nav .nav-container {
+    width: 69%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: opacity 0.5s ease, visibility 0.5s ease, transform 0.5s ease;
+}
+
+#checkbox {
+    display: none;
+}
+
+.ES-toggle {
+    position: relative;
+    width: 28px;
+    height: 28px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    gap: 5px;
+    transition-duration: .5s;
+}
+
+.ES-bars {
+    width: 28px;
+    height: 2px;
+    background-color: var(--black11-color);
+    border-radius: 4px;
+}
+#bar2 {
+    transition-duration: .8s;
+}
+#bar1 {
+    width: 50%;
+}
+#checkbox:checked+.ES-toggle .ES-bars {
+    position: absolute;
+    transition-duration: .5s;
+}
+
+#checkbox:checked+.ES-toggle #bar2 {
+    transform: scaleX(0);
+    transition-duration: .1s;
+}
+
+#checkbox:checked+.ES-toggle #bar1 {
+    width: 100%;
+    transform: rotate(45deg);
+    transition-duration: .5s;
+}
+
+#checkbox:checked+.ES-toggle #bar3 {
+    width: 100%;
+    transform: rotate(-45deg);
+    transition-duration: .5s;
+}
+
+#checkbox:checked+.ES-toggle {
+    transition-duration: .5s;
+    transform: rotate(180deg);
+}
+
+nav .nav-container.open {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+nav .nav-container ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    list-style: none;
+    margin: 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--white-color);
+    border-radius: 82px;
+    padding: 12px 24px;
+    border-radius: 82px;
+}
+
+nav ul li a:not(.active):hover,
+.active-link {
+    background-color: var(--gray20-color);
+}
+
+
+.JS-right-nav .js-btn1-nav {
+    background-color: transparent;
+    border: none;
+}
+
+.JS-right-nav .js-btn1-nav a {
+    text-decoration: none;
+    color: var(--white-color);
+}
+
+.JS-right-nav .js-btn2-nav {
+    background-color: var(--green60-color);
+    border: none;
+    width: 109px;
+    height: 55px;
+    border-radius: 82px;
+    margin-left: 30px;
+}
+
+.JS-right-nav .js-btn2-nav a {
+    text-decoration: none;
+    color: var(--black11-color);
+}
+
+/* Start Responsive */
+@media (max-width: 1919px) {
+    nav {
+        width: 88.889%;
+        left: 5.5555%;
+        padding: 14px 24px;
+        top: 30px;
+    }
+    nav.scrolled {
+        padding: 14px 5.5%;
+    }
+
+    nav .f-18 {
+        font-size: 14px;
+    }
+
+    nav .JS-logo .js-logo-img {
+        width: 30px;
+        height: 30px;
+    }
+
+    nav .JS-logo .js-yourbank {
+        width: 83.75px;
+        height: 13.75px;
+        margin-left: 3.2px;
+    }
+
+    .JS-right-nav .js-btn2-nav {
+        width: 87px;
+        height: 45px;
+        border-radius: 82px;
+        margin-left: 20px;
+    }
+
+}
+
+@media (max-width: 1439px) {
+    nav {
+        height: 63px;
+    }
+    /* nav .nav-container ul {
+        margin-right: 301.5px;
+    } */
+    /* nav .f-18 {
+        font-size: 10px;
+    } */
+
+    /* nav .JS-logo .js-logo-img {
+        width: 26px;
+        height: 26px;
+    } */
+
+    /* nav .JS-logo .js-yourbank {
+        width: 55.333px;
+        height: 9.16px;
+    } */
+
+    .JS-right-nav .js-btn2-nav {
+        width: 72.66px;
+        height: 36.66px;
+        margin-left: 20px;
+    }
+}
+
+@media (max-width: 992px) {
+    nav {
+        width: 91.794%;
+        left: 4.103%;
+        height: 68px;
+        padding-left: 24px;
+        padding-right: 24px;
+        /* flex-direction: column;
+        align-items: start;
+        justify-content: center; */
+    }
+
+    nav .nav-container {
+        flex-direction: column;
+        justify-content: center;
+        visibility: hidden;
+        opacity: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: var(--black11-color);
+        position: fixed;
+        left: 0px;
+        top: 0px;
+        padding-top: 100px;
+        transition: opacity 0.5s ease, visibility 0.5s ease, transform 0.5s ease;
+    }
+
+    nav .nav-container.open {
+        visibility: visible;
+        opacity: 1;
+    }
+
+    nav .nav-container ul {
+        flex-direction: column;
+        width: 100%;
+        gap: 0px;
+        margin: 0;
+        padding: 0;
+        margin-bottom: 50px;
+        /* margin: 50px 0; */
+    }
+
+    nav .nav-container ul li {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        margin-bottom: 25px;
+        font-size: 18px;
+    }
+
+    nav .nav-container ul li a {
+        margin: 3px 6px;
+        padding: 12px 45%;
+    }
+
+    nav .JS-logo .js-logo-img {
+        width: 26px;
+        height: 26px;
+    }
+
+    nav .JS-logo .js-yourbank {
+        width: 72.58px;
+        height: 11.9px;
+        margin-left: 2.71px;
+    }
+
+    nav .js-menu {
+        display: flex;
+    }
+
+    .JS-right-nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .JS-right-nav .js-btn1-nav {
+        background-color: transparent;
+        border: none;
+        width: 200px;
+        margin-bottom: 25px;
+        font-size: 18px;
+    }
+
+    .JS-right-nav .js-btn1-nav a {
+        text-decoration: none;
+        color: var(--white-color);
+    }
+
+    .JS-right-nav .js-btn2-nav {
+        background-color: transparent;
+        border: none;
+        width: 90%;
+        height: 51px;
+        margin: 0;
+        margin-bottom: 30px;
+        font-size: 18px;
+        background-color: var(--green60-color);
+
+    }
+
+    .JS-right-nav .js-btn2-nav a {
+        text-decoration: none;
+        color: var(--black11-color);
+    }
+
+
+}

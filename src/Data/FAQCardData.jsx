@@ -2,7 +2,7 @@ export const FAQCardData = [
   {
     Qustion: "How do I open an account with YourBank?",
     Answer:
-      "Opening an account with YourBank is easy. Simply visit our website and click on the \"Open an Account\" button. Follow the prompts, provide the required information, and complete the application process. If you have any questions or need assistance, our customer support team is available to help.",
+      'Opening an account with YourBank is easy. Simply visit our website and click on the "Open an Account" button. Follow the prompts, provide the required information, and complete the application process. If you have any questions or need assistance, our customer support team is available to help.',
   },
   {
     Qustion: "What documents do I need to provide to apply for a loan?",
@@ -15,7 +15,7 @@ export const FAQCardData2 = [
   {
     Qustion: "How can I access my accounts online?",
     Answer:
-      "Accessing your accounts online is simple and secure. Visit our website and click on the \"Login\" button. Enter your username and password to access your accounts. If you haven't registered for online banking, click on the \"Enroll Now\" button and follow the registration process. If you need assistance, our customer support team is available to guide you.",
+      'Accessing your accounts online is simple and secure. Visit our website and click on the "Login" button. Enter your username and password to access your accounts. If you haven\'t registered for online banking, click on the "Enroll Now" button and follow the registration process. If you need assistance, our customer support team is available to guide you.',
   },
   {
     Qustion: "Are my transactions and personal information secure?",
