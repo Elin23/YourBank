@@ -7,7 +7,9 @@ export default function TitleComponent({ titleLeft, span, titleRight, desc }) {
         <span className="span">{span}</span>
         {titleRight}
       </h3>
-      <p className="desc desc-product fw-300 f-18">{desc}</p>
+      <p className="desc desc-product mission-vision-desc fw-300 f-18">
+        {desc}
+      </p>
     </div>
   );
 }

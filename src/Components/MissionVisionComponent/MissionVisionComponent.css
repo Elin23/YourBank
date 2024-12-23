@@ -1,0 +1,21 @@
+.AM-missionVision-sec {
+    background-color: var(--black10-color);
+}
+
+.AM-missionVision-sec .mission-vision-desc {
+    max-width: 1296px;
+}
+
+/* media query */
+
+@media (max-width: 1919px) {
+    .AM-missionVision-sec .mission-vision-desc {
+        max-width: 1030px;
+    }
+}
+
+@media (min-width: 390px) and (max-width: 768px) {
+    .AM-missionVision-sec .mission-vision-desc {
+        max-width: 358px;
+    }
+}

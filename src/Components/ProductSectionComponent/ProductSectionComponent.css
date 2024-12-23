@@ -80,7 +80,6 @@
         width: 139px;
         height: 41px;
         font-size: 14px;
-
     }
 }
 
@@ -107,6 +106,12 @@
     }
 
 }
+
+/* @media (min-width: 390px) and (max-width: 768px) {
+    .AM-title-comp .desc-product {
+        max-width: 280px;
+    }
+} */
 
 @media (max-width: 389px) {
     .AM-title-comp .desc-product {
