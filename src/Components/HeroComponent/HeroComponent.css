@@ -36,22 +36,6 @@
     margin-top: 20px;
     margin-bottom: 50px;
 }
-
-.es-hero-left-content .es-main-title h2 {
-    line-height: 72px;
-    color: var(--white-color);
-    margin-bottom: 14px;
-}
-
-.es-hero-left-content .es-main-title h2 span {
-    font-size: 48px;
-    color: var(--green60-color);
-}
-
-.es-hero-left-content .es-main-title p {
-    color: var(--offwhite-90-color);
-}
-
 .es-hero-left-content img {
     padding-left: 12px;
 }
@@ -411,22 +395,6 @@
         margin-top: 16px;
         margin-bottom: 40px;
     }
-
-    .es-hero-left-content .es-main-title h2 {
-        font-size: 38px;
-        line-height: 57px;
-        margin-bottom: 10px;
-    }
-
-    .es-hero-left-content .es-main-title h2 span {
-        font-size: 38px;
-    }
-
-    .es-hero-left-content .es-main-title p {
-        font-size: 16px;
-        line-height: 24px;
-    }
-
     .es-hero-left-content img {
         padding-left: 9.88px;
     }
@@ -647,21 +615,6 @@
         margin-top: 12px;
         margin-bottom: 25px;
     }
-    .es-hero-left-content .es-main-title h2 {
-        font-size: 30px;
-        line-height: 45px;
-        margin-bottom: 8px;
-    }
-
-    .es-hero-left-content .es-main-title h2 span {
-        font-size: 30px;
-    }
-
-    .es-hero-left-content .es-main-title p {
-        font-size: 12px;
-        line-height: 21px;
-    }
-
     .es-hero-right-content {
         /* width: 360px; */
         padding: 20px;
@@ -742,12 +695,6 @@
     /* .es-hero-container{
         margin-top: 20%;
     } */
-    .es-hero-left-content .es-main-title h2,
-    .es-hero-left-content .es-main-title h2 span {
-        font-size: 28px;
-        line-height: 42px;
-    }
-    
 }
 @media (max-width: 540px) {
     /* Left Side Start*/
@@ -759,15 +706,9 @@
     .es-hero-left-content{
         width: 100%;
     }
-    .es-hero-left-content .es-sub-title span {
-        font-size: 12px;
-    }
     .es-hero-left-content .es-main-title {
         margin-top: 12px;
         margin-bottom: 30px;
-    }
-    .es-hero-left-content .es-main-title h2 {
-        margin-bottom: 8px;
     }
     .es-hero-right-content::after {
         /* width: 220px;
@@ -942,12 +883,12 @@
     .es-hero-container{
         margin-top: 40%;
     }
-    .es-hero-left-content .es-main-title h2,
-    .es-hero-left-content .es-main-title h2 span {
+    .es-hero-left-content .es-main-title .title,
+    .es-hero-left-content .es-main-title .title span {
         font-size: 20px;
         line-height: 32px;
     }
-    .es-hero-left-content .es-main-title p {
+    .es-hero-left-content .es-main-title .desc {
         font-size: 12px;
     }
     .es-monthly-income{
