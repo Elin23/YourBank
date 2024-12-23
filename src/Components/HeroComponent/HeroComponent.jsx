@@ -11,6 +11,7 @@ import EuroSign from '../../assets/imgs/Home icons/euro-currency-symbol.png'
 import Bitcoin from '../../assets/imgs/Home icons/Shape2.png'
 import ethereum from '../../assets/imgs/Home icons/Group.png'
 import plus from '../../assets/imgs/Home icons/Vector3.png'
+import TitleComponent from '../TitleComponent/TitleComponent'
 export default function HeroComponent() {
   return (
     <>
@@ -21,10 +22,15 @@ export default function HeroComponent() {
             <span className='fw-300'>No LLC Required, No Credit Check.</span>
           </div>
           <div className="es-main-title">
-            <h2 className='fs-48'>Welcome to YourBank Empowering Your <span>Financial Journey</span></h2>
+            {/* <h2 className='fs-48'>Welcome to YourBank Empowering Your <span>Financial Journey</span></h2>
             <p className='f-18 fw-300'>At YourBank, our mission is to provide comprehensive banking solutions that empower individuals and businesses to achieve their financial goals.
               We are committed to delivering personalized and innovative services that prioritize our customers' needs.
-            </p>
+            </p> */}
+            <TitleComponent
+              title="Welcome to YourBank Empowering Your Financial Journey"
+              desc="At YourBank, our mission is to provide comprehensive banking solutions that empower individuals and businesses to achieve their financial goals. We are committed to delivering personalized and innovative services that prioritize our customers' needs."
+              highlightedWords={["Financial", "Journey"]}
+            />
           </div>
           <div className="es-hero-btn f-18">
             <Link to='./signUp'>Open Account</Link>
