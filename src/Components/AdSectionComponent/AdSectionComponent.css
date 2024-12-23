@@ -1,0 +1,244 @@
+.AdSectionComponent{
+    margin-top: 100px;
+    background-color: transparent;
+}
+.hw-AdSectionContent{
+    background-color:  var(--black11-color);
+    border: 1px solid var(--gray15-color);
+    border-radius: 20px;
+    padding: 80px;
+    display:flex;
+    align-items: center;
+    justify-content:space-between;
+    position: relative;
+    border-width: 0.87px;
+    border-style: solid;
+    border-image-source: linear-gradient(214.24deg, rgba(202, 255, 51, 0.2) 0%, rgba(202, 255, 51, 0) 11.24%, rgba(202, 255, 51, 0) 91.73%, rgba(202, 255, 51, 0.2) 99.95%);
+    border-image-slice: 1;
+}
+.hw-AdSecBg{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    opacity: 50%;
+    z-index: 1;
+    /* object-fit: cover; */
+    mix-blend-mode: screen;
+}
+.hw-AdSectionContent::before{
+    content: "";
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    background: linear-gradient(90deg, rgba(26, 26, 26, 0) 0%, rgba(26, 26, 26, 0.7) 50%, #1A1A1A 60%);
+    z-index: 2;
+    border-radius: 20px;
+}
+.hw-AdSecRight{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-right: 150px;
+    z-index: 10;
+    h3{
+        line-height: 60px;
+        color: var(--white-color);
+        margin-bottom: 14px;
+        span{
+            color: var(--green60-color);
+        }
+    }
+    .hw-AdSecPara{
+        color: var(--gray70-color);
+        font-size: 18px;
+        margin-bottom: 0;
+        line-height: 27px;
+    }
+}
+.hw-AdSecleft{
+    padding: 18px 30px;
+    width: 183px;
+    height: 63px;
+    z-index: 10;
+    background-color: var(--green60-color);
+    border-radius: 82px;
+    border: none;
+        a{
+            display: inline-block;
+            text-decoration: none;
+            color: inherit;
+            line-height: 27px;
+            font-weight: 400;
+            font-size: 18px;
+            width: 125px;
+        }
+}
+.hw-AdSectionContent .toRightDown{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 298px;
+    height:283px;
+    z-index: 10;
+    border-top-left-radius: 20px;
+}
+@media (max-width: 1919px){/*for the 1440px width,1920 and more are the main design*/
+    .hw-AdSectionContent{
+        padding: 60px;/*ready for max*/
+        }
+    .hw-AdSecRight h3{
+        font-size: 30px;
+        margin-bottom: 10px;
+        line-height: 45px;
+    }
+    .hw-AdSecPara{
+        font-size: 16px !important;
+        line-height: 24px !important;
+    }
+    .hw-AdSecleft{
+        padding: 14px 20px;
+        width: 136px;
+        height: 49px;
+        display:flex;
+        a{
+            line-height: 21px;
+            width: 96px;
+            font-size: 14px !important;
+        }
+    }
+    .hw-AdSectionContent .toRightDown{
+        width: 202px;
+        height: 192px;
+    }
+}
+@media (max-width: 1439px){
+    .hw-AdSectionContent{
+        padding: 43px;
+    }
+    .hw-AdSecRight h3{
+        font-size: 28px;
+        margin-bottom: 7px;
+        line-height: 40px;
+    }
+    .hw-AdSecPara{
+        font-size: 14px !important;
+        line-height: 22px !important;
+    }
+    .hw-AdSecleft{
+        padding: 10px 20px;
+        width: 150px;
+        font-size: 13px;
+        height: 40px;
+        font-weight: 400;
+        a{
+            width: 90px;
+            font-size: 13px !important;
+        }
+    }
+    .hw-AdSectionContent .toRightDown{
+        width: 180px;
+        height: 150px;
+    }
+}
+@media (max-width: 1200px){
+    .hw-AdSectionContent{
+        padding: 40px;
+    }
+    .hw-AdSecRight h3{
+        font-size: 26px;
+        margin-bottom: 14px;
+        line-height: 36px;
+    }
+    .hw-AdSecPara{
+        font-size: 14px !important;
+        line-height: 22px !important;
+    }
+    .hw-AdSecRight{
+        margin-right: 70px;
+    }
+    .hw-AdSecleft{
+        font-size: 13px;
+        width: 150px;
+        height: 40px;
+        a{
+            width: 90px;
+            font-size: 13px !important;
+        }
+    }
+    .hw-AdSectionContent .toRightDown{
+        width: 160px;
+        height: 150px;
+    }
+}
+@media (max-width: 992px){
+    .hw-AdSectionContent{
+        flex-direction: column;
+        padding: 40px;
+    }
+    .hw-AdSecRight{
+        margin-right: 0;
+        margin-bottom: 24px;
+        text-align: center;
+    }
+    .hw-AdSecRight h3{
+        font-size: 28px;
+        margin-bottom: 14px;
+        line-height: 36px;
+    }
+    .hw-AdSecPara{
+        font-size: 16px !important;
+        line-height: 21px !important;
+    }
+    .hw-AdSecleft{
+        width: 144px;
+        height: 49px;
+        a{
+            line-height: 21px;
+            width: 96px;
+            font-size: 13px !important;
+            height: 21px;
+        }
+    }
+    .hw-AdSectionContent .toRightDown{
+        width: 151px;
+        height: 143px;
+    }
+}
+@media (max-width: 768px){ 
+    .hw-AdSectionContent{
+        padding: 30px;
+    }
+    .hw-AdSecRight{
+        width: 298px;
+    }
+    .hw-AdSecRight h3{
+        font-size: 24px;
+        margin-bottom: 14px;
+        line-height: 36px;
+    }
+    .hw-AdSecPara{
+        font-size: 14px !important;
+        line-height: 21px !important;
+    }
+    .hw-AdSecleft{
+        padding: 14px 24px;
+    }
+    .hw-AdSectionContent .toRightDown{
+        width: 151px;
+        height: 143px;
+    }
+}
+@media (max-width: 389px) {
+    .hw-AdSecRight{
+        width: unset;
+    }
+    .hw-AdSecRight h3{
+        font-size: 22px;
+        margin-bottom: 14px;
+        line-height: 34px;
+    }
+}

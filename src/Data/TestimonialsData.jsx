@@ -1,3 +1,5 @@
+import img from '../assets/imgs/TestimonialsIcons/Icon.png'
+
 export const TestimonialsData = [
   {
     userName: "Sara T",

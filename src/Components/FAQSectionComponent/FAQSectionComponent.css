@@ -1,6 +1,6 @@
 /* Main container for FAQ cards */
 .MR-FAQ-card-container {
-  background-color: var(--black11-color);
+  background-color: var(--black10-color);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -18,15 +18,22 @@
   display: flex;
   gap: 30px;
   margin-bottom: 30px;
-  -webkit-mask-image: linear-gradient(to bottom,
-      rgba(0, 0, 0, 1),
-      rgba(0, 0, 0, 0));
+
+}
+
+.MR-FAQ-Gradient1{
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 1),
+    rgba(0, 0, 0, 0)
+  );
   mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
   -webkit-mask-repeat: no-repeat;
   mask-repeat: no-repeat;
   -webkit-mask-size: 100% 100%;
-  mask-size: 100% 100%;
+  mask-size: 100% 110%;
 }
+
 
 /* Button styling for the FAQ section */
 .MR-FAQ-Button {
@@ -41,6 +48,17 @@
 }
 
 /* Responsive styles for screens smaller than 1200px */
+@media (max-width: 1919px) {
+  .MR-Upper-FAQ-Card {
+    gap: 20px;
+  }
+  .MR-Lower-FAQ-Card {
+    gap: 20px;
+  }
+
+
+}
+
 @media (max-width: 1200px) {
   .MR-Upper-FAQ-Card {
     width: 100%;

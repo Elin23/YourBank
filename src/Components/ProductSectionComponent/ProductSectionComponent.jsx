@@ -23,18 +23,16 @@ export default function ProductSectionComponent() {
       "
       >
         <TitleComponent
-          titleLeft="Our "
-          span="Products"
-          titleRight=""
+          title="Our Products"
           desc="Discover a range of comprehensive and customizable banking products at YourBank, designed to suit your unique financial needs and aspirations"
+          highlightedWords={["Products"]}
         />
         <div className="tabs">
           {productTabs.map((tab) => (
             <button
               key={tab.id}
-              className={`tab fw-400 ${
-                toggleState === tab.id ? "active-tab" : ""
-              }`}
+              className={`tab fw-400 ${toggleState === tab.id ? "active-tab" : ""
+                }`}
               onClick={() => toggleTab(tab.id)}
             >
               {tab.label}
@@ -45,9 +43,8 @@ export default function ProductSectionComponent() {
       {productTabs.map((tab) => (
         <div
           key={tab.id}
-          className={`row-cards px-162 ${
-            toggleState === tab.id ? "active-content" : ""
-          }`}
+          className={`row-cards px-162 ${toggleState === tab.id ? "active-content" : ""
+            }`}
         >
           {tab.data.map((e, index) => (
             <ProductCardComponent key={index} data={e} />
