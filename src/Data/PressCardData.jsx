@@ -3,8 +3,9 @@ import image_2 from "../assets/imgs/Releases/Image2.png"
 import image_3 from "../assets/imgs/Releases/Image3.png"
 import image_4 from "../assets/imgs/Releases/Image4.png"
 
+const StoredPressCardData = localStorage.getItem("PressCardData");
 
-export const PressCardData = [
+const PressCardData = StoredPressCardData ? JSON.parse(StoredPressCardData) : [
   {
     image: image_1,
     title: "YourBank Launches New Rewards Program to Enhance Customer Loyalty and Satisfaction",
@@ -34,3 +35,9 @@ export const PressCardData = [
     desc: "YourBank is excited to unveil our new Sustainable Banking Initiative, demonstrating our commitment to environmental responsibility. This initiative includes a range of sustainable banking products and services, such as green loans, eco-friendly investment options, and paperless banking solutions. By incorporating sustainable practices into our operations, we aim to contribute to a greener future while providing innovative banking solutions to our customers."
   },
 ]
+
+if (!StoredPressCardData) {
+  localStorage.setItem("PressCardData", JSON.stringify(PressCardData));
+}
+
+export const exportedPressCardData = PressCardData
