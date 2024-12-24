@@ -30,11 +30,16 @@
     }
 }
 @media (max-width: 992px){
-    .AM-title-comp{
+    /* .AM-title-comp{
         display: flex;
         align-items: center;
         justify-content: center;
         flex-direction: column;
+    } */
+    .AM-title-comp .title,
+    .AM-title-comp .highlight,
+    .AM-title-comp .desc{
+        text-align: center;
     }
 }
 @media (max-width: 540px) {
@@ -43,10 +48,12 @@
         font-size: 28px;
         line-height: 42px;
         margin-bottom: 8px;
+        
     }
 
     .AM-title-comp .desc {
         font-size: 14px;
         line-height: 21px;
+        
     }
 }

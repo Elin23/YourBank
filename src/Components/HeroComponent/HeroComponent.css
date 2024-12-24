@@ -36,6 +36,9 @@
     margin-top: 20px;
     margin-bottom: 50px;
 }
+.es-hero-left-content .es-main-title .title{
+    font-weight: 500;
+}
 .es-hero-left-content img {
     padding-left: 12px;
 }
