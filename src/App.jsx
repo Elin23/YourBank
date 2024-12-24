@@ -7,10 +7,12 @@ import Security from './Pages/Security/Security'
 import SignUp from './Pages/SignUp/SignUp'
 import "./App.css";
 import FooterComponent from './Components/FooterComponent/FooterComponent';
+import NavBarComponent from './Components/NavBarComponent/NavBarComponent';
 
 function App() {
   return (
     <>
+      <NavBarComponent />
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/about' element={<About />} />
@@ -19,7 +21,7 @@ function App() {
         <Route path='/login' element={<Login />} />
         <Route path='/signUp' element={<SignUp />} />
       </Routes>
-      <FooterComponent/>
+      <FooterComponent />
     </>
   );
 }
