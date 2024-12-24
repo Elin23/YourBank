@@ -1,8 +1,11 @@
 import React from 'react'
+import PressReleasesSectionComponent from '../../Components/PressReleasesSectionComponent/PressReleasesSectionComponent'
 
 export default function About() {
   return (
-    <div></div>
+    <div>
+      <PressReleasesSectionComponent />
+    </div>
   )
 }
 
