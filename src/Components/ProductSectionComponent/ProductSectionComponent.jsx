@@ -19,7 +19,7 @@ export default function ProductSectionComponent() {
   return (
     <section className="AM-product-sec pb-150">
       <div
-        className="title-tabs  px-162 title-product mb-100
+        className="title-tabs  px-162 title-product mb-100 
       "
       >
         <TitleComponent
@@ -31,8 +31,9 @@ export default function ProductSectionComponent() {
           {productTabs.map((tab) => (
             <button
               key={tab.id}
-              className={`tab fw-400 ${toggleState === tab.id ? "active-tab" : ""
-                }`}
+              className={`tab fw-400 ${
+                toggleState === tab.id ? "active-tab" : ""
+              }`}
               onClick={() => toggleTab(tab.id)}
             >
               {tab.label}
@@ -43,8 +44,9 @@ export default function ProductSectionComponent() {
       {productTabs.map((tab) => (
         <div
           key={tab.id}
-          className={`row-cards px-162 ${toggleState === tab.id ? "active-content" : ""
-            }`}
+          className={`row-cards px-162 ${
+            toggleState === tab.id ? "active-content" : ""
+          }`}
         >
           {tab.data.map((e, index) => (
             <ProductCardComponent key={index} data={e} />

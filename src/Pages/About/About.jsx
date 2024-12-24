@@ -1,8 +1,10 @@
-import React from 'react'
+import MissionVisionComponent from '../../Components/MissionVisionComponent/MissionVisionComponent'
 
 export default function About() {
   return (
-    <div></div>
+    <div className='about'>
+      <MissionVisionComponent/>
+    </div>
   )
 }
 
