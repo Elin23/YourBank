@@ -23,11 +23,11 @@ export default function TitleComponent({ title, desc, highlightedWords }) {
   };
 
   return (
-    <div className="AM-title-comp ">
+    <div className="AM-title-comp">
       <h3 className="title fw-500 fs-48 ">
         {highlightText(title)}
       </h3>
-      <p className="desc desc-product fw-300 f-18">{desc}</p>
+      <p className="desc fw-300 f-18">{desc}</p>
     </div>
     );
 }

@@ -60,6 +60,10 @@
   /*Edited*/
 }
 
+.mb-80{
+  margin-bottom: 5.0253%;
+}
+
 .p-50 {
   padding: 50px;
 }
@@ -116,7 +120,7 @@
   font-size: 40px;
 }
 
-@media (min-width: 1440px) and (max-width: 1919px) {
+@media (max-width: 1919px) {
   .pb-150 {
     padding-bottom: 8.334%;
   }
@@ -126,9 +130,13 @@
     padding-right: 5.55556%;
   }
 
+  .mb-100 {
+    margin-bottom: 5.5555556%;
+  }
+
 }
 
-@media (min-width: 390px) and (max-width: 768px) {
+@media (max-width: 768px) {
   .pb-150 {
     padding-bottom: 20.495%;
   }
@@ -137,6 +145,11 @@
     padding-left: 4.101%;
     padding-right: 4.101%;
   }
+
+  .mb-100 {
+    margin-bottom: 15.3846154%;
+  }
+
 }
 
 /* 
