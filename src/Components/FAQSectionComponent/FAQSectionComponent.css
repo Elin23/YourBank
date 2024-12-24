@@ -1,9 +1,14 @@
 /* Main container for FAQ cards */
-.MR-FAQ-card-container {
+.MR-FAQ-section-container {
   background-color: var(--black10-color);
+
+}
+
+.MR-FAQ-card-container{
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 80px;
 }
 
 /* Styling for the upper FAQ card section */
@@ -49,6 +54,9 @@
 
 /* Responsive styles for screens smaller than 1200px */
 @media (max-width: 1919px) {
+  .MR-FAQ-card-container{
+    margin-top: 60px;
+  }
   .MR-Upper-FAQ-Card {
     gap: 20px;
   }
@@ -60,6 +68,9 @@
 }
 
 @media (max-width: 1200px) {
+  .MR-FAQ-card-container{
+    margin-top: 50px;
+  }
   .MR-Upper-FAQ-Card {
     width: 100%;
     flex-wrap: wrap;

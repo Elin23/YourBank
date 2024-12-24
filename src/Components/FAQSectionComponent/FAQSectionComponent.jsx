@@ -4,9 +4,8 @@ import "./FAQSectionComponent.css";
 import {
   FAQCardData,
   FAQCardData2,
-  FAQCardData4,
-  FAQCardData3,
 } from "./../../Data/FAQCardData";
+import TitleComponent from "../TitleComponent/TitleComponent";
 
 export default function FAQSectionComponent() {
   const [isVisible, setIsVisible] = useState(false);
@@ -17,7 +16,15 @@ export default function FAQSectionComponent() {
 
   return (
     <>
-      <div className="MR-FAQ-card-container px-162 pb-150">
+
+      <div className="MR-FAQ-section-container px-162 pb-150">
+      <TitleComponent 
+           title="Frequently Asked Questions" 
+           desc="Still you have any questions? Contact our Team via support@yourbank.com" 
+           highlightedWords={["Frequently"]}
+    />
+    
+    <div className="MR-FAQ-card-container">
         <div className="MR-Upper-FAQ-Card">
           {FAQCardData.map((data, index) => (
             <FAQCardComponent
@@ -44,11 +51,8 @@ export default function FAQSectionComponent() {
 
         {isVisible && (
           <>
-            <div
-              className={`MR-Upper-FAQ-Card 
-              }`}
-            >
-              {FAQCardData3.map((data, index) => (
+            <div className="MR-Upper-FAQ-Card">
+              {FAQCardData.map((data, index) => (
                 <FAQCardComponent
                   key={index}
                   Qustion={data.Qustion}
@@ -62,7 +66,7 @@ export default function FAQSectionComponent() {
                 isVisible ? "MR-FAQ-Gradient1" : ""
               }`}
             >
-              {FAQCardData4.map((data, index) => (
+              {FAQCardData2.map((data, index) => (
                 <FAQCardComponent
                   key={index}
                   Qustion={data.Qustion}
@@ -73,18 +77,21 @@ export default function FAQSectionComponent() {
           </>
         )}
 
-        {!isVisible && (
-          <button
-            className={`MR-FAQ-Button fw-400`}
-            onClick={toggleFAQs}
-          >
-            Load All FAQ's
-            <img
-              src="./src/assets/imgs/Home icons/Vector 9.png"
-              alt="vector"
-            />
-          </button>
-        )}
+        <button
+          className="MR-FAQ-Button fw-400"
+          onClick={toggleFAQs}
+        >
+          {isVisible ? "Hide FAQ's " : "Load All FAQ's "}
+          <img
+    src={
+      isVisible
+        ? "./src/assets/imgs/Home icons/Vector 10.png" 
+        : "./src/assets/imgs/Home icons/Vector 9.png" 
+    }
+    alt="vector"
+          />
+        </button>
+      </div>
       </div>
     </>
   );
