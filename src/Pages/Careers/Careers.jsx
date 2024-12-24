@@ -5,11 +5,7 @@ import OurValuesSectionComponent from '../../Components/OurValuesSectionComponen
 export default function Careers() {
   return (
     <div>
-<<<<<<< HEAD
       <OurValuesSectionComponent/>
-=======
-
->>>>>>> c6b895c905c65f735e921a6d4a6e750040e1a33b
     </div>
   )
 }
