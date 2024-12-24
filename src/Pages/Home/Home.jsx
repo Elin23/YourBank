@@ -12,12 +12,12 @@ import './Home.css'
 export default function Home() {
   return (
     <div className='Home'>
-      <HeaderComponent/>
+      <HeaderComponent />
       <ProductSectionComponent />
       <UseCasesSectionComponent />
       <FeaturesSectionComponent />
       <FAQSectionComponent mode="Home" />
-      <TestimonialsSectionComponent/>
+      <TestimonialsSectionComponent />
       <AdSectionComponent DATA={AdSecData[0]} />
     </div>
   )

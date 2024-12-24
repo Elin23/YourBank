@@ -3,22 +3,28 @@
   background-color: var(--black11-color);
   border: 1px solid var(--gray15-color);
   border-radius: 40px 40px 16px 16px;
-  padding: 30px 30px 57px 30px;
+  padding: 30px;
 }
+
 .Press-Card-Component img {
   width: 100%;
+  border-radius: 30px 30px 12px 12px;
 }
+
 .Press-Card-Content {
   width: 92.337%;
   margin: 51px auto 0 auto;
 }
+
 .Press-Card-Content h5 {
   color: var(--white-color);
   margin-bottom: 0;
 }
+
 .Press-Card-Content .et-card-info {
   margin-top: 20px;
 }
+
 .Press-Card-Content span {
   background-color: var(--black11-color);
   color: var(--gray70-color);
@@ -27,8 +33,91 @@
   padding: 8px 16px;
   margin-right: 10px;
 }
+
 .Press-Card-Content p {
   color: var(--gray70-color);
   margin-bottom: 0;
   margin-top: 30px;
+}
+
+
+/* figma design */
+@media (max-width: 1919px) {
+  .Press-Card-Component {
+    width: 49.21875%;
+    padding: 24px;
+  }
+
+  .Press-Card-Content {
+    margin: 40px auto 0 auto;
+  }
+
+  .Press-Card-Content h5 {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  .Press-Card-Content .et-card-info {
+    margin-top: 14px;
+  }
+
+  .Press-Card-Content span {
+    font-size: 16px;
+    line-height: 24px;
+    padding: 6px 14px;
+    margin-right: 6px;
+  }
+
+  .Press-Card-Content p {
+    margin-top: 24px;
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+/* figma design */
+@media (max-width: 992px) {
+  .Press-Card-Component {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .Press-Card-Content {
+    margin-top: 30px;
+    width: 100%;
+  }
+
+  .Press-Card-Content h5 {
+    font-size: 18px;
+    line-height: 27px;
+  }
+
+  .Press-Card-Content .et-card-info {
+    margin-top: 10px;
+  }
+
+  .Press-Card-Content span {
+    font-size: 14px;
+    line-height: 21px;
+    padding: 6px 12px;
+  }
+
+  .Press-Card-Content p {
+    font-size: 14px;
+    line-height: 21px;
+  }
+}
+
+@media (max-width: 389px) {
+  .Press-Card-Content h5 {
+    font-size: 16px;
+    line-height: 21px;
+  }
+
+  .Press-Card-Content .et-card-info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 70%;
+  }
 }
