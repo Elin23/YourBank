@@ -1,6 +1,5 @@
-import img from '../assets/imgs/TestimonialsIcons/Icon.png'
-
-export const TestimonialsData = [
+const storedValueTestimonialsData = localStorage.getItem('ValueTestimonialsData');
+const valueCardData = storedValueTestimonialsData ? JSON.parse(storedValueTestimonialsData) : [
   {
     userName: "Sara T",
     opinion:
@@ -45,5 +44,11 @@ export const TestimonialsData = [
     userName: "Mustafa R",
     opinion:
       "Lovely bank, warm environment. I know some of the people working in this branch and they are very nice. Always welcoming and eager to help you. It feels they have a more personal relationship with their clients.",
-  },
+  }
 ];
+
+if(!storedValueTestimonialsData){
+  localStorage.setItem('ValueTestimonialsData',JSON.stringify(valueCardData));
+}
+
+export const TestimonialsData = valueCardData;

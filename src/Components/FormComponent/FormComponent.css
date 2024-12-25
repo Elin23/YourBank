@@ -216,7 +216,7 @@
     }
 
     .AA-form-section .AA-form-container .overlay .AA-custom-btn{
-        padding-bottom: 2.255639097744361%;
+        margin-bottom: 2.255639097744361%;
     }
 
     .AA-form-section .AA-form-container .overlay .AA-social-btns{
@@ -261,6 +261,15 @@
     .AA-form-section .AA-form-container .overlay .AA-inputs{
         flex-wrap: wrap;
         width: 100%;
+    }
+
+    .AA-form-section .AA-form-container .overlay .AA-forget-pass-btn{
+        padding-top: 6.70391061452514%;
+        padding-bottom: 6.70391061452514%;
+    }
+
+    .AA-form-section .AA-form-container .overlay .AA-custom-btn{
+        margin-bottom: 6.70391061452514%;
     }
 
     .AA-form-section .AA-form-container .overlay .AA-continue-p{
