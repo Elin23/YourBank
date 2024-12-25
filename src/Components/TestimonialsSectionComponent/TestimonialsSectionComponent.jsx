@@ -12,17 +12,17 @@ import prevImage from "../../assets/imgs/TestimonialsIcons/left-arrow.png";
 import nextImage from "../../assets/imgs/TestimonialsIcons/right-arrow.png";
 
 export default function TestimonialsSectionComponent() {
-  const [swiperRef, setSwiperRef] = useState(null);
+    const [swiperRef, setSwiperRef] = useState(null);
 
-  const prevHandler = () => {
+    const prevHandler = () => {
     swiperRef.slidePrev();
-  };
+    };
 
-  const nextHandler = () => {
+    const nextHandler = () => {
     swiperRef.slideNext();
-  };
+    };
 
-  return (
+    return (
     <section className="AA-testimonials-section px-162 pb-150">
         <div className="wrapper">
             <div className="AA-left-shadow" />

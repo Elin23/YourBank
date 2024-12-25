@@ -140,7 +140,7 @@ export default function UseCasesComponent({ reverse }) {
                         <button className='Btn'>Learn More</button>
                     </div>
                 </div>
-            </div >
+            </div > 
         </>
     )
 }

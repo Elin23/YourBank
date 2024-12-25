@@ -6,7 +6,7 @@ import FAQSectionComponent from './../../Components/FAQSectionComponent/FAQSecti
 import FeaturesSectionComponent from './../../Components/FeaturesSectionComponent/FeaturesSectionComponent'
 import AdSectionComponent from './../../Components/AdSectionComponent/AdSectionComponent'
 import AdSecData from './../../Data/AdSectionData'
-import TestimonialsSectionComponent from './../../Components/TestimonialsSectionComponent/TestimonialsSectionComponent'
+// import TestimonialsSectionComponent from './../../Components/TestimonialsSectionComponent/TestimonialsSectionComponent'
 import './Home.css'
 
 export default function Home() {
@@ -17,9 +17,8 @@ export default function Home() {
       <UseCasesSectionComponent />
       <FeaturesSectionComponent />
       <FAQSectionComponent mode="Home" />
-      <TestimonialsSectionComponent/>
+      {/* <TestimonialsSectionComponent/> */}
       <AdSectionComponent DATA={AdSecData[0]} />
-      <FooterComponent />
     </div>
   )
 }

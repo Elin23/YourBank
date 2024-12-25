@@ -1,7 +1,7 @@
 .AdSectionComponent{
     background-color: transparent;
-    margin-bottom: 7.8125%;
-    margin-top: 7.8125%;
+    padding-bottom: 7.8125%;
+    padding-top: 7.8125%;
 }
 .hw-AdSectionContent{
     background-color:  var(--black11-color);
@@ -89,8 +89,8 @@
 }
 @media (max-width: 1919px){/*for the 1440px width,1920 and more are the main design*/
     .AdSectionComponent{
-        margin-bottom: 8.3333333%;
-        margin-top: 8.333333%;
+        padding-bottom: 8.3333333%;
+        padding-top: 8.333333%;
     }
     .hw-AdSectionContent{
         padding: 60px;/*ready for max*/
@@ -215,8 +215,8 @@
 }
 @media (max-width: 768px){ 
     .AdSectionComponent{
-        margin-bottom: 80px;
-        margin-top: 80px;
+        padding-bottom: 80px;
+        padding-top: 80px;
     }
     .hw-AdSectionContent{
         padding: 30px;
