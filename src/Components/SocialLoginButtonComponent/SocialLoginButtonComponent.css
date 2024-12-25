@@ -1,0 +1,32 @@
+.AA-social-btn{
+    background: linear-gradient(180deg, rgba(202, 255, 51, 0.1) -66.22%, rgba(202, 255, 51, 0) 85.46%);
+    border: 1px solid;
+    border-radius: 50px;
+    padding: 20px;
+    border-radius: 50px;
+    position: relative;
+    border-image: linear-gradient(180deg, rgba(202, 255, 51, 0.2) -173.65%, rgba(202, 255, 51, 0) 87.22%);
+}
+
+.AA-container-social-btn{
+    display: inline-block;
+    background: linear-gradient(180deg, rgba(202, 255, 51, 0.05) 0%, rgba(202, 255, 51, 0) 100%);
+    padding: 12px;
+    border-radius: 70px;
+    opacity: 0px;
+}
+
+@media (max-width: 1919px) {
+    .AA-container-social-btn{
+        padding: 8px;
+    }
+    .AA-social-btn{
+        padding: 14px;   
+    }
+
+    .AA-social-btn img{
+        width: 24px;
+        height: 24px;
+    }
+}
+

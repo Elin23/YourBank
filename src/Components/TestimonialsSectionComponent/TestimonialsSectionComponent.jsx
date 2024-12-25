@@ -8,6 +8,7 @@ import "swiper/css/scrollbar";
 import "./TestimonialsSectionComponent.css";
 import { TestimonialsData } from "../../Data/TestimonialsData";
 import TestimonialsCardComponent from "../TestimonialsCardComponent/TestimonialsCardComponent";
+import TitleComponent from '../TitleComponent/TitleComponent'
 import prevImage from "../../assets/imgs/TestimonialsIcons/left-arrow.png";
 import nextImage from "../../assets/imgs/TestimonialsIcons/right-arrow.png";
 
@@ -24,6 +25,11 @@ export default function TestimonialsSectionComponent() {
 
   return (
     <section className="AA-testimonials-section px-162 pb-150">
+        <TitleComponent
+              title="Our Testimonials"
+              desc="Discover how YourBank has transformed lives with innovative digital solutions and personalized customer service. See why our clients trust us for a secure and prosperous financial journey"
+              highlightedWords={["Testimonials"]}
+            />
         <div className="wrapper">
             <div className="AA-left-shadow" />
                 <Swiper

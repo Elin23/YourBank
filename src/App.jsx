@@ -5,8 +5,8 @@ import Home from './Pages/Home/Home'
 import Login from './Pages/Login/Login'
 import Security from './Pages/Security/Security'
 import SignUp from './Pages/SignUp/SignUp'
-import "./App.css";
-import FooterComponent from './Components/FooterComponent/FooterComponent';
+import FooterComponent from './Components/FooterComponent/FooterComponent'
+import './App.css'
 
 function App() {
   return (
@@ -21,7 +21,7 @@ function App() {
       </Routes>
       <FooterComponent/>
     </>
-  );
+  )
 }
 
-export default App;
+export default App

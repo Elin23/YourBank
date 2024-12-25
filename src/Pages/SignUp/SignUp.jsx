@@ -1,8 +1,13 @@
 import React from 'react'
+import TestimonialsSectionComponent from '../../Components/TestimonialsSectionComponent/TestimonialsSectionComponent'
+import FormComponent from '../../Components/FormComponent/FormComponent'
 
 export default function SignUp() {
   return (
-    <div></div>
+    <>
+      <FormComponent action={"signup"} />
+      <TestimonialsSectionComponent />
+    </>
   )
 }
 
