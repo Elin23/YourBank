@@ -13,7 +13,7 @@ export default function HeroComponent2({ image, head, disc, light }) {
                             highlightedWords={[light]}
                         />
                     </div>
-                    <img src={image} alt="" />
+                    <img src={image} alt="HeroImg" />
                 </div>
             </div>
         </>
