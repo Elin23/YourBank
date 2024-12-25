@@ -106,6 +106,11 @@
 
 /* Media query for screens smaller than 1439px */
 @media (max-width: 1439px) {
+  .MR-JobCard-Title  {
+    display: flex;
+    flex-direction: column;
+    gap:6px;
+  }
   .MR-JobCard-Title h3 {
     font-size: 20px;
     line-height: 30px;
@@ -132,7 +137,7 @@
 }
 
 /* Media query for screens smaller than 390px */
-@media (max-width: 390px) {
+@media (max-width: 992px) {
   .MR-JobCard-Title {
     display: flex;
     flex-direction: column;
@@ -166,5 +171,32 @@
 
   .MR-JobCardContainer button {
     margin-top: 30px;
+  }
+}
+
+@media (max-width: 389px) {
+  .MR-JobCard-Title h3 {
+    font-size: 16px;
+  }
+  .MR-JobCard-Title span {
+    font-size: 12px;
+  }
+  .MR-JobCardContainer h4 {
+    font-size: 14px;
+  }
+  .MR-JobCardContainer p {
+    font-size: 12px;
+  }
+  .MR-JobCardContainer ul {
+    font-size: 12px;
+    gap: 12px;
+  }
+  .MR-JobCardContainer button {
+    margin-top: 24px;
+  }
+  .MR-JobCardContainer button {
+    padding: 10px 20px;
+    margin-top: 24px;
+    font-size: 12px;
   }
 }
