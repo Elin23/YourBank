@@ -6,11 +6,11 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 import "./TestimonialsSectionComponent.css";
-import { TestimonialsData, TestimonialsDataBusiness } from "../../Data/TestimonialsData";
+import { StoredTestimonialsData, StoredTestimonialsBusinessData } from "../../Data/TestimonialsData";
 import TestimonialsCardComponent from "../TestimonialsCardComponent/TestimonialsCardComponent";
+import TitleComponent from '../TitleComponent/TitleComponent'
 import prevImage from "../../assets/imgs/TestimonialsIcons/left-arrow.png";
 import nextImage from "../../assets/imgs/TestimonialsIcons/right-arrow.png";
-import TitleComponent from "../TitleComponent/TitleComponent";
 
 export default function TestimonialsSectionComponent() {
     const [swiperRef, setSwiperRef] = useState(null);
@@ -29,8 +29,8 @@ export default function TestimonialsSectionComponent() {
     };
   
     const TestimonialsTabs = [
-      { id: 1, label: "For Individuals", data: TestimonialsData },
-      { id: 2, label: "For Businesses", data: TestimonialsDataBusiness },
+      { id: 1, label: "For Individuals", data: StoredTestimonialsData },
+      { id: 2, label: "For Businesses", data: StoredTestimonialsBusinessData },
     ];
 
     const currentTestimonialsData = TestimonialsTabs.find(tab => tab.id === toggleState).data;

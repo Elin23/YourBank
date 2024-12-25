@@ -23,7 +23,7 @@ function App() {
       </Routes>
       <FooterComponent />
     </>
-  );
+  )
 }
 
-export default App;
+export default App
