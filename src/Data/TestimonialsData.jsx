@@ -32,7 +32,7 @@ export const TestimonialsData = [
       "This bank has an awesome team and a dedicated staff. I am very impressed by their vision, hard work, outstanding performance, and wonferful team-mates. Always welcoming and eager to help you.",
   },
   {
-    userName: "Ammen F",
+    userName: "Ameen F",
     opinion:
       "I’ve been with YourBank for a few years, and every single encounter w them has been exceptional despite my comparatively small-status among businesses they likely serve. Always welcoming and eager to help you.",
   },

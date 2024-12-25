@@ -137,7 +137,7 @@ export default function UseCasesComponent({ reverse }) {
                         </div>
                     </ScrollTrigger>
                     <div className='Af-UseCasesComponentSide-2-button'>
-                        <button className='Btn'>Learn More</button>
+                        <button className='Af-Btn'>Learn More</button>
                     </div>
                 </div>
             </div >

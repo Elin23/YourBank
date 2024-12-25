@@ -1,0 +1,166 @@
+.Af-HeroComponent2-father {
+    padding-top: 198px;
+    padding-left: 159px;
+    padding-right: 162px;
+    background-color: var(--black10-color);
+}
+
+.Af-HeroComponent2 {
+    background-color: var(--black11-color);
+    background-image: url(/src/assets/imgs/Abstract\ Design4.png);
+    background-repeat: no-repeat;
+    background-position: top right;
+    background-size: 31.58%;
+    width: 100%;
+    height: max-content;
+    padding: 50px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.Af-HeroComponent2-heading {
+    z-index: 3;
+    width: 49.46% !important;
+    height: max-content;
+    background-color: var(--black10-color);
+    padding: 60px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 80px;
+    margin-right: -180px;
+
+}
+
+.Af-HeroComponent2-heading .title {
+    font-size: 50px !important;
+    font-weight: 500 !important;
+
+    span {
+        font-size: 50px !important;
+    }
+}
+
+.Af-HeroComponent2-heading .desc {
+    font-size: 18px !important;
+    font-weight: 300 !important;
+
+}
+
+.Af-HeroComponent2 img {
+    width: 60.53%;
+}
+
+@media (max-width: 1919px) {
+    .Af-HeroComponent2-heading {
+        padding: 40px;
+    }
+
+    .Af-HeroComponent2-heading .title {
+        font-size: 45px !important;
+
+        span {
+            font-size: 45px !important;
+        }
+    }
+
+    .Af-HeroComponent2-heading .desc {
+        font-size: 16px !important;
+    }
+}
+
+@media(max-width:1440px) {
+    .Af-HeroComponent2-father {
+        padding-top: 153px;
+        padding-left: 81px;
+        padding-right: 80px;
+    }
+
+    .Af-HeroComponent2 {
+        padding: 40px;
+    }
+
+    .Af-HeroComponent2-heading {
+        width: 51.44% !important;
+        padding: 28px;
+        padding-top: 50px;
+    }
+
+    .Af-HeroComponent2 img {
+        width: 55.90%;
+    }
+
+    .Af-HeroComponent2-heading .title {
+        font-size: 38px !important;
+        line-height: 35px !important;
+
+        span {
+            font-size: 38px !important;
+        }
+    }
+
+    .Af-HeroComponent2-heading .desc {
+        font-size: 14px !important;
+    }
+}
+
+@media(max-width:1200px) {
+    .Af-HeroComponent2-heading {
+        padding: 30px;
+    }
+
+    .Af-HeroComponent2-heading .title {
+        font-size: 32px !important;
+        line-height: 20px !important;
+
+        span {
+            font-size: 32px !important;
+        }
+    }
+
+    .Af-HeroComponent2-heading .desc {
+        font-size: 14px !important;
+    }
+}
+
+@media(max-width:992px) {
+    .Af-HeroComponent2-father {
+        padding-top: 138px;
+        padding-left: 17px;
+        padding-right: 18px;
+    }
+    .Af-HeroComponent2 {
+        flex-direction: column-reverse;
+        align-items: center;
+        padding: 14px;
+    }
+
+    .Af-HeroComponent2-heading {
+        width: 92.15% !important;
+        margin-right: 0;
+        margin-top: -50px;
+        border-radius: 20px;
+        padding: 18px;
+        text-align: center;
+    }
+
+    .Af-HeroComponent2 img {
+        width: 92.15%;
+    }
+    
+}
+@media (max-width: 768px){
+    .Af-HeroComponent2-heading .title {
+        font-size: 28px !important;
+        line-height: 36.2px !important;
+
+        span {
+            font-size: 28px !important;
+        }
+    }
+    .Af-HeroComponent2-heading .desc {
+        font-size: 14px !important;
+    }
+}
