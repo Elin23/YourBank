@@ -6,6 +6,7 @@
 
 .AM-title-comp .title {
     line-height: 72px;
+    line-height: 72px;
     color: var(--white-color);
     margin-bottom: 14px;
 }
@@ -17,6 +18,7 @@
 /* media query */
 
 @media (max-width: 1919px) {
+
 
     .AM-title-comp .title,
     .AM-title-comp .highlight {
@@ -43,7 +45,9 @@
         text-align: center;
     }
 }
+
 @media (max-width: 540px) {
+
 
     .AM-title-comp .title,
     .AM-title-comp .highlight {

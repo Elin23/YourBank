@@ -15,5 +15,5 @@ export default function TitleComponent({ title, desc, highlightedWords }) {
       </h3>
       <p className="desc fw-300 f-18">{desc}</p>
     </div>
-    );
+  );
 }

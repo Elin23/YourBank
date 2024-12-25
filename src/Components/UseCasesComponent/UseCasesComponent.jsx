@@ -1,8 +1,8 @@
 import './UseCasesComponent.css'
 import { UseCaseData } from '../../Data/UseCaseData'
-import CountUp from 'react-countup'
 import { useState } from 'react'
 import ScrollTrigger from 'react-scroll-trigger'
+import CountUp from 'react-countup'
 export default function UseCasesComponent({ reverse }) {
     const [counterState, setCounterState] = useState(false)
     return (

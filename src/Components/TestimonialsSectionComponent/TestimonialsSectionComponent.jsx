@@ -6,13 +6,15 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 import "./TestimonialsSectionComponent.css";
-import { TestimonialsData } from "../../Data/TestimonialsData";
+import { TestimonialsData, TestimonialsDataBusiness } from "../../Data/TestimonialsData";
 import TestimonialsCardComponent from "../TestimonialsCardComponent/TestimonialsCardComponent";
 import prevImage from "../../assets/imgs/TestimonialsIcons/left-arrow.png";
 import nextImage from "../../assets/imgs/TestimonialsIcons/right-arrow.png";
+import TitleComponent from "../TitleComponent/TitleComponent";
 
 export default function TestimonialsSectionComponent() {
     const [swiperRef, setSwiperRef] = useState(null);
+    const [toggleState, setToggleState] = useState(1);
 
     const prevHandler = () => {
         swiperRef.slidePrev();
@@ -22,8 +24,38 @@ export default function TestimonialsSectionComponent() {
         swiperRef.slideNext();
     };
 
+    const toggleTab = (index) => {
+      setToggleState(index);
+    };
+  
+    const TestimonialsTabs = [
+      { id: 1, label: "For Individuals", data: TestimonialsData },
+      { id: 2, label: "For Businesses", data: TestimonialsDataBusiness },
+    ];
+
+    const currentTestimonialsData = TestimonialsTabs.find(tab => tab.id === toggleState).data;
+
     return (
         <section className="AA-testimonials-section px-162 pb-150">
+            <div className="title-tabs mb-100">
+                <TitleComponent
+                    title="Our Testimonials"
+                    desc="Discover how YourBank has transformed lives with innovative digital solutions and personalized customer service. See why our clients trust us for a secure and prosperous financial journey"
+                    highlightedWords={["Testimonials"]}
+                />
+                <div className="tabs">
+                    {TestimonialsTabs.map((tab) => (
+                        <button
+                            key={tab.id}
+                            className={`tab fw-400 ${toggleState === tab.id ? "active-tab" : ""
+                                }`}
+                            onClick={() => toggleTab(tab.id)}
+                        >
+                            {tab.label}
+                        </button>
+                    ))}
+                </div>
+            </div>
             <div className="wrapper">
                 <div className="AA-left-shadow" />
                 <Swiper
@@ -39,10 +71,10 @@ export default function TestimonialsSectionComponent() {
                 >
 
 
-                    {TestimonialsData.map((e, index) => {
+                    {currentTestimonialsData.map((e, index) => {
                         return (
-                            <SwiperSlide>
-                                <TestimonialsCardComponent data={e}></TestimonialsCardComponent>
+                            <SwiperSlide key={index}>
+                                <TestimonialsCardComponent data={e}/>
                             </SwiperSlide>
                         );
                     })}

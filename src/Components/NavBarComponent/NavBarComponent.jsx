@@ -2,7 +2,6 @@ import React, { useEffect } from 'react'
 import { Link, NavLink } from "react-router-dom";
 import logo1 from "./../../assets/imgs/logo.png";
 import logo2 from "./../../assets/imgs/YourBanK.svg";
-import menu from "./../../assets/imgs/menue.png";
 import "./NavBarComponent.css";
 import { useState } from "react";
 
@@ -29,7 +28,6 @@ export default function NavBarComponent() {
           <img src={logo2} alt="logo" className="js-yourbank" />
         </Link>
         <div className="js-menu">
-          {/* <img src={menu} alt="menu" /> */}
           <input id="checkbox" type="checkbox" onClick={() => setMenuOpen(prev => !prev)} />
           <label className="ES-toggle" htmlFor="checkbox">
             <div id="bar3" className="ES-bars"></div>
