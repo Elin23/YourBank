@@ -1,8 +1,8 @@
 import { useState } from "react"
-import { FeaturesCardData } from "../../Data/FeaturesCardData"
 import "./FeaturesSectionComponent.css"
 import FeaturesCardComponent from "../FeaturesCardComponent/FeaturesCardComponent"
 import TitleComponent from "../TitleComponent/TitleComponent"
+import { exportedFeaturesCardData } from "../../Data/FeaturesCardData"
 
 export default function FeaturesSectionComponent() {
   const btns = [
@@ -50,7 +50,7 @@ export default function FeaturesSectionComponent() {
         </div>
 
         <div className="features-cards">
-          {FeaturesCardData.map((e) => {
+          {exportedFeaturesCardData.map((e) => {
             if (activeBtn == e.filter) {
               return (
                 e.btn.map((b, index) => {

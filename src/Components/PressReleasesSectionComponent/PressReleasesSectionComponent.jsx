@@ -1,8 +1,8 @@
 import React from 'react'
 import "./PressReleasesSectionComponent.css"
 import PressCardComponent from '../PressCardComponent/PressCardComponent'
-import { PressCardData } from '../../Data/PressCardData'
 import TitleComponent from '../TitleComponent/TitleComponent'
+import { exportedPressCardData } from '../../Data/PressCardData'
 
 export default function PressReleasesSectionComponent() {
   return (
@@ -17,7 +17,7 @@ export default function PressReleasesSectionComponent() {
       </div>
 
       <div className="press-cards">
-        {PressCardData.map((e, index) => {
+        {exportedPressCardData.map((e, index) => {
           return (
             <PressCardComponent key={index}
               image={e.image}
