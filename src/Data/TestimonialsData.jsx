@@ -74,4 +74,9 @@ export const TestimonialsDataBusiness = [
     opinion:
       "The staff at YourBank is extremely professional. I have always received the help I need.",
   },
+  {
+    userName: "Syrian Airlines",
+    opinion:
+      "My experience with YourBank has been wonderful. The service is quick and efficient, and I am grateful for the support I received.",
+  }
 ];

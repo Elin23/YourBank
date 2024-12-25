@@ -6,10 +6,18 @@
     justify-content: space-between;
     flex-wrap: wrap;
     gap: 6.25%;
-    margin-top: 5.711%;
-    height: 100vh;
+    padding-top: 10.3125%;
+    height: 100%;
+    overflow: hidden;
+    background-color: var(--black10-color);
+    margin-bottom: 7.943%;
 }
-
+.es-hero-container::before{
+    content: url('../../assets/imgs/Abstract Design5.png');
+    position: absolute;
+    top: 0;
+    left: 0;
+}
 /*Left Side Start*/
 .es-hero-left-content {
     width: 51.7535%;
@@ -378,7 +386,8 @@
     .es-hero-container {
         padding: 0 5.5556%;
         gap: 6.95%;
-        margin-top: 3.865%;
+        padding-top: 9.237%;
+        margin-bottom: 8.38%;
     }
 
     .es-hero-left-content {
@@ -611,12 +620,18 @@
 }
 @media (max-width: 1200px){
     .es-hero-container {
-        padding: 0 4.1%;
+        padding-left: 4.1%;
+        padding-right: 4.1%;
+        padding-top: 10.23%;
         gap: 5%;
     }
     .es-hero-left-content .es-main-title {
         margin-top: 12px;
         margin-bottom: 25px;
+    }
+    .es-hero-left-content .es-main-title .title{
+        font-size: 32px;
+        line-height: 45px;
     }
     .es-hero-right-content {
         /* width: 360px; */
@@ -671,7 +686,7 @@
         justify-content: center;
         align-items: flex-start;
         text-align: center;
-        margin-top: 20%;
+        padding-top: 20%;
     }
     .es-hero-left-content{
         width: 75%;
@@ -695,16 +710,14 @@
     .es-hero-left-content{
         width: 100%;
     }
-    /* .es-hero-container{
-        margin-top: 20%;
-    } */
 }
 @media (max-width: 540px) {
     /* Left Side Start*/
     .es-hero-container {
         padding: 0 4.1%;
         /* gap: 13.95%; */
-        margin-top: 40%;
+        padding-top: 40%;
+        margin-bottom: 17.78%;
     }
     .es-hero-left-content{
         width: 100%;
@@ -884,7 +897,7 @@
 }
 @media (max-width: 389px) {
     .es-hero-container{
-        margin-top: 40%;
+        padding-top: 40%;
     }
     .es-hero-left-content .es-main-title .title,
     .es-hero-left-content .es-main-title .title span {

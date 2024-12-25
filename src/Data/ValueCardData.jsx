@@ -1,4 +1,4 @@
-const storedValueCardData = localStorage.getItem('ValueCardData');
+const storedValueCardData = localStorage.getItem('ValueCardData'); 
 
 const ValueCardData = storedValueCardData ? JSON.parse(storedValueCardData) : [ 
     {
@@ -22,6 +22,5 @@ const ValueCardData = storedValueCardData ? JSON.parse(storedValueCardData) : [
 if (!storedValueCardData) {
     localStorage.setItem('ValueCardData', JSON.stringify(ValueCardData));
 }
-
 export const exportedValueCardData = ValueCardData;
 
