@@ -29,19 +29,23 @@
         line-height: 24px;
     }
 }
-
+@media (max-width: 540px) {
+    .AM-title-comp .title,
+    .AM-title-comp .highlight
+    .AM-title-comp .desc {
+        text-align: center;
+    }
+    }
 @media (max-width: 540px) {
     .AM-title-comp .title,
     .AM-title-comp .highlight {
         font-size: 28px;
         line-height: 42px;
         margin-bottom: 8px;
-        text-align: center;
     }
 
     .AM-title-comp .desc {
         font-size: 14px;
         line-height: 21px;
-        text-align: center;
     }
 }
