@@ -1,5 +1,5 @@
 import React from 'react'
-import HeaderComponent from './../../Components/HeaderComponent/HeaderComponent'
+import HeroComponent from './../../Components/HeroComponent/HeroComponent'
 import ProductSectionComponent from './../../Components/ProductSectionComponent/ProductSectionComponent'
 import UseCasesSectionComponent from './../../Components/UseCasesSectionComponent/UseCasesSectionComponent'
 import FAQSectionComponent from './../../Components/FAQSectionComponent/FAQSectionComponent'
@@ -12,7 +12,7 @@ import './Home.css'
 export default function Home() {
   return (
     <div className='Home'>
-      <HeaderComponent/>
+      <HeroComponent/>
       <ProductSectionComponent />
       <UseCasesSectionComponent />
       <FeaturesSectionComponent />
