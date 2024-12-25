@@ -2,7 +2,7 @@ import "./TitleComponent.css";
 export default function TitleComponent({ title, desc, highlightedWords }) {
   const highlightText = (text) => {
     if (!highlightedWords || highlightedWords.length === 0) return text;
-    const regex = new RegExp(`(${highlightedWords.join('|')})`, 'gi'); // our|values
+    const regex = new RegExp(`(${highlightedWords.join('|')})`, 'gi'); 
     return text.split(regex).map((part, index) => 
       highlightedWords.includes(part) ? <span key={index} className="highlight">{part}</span> : part
     );
