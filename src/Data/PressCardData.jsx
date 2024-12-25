@@ -40,4 +40,4 @@ if (!StoredPressCardData) {
   localStorage.setItem("PressCardData", JSON.stringify(PressCardData));
 }
 
-export const exportedPressCardData = PressCardData
+export const exportedPressCardData = PressCardData;
