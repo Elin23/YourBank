@@ -7,10 +7,12 @@ import Security from './Pages/Security/Security'
 import SignUp from './Pages/SignUp/SignUp'
 import FooterComponent from './Components/FooterComponent/FooterComponent'
 import './App.css'
+import NavBarComponent from './Components/NavBarComponent/NavBarComponent';
 
 function App() {
   return (
     <>
+    <NavBarComponent />
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/about' element={<About />} />
