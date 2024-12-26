@@ -1,4 +1,4 @@
-import { MissionVisionCardData } from "../../Data/MissionVisionCardData";
+import { exportedMissionVisionCardData } from "../../Data/MissionVisionCardData";
 import "./MissionVisionCardComponent.css";
 export default function MissionVisionCardComponent({ reverse }) {
   return (
@@ -8,21 +8,21 @@ export default function MissionVisionCardComponent({ reverse }) {
       }
     >
       <div className="mission-vision-img">
-        {!reverse && <img src={MissionVisionCardData[0].img} alt="" />}
-        {reverse && <img src={MissionVisionCardData[1].img} alt="" />}
+        {!reverse && <img src={exportedMissionVisionCardData[0].img} alt="" />}
+        {reverse && <img src={exportedMissionVisionCardData[1].img} alt="" />}
       </div>
       <div className="content">
         {!reverse && (
-          <h3 className="title fw-500">{MissionVisionCardData[0].title}</h3>
+          <h3 className="title fw-500">{exportedMissionVisionCardData[0].title}</h3>
         )}
         {reverse && (
-          <h3 className="title fw-500">{MissionVisionCardData[1].title}</h3>
+          <h3 className="title fw-500">{exportedMissionVisionCardData[1].title}</h3>
         )}
         {!reverse && (
-          <p className="desc fw-300 f-18">{MissionVisionCardData[0].desc}</p>
+          <p className="desc fw-300 f-18">{exportedMissionVisionCardData[0].desc}</p>
         )}
         {reverse && (
-          <p className="desc fw-300 f-18">{MissionVisionCardData[1].desc}</p>
+          <p className="desc fw-300 f-18">{exportedMissionVisionCardData[1].desc}</p>
         )}
       </div>
     </div>
