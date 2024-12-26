@@ -3,7 +3,7 @@ import "./JobCardComponent.css";
 export default function JobCardComponent({
   Title,
   location,
-  Depatrment,
+  Department,
   jobDescription,
   Req1,
   Req2,
@@ -17,7 +17,7 @@ export default function JobCardComponent({
       <div className=" fw-300 f-18 MR-JobCard-Title">
         <h3 className="fs-30">{Title}</h3>
         <span>Loction: {location}</span>
-        <span>Department: {Depatrment}</span>
+        <span>Department: {Department}</span>
       </div>
       <div>
         <h4 className="fs-24">About This Job</h4>

@@ -12,6 +12,8 @@
   gap: 30px;
   margin-top: 80px;
   margin-bottom: 30px;
+  flex-wrap: wrap;
+
 }
 
 /* Styles for each individual job card */
@@ -24,7 +26,6 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  flex-grow: 1;
 }
 
 /* Media query for screens smaller than 1919px */
@@ -32,6 +33,7 @@
 
   .MR-JobcardFlex {
     display: flex;
+
     gap: 20px;
     margin-top: 60px;
     margin-bottom: 20px;
