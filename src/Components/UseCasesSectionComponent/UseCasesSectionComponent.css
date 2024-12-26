@@ -1,11 +1,9 @@
 .Af-UseCasesSectionComponent {
     background-color: var(--black10-color);
+    
 }
-
-.Af-titleUseCasesComponent h2 span {
-    color: var(--green60-color);
-}
-
-.Af-titleUseCasesComponent p {
-    color: var(--gray70-color);
+@media(max-width:1440px){
+    .Af-UseCasesSectionComponent-title{
+        margin-bottom: 60px;
+    }
 }
