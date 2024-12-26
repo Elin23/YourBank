@@ -1,10 +1,7 @@
 import React, { useState } from "react";
 import FAQCardComponent from "../FAQCardComponent/FAQCardComponent";
 import "./FAQSectionComponent.css";
-import {
-  FAQCardData,
-  FAQCardData2,
-} from "./../../Data/FAQCardData";
+import { exportedFAQCardData } from "./../../Data/FAQCardData";
 import TitleComponent from "../TitleComponent/TitleComponent";
 
 export default function FAQSectionComponent() {
@@ -14,19 +11,21 @@ export default function FAQSectionComponent() {
     setIsVisible((prevState) => !prevState);
   };
 
-  return (
-    <>
+  const upperFAQs = exportedFAQCardData.slice(0, 2);
+  const lowerFAQs = exportedFAQCardData.slice(2, 4);
 
-      <div className="MR-FAQ-section-container px-162 pb-150">
-      <TitleComponent 
-           title="Frequently Asked Questions" 
-           desc="Still you have any questions? Contact our Team via support@yourbank.com" 
-           highlightedWords={["Frequently"]}
-    />
-    
-    <div className="MR-FAQ-card-container">
+  return (
+    <div className="MR-FAQ-section-container px-162 pb-150">
+      <TitleComponent
+        title="Frequently Asked Questions"
+        desc="Still you have any questions? Contact our Team via support@yourbank.com"
+        highlightedWords={["Frequently"]}
+      />
+
+      <div className="MR-FAQ-card-container">
+        {/* upper FAQs Cards*/}
         <div className="MR-Upper-FAQ-Card">
-          {FAQCardData.map((data, index) => (
+          {upperFAQs.map((data, index) => (
             <FAQCardComponent
               key={index}
               Qustion={data.Qustion}
@@ -35,12 +34,13 @@ export default function FAQSectionComponent() {
           ))}
         </div>
 
+        {/* Lower FAQs Cards*/}
         <div
           className={`MR-Lower-FAQ-Card ${
             !isVisible ? "MR-FAQ-Gradient1" : ""
           }`}
         >
-          {FAQCardData2.map((data, index) => (
+          {lowerFAQs.map((data, index) => (
             <FAQCardComponent
               key={index}
               Qustion={data.Qustion}
@@ -49,10 +49,12 @@ export default function FAQSectionComponent() {
           ))}
         </div>
 
+        {/* Hidden Card*/}
         {isVisible && (
           <>
+            {/* upper FAQs Cards*/}
             <div className="MR-Upper-FAQ-Card">
-              {FAQCardData.map((data, index) => (
+              {upperFAQs.map((data, index) => (
                 <FAQCardComponent
                   key={index}
                   Qustion={data.Qustion}
@@ -61,12 +63,13 @@ export default function FAQSectionComponent() {
               ))}
             </div>
 
+            {/* Lower FAQs Cards*/}
             <div
               className={`MR-Lower-FAQ-Card ${
                 isVisible ? "MR-FAQ-Gradient1" : ""
               }`}
             >
-              {FAQCardData2.map((data, index) => (
+              {lowerFAQs.map((data, index) => (
                 <FAQCardComponent
                   key={index}
                   Qustion={data.Qustion}
@@ -77,22 +80,18 @@ export default function FAQSectionComponent() {
           </>
         )}
 
-        <button
-          className="MR-FAQ-Button fw-400"
-          onClick={toggleFAQs}
-        >
+        <button className="MR-FAQ-Button fw-400" onClick={toggleFAQs}>
           {isVisible ? "Hide FAQ's " : "Load All FAQ's "}
           <img
-    src={
-      isVisible
-        ? "./src/assets/imgs/Home icons/Vector 10.png" 
-        : "./src/assets/imgs/Home icons/Vector 9.png" 
-    }
-    alt="vector"
+            src={
+              isVisible
+                ? "./src/assets/imgs/Home icons/Vector 10.png"
+                : "./src/assets/imgs/Home icons/Vector 9.png"
+            }
+            alt="vector"
           />
         </button>
       </div>
-      </div>
-    </>
+    </div>
   );
 }
