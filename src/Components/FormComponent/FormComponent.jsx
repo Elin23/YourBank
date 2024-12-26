@@ -95,9 +95,9 @@ export default function FormComponent({action}) {
 
   return (
     <section className="AA-form-section AA-px-297 pb-150">
-        <div className="AA-design"></div>
+
         <div className="AA-form-container">
-            <div className="AA-bg-img"></div>
+            <div className="AA-design"></div>
             <div className="overlay">
                 <TitleComponent
                     title={title}
@@ -106,7 +106,7 @@ export default function FormComponent({action}) {
                     />
                 <form>
                 {action == "signup"?
-                    <div className="AA-inputs">
+                    <div className="AA-inputs AA-input-pb">
                         {/* firstName input */}
                         <div className="AA-input-Fields">
                             <input className="AA-input f-18 fw-300" placeholder="Enter First Name" onChange={handleFirstNameChange} />

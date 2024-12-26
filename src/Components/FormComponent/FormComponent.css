@@ -1,4 +1,5 @@
 .AA-form-section{
+    padding-top: 10.3125%;
     background-color: var(--black10-color);
 }
 
@@ -19,9 +20,10 @@
 /**style form container**/
 .AA-form-section .AA-form-container{
     position: relative;
+    display: inline-block;
     border: 1px solid var(--gray15-color);
     border-radius: 20px;
-    height: 100vh;    
+    width: 100%;
 }
 
 /**style background of form**/
@@ -39,9 +41,25 @@
 }
 
 .AA-form-section .AA-form-container .overlay{
-    position: absolute;
-    top: 0;
     width: 100%;
+    height: 100%;
+}
+
+.AA-form-section .AA-form-container .overlay:before{
+    position: absolute;
+    background-image: url('../../assets/imgs/login-bg.png');
+    display: inline-block;
+    content: '';
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    background-color: var(--black11-color); 
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    opacity: 5%;
+    border-radius: 20px;
+    filter: grayscale(100%);
 }
 
 /**style title**/
@@ -75,6 +93,10 @@
 }
 
 /***style input field**/
+.AA-form-section .AA-form-container .overlay .AA-input-pb{
+    padding-bottom: 2.262443438914027%;
+}
+
 .AA-form-section .AA-form-container .overlay .AA-input,
 .AA-form-section .AA-form-container .overlay .AA-password-input{
     color:var(--white-color) ;
@@ -184,6 +206,9 @@
 
 
 @media (max-width: 1919px) {
+    .AA-form-section{
+        padding-top: 10.625%;
+    }
     .AA-px-297 {
         padding-left: 13.05555556%;
         padding-right: 13.05555556%;
@@ -206,9 +231,10 @@
         margin: 0;
     }
 
-    /* .AA-form-section .AA-form-container .overlay .AA-inputs{
-        padding-bottom: 4.2194092827%;
-    } */
+    .AA-form-section .AA-form-container .overlay .AA-input-pb{
+        padding-bottom: 2.819548872180451%;
+    }
+    
 
     .AA-form-section .AA-form-container .overlay .AA-forget-pass-btn{
         padding-top: 2.819548872180451%;
@@ -246,6 +272,10 @@
 }
   
 @media (max-width: 768px) {
+    .AA-form-section{
+        padding-top: 35.38461538461538%;
+    }
+    
     .AA-px-297 {
         padding-left: 4.1025641%;
         padding-right: 4.1025641%;
@@ -258,6 +288,9 @@
         padding-bottom: 11.1731843575419%;
     }
 
+    .AA-form-section .AA-form-container .overlay .AA-input-pb{
+        padding-bottom: 5.58659217877095%;
+    }
     .AA-form-section .AA-form-container .overlay .AA-inputs{
         flex-wrap: wrap;
         width: 100%;
