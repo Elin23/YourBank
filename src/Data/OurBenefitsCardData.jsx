@@ -3,11 +3,9 @@ import icon2 from './../assets/imgs/careers icons/Vector.png'
 import icon3 from './../assets/imgs/careers icons/Icon (2).png'
 import icon4 from './../assets/imgs/careers icons/Icon (1).png'
 
+const storedOurBenefitsCardData = localStorage.getItem('OurBenefitsCardData');
 
-
-
-
-const OurBenefitsCardData=[
+const OurBenefitsCardData = storedOurBenefitsCardData ? JSON.parse(storedOurBenefitsCardData) : [
     {
         icon:icon1,
         title:'Competitive Compensation',
@@ -28,5 +26,9 @@ const OurBenefitsCardData=[
         title:'Work-Life Balance',
         desc:'We understand the importance of maintaining a healthy work-life balance. YourBank offers flexible work arrangements, paid time off, parental leave, and other programs that support employees in managing their personal and professional commitments.'
     }
-]
-export default OurBenefitsCardData;
+];
+
+if(!storedOurBenefitsCardData){
+    localStorage.setItem('OurBenefitsCardData' , JSON.stringify(OurBenefitsCardData))
+}
+export const exportedData = OurBenefitsCardData;
