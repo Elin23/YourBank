@@ -59,14 +59,16 @@ export default function FormComponent({action}) {
 
         const handlePasswordChange = (e) => {
           const newPassword = e.target.value;
-    
-          if (passwordRegex.test(newPassword)) {
-            setMessagePass('Password is valid');
-          } else {
-            if(newPassword.length > 0)
-                setMessagePass('Password must be at least 8 characters long and include both letters and numbers');
-            else
-                setMessagePass('');
+          if(action == "signup")
+          {
+            if (passwordRegex.test(newPassword)) {
+                setMessagePass('Password is valid');
+            } else {
+                if(newPassword.length > 0)
+                    setMessagePass('Password must be at least 8 characters long and include both letters and numbers');
+                else
+                    setMessagePass('');
+            }
           }
         }
       
@@ -108,25 +110,25 @@ export default function FormComponent({action}) {
                 {action == "signup"?
                     <div className="AA-inputs AA-input-pb">
                         {/* firstName input */}
-                        <div className="AA-input-Fields">
+                        <div className="AA-input-Fields AA-input-group">
                             <input className="AA-input f-18 fw-300" placeholder="Enter First Name" onChange={handleFirstNameChange} />
                             <p className={`AA-error ${messagefirstName.length == 0 ? "AA-hide" : "AA-show" }`}>{messagefirstName}</p>                    
                         </div>
                         {/* lastName input */}
-                        <div className="AA-input-Fields">
+                        <div className="AA-input-Fields AA-input-group">
                             <input className="AA-input f-18 fw-300" placeholder="Enter Last Name" onChange={handleLastNameChange} />
                             <p className={`AA-error ${messagelastName.length == 0 ? "AA-hide" : "AA-show" }`}>{messagelastName}</p>                    
                         </div>
                     </div> : <></>}
                     <div className="AA-inputs">
                         {/* email input */}
-                        <div className="AA-input-Fields">
+                        <div className="AA-input-Fields AA-input-group">
                             <input className="AA-input f-18 fw-300" placeholder="Enter your Email" onChange={handleEmailChange} />
                             <p className={`AA-error ${message.length == 0 ? "AA-hide" : "AA-show" }`}>{message}</p>                    
                         </div>
                         {/* password input */}
                         <div className="AA-input-Fields">
-                            <div className="AA-password-input-group">
+                            <div className="AA-input-group">
                                 <input className="AA-password-input f-18 fw-300" type={type} placeholder="Enter your Password" onChange={handlePasswordChange}/>
                                 <span class="AA-icon-pass" onClick={handleToggle}>
                                     <i class={`eye-icon ${icon == 'show' ? "fa-solid fa-eye" : "fa-regular fa-eye-slash"}`}  onClick={handleToggle}></i>
