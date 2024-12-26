@@ -22,9 +22,23 @@
     width: 664px;
     padding: 60px;
     padding-bottom: 0px;
+    border: 1px solid var(--gray15-color);
     border-radius: 50px 50px 20px 20px;
 }
-
+.mission-vision-img{
+    position: relative;
+    overflow: hidden;
+}
+.mission-vision-img::after{
+    content: "";
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-image: url("../../assets/imgs/blend.png");
+    opacity: 25%;
+}
 .AM-mission-vision-card .content .title,
 .AM-mission-vision-card-reverse .content .title {
     color: var(--white-color);
