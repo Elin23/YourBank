@@ -7,6 +7,7 @@
 }
 .swiper {
     position: relative;
+    width: 85.96491228%;
     /* width: 85.96491228%; */
     display: flex;
     justify-content: center;
@@ -19,37 +20,37 @@
 }
 
 .swiper .swiper-slide {
-    width: 29.44606414%;
-    padding-right: 40px;
+    width: 29.44606413994169% !important;
+    margin-right: 5.830903790087464%;
 }
 
 .wrapper {
     position: relative;
     margin: 0 auto;
-    width: 85.96491228%;
   }
   
   .AA-left-shadow {
-    pointer-events: none;
-    position: absolute;
+    position: absolute; 
     top: 0;
     bottom: 0;
-    z-index: 10;
-    left: -1px;
-    width: 40.52478134%;
+    z-index: 2;
+    left: 0px;
+    width: 34.83709273182957%;
     height: 100%;
+    margin-left: 7.017543859649123%;
     background: linear-gradient(270deg, rgba(25, 25, 25, 0) 0%, var(--black10-color) 105.84%);
   }
   
   .AA-right-shadow {
-    pointer-events: none;
-    position: absolute;
+    position: absolute; 
     top: 0;
     bottom: 0;
-    z-index: 10;
+    z-index: 2;
+    margin-right: 7.017543859649123%;
     right: -1px;
+    height: 100%;
     background: linear-gradient(270deg, #191919 10.8%, rgba(25, 25, 25, 0) 105.84%);
-    width: 40.52478134%;
+    width: 30.07518796992481%;
   }
   
 
@@ -70,7 +71,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: 15;
+    z-index: 0;
 }
 
 /***laptop ***/
@@ -83,12 +84,13 @@
         padding: 14px;
     }
 
-    .wrapper {
+    .swiper{
         width: 85.625%;
     }
 
-    .swiper-slide {
-        padding-right: 60px ;
+    .swiper .swiper-slide {
+        width: 29.65328467153285% !important;
+        margin-right : 5.474452554744526% ;
     }
 
     .AA-navigation-btns img {
@@ -100,19 +102,26 @@
         padding: 11px;
     }
 
-    .swiper::after {
-        width: 36.31356861%;
+    .AA-right-shadow {
+        width: 27.96875%;
     }
 
-    .swiper::before {
-        width: 32.66423358%;
+    .AA-left-shadow {
+        width: 31.09375%;
     }
 }
+
 @media (max-width: 1200px) {
     .AA-testimonials-section .title-tabs .AM-title-comp{
         width: 60.92%;
     }
+    .swiper .swiper-slide{
+        padding-right :10% ;
+        margin-right: 0 !important;
+        width: 50% !important;
+    }
 }
+
 /***tablet ***/
 @media (max-width: 992px) {
     .AA-testimonials-section .title-tabs .AM-title-comp{
@@ -127,18 +136,15 @@
         justify-content: center;
         gap: 20px;
     }
-
-    .wrapper {
-        width: 100%;
+    .swiper{
+        width: 100%
     }
-
-    .swiper-wrapper {
-        align-items: end;
+    .swiper .swiper-slide{
+        padding-right :0% ;
+        margin-right: 0 !important;
+        width: 100% !important;
     }
-
-    .swiper-slide{
-        padding-right: 0 !important;
-    }
+ 
     .AA-right-shadow,
     .AA-left-shadow{
         display: none;
@@ -160,18 +166,13 @@
         position: unset;
     }
 
-    .swiper-slide{
-        padding-right: 0 !important;
+   .swiper .swiper-slide{
+        margin-right: 0 !important;
+        width: 100% !important;
     }
 
     .swiper-slide.swiper-slide-active {
         width: 100% !important;
         margin-right: 0px auto !important;
-    }
-    .swiper-slide .AA-Testimony-Card{
-        position: relative;
-    }
-    .swiper-wrapper {
-        align-items: end;
     }
 }
