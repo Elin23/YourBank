@@ -155,7 +155,7 @@
 
 }
 
-.Btn {
+.Af-Btn {
     margin-top: 62px;
     background-color: var(--black11-color);
     color: rgba(255, 255, 255, 1);
@@ -163,22 +163,20 @@
     border-radius: 82px;
     padding: 18px 24px;
 }
-@media (max-width:1440px){
-    .Af-UseCasesComponentSide-2{
+
+@media (max-width:1440px) {
+    .Af-UseCasesComponentSide-2 {
         margin-top: 20px;
-    }
-
-    .Af-UseCasesComponentSide-2-secondDiv {
-        justify-content: center;
-    }
-
-    .Af-UseCasesComponentSide-2-button {
-        display: flex;
-        justify-content: center;
     }
 
     .Af-UseCasesComponentSide-1-card span {
         font-size: 16px;
+    }
+    .Af-UseCasesComponentSide-2-secondDiv .Af-rate p{
+        font-size: 16px;
+    }
+    .Af-UseCasesComponentSide-2-secondDiv .Af-rate h3 {
+        font-size: 40px;
     }
 }
 
@@ -235,7 +233,9 @@
         font-size: 12px;
         padding: 12px 15px 15px;
     }
-
+    .Af-UseCasesComponentSide-2-secondDiv{
+        justify-content: center;
+    }
     .Af-UseCasesComponentSide-2-secondDiv div p {
         font-size: 14px;
     }
@@ -252,5 +252,9 @@
 
     .Af-UseCasesComponentSide-2-title {
         text-align: center;
+    }
+    .Af-UseCasesComponentSide-2-button {
+        display: flex;
+        justify-content: center;
     }
 }

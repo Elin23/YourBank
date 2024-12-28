@@ -2,13 +2,16 @@
   background-color: var(--black10-color);
 }
 
+.features-title {
+  width: 81.202%;
+}
+
 .features-content {
   display: flex;
   justify-content: space-between;
   align-items: start;
   flex-wrap: wrap;
   column-gap: 30px;
-  padding-top: 80px;
 }
 
 .features-content .et-btns {
@@ -49,9 +52,12 @@
 
 /* figma design */
 @media (max-width: 1919px) {
+  .features-title {
+    margin-bottom: 60px;
+  }
+
   .features-content {
     column-gap: 20px;
-    padding-top: 60px;
   }
 
   .features-content .et-btns {
@@ -92,6 +98,9 @@
 }
 
 @media (max-width: 1200px) {
+  .features-title {
+    width: 100%;
+  }
   .features-content .et-btns {
     width: 100%;
     display: flex;
@@ -123,8 +132,9 @@
     padding: 0 12px 80px 12px;
   }
 
-  .features-content {
-    padding-top: 50px;
+  .features-title {
+    margin-bottom: 50px;
+    width: 100%;
   }
 
   .features-content .et-btns {

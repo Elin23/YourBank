@@ -2,6 +2,7 @@ import './UseCasesComponent.css'
 import { UseCaseData } from '../../Data/UseCaseData'
 import { useState } from 'react'
 import ScrollTrigger from 'react-scroll-trigger'
+import CountUp from 'react-countup'
 export default function UseCasesComponent({ reverse }) {
     const [counterState, setCounterState] = useState(false)
     return (
@@ -12,8 +13,8 @@ export default function UseCasesComponent({ reverse }) {
                         <div className='Af-UseCasesComponentSide-1-card'>
                             <div className='Af-UseCasesComponentSide-1-card-img'>
                                 <div>
-                                    {!reverse && <img src={UseCaseData[0].properities[0].icon} alt="" />}
-                                    {reverse && <img src={UseCaseData[1].properities[0].icon} alt="" />}
+                                    {!reverse && <img src={UseCaseData[0].properities[0].icon} alt="icon" />}
+                                    {reverse && <img src={UseCaseData[1].properities[0].icon} alt="icon" />}
                                 </div>
                             </div>
                             {!reverse && <span>{UseCaseData[0].properities[0].desc}</span>}
@@ -22,8 +23,8 @@ export default function UseCasesComponent({ reverse }) {
                         <div className='Af-UseCasesComponentSide-1-card'>
                             <div className='Af-UseCasesComponentSide-1-card-img'>
                                 <div>
-                                    {!reverse && <img src={UseCaseData[0].properities[1].icon} alt="" />}
-                                    {reverse && <img src={UseCaseData[1].properities[1].icon} alt="" />}
+                                    {!reverse && <img src={UseCaseData[0].properities[1].icon} alt="icon" />}
+                                    {reverse && <img src={UseCaseData[1].properities[1].icon} alt="icon" />}
                                 </div>
                             </div>
                             {!reverse && <span>{UseCaseData[0].properities[1].desc}</span>}
@@ -34,8 +35,8 @@ export default function UseCasesComponent({ reverse }) {
                         <div className='Af-UseCasesComponentSide-1-card'>
                             <div className='Af-UseCasesComponentSide-1-card-img'>
                                 <div>
-                                    {!reverse && <img src={UseCaseData[0].properities[2].icon} alt="" />}
-                                    {reverse && <img src={UseCaseData[1].properities[2].icon} alt="" />}
+                                    {!reverse && <img src={UseCaseData[0].properities[2].icon} alt="icon" />}
+                                    {reverse && <img src={UseCaseData[1].properities[2].icon} alt="icon" />}
                                 </div>
                             </div>
                             {!reverse && <span>{UseCaseData[0].properities[2].desc}</span>}
@@ -44,8 +45,8 @@ export default function UseCasesComponent({ reverse }) {
                         <div className='Af-UseCasesComponentSide-1-card'>
                             <div className='Af-UseCasesComponentSide-1-card-img'>
                                 <div>
-                                    {!reverse && <img src={UseCaseData[0].properities[3].icon} alt="" />}
-                                    {reverse && <img src={UseCaseData[1].properities[3].icon} alt="" />}
+                                    {!reverse && <img src={UseCaseData[0].properities[3].icon} alt="icon" />}
+                                    {reverse && <img src={UseCaseData[1].properities[3].icon} alt="icon" />}
                                 </div>
                             </div>
                             {!reverse && <span>{UseCaseData[0].properities[3].desc}</span>}
@@ -136,10 +137,10 @@ export default function UseCasesComponent({ reverse }) {
                         </div>
                     </ScrollTrigger>
                     <div className='Af-UseCasesComponentSide-2-button'>
-                        <button className='Btn'>Learn More</button>
+                        <button className='Af-Btn'>Learn More</button>
                     </div>
                 </div>
-            </div >
+            </div > 
         </>
     )
 }

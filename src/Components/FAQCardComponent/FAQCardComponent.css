@@ -1,13 +1,13 @@
 /* Main card container styling */
 .MR-FAQ-Card {
+  width: 49.059%;
+  padding: 50px;
   background-color: var(--black10-color);
-  border: 1px #363636 solid;
+  border: 1px var(--gray15-color) solid;
   border-radius: 14px;
   display: flex;
   flex-direction: column;
   gap: 30px;
-  width: 49.059%;
-  padding: 50px 50px 50px 50px;
 }
 
 /* Styling for title elements inside the card */
@@ -19,7 +19,7 @@
 /* Horizontal line styling for separating sections */
 .MR-line {
   height: 1px;
-  background-color: #262626;
+  background-color: var(--gray15-color);
 }
 
 /* Paragraph styling inside the card */
@@ -28,7 +28,7 @@
   margin-bottom: 0 !important;
 }
 
-/* Responsive styles for medium-large screens (1201px to 1440px) */
+/* Responsive styles for medium-large screens (992px to 1919px) */
 @media (max-width: 1919px) {
   .MR-FAQ-Card {
     width: 49.218%;
@@ -40,28 +40,18 @@
   .MR-FAQ-Card span {
     font-size: 18px;
     line-height: 22.5px;
-    font-weight: 500;
   }
 
   .MR-FAQ-Card p {
     font-size: 16px;
     line-height: 24px;
-    font-weight: 300;
   }
 }
 
-/* Responsive styles for medium screens (769px to 1200px) */
-@media (max-width: 1200px) {
+/* Responsive styles for extra-small screens (less than 992px) */
+@media (max-width: 992px) {
   .MR-FAQ-Card {
     width: 100%;
-  }
-}
-
-
-
-/* Responsive styles for extra-small screens (less than 389px) */
-@media (max-width: 390px) {
-  .MR-FAQ-Card {
     flex-wrap: wrap;
     padding: 30px;
     gap: 20px;
@@ -70,10 +60,5 @@
   .MR-FAQ-Card p {
     font-size: 14px;
     line-height: 21px;
-    font-weight: 300;
-  }
-
-  .MR-FAQ-Card span {
-    font-weight: 500;
   }
 }

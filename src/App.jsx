@@ -6,11 +6,13 @@ import Login from './Pages/Login/Login'
 import Security from './Pages/Security/Security'
 import SignUp from './Pages/SignUp/SignUp'
 import "./App.css";
+import NavBarComponent from './Components/NavBarComponent/NavBarComponent'
 import FooterComponent from './Components/FooterComponent/FooterComponent';
 
 function App() {
   return (
     <>
+      <NavBarComponent/>
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/about' element={<About />} />
@@ -19,9 +21,9 @@ function App() {
         <Route path='/login' element={<Login />} />
         <Route path='/signUp' element={<SignUp />} />
       </Routes>
-      <FooterComponent/>
+      <FooterComponent />
     </>
-  );
+  )
 }
 
-export default App;
+export default App

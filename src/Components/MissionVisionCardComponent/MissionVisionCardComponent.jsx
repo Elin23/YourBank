@@ -1,4 +1,5 @@
 import { exportedMissionVisionCardData } from "../../Data/MissionVisionCardData";
+import { exportedMissionVisionCardData } from "../../Data/MissionVisionCardData";
 import "./MissionVisionCardComponent.css";
 export default function MissionVisionCardComponent({ reverse }) {
   return (

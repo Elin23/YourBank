@@ -1,6 +1,8 @@
 import icon10 from "../assets/imgs/Home icons/Icon (10).png"
 
-export const FeaturesCardData = [
+const StoredFeaturesCardData = localStorage.getItem("FeaturesCardData");
+
+const FeaturesCardData = StoredFeaturesCardData ? JSON.parse(StoredFeaturesCardData) : [
   {
     filter: "Online Banking",
     btn: [
@@ -23,7 +25,7 @@ export const FeaturesCardData = [
         title: "Bill Pay and Transfers",
         img: icon10,
         content: "Save time and avoid late fees with our convenient bill pay service. Set up recurring payments or make one-time transfers between your accounts with just a few clicks"
-      },
+      }
     ]
   },
   {
@@ -73,7 +75,13 @@ export const FeaturesCardData = [
         title: "Building a Strong Customer Support Team",
         img: icon10,
         content: "A well-trained, empathetic customer support team is essential for delivering high-quality service. The best customer support agents are not only knowledgeable about the products or services they represent but also possess strong communication skills and a genuine desire to help."
-      },
+      }
     ]
   }
 ]
+
+if (!StoredFeaturesCardData) {
+  localStorage.setItem("FeaturesCardData", JSON.stringify(FeaturesCardData));
+}
+
+export const exportedFeaturesCardData = FeaturesCardData;

@@ -1,7 +1,8 @@
 import { useState } from "react"
-import { FeaturesCardData } from "../../Data/FeaturesCardData"
 import "./FeaturesSectionComponent.css"
 import FeaturesCardComponent from "../FeaturesCardComponent/FeaturesCardComponent"
+import TitleComponent from "../TitleComponent/TitleComponent"
+import { exportedFeaturesCardData } from "../../Data/FeaturesCardData"
 
 export default function FeaturesSectionComponent() {
   const btns = [
@@ -20,12 +21,20 @@ export default function FeaturesSectionComponent() {
   ]
   const [activeBtn, setActiveBtn] = useState("Online Banking")
 
-  function test(filter) {
+  function activeTab(filter) {
     setActiveBtn(filter)
   }
 
   return (
     <section className="features px-162 pb-150">
+
+      <div className="features-title mb-80">
+        <TitleComponent
+          title="Our Features"
+          desc="Experience a host of powerful features at YourBank, including seamless online banking, secure transactions, and personalized financial insights, all designed to enhance your banking experience"
+          highlightedWords={["Features"]}
+        />
+      </div>
 
       <div className="features-content">
         <div className="et-btns p-50">
@@ -33,7 +42,7 @@ export default function FeaturesSectionComponent() {
             return (
               <button key={index}
                 className={`fw-400 f-18 ${activeBtn == btn.filter ? "et-active-btn" : "et-btn"}`}
-                onClick={() => test(btn.filter)}>
+                onClick={() => activeTab(btn.filter)}>
                 {btn.txt}
               </button>
             )
@@ -41,7 +50,7 @@ export default function FeaturesSectionComponent() {
         </div>
 
         <div className="features-cards">
-          {FeaturesCardData.map((e) => {
+          {exportedFeaturesCardData.map((e) => {
             if (activeBtn == e.filter) {
               return (
                 e.btn.map((b, index) => {
