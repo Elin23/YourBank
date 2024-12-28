@@ -1,6 +1,5 @@
 import React from 'react'
 import './OurBenefitsCardComponent.css'
-import icon from './../../assets/imgs/careers icons/Icon.png'
 import blend from './../../assets/imgs/blend.png'
 export default function OurBenefitsCardComponent({left ,data}) {
   return (
@@ -14,7 +13,6 @@ export default function OurBenefitsCardComponent({left ,data}) {
                 <div className="circle circle3"></div>
                 <img src={data.icon} className='OurBenefitsCardIcon'/>
             </div>
-            {/* <img src={icon} className='OurBenefitsCardIcon'/> */}
             <h3 className='hw-OurBenefitsCardTitle'>{data.title}</h3>
         </div>
         <p className='OurBenefitsCardDescription'>
