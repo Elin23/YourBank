@@ -64,10 +64,10 @@ export default function TestimonialsSectionComponent() {
                     loop={true}
                     modules={[Autoplay,Navigation, Pagination, Scrollbar]}
                     slidesPerView={3}
-                    // autoplay={{
-                    //     delay: 2500,
-                    //     disableOnInteraction: false
-                    //   }}
+                    autoplay={{
+                        delay: 2500,
+                        disableOnInteraction: false
+                      }}
                     breakpoints={{
                         0: { slidesPerView: 1 },
                         993: { slidesPerView: 2 },
