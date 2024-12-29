@@ -130,8 +130,8 @@ export default function FormComponent({action}) {
                         <div className="AA-input-Fields">
                             <div className="AA-input-group">
                                 <input className="AA-password-input f-18 fw-300" type={type} placeholder="Enter your Password" onChange={handlePasswordChange}/>
-                                <span class="AA-icon-pass" onClick={handleToggle}>
-                                    <i class={`eye-icon ${icon == 'show' ? "fa-solid fa-eye" : "fa-regular fa-eye-slash"}`}  onClick={handleToggle}></i>
+                                <span className="AA-icon-pass" onClick={handleToggle}>
+                                    <i className={`eye-icon ${icon == 'show' ? "fa-solid fa-eye" : "fa-regular fa-eye-slash"}`}  onClick={handleToggle}></i>
                                 </span>
                             </div>
                             <p className={`AA-error ${messagePass.length == 0 ? "AA-hide" : "AA-show" }`}>{messagePass}</p>

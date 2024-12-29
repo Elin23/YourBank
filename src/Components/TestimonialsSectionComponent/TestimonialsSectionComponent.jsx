@@ -1,5 +1,5 @@
 import React, { useRef, useState } from "react";
-import { Navigation, Pagination, Scrollbar, A11y } from "swiper/modules";
+import { Navigation, Pagination, Scrollbar, Autoplay } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
@@ -57,19 +57,23 @@ export default function TestimonialsSectionComponent() {
                 </div>
             </div>
             <div className="wrapper">
-                <div className="AA-left-shadow" />
+                
+            <div className="AA-left-shadow" ></div>
+                 
                 <Swiper
-                    modules={[Navigation, Pagination, Scrollbar]}
+                    loop={true}
+                    modules={[Autoplay,Navigation, Pagination, Scrollbar]}
                     slidesPerView={3}
+                    autoplay={{
+                        delay: 2500,
+                        disableOnInteraction: false
+                      }}
                     breakpoints={{
                         0: { slidesPerView: 1 },
                         993: { slidesPerView: 2 },
                         1200: { slidesPerView: 3 },
                     }}
-                    onSwiper={(swiper) => setSwiperRef(swiper)}
-                    className=""
-                >
-
+                    onSwiper={(swiper) => setSwiperRef(swiper)} >
 
                     {currentTestimonialsData.map((e, index) => {
                         return (
@@ -78,19 +82,15 @@ export default function TestimonialsSectionComponent() {
                             </SwiperSlide>
                         );
                     })}
-
                 </Swiper>
-                <div className="AA-right-shadow" />
-            </div>
-            <div className="AA-navigation-btns px-162">
-                <div>
+                <div className="AA-right-shadow" ></div> 
+
+                <div className="AA-navigation-btns">
                     <button
                         className="AA-custom-swiper-navigation-prev"
                         onClick={prevHandler}>
                         <img src={prevImage} alt="prev" />
                     </button>
-                </div>
-                <div>
                     <button
                         className="AA-custom-swiper-navigation-next"
                         onClick={nextHandler}>
@@ -98,6 +98,7 @@ export default function TestimonialsSectionComponent() {
                     </button>
                 </div>
             </div>
+            
         </section>
     );
 }

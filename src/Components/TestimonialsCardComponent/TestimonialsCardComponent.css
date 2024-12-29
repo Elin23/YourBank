@@ -61,8 +61,8 @@
 .AA-left-shadow-card {
     pointer-events: none;
     position: absolute;
-    top: 0;
-    bottom: 0;
+    top: 20px;
+    bottom: 20px;
     z-index: 10;
     left: -1px;
     width: 40.52478134%;
@@ -73,8 +73,8 @@
   .AA-right-shadow-card {
     pointer-events: none;
     position: absolute;
-    top: 0;
-    bottom: 0;
+    top: 20px;
+    bottom: 20px;
     z-index: 10;
     right: -1px;
     width: 40.52478134%;
@@ -100,11 +100,12 @@
 }
 
 /***tablet***/
-@media (max-width: 993px) {
+@media (max-width: 992px) {
     .AA-Testimony-Card {
         border: 1px solid var(--gray15-color);
         border-radius: 12px;
         padding: 20px;
+        min-height: 275px;
     }
 
     .AA-pb-50 {
@@ -124,8 +125,6 @@
     .AA-left-shadow-card {
         width: 24.02234637%;
         height: 85.34798535%;
-        top: 20px;
-        bottom: 20px;
         left: 1px;
         display: block;
     }
@@ -133,8 +132,6 @@
     .AA-right-shadow-card {
         width: 27.37430168%;
         height: 85.34798535%;
-        top: 20px;
-        bottom: 20px;
         right: 1px;
         display: block;
     }
