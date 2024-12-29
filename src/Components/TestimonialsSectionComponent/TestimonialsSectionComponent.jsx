@@ -61,6 +61,7 @@ export default function TestimonialsSectionComponent() {
             <div className="AA-left-shadow" ></div>
                  
                 <Swiper
+                    centeredSlides= {true}
                     loop={true}
                     modules={[Autoplay,Navigation, Pagination, Scrollbar]}
                     slidesPerView={3}
@@ -71,7 +72,7 @@ export default function TestimonialsSectionComponent() {
                     breakpoints={{
                         0: { slidesPerView: 1 },
                         993: { slidesPerView: 2 },
-                        1200: { slidesPerView: 3 },
+                        1920: { slidesPerView: 3 },
                     }}
                     onSwiper={(swiper) => setSwiperRef(swiper)} >
 
