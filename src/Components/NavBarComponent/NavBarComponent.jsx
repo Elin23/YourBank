@@ -8,6 +8,11 @@ import { useState } from "react";
 export default function NavBarComponent() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolling, setScrolling] = useState(false);
+  const [activeBtn, setActiveBtn] = useState(false);
+
+  const activeNavBtn = () => {
+    setActiveBtn(true)
+  }
 
   useEffect(() => {
     const handleScroll = () => {
@@ -34,7 +39,6 @@ export default function NavBarComponent() {
             <div id="bar3" className="ES-bars"></div>
             <div id="bar1" className="ES-bars"></div>
           </label>
-
         </div>
         <div className={`nav-container ${menuOpen ? "open" : ""}`}>
           <ul>
@@ -47,22 +51,29 @@ export default function NavBarComponent() {
               <li key={index} className="f-18">
                 <NavLink
                   to={item.path}
-                  className={({ isActive }) => (isActive ? "active-link" : "")}
-                >
+                  className={({ isActive }) => (isActive ? "active-link" : "")} >
                   {item.name}
                 </NavLink>
               </li>
             ))}
           </ul>
 
-          <div className="JS-right-nav">
-            <button className="js-btn1-nav f-18">
-              <Link to="/signUp">Sign Up</Link>
-            </button>
-            <button className="js-btn2-nav f-18">
-              <Link to="/login">Login</Link>
-            </button>
+          <div className="et-nav-btns">
+            <Link
+              to={"/signup"}
+              className={`f-18 ${activeBtn ? "et-bg-green" : "et-white"}`}
+              onClick={() => setActiveBtn(!activeBtn)}
+            >
+              Sign up
+            </Link>
+            <Link
+              to={"/login"}
+              className={`f-18 ${activeBtn ? "et-white" : "et-bg-green"}`}
+              onClick={() => setActiveBtn(!activeBtn)}>
+              Login
+            </Link>
           </div>
+
         </div>
       </nav>
     </>
