@@ -64,6 +64,7 @@ export default function TestimonialsSectionComponent() {
                     loop={true}
                     modules={[Autoplay,Navigation, Pagination, Scrollbar]}
                     slidesPerView={3}
+                    centeredSlides={true}
                     autoplay={{
                         delay: 2500,
                         disableOnInteraction: false
@@ -71,7 +72,7 @@ export default function TestimonialsSectionComponent() {
                     breakpoints={{
                         0: { slidesPerView: 1 },
                         993: { slidesPerView: 2 },
-                        1200: { slidesPerView: 3 },
+                        1200: { slidesPerView: 4 },
                     }}
                     onSwiper={(swiper) => setSwiperRef(swiper)} >
 
