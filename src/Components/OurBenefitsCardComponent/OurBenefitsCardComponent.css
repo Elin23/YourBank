@@ -15,7 +15,6 @@
     flex-direction: column;
     background-color: var(--black11-color);
     position: relative;
-    border-radius:20px;/*this is the default value*/
     min-height: 336px;
     overflow: hidden;
 }
@@ -31,11 +30,9 @@
 }
 .hw-OurBenefitsBlendBg{
     position: absolute;
-    width: 100%;
     height: 100%;
     top: 0;
     left: 0;
-    mix-blend-mode: screen;
     opacity: 50%;
     z-index: 3;
 }
@@ -137,8 +134,8 @@
         height: 60px;
     }
     .hw-iconContainer .circle3{
-        width: 63px;
-        height: 63px;
+        width: 60px;
+        height: 60px;
     }
     .OurBenefitsCardDescription{
         font-size: 16px;

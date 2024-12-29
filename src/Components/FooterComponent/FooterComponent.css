@@ -35,8 +35,6 @@
 .hw-footer .hw-footerLinks a{
     text-decoration: none;
     font-weight: 400;
-    font-size: 18px;
-    line-height: 27px;
     color: var(--offwhite-90-color);
     display: inline-block;
 }
@@ -54,8 +52,6 @@
         p{
             color: var(--offwhite-90-color);
             margin-bottom: 0;
-            font-size: 18px;
-            line-height: 27px;
         }
     }
 }
@@ -67,7 +63,6 @@
 .hw-lineGray{
     width: 100%;
     background-color: var(--gray15-color);
-    border: 1px;
     height: 1px;
 }
 .hw-footerBottom{
@@ -97,8 +92,6 @@
 }
 .hw-footerBottom > span{
     font-weight: 300;
-    font-size: 18px;
-    line-height: 27px;
     color: var(--gray70-color);
 }
 .hw-footerBottom .hw-footerPrivacy{
@@ -108,14 +101,11 @@
     gap: 12px;
     a{
         font-weight: 300;
-        font-size: 18px;
-        line-height: 27px;
         color: var(--gray70-color);
         text-decoration: none;
     }
 }
 .lineF{
-    display: inline-block;
     width: 1px;
     height: 27px;
     background-color: var(--gray70-color);
