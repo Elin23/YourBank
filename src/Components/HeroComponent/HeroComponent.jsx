@@ -15,7 +15,7 @@ import TitleComponent from '../TitleComponent/TitleComponent'
 export default function HeroComponent() {
   return (
     <>
-      <div className='es-hero-container'>
+      <div className='es-hero-container px-162 pb-150'>
         <div className='es-hero-left-content'>
           <div className='es-sub-title'>
             <img src={tickIcon} alt="tick-icon" />
