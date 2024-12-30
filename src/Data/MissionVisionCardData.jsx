@@ -1,8 +1,8 @@
+import img1 from "../assets/imgs/Vision/Image1.png";
+import img2 from "../assets/imgs/Vision/Image2.png";
 const storedMissionVisionCardData = localStorage.getItem(
   "MissionVisionCardData"
 );
-import img1 from "../assets/imgs/Vision/Image1.png";
-import img2 from "../assets/imgs/Vision/Image2.png";
 const MissionVisionCardData = storedMissionVisionCardData
   ? JSON.parse(storedMissionVisionCardData)
   : [

@@ -1,62 +1,97 @@
-.HW-OurBenefitsComponent{
+.HW-OurBenefitsComponent {
     background-color: var(--black10-color);
 }
-.HW-OurBenefitsCardsContainer{
+
+.HW-OurBenefitsCardsContainer {
     display: flex;
     align-items: center;
     flex-direction: column;
     justify-content: space-between;
-    gap:50px;
+    gap: 50px;
     margin-top: 80px;
 }
-.hw-OurBenefitsCardsRow{
+
+.hw-OurBenefitsCardsRow {
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 50px;
 }
-.hw-dashed-lines-vr{
+
+.hw-dashed-lines-vr {
     height: 336px;
-    width: 2px;
-    border: 1px dashed var(--gray15-color);
+    /* width: 2px; */
+    /* border: 1px dashed var(--gray15-color); */
+    border: 1px dashed transparent;
+    border-image: repeating-linear-gradient(to bottom,
+            var(--gray15-color) 0,
+            var(--gray15-color) 10px,
+            transparent 10px,
+            transparent 20px);
+    border-image-slice: 1;
 }
-.hw-dashed-lines-hr{
+
+.hw-dashed-lines-hr {
     width: 100%;
-    border: 1px dashed var(--gray15-color);
+    /* border: 1px dashed var(--gray15-color); */
+    border: 1px dashed transparent;
+    border-image: repeating-linear-gradient(to left,
+            var(--gray15-color) 0,
+            var(--gray15-color) 10px,
+            transparent 10px,
+            transparent 20px);
+    border-image-slice: 1;
 }
-.HW-OurBenefitsComponent .title-head .AM-title-comp .desc-product{
+
+.HW-OurBenefitsComponent .title-head .AM-title-comp .desc-product {
     max-width: 1296px;
 }
-.hw-roundedCardLeft{
+
+.hw-roundedCardLeft {
     border-radius: 50px 20px 50px 20px;
 }
-.hw-roundedCardRight{
+
+.hw-roundedCardRight {
     border-radius: 20px 50px 20px 50px;
 }
-@media (max-width:1919px){
-    .HW-OurBenefitsCardsContainer{
+
+@media (max-width:1919px) {
+    .HW-OurBenefitsCardsContainer {
         margin-top: 60px;
     }
-    .hw-dashed-lines-vr{
+
+    .hw-dashed-lines-vr {
         height: 276px;
     }
 }
-@media (max-width:992px){
-    .HW-OurBenefitsCardsContainer{
+
+@media (max-width:992px) {
+    .HW-OurBenefitsCardsContainer {
         gap: 24px;
     }
-    .hw-OurBenefitsCardsRow{
+
+    .hw-OurBenefitsCardsRow {
         gap: 24px;
         flex-direction: column;
     }
-    .HW-OurBenefitsComponent .AM-title-comp .desc-product{
+    .hw-dashed-lines-vr {
+        border-image: repeating-linear-gradient(to right,
+                var(--gray15-color) 0,
+                var(--gray15-color) 10px,
+                transparent 10px,
+                transparent 20px);
+        border-image-slice: 1;
+    }
+    .HW-OurBenefitsComponent .AM-title-comp .desc-product {
         text-align: center !important;
     }
-    .hw-dashed-lines-vr{
+
+    .hw-dashed-lines-vr {
         width: 590px;
         height: 2px;
     }
-    .hw-dashed-lines-hr{
+
+    .hw-dashed-lines-hr {
         width: 590px
     }
 }

@@ -42,6 +42,23 @@
   --gray75-color: #BFBFBF;
 }
 
+::-webkit-scrollbar {
+  width: 12px; 
+  height: 15px; 
+}
+
+::-webkit-scrollbar-track {
+  background: var(--gray20-color); 
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, var(--green-heavy),var(--green65-color), var(--green70-color));
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(to bottom, var(--green80-color), var(--green70-color));
+}
 .pb-150 {
   padding-bottom: 7.8125%;
 }
@@ -157,3 +174,4 @@
 }
 @media (max-width: 389px) {
 } */
+
