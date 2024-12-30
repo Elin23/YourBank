@@ -25,8 +25,8 @@
 }
 
 .swiper-wrapper {
-    justify-content: center;
-    align-items: start;
+    justify-content: start;
+    /* align-items: start; */
     /* width: 85.96491228%; */
 }
 
@@ -105,8 +105,7 @@
         padding: 14px;
     }
 
-    .swiper,
-    .swiper-wrapper{
+    .swiper{
         width: 85.625%;
     }
 
@@ -154,20 +153,18 @@
         align-items: center;
     }
 
-    /* .AA-testimonials-section .title-tabs .desc{
-        width: 100%;
-    } */
     .AA-navigation-btns {
         padding-top: 30px;
         position: static;
         justify-content: center;
         gap: 20px;
     }
-    .swiper,
-    .swiper-wrapper
+
+    .swiper
     {
         width: 100%
     }
+    
     .swiper .swiper-slide{
         padding-right :0% ;
         margin-right: 0 !important;
