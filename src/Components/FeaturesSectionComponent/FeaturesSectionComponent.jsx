@@ -27,12 +27,12 @@ export default function FeaturesSectionComponent() {
 
   return (
     <section className="features px-162 pb-150">
-
       <div className="features-title mb-80">
         <TitleComponent
           title="Our Features"
           desc="Experience a host of powerful features at YourBank, including seamless online banking, secure transactions, and personalized financial insights, all designed to enhance your banking experience"
           highlightedWords={["Features"]}
+          fw={false}
         />
       </div>
 
@@ -40,35 +40,36 @@ export default function FeaturesSectionComponent() {
         <div className="et-btns p-50">
           {btns.map((btn, index) => {
             return (
-              <button key={index}
-                className={`fw-400 f-18 ${activeBtn == btn.filter ? "et-active-btn" : "et-btn"}`}
-                onClick={() => activeTab(btn.filter)}>
+              <button
+                key={index}
+                className={`fw-400 f-18 ${
+                  activeBtn == btn.filter ? "et-active-btn" : "et-btn"
+                }`}
+                onClick={() => activeTab(btn.filter)}
+              >
                 {btn.txt}
               </button>
-            )
+            );
           })}
         </div>
 
         <div className="features-cards">
           {exportedFeaturesCardData.map((e) => {
             if (activeBtn == e.filter) {
-              return (
-                e.btn.map((b, index) => {
-                  return (
-                    <FeaturesCardComponent key={index}
-                      title={b.title}
-                      img={b.img}
-                      content={b.content}
-                    />
-                  )
-                }
-                )
-              )
+              return e.btn.map((b, index) => {
+                return (
+                  <FeaturesCardComponent
+                    key={index}
+                    title={b.title}
+                    img={b.img}
+                    content={b.content}
+                  />
+                );
+              });
             }
           })}
         </div>
-
       </div>
     </section>
-  )
+  );
 }

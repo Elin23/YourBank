@@ -10,6 +10,7 @@ export default function JobComponent() {
         title="Job Openings"
         desc="Explore exciting job openings at YourBank, where we value talent, innovation, and a passion for customer service. Join our team and be part of shaping a brighter future in the banking industry."
         highlightedWords={["Job Openings"]}
+        fw={false}
       />
       <div className="MR-JobcardFlex">
         {exportedJobData.map((data, index) => (

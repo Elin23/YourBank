@@ -26,6 +26,7 @@ export default function ProductSectionComponent() {
           title="Our Products"
           desc="Discover a range of comprehensive and customizable banking products at YourBank, designed to suit your unique financial needs and aspirations"
           highlightedWords={["Products"]}
+          fw={false}
         />
         <div className="tabs">
           {productTabs.map((tab) => (

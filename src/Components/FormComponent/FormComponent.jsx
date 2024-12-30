@@ -107,6 +107,7 @@ export default function FormComponent({action}) {
                     title={title}
                     desc={desc}
                     highlightedWords={[title]}
+                    fw={false}
                     />
                 <form>
                 {action == "signup"?
@@ -154,5 +155,5 @@ export default function FormComponent({action}) {
             </div>
         </div>
     </section>
-  )
+  );
 }
