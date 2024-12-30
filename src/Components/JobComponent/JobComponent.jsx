@@ -20,7 +20,6 @@ export default function JobComponent() {
             Department={data.Department}
             jobDescription={data.jobDescription}
             Requirements={data.Requirements}
-
           />
         ))}
       </div>

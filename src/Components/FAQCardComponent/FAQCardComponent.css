@@ -1,7 +1,7 @@
 /* Main card container styling */
 .MR-FAQ-Card {
   width: 49.0595611%;
-  padding: 49px;
+  padding: 48.5px;
   background-color: var(--black10-color);
   border: 1px var(--gray15-color) solid;
   border-radius: 14px;
@@ -28,7 +28,7 @@
   margin-bottom: 0 !important;
 }
 
-/* Responsive styles for medium-large screens (992px to 1919px) */
+/* Responsive styles for medium-large screens (1919px) */
 @media (max-width: 1919px) {
   .MR-FAQ-Card {
     width: 49.218%;
@@ -48,12 +48,12 @@
   }
 }
 
-/* Responsive styles for small screens (less than 992px) */
+/* Responsive styles for small screens less than 992px) */
 @media (max-width: 992px) {
   .MR-FAQ-Card {
     width: 100%;
     flex-wrap: wrap;
-    padding: 30px;
+    padding: 29.5px;
     gap: 20px;
   }
 
