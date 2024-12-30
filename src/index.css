@@ -8,7 +8,6 @@
   box-sizing: border-box;
   font-family: "Lexend", sans-serif;
 }
-
 :root {
   --white-color: #fff;
   --black-color: #000;
@@ -135,7 +134,6 @@
 .fs-40 {
   font-size: 40px;
 }
-
 @media (max-width: 1919px) {
 
   /*edited*/

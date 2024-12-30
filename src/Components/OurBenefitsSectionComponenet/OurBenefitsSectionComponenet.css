@@ -1,8 +1,10 @@
 .HW-OurBenefitsComponent {
     background-color: var(--black10-color);
 }
-
-.HW-OurBenefitsCardsContainer {
+.HW-OurBenefitsComponent .AM-title-comp .desc{
+    width: 1296px;
+}
+.HW-OurBenefitsCardsContainer{
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -20,8 +22,7 @@
 
 .hw-dashed-lines-vr {
     height: 336px;
-    /* width: 2px; */
-    /* border: 1px dashed var(--gray15-color); */
+    width: 2px;
     border: 1px dashed transparent;
     border-image: repeating-linear-gradient(to bottom,
             var(--gray15-color) 0,
@@ -33,9 +34,8 @@
 
 .hw-dashed-lines-hr {
     width: 100%;
-    /* border: 1px dashed var(--gray15-color); */
     border: 1px dashed transparent;
-    border-image: repeating-linear-gradient(to left,
+    border-image: repeating-linear-gradient(to right,
             var(--gray15-color) 0,
             var(--gray15-color) 10px,
             transparent 10px,
@@ -58,10 +58,17 @@
 @media (max-width:1919px) {
     .HW-OurBenefitsCardsContainer {
         margin-top: 60px;
+        gap: 30px;
+    }
+    .hw-OurBenefitsCardsRow{
+        gap: 30px;
     }
 
     .hw-dashed-lines-vr {
         height: 276px;
+    }
+    .HW-OurBenefitsComponent .AM-title-comp .desc{
+        width: 1030px;
     }
 }
 
@@ -69,8 +76,10 @@
     .HW-OurBenefitsCardsContainer {
         gap: 24px;
     }
-
-    .hw-OurBenefitsCardsRow {
+    .HW-OurBenefitsComponent .AM-title-comp .desc{
+        width: unset;
+    }
+    .hw-OurBenefitsCardsRow{
         gap: 24px;
         flex-direction: column;
     }
