@@ -24,7 +24,7 @@ export default function FAQSectionComponent() {
 
       <div className="MR-FAQ-card-container">
         {/* upper FAQs Cards*/}
-        <div className="MR-Upper-FAQ-Card">
+        <div className="MR-Upper-FAQ-Card ">
           {upperFAQs.map((data, index) => (
             <FAQCardComponent
               key={index}
@@ -80,7 +80,7 @@ export default function FAQSectionComponent() {
           </>
         )}
 
-        <button className="MR-FAQ-Button fw-400" onClick={toggleFAQs}>
+        <button className="MR-FAQ-Button f-18 fw-400" onClick={toggleFAQs}>
           {isVisible ? "Hide FAQ's " : "Load All FAQ's "}
           <img
             src={

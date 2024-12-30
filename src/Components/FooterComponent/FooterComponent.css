@@ -217,7 +217,7 @@
         position: absolute;
         bottom: 100%;
         transform: translatey(52%);
-    }
+    } 
 }
 @media (max-width: 389px) {
         .hw-footer{
@@ -241,7 +241,8 @@
                 line-height: 21px;
             }
         }
-    }    
+    }  
+
     .hw-footerBottom .hw-footerIcons{
         gap: 8px;
     }

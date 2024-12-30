@@ -64,7 +64,6 @@ export default function FooterComponent() {
                 <div className="hw-fotIconConta">
                     <img src={linkdenIcon}  />
                 </div>
-                
             </div>
             <span>YourBank All Rights Reserved</span>
             <div className="hw-footerPrivacy">

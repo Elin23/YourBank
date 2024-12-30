@@ -13,19 +13,15 @@ export default function JobComponent() {
       />
       <div className="MR-JobcardFlex">
         {exportedJobData.map((data, index) => (
-          <div className="MR-JobCardContainer" key={index}>
-            <JobCardComponent
-              Title={data.Title}
-              location={data.location}
-              Department={data.Department}
-              jobDescription={data.jobDescription}
-              Req1={data.Req1}
-              Req2={data.Req2}
-              Req3={data.Req3}
-              Req4={data.Req4}
-              Req5={data.Req5}
-            />
-          </div>
+          <JobCardComponent
+            key={index}
+            Title={data.Title}
+            location={data.location}
+            Department={data.Department}
+            jobDescription={data.jobDescription}
+            Requirements={data.Requirements}
+
+          />
         ))}
       </div>
     </div>
