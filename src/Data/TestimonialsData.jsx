@@ -18,7 +18,7 @@ const TestimonialsData = storedValueTestimonialsData ? JSON.parse(storedValueTes
   {
     userName: "Alaa A",
     opinion:
-      "I really appreciated how you kept me up to date on yourank — it helped me coordinate with our stakeholders, and I’m excited to share that we’re on track to launch. I’m impressed with the services you’re introducing.",
+      "I really appreciated how you kept me up to date on yourBank — it helped me coordinate with our stakeholders, and I’m excited to share that we’re on track to launch. I’m impressed with the services you’re introducing.",
   },
   {
     userName: "Joudy S",
