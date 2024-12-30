@@ -17,13 +17,75 @@
 .AM-mission-vision-card .mission-vision-img,
 .AM-mission-vision-card-reverse .mission-vision-img {
     background-image: url("../../../src//assets/imgs/Abstract\ Design6.png");
-    background-size: cover;
-    background-position: center;
+    background-size: contain;
+    /* background-position:left; */
+    background-repeat: no-repeat;
     width: 664px;
     padding: 60px;
     padding-bottom: 0px;
     border: 1px solid var(--gray15-color);
     border-radius: 50px 50px 20px 20px;
+    position: relative;
+    /* overflow: hidden; */
+}
+
+/* .AM-mission-vision-card .mission-vision-img .mission-vision-img2 {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+} */
+
+.AM-mission-vision-card .mission-vision-img::before,
+.AM-mission-vision-card-reverse .mission-vision-img::before {
+    content: "";
+    background-image: url("../../../src//assets/imgs/blend.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 50%;
+    padding: 60px;
+    padding-bottom: 0px;
+    border-radius: 50px 50px 20px 20px;
+    width: 50%;
+    height: 100%;
+    object-fit: cover;
+    top: 0;
+    left: 0;
+    position: absolute;
+    z-index: 2;
+
+}
+
+.AM-mission-vision-card .mission-vision-img::after,
+.AM-mission-vision-card-reverse .mission-vision-img::after {
+    content: "";
+    background: linear-gradient(267.5deg, #1C1C1C 40.67%, rgba(28, 28, 28, 0) 99.81%),
+        linear-gradient(106.06deg, rgba(202, 255, 51, 0.05) -29.45%, rgba(202, 255, 51, 0) 27.86%);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    padding: 60px;
+    padding-bottom: 0px;
+    object-fit: cover;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    border-radius: 50px 50px 20px 20px;
+
+}
+
+.AM-mission-vision-card .mission-vision-img img,
+.AM-mission-vision-card-reverse .mission-vision-img img {
+    /* content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0; */
+    position: relative;
+    z-index: 4;
+
+
 }
 .mission-vision-img{
     position: relative;
@@ -201,4 +263,3 @@
         margin-bottom: 0px;
     }
 }
-
