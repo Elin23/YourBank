@@ -2,7 +2,6 @@
     position: relative;
     display: flex;
     align-items: start;
-    /* justify-content: space-between; */
     flex-wrap: wrap;
     gap: 6.25%;
     padding-top: 10.3125%;
@@ -93,14 +92,12 @@
     position: relative;
     display: flex;
     flex-direction: column;
-    background-color: var(--black11-color);
     gap: 26.01px;
     border-radius: 10.4px;
-    border-width: 0.87px;
-    border-style: solid;
-    /* border-image-source: linear-gradient(214.24deg, rgba(202, 255, 51, 0.2) 0%, rgba(202, 255, 51, 0) 11.24%, rgba(202, 255, 51, 0) 91.73%, rgba(202, 255, 51, 0.2) 99.95%); */
-    border-image-slice: 1;
-    z-index: 1;
+    border: 0.87px solid transparent;
+    background: linear-gradient(-214.85deg, rgba(202, 255, 51, 0.2) 0%,
+            rgba(202, 255, 51, 0) 11.24%, rgba(202, 255, 51, 0) 91.73%,
+            rgba(202, 255, 51, 0.2) 99.95%), rgba(38, 38, 38, 1) border-box;
 }
 
 .es-hero-right-content::before {
@@ -109,11 +106,9 @@
     height: 100%;
     top: 0;
     left: 0;
+    border-radius: 10.4px; 
     position: absolute;
-    background: linear-gradient(214.85deg,
-            rgba(26, 26, 26, 0) 0%,
-            rgba(26, 26, 26, 0.7) 30%,
-            #1A1A1A 60%);
+    background-color: var(--black10-color);
     z-index: 2;
 }
 
@@ -136,10 +131,13 @@
     left: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    mix-blend-mode: screen;
-    opacity: 50%;
-    z-index: 1;
+    opacity: 0.5;
+    z-index: 2;
+    background: linear-gradient(214.85deg,
+            rgba(26, 26, 26, 0) 0%,
+            rgba(26, 26, 26, 0.7) 10%,
+            #1A1A1A 60%),
+        url('../../assets/imgs/blend.png');
 }
 
 .es-hero-right-content .es-your-trans h4,
@@ -279,9 +277,12 @@
     line-height: 26.01px;
     color: var(--white-color);
     border-right: 0.87px solid var(--gray15-color);
-    border-bottom: 0.87px solid var(--gray15-color);
 }
-
+.es-mini-box:nth-child(2) .es-currency-value,
+.es-mini-box:nth-child(2) .es-upper
+{
+    border-right:none;
+}
 .exchange-btn {
     width: 100%;
     position: relative;
@@ -767,11 +768,13 @@
         width: 382px;
         height: 307.42px;
     }
+
     .es-hero-right-content::after {
         width: 210px;
         height: 201px;
         top: -5%;
     }
+
     .es-hero-left-content {
         width: 100%;
     }

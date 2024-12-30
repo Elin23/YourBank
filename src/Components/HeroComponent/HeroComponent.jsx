@@ -43,7 +43,7 @@ export default function HeroComponent() {
             </div>
           </div>
           <div className='es-hero-right-content'>
-            <img src={imgScreen} className='bg-img' alt="imgScreen" />
+            <div className='bg-img' alt="imgScreen" />
             <div className="es-your-trans">
               <h4 className='fw-500'>Your Transactions</h4>
               {/* box-1- */}
