@@ -99,7 +99,9 @@ export default function FormComponent({action}) {
     <section className="AA-form-section AA-px-297 pb-150">
 
         <div className="AA-form-container">
-            <div className="AA-design"></div>
+            <div className="AA-design">
+                <img src='../../assets/imgs/Abstract Design4.png' alt="design" />
+            </div>
             <div className="overlay">
                 <TitleComponent
                     title={title}
@@ -137,7 +139,7 @@ export default function FormComponent({action}) {
                             <p className={`AA-error ${messagePass.length == 0 ? "AA-hide" : "AA-show" }`}>{messagePass}</p>
                         </div>
                     </div>
-                    <Link className="AA-forget-pass-btn f-18 fw-400" to="#">Forgot Password?</Link>
+                    {action == "login"? <Link className="AA-forget-pass-btn f-18 fw-400" to="#">Forgot Password?</Link> : <div className="AA-pb-40"></div>}
                     <CustomButtonComponent title={`${action==="login" ? "Login" : "Sign Up"}`} IsColor={true} />
                     <CustomButtonComponent title={`${action==="login" ? "Sign Up" : "Login"}`} IsColor={false}/>
                     <div className="AA-continue-p">

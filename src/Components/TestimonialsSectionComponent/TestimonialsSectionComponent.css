@@ -2,21 +2,32 @@
     background-color: var(--black10-color);
     position: relative;
 }
+
+.AA-testimonials-section .title-tabs{
+    align-items: end;
+}
+
 .AA-testimonials-section .title-tabs .AM-title-comp{
     width: 57.01%;
 }
+
+.AA-testimonials-section .title-tabs .AM-title-comp .desc{
+    margin-bottom: 0 !important;
+}
+
 .swiper {
     position: relative;
     width: 85.96491228%;
     /* width: 85.96491228%; */
     display: flex;
     justify-content: center;
-    align-items: center;
     align-items: stretch;
 }
 
 .swiper-wrapper {
-    align-items: stretch;
+    justify-content: center;
+    align-items: start;
+    /* width: 85.96491228%; */
 }
 
 .swiper .swiper-slide {
@@ -34,7 +45,7 @@
     top: 0;
     bottom: 0;
     z-index: 2;
-    left: 0px;
+    left: -1px;
     width: 34.83709273182957%;
     height: 100%;
     margin-left: 7.017543859649123%;
@@ -76,15 +87,26 @@
 
 /***laptop ***/
 @media (max-width: 1919px) {
+
+    .AA-testimonials-section .mb-100{
+        margin-bottom: 6.25%;
+    }
     .AA-testimonials-section .title-tabs .AM-title-comp{
         width: 64.92%;
     }
+
+    .AA-testimonials-section .title-tabs .AM-title-comp .desc{
+        font-size: 14px;
+        line-height: 21px;
+    }
+
     .AA-custom-swiper-navigation-next,
     .AA-custom-swiper-navigation-prev {
         padding: 14px;
     }
 
-    .swiper{
+    .swiper,
+    .swiper-wrapper{
         width: 85.625%;
     }
 
@@ -127,6 +149,11 @@
     .AA-testimonials-section .title-tabs .AM-title-comp{
         width: 100%;
     }
+
+    .AA-testimonials-section .title-tabs{
+        align-items: center;
+    }
+
     /* .AA-testimonials-section .title-tabs .desc{
         width: 100%;
     } */
@@ -136,7 +163,9 @@
         justify-content: center;
         gap: 20px;
     }
-    .swiper{
+    .swiper,
+    .swiper-wrapper
+    {
         width: 100%
     }
     .swiper .swiper-slide{
@@ -153,6 +182,14 @@
 
 /***mobile ***/
 @media (max-width: 768px) {
+    .AA-testimonials-section .mb-100{
+        margin-bottom: 11.1731843575419%;
+    }
+
+    .AA-testimonials-section .title-tabs .AM-title-comp .title{
+        margin-bottom: 10px;
+    }
+
     .AA-navigation-btns {
         position: static;
         justify-content: center;

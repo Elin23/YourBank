@@ -72,7 +72,7 @@ export default function TestimonialsSectionComponent() {
                     breakpoints={{
                         0: { slidesPerView: 1 },
                         993: { slidesPerView: 2 },
-                        1920: { slidesPerView: 3 },
+                        1200: { slidesPerView: 4 },
                     }}
                     onSwiper={(swiper) => setSwiperRef(swiper)} >
 

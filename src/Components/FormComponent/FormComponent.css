@@ -3,13 +3,19 @@
     background-color: var(--black10-color);
 }
 
+.AA-pb-40{
+    padding-bottom: 3.898635477582846%;
+}
+
 /**style image design**/
 .AA-form-section .AA-design{
     position: relative;
 }
 
-.AA-form-section .AA-design::before {
+.AA-form-section .AA-design {
     content: url('../../assets/imgs/Abstract Design4.png');
+    width: 342px;
+    height: 325px;
     position: absolute;
     top: 0%;
     right: 0%;
@@ -62,20 +68,30 @@
     filter: grayscale(100%);
 }
 
-/**style title**/
+/**style custom title**/
 .AA-form-section .AA-form-container .overlay .AM-title-comp{
     padding-top: 7.5414781297%;
     padding-bottom: 6.033182503770739%;
 }
 
 .AA-form-section .AA-form-container .overlay .AM-title-comp .title,
-.AA-form-section .AA-form-container .overlay .AM-title-comp .highlight {
+.AA-form-section .AA-form-container .overlay .AM-title-comp .highlight,
+.AA-form-section .AA-form-container .overlay .AM-title-comp .desc  {
     text-align: center;
 }
 
 .AA-form-section .AA-form-container .overlay .AM-title-comp .desc {
-    text-align: center;
+    line-height: 22.5px;
 }
+
+.AA-form-section .AA-form-container .overlay .AM-title-comp .title,
+.AA-form-section .AA-form-container .overlay .AM-title-comp .highlight{
+    line-height: 60px;
+}
+
+.AA-form-section .AA-form-container .overlay .AM-title-comp .title{
+    margin-bottom: 1.510574018126888%;
+} 
 
 /**style error message**/
 .AA-form-section .AA-form-container .overlay .AA-error{
@@ -94,7 +110,7 @@
 
 /***style input field**/
 .AA-form-section .AA-form-container .overlay .AA-input-pb{
-    padding-bottom: 2.262443438914027%;
+    padding-bottom: 2.923976608187135%;
 }
 
 .AA-form-section .AA-form-container .overlay .AA-input,
@@ -103,10 +119,8 @@
     background-color: #1A1A1A;
     border: 1px solid #262626;
     padding: 24px;
-    gap: 10px;
     border-radius: 88px;
     width: 100%;
-    display: inline-block;
 }
 
 .AA-form-section .AA-form-container .overlay .AA-inputs{
@@ -141,8 +155,8 @@
 /**style forget btn**/
 .AA-form-section .AA-form-container .overlay .AA-forget-pass-btn{
     color: var(--white-color);
-    padding-top: 3.01659125188537%;
-    padding-bottom: 3.01659125188537%;
+    padding-top: 3.898635477582846%;
+    padding-bottom: 3.898635477582846%;
 }
 
 /**style social login div**/
@@ -152,7 +166,7 @@
 }
 
 .AA-form-section .AA-form-container .overlay .AA-custom-btn{
-    margin-bottom: 1.809954751131222%;
+    margin-bottom: 2.339181286549708%;
 }
 
 .AA-form-section .AA-form-container .overlay form{
@@ -175,7 +189,7 @@
     color: var(--gray70-color);
     width: 50.4873294347%;
     text-align: center;
-    margin-bottom: 2.262443438914027%;
+    margin-bottom: 2.923976608187135%;
 }
 
 .AA-form-section .AA-form-container .overlay .AA-continue-p p{
@@ -210,9 +224,18 @@
     .AA-form-section{
         padding-top: 10.625%;
     }
+
+    .AA-pb-40{
+        padding-bottom: 4.518072289156627%;
+    }
+
     .AA-px-297 {
         padding-left: 13.05555556%;
         padding-right: 13.05555556%;
+    }
+    .AA-form-section .AA-design {
+        width: 256px;
+        height: 243px;
     }
 
     .AA-form-section .AA-form-container .overlay form{
@@ -227,28 +250,41 @@
         padding-left: 18.79699248120301%;
         padding-right: 18.79699248120301%;
     }
+    .AA-form-section .AA-form-container .overlay .AM-title-comp .title{
+        margin-bottom: 2.409638554216867%;
+    } 
 
+    .AA-form-section .AA-form-container .overlay .AM-title-comp .title,
+    .AA-form-section .AA-form-container .overlay .AM-title-comp .highlight
+    {
+        line-height: 47.5px;
+    }
+    
     .AA-form-section .AA-form-container .overlay .AM-title-comp p{
+        line-height: 20px;
         margin: 0;
     }
 
     .AA-form-section .AA-form-container .overlay .AA-input-pb{
-        padding-bottom: 2.819548872180451%;
+        padding-bottom: 4.518072289156627%;
     }
     
 
     .AA-form-section .AA-form-container .overlay .AA-forget-pass-btn{
-        padding-top: 2.819548872180451%;
-        padding-bottom: 2.819548872180451%;
+        padding-top: 4.518072289156627%;
+        padding-bottom: 4.518072289156627%;
     }
 
     .AA-form-section .AA-form-container .overlay .AA-custom-btn{
-        margin-bottom: 2.255639097744361%;
+        margin-bottom: 3.614457831325301%;
     }
 
-    .AA-form-section .AA-form-container .overlay .AA-social-btns{
-        padding-top: 2.255639097744361%;
+    .AA-form-section .AA-form-container .overlay .AA-social-login-btns{
         gap: 20px;
+    }
+
+    .AA-form-section .AA-form-container .overlay .AA-inputs{
+        gap: 24px;
     }
 
     .AA-form-section .AA-form-container .overlay .AA-input,
@@ -258,9 +294,10 @@
     }
     .AA-form-section .AA-form-container .overlay  .AA-continue-p{
         width: 60.843373494%;
-        padding-top: 2.255639097744361%;
-        padding-bottom: 2.255639097744361%;
-        margin-bottom: 0%;
+        /* padding-top: 2.255639097744361%;
+        padding-bottom: 2.255639097744361%; */
+        margin-bottom: 3.614457831325301%;
+
     }
 
     .AA-form-section .AA-form-container .overlay .AA-continue-p::before,
@@ -276,6 +313,7 @@
 
     .AA-form-section .AA-form-container .overlay .AA-inputs{
         flex-wrap: wrap;
+        gap: 20px;
         width: 100%;
     }
 
@@ -290,10 +328,19 @@
 }
 
 @media (max-width: 768px) {
+    .AA-pb-40{
+        padding-bottom: 8.053691275167785%;
+    }
+
     .AA-form-section{
         padding-top: 35.38461538461538%;
     }
     
+    .AA-form-section .AA-design {
+        width: 167px;
+        height: 159px;
+    }
+
     .AA-px-297 {
         padding-left: 4.1025641%;
         padding-right: 4.1025641%;
@@ -310,27 +357,36 @@
         padding-bottom: 11.1731843575419%;
     }
 
-    .AA-form-section .AA-form-container .overlay .AA-input-pb{
-        padding-bottom: 5.58659217877095%;
+    .AA-form-section .AA-form-container .overlay .AM-title-comp .title,
+    .AA-form-section .AA-form-container .overlay .AM-title-comp .highlight{
+        line-height: 35px;
     }
-    .AA-form-section .AA-form-container .overlay .AA-inputs{
-        flex-wrap: wrap;
-        width: 100%;
+
+    .AA-form-section .AA-form-container .overlay .AM-title-comp .title{
+        margin-bottom: 3.355704697986577%;
+    }
+
+    .AA-form-section .AA-form-container .overlay .AM-title-comp .desc {
+        line-height: 17.5px;
+    }
+
+    .AA-form-section .AA-form-container .overlay .AA-input-pb{
+        padding-bottom: 6.711409395973154%;
     }
 
     .AA-form-section .AA-form-container .overlay .AA-forget-pass-btn{
-        padding-top: 6.70391061452514%;
-        padding-bottom: 6.70391061452514%;
+        padding-top: 8.053691275167785%;
+        padding-bottom: 8.053691275167785%;
     }
 
     .AA-form-section .AA-form-container .overlay .AA-custom-btn{
-        margin-bottom: 6.70391061452514%;
+        margin-bottom: 8.053691275167785%;
     }
 
     .AA-form-section .AA-form-container .overlay .AA-continue-p{
         width: 100%;
-        padding-top: 6.70391061452514%;
-        padding-bottom: 6.70391061452514%;
+        padding-top: 0;
+        margin-bottom: 8.053691275167785%;
     }
     .AA-form-section .AA-form-container .overlay .AA-continue-p::before {
         width: 25.5033557047%;
