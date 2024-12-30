@@ -97,60 +97,119 @@ export default function FormComponent({action}) {
 
   return (
     <section className="AA-form-section AA-px-297 pb-150">
-
-        <div className="AA-form-container">
-            <div className="AA-design"></div>
-            <div className="overlay">
-                <TitleComponent
-                    title={title}
-                    desc={desc}
-                    highlightedWords={[title]}
-                    />
-                <form>
-                {action == "signup"?
-                    <div className="AA-inputs AA-input-pb">
-                        {/* firstName input */}
-                        <div className="AA-input-Fields AA-input-group">
-                            <input className="AA-input f-18 fw-300" placeholder="Enter First Name" onChange={handleFirstNameChange} />
-                            <p className={`AA-error ${messagefirstName.length == 0 ? "AA-hide" : "AA-show" }`}>{messagefirstName}</p>                    
-                        </div>
-                        {/* lastName input */}
-                        <div className="AA-input-Fields AA-input-group">
-                            <input className="AA-input f-18 fw-300" placeholder="Enter Last Name" onChange={handleLastNameChange} />
-                            <p className={`AA-error ${messagelastName.length == 0 ? "AA-hide" : "AA-show" }`}>{messagelastName}</p>                    
-                        </div>
-                    </div> : <></>}
-                    <div className="AA-inputs">
-                        {/* email input */}
-                        <div className="AA-input-Fields AA-input-group">
-                            <input className="AA-input f-18 fw-300" placeholder="Enter your Email" onChange={handleEmailChange} />
-                            <p className={`AA-error ${message.length == 0 ? "AA-hide" : "AA-show" }`}>{message}</p>                    
-                        </div>
-                        {/* password input */}
-                        <div className="AA-input-Fields">
-                            <div className="AA-input-group">
-                                <input className="AA-password-input f-18 fw-300" type={type} placeholder="Enter your Password" onChange={handlePasswordChange}/>
-                                <span class="AA-icon-pass" onClick={handleToggle}>
-                                    <i class={`eye-icon ${icon == 'show' ? "fa-solid fa-eye" : "fa-regular fa-eye-slash"}`}  onClick={handleToggle}></i>
-                                </span>
-                            </div>
-                            <p className={`AA-error ${messagePass.length == 0 ? "AA-hide" : "AA-show" }`}>{messagePass}</p>
-                        </div>
-                    </div>
-                    <Link className="AA-forget-pass-btn f-18 fw-400" to="#">Forgot Password?</Link>
-                    <CustomButtonComponent title={`${action==="login" ? "Login" : "Sign Up"}`} IsColor={true} />
-                    <CustomButtonComponent title={`${action==="login" ? "Sign Up" : "Login"}`} IsColor={false}/>
-                    <div className="AA-continue-p">
-                        <p>Or Continue with</p>
-                    </div>
-                    <div className="AA-social-login-btns">
-                        <SocialButtonComponent img={imgGmail}/>
-                        <SocialButtonComponent img={imgFacebook} />
-                        <SocialButtonComponent img={imgApple}/>
-                    </div>
-                </form>
+      <div className="AA-form-container">
+        <div className="AA-design"></div>
+        <div className="overlay">
+          <TitleComponent
+            title={title}
+            desc={desc}
+            highlightedWords={[title]}
+            fw={false}
+          />
+          <form>
+            {action == "signup" ? (
+              <div className="AA-inputs AA-input-pb">
+                {/* firstName input */}
+                <div className="AA-input-Fields AA-input-group">
+                  <input
+                    className="AA-input f-18 fw-300"
+                    placeholder="Enter First Name"
+                    onChange={handleFirstNameChange}
+                  />
+                  <p
+                    className={`AA-error ${
+                      messagefirstName.length == 0 ? "AA-hide" : "AA-show"
+                    }`}
+                  >
+                    {messagefirstName}
+                  </p>
+                </div>
+                {/* lastName input */}
+                <div className="AA-input-Fields AA-input-group">
+                  <input
+                    className="AA-input f-18 fw-300"
+                    placeholder="Enter Last Name"
+                    onChange={handleLastNameChange}
+                  />
+                  <p
+                    className={`AA-error ${
+                      messagelastName.length == 0 ? "AA-hide" : "AA-show"
+                    }`}
+                  >
+                    {messagelastName}
+                  </p>
+                </div>
+              </div>
+            ) : (
+              <></>
+            )}
+            <div className="AA-inputs">
+              {/* email input */}
+              <div className="AA-input-Fields AA-input-group">
+                <input
+                  className="AA-input f-18 fw-300"
+                  placeholder="Enter your Email"
+                  onChange={handleEmailChange}
+                />
+                <p
+                  className={`AA-error ${
+                    message.length == 0 ? "AA-hide" : "AA-show"
+                  }`}
+                >
+                  {message}
+                </p>
+              </div>
+              {/* password input */}
+              <div className="AA-input-Fields">
+                <div className="AA-input-group">
+                  <input
+                    className="AA-password-input f-18 fw-300"
+                    type={type}
+                    placeholder="Enter your Password"
+                    onChange={handlePasswordChange}
+                  />
+                  <span class="AA-icon-pass" onClick={handleToggle}>
+                    <i
+                      class={`eye-icon ${
+                        icon == "show"
+                          ? "fa-solid fa-eye"
+                          : "fa-regular fa-eye-slash"
+                      }`}
+                      onClick={handleToggle}
+                    ></i>
+                  </span>
+                </div>
+                <p
+                  className={`AA-error ${
+                    messagePass.length == 0 ? "AA-hide" : "AA-show"
+                  }`}
+                >
+                  {messagePass}
+                </p>
+              </div>
             </div>
+            <Link className="AA-forget-pass-btn f-18 fw-400" to="#">
+              Forgot Password?
+            </Link>
+            <CustomButtonComponent
+              title={`${action === "login" ? "Login" : "Sign Up"}`}
+              IsColor={true}
+            />
+            <CustomButtonComponent
+              title={`${action === "login" ? "Sign Up" : "Login"}`}
+              IsColor={false}
+            />
+            <div className="AA-continue-p">
+              <p>Or Continue with</p>
+            </div>
+            <div className="AA-social-login-btns">
+              <SocialButtonComponent img={imgGmail} />
+              <SocialButtonComponent img={imgFacebook} />
+              <SocialButtonComponent img={imgApple} />
+            </div>
+          </form>
         </div>
+      </div>
     </section>
-  )
+  );
 }

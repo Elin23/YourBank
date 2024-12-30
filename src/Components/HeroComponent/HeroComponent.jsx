@@ -26,6 +26,7 @@ export default function HeroComponent() {
               title="Welcome to YourBank Empowering Your Financial Journey"
               desc="At YourBank, our mission is to provide comprehensive banking solutions that empower individuals and businesses to achieve their financial goals. We are committed to delivering personalized and innovative services that prioritize our customers' needs."
               highlightedWords={["Financial", "Journey"]}
+              fw={false}
             />
           </div>
           <div className="es-hero-btn f-18">
