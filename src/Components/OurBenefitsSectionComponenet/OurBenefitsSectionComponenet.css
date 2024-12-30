@@ -21,11 +21,23 @@
 .hw-dashed-lines-vr{
     height: 336px;
     width: 2px;
-    border: 1px dashed var(--gray15-color);
+    border: 1px dashed transparent;
+    border-image: repeating-linear-gradient(to bottom,
+            var(--gray15-color) 0,
+            var(--gray15-color) 10px,
+            transparent 10px,
+            transparent 20px);
+    border-image-slice: 1;
 }
 .hw-dashed-lines-hr{
     width: 100%;
-    border: 1px dashed var(--gray15-color);
+    border: 1px dashed transparent;
+    border-image: repeating-linear-gradient(to right,
+            var(--gray15-color) 0,
+            var(--gray15-color) 10px,
+            transparent 10px,
+            transparent 20px);
+    border-image-slice: 1;
 }
 .HW-OurBenefitsComponent .title-head .AM-title-comp .desc-product{
     max-width: 1296px;
@@ -54,6 +66,9 @@
 @media (max-width:992px){
     .HW-OurBenefitsCardsContainer{
         gap: 24px;
+    }
+    .HW-OurBenefitsComponent .AM-title-comp .desc{
+        width: unset;
     }
     .hw-OurBenefitsCardsRow{
         gap: 24px;

@@ -8,7 +8,6 @@
     margin-bottom: 0;
 }
 .hw-OurBenefitsCard{
-    padding: 50px;
     gap: 30px;
     display: flex;
     align-items: flex-start;
@@ -53,7 +52,6 @@
 .hw-OurBenefitsCardHeading{
     display: flex;
     align-items: center;
-    justify-content: space-between;
     gap: 20px;
     z-index: 6;
 }
@@ -94,15 +92,9 @@
     opacity: 0.3;
 }
 .hw-OurBenefitsCardTitle{
-    font-size: 24px;
-    font-weight: 400;
-    line-height: 36px;
     color: var(--white-color);
 }
 .OurBenefitsCardDescription{
-    font-weight: 300;
-    font-size: 18px;
-    line-height: 27px;
     color: var(--gray70-color);
     z-index: 6;
     max-width: 648px;
