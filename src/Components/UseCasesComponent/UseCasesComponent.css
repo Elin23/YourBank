@@ -4,6 +4,7 @@
     justify-content: space-between;
     flex-wrap: wrap;
     width: 100%;
+    margin-bottom: 60px;
 }
 
 .Af-UseCasesComponentReverse {
@@ -19,9 +20,10 @@
     width: 46.86%;
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
     flex-wrap: wrap;
     gap: 20px;
+    padding: 50px;
     background-color: var(--black11-color);
     background-image: url(/src/assets/imgs/Abstract\ Design3.png);
     background-repeat: no-repeat;
@@ -33,9 +35,10 @@
     width: 46.86%;
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
     flex-wrap: wrap;
     gap: 20px;
+    padding: 50px;
     background-color: var(--black11-color);
     background-image: url(/src/assets/imgs/Abstract\ Design4.png);
     background-repeat: no-repeat;
@@ -44,31 +47,32 @@
 }
 
 .Af-cardTop {
-    margin-top: 50px;
-    width: 86.63%;
+    width: 100%;
+    height: 222px;
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 10px;
+    gap: 20px;
 }
 
 .Af-cardBottom {
-    width: 86.63%;
+    width: 100%;
+    height: 192px;
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 10px;
-    margin-bottom: 50px;
+    gap: 20px;
 }
 
 .Af-UseCasesComponentSide-1-card {
     display: flex;
-    justify-content: center;
     align-items: center;
     flex-direction: column;
+    gap: 24px;
+    padding: 30px;
     background-color: var(--black10-color);
     width: 48.45%;
-    height: 222px;
+    height: 100%;
     border-radius: 16px;
     border: 1px solid var(--gray15-color);
 
@@ -76,13 +80,11 @@
 
 .Af-UseCasesComponentSide-1-card span {
     color: var(--white-color);
-    padding: 24px 30px 30px;
     text-align: center;
     font-size: 20px;
 }
 
 .Af-UseCasesComponentSide-1-card-img {
-    margin-top: 30px;
     padding: 10px;
     width: 78px;
     height: 78px;
@@ -92,32 +94,32 @@
 }
 
 .Af-UseCasesComponentSide-1-card-img div {
-    background-image: linear-gradient(to bottom, rgba(202, 255, 51, 0.05), rgba(202, 255, 51, 0));
+    background-image: linear-gradient(to bottom, rgba(202, 255, 51, 0.1), rgba(202, 255, 51, 0));
     width: 58px;
     height: 58px;
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 1px solid var(--gray20-color);
+    border: 1px solid linear-gradient(to bottom, rgba(202, 255, 51, 0.2), rgba(202, 255, 51, 0));
 }
 
 .Af-UseCasesComponentSide-2 {
     width: 46.86%;
 }
 
+/* gap */
 .Af-UseCasesComponentSide-2-title {
-    padding-bottom: 62px;
+    margin-bottom: 62px;
 }
 
 .Af-UseCasesComponentSide-2-title h4 {
     color: var(--white-color);
+    line-height: 45px;
 }
 
 .Af-UseCasesComponentSide-2-title p {
     color: var(--gray70-color);
-    font-size: 18px;
-    font-weight: 300;
 }
 
 .Af-UseCasesComponentSide-2-secondDiv {
@@ -125,12 +127,13 @@
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    gap: 10px;
     width: 100%;
 }
-
 .Af-divBorder {
-    border-right: 1px dashed var(--gray15-color);
+    width: 1px;
+    height: 146px;
+    background-image: linear-gradient(to bottom, var(--gray15-color) 50%, transparent 50%);
+    background-size: 1px 20px;
 }
 
 .Af-UseCasesComponentSide-2-secondDiv .Af-rate {
@@ -140,14 +143,12 @@
 
 .Af-UseCasesComponentSide-2-secondDiv .Af-rate h3 {
     color: var(--green60-color);
-    font-size: 48px;
+    font-size: 58px;
+    line-height: 87px;
 }
 
 .Af-UseCasesComponentSide-2-secondDiv .Af-rate p {
     color: var(--gray70-color);
-    font-size: 18px;
-    font-weight: 300;
-    line-height: 27px;
 }
 
 .Af-UseCasesComponentSide-2-button {
@@ -164,23 +165,78 @@
     padding: 18px 24px;
 }
 
-@media (max-width:1440px) {
+@media (max-width:1919px) {
     .Af-UseCasesComponentSide-2 {
         margin-top: 20px;
+    }
+
+    .Af-UseCasesComponentSide-1Reverse,
+    .Af-UseCasesComponentSide-1 {
+        width: 47.65%;
+        padding: 40px;
+        gap: 10px;
+    }
+
+    .Af-cardTop {
+        height: 174px;
+        gap: 10px;
+    }
+
+    .Af-cardBottom {
+        height: 150px;
+        gap: 10px;
+    }
+
+    .Af-UseCasesComponentSide-1-card {
+        padding: 24px;
+        gap: 14px;
+        width: 49.05%;
+    }
+
+    .Af-UseCasesComponentSide-1-card-img {
+        height: 64px;
+        width: 64px;
+        padding: 8px;
+        gap: 10px;
+
+        div {
+            width: 48px;
+            height: 48px;
+            padding: 12px;
+            gap: 10px;
+
+            img {
+                width: 24px;
+                height: 24px;
+            }
+        }
     }
 
     .Af-UseCasesComponentSide-1-card span {
         font-size: 16px;
     }
-    .Af-UseCasesComponentSide-2-secondDiv .Af-rate p{
+    .Af-UseCasesComponentSide-2-title h4 {
+        color: var(--white-color);
+        font-size: 26px;
+        line-height: 39px;
+    }
+    
+    .Af-UseCasesComponentSide-2-title p {
+        color: var(--gray70-color);
+        font-size: 16px;
+        line-height: 24px;
+        font-weight: 200;
+    }
+    .Af-UseCasesComponentSide-2-secondDiv .Af-rate p {
         font-size: 16px;
     }
+
     .Af-UseCasesComponentSide-2-secondDiv .Af-rate h3 {
         font-size: 40px;
     }
 }
 
-@media (max-width:1280px) {
+@media (max-width:1439px) {
     .Af-UseCasesComponentSide-1-card span {
         font-size: 14px;
     }
@@ -194,16 +250,6 @@
     .Af-UseCasesComponentSide-1-card-img div {
         width: 48px;
         height: 48px;
-    }
-
-    .Af-cardTop,
-    .Af-cardBottom {
-        width: 86.88%;
-    }
-
-    .Af-UseCasesComponentSide-1-card {
-        width: 49.05%;
-        height: 174px;
     }
 
     .Af-UseCasesComponentSide-2-secondDiv div p {
@@ -225,17 +271,14 @@
         width: 100%;
     }
 
-    .Af-UseCasesComponentSide-1-card {
-        height: 160px;
-    }
-
     .Af-UseCasesComponentSide-1-card span {
         font-size: 12px;
-        padding: 12px 15px 15px;
     }
-    .Af-UseCasesComponentSide-2-secondDiv{
+
+    .Af-UseCasesComponentSide-2-secondDiv {
         justify-content: center;
     }
+
     .Af-UseCasesComponentSide-2-secondDiv div p {
         font-size: 14px;
     }
@@ -246,15 +289,64 @@
     }
 
     .Af-divBorder {
-        border-right: none;
-        border-bottom: 1px dashed var(--gray15-color);
+        width: 146px;
+        height: 1px;
+        background-image: linear-gradient(to right, var(--gray15-color) 50%, transparent 50%);
+        background-size: 20px 1px;
     }
-
     .Af-UseCasesComponentSide-2-title {
         text-align: center;
     }
+
     .Af-UseCasesComponentSide-2-button {
         display: flex;
         justify-content: center;
+    }
+    .Af-UseCasesComponentSide-2-secondDiv .Af-rate p {
+        font-size: 14px;
+    }
+
+}
+
+@media(max-width:540px) {
+
+    .Af-UseCasesComponentSide-1Reverse,
+    .Af-UseCasesComponentSide-1 {
+        padding: 20px;
+        gap: 10px;
+    }
+
+    .Af-cardTop {
+        height: 160px;
+
+        gap: 10px;
+    }
+
+    .Af-cardBottom {
+        height: 160px;
+        gap: 10px;
+    }
+
+    .Af-UseCasesComponentSide-1-card {
+        padding: 20px 14px;
+        gap: 14px;  
+        width: 48.88%;
+    }
+
+    .Af-UseCasesComponentSide-1-card span {
+        font-size: 14px;
+        line-height: 21px;
+    }
+    .Af-UseCasesComponentSide-2-title h4 {
+        color: var(--white-color);
+        font-size: 20px;
+        line-height: 30px;
+    }
+    
+    .Af-UseCasesComponentSide-2-title p {
+        color: var(--gray70-color);
+        font-size: 14px;
+        line-height: 21px;
+        font-weight: 300;
     }
 }

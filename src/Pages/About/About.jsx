@@ -8,6 +8,7 @@ export default function About() {
   return (
     <>
       <HeroComponent2
+        bool={true}
         image={IMG2}
         head={"Where Banking Meets Excellence!"}
         light={"Excellence!"}
