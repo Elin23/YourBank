@@ -40,24 +40,6 @@
   --gray70-color: #B3B3B3;
   --gray75-color: #BFBFBF;
 }
-
-::-webkit-scrollbar {
-  width: 12px; 
-  height: 15px; 
-}
-
-::-webkit-scrollbar-track {
-  background: var(--gray20-color); 
-}
-
-::-webkit-scrollbar-thumb {
-  background: linear-gradient(to bottom, var(--green-heavy),var(--green65-color), var(--green70-color));
-  border-radius: 6px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(to bottom, var(--green80-color), var(--green70-color));
-}
 .pb-150 {
   padding-bottom: 7.8125%;
 }
@@ -76,7 +58,6 @@
 
 .mb-80 {
   margin-bottom: 5.0253%;
-  /*Added*/
 }
 
 .p-50 {
@@ -134,6 +115,28 @@
 .fs-40 {
   font-size: 40px;
 }
+
+/* Start Scrollbar Customization */
+::-webkit-scrollbar {
+  width: 12px; 
+  height: 15px; 
+}
+
+::-webkit-scrollbar-track {
+  background: var(--gray20-color); 
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, var(--green-heavy),var(--green65-color), var(--green70-color));
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(to bottom, var(--green80-color), var(--green70-color));
+}
+/* End Scrollbar Customization */
+
+/*Start Responsive*/
 @media (max-width: 1919px) {
 
   /*edited*/
@@ -148,8 +151,6 @@
 }
 
 @media (max-width: 768px) {
-
-  /*edited*/
   .pb-150 {
     padding-bottom: 20.495%;
   }
@@ -164,18 +165,4 @@
   }
 
 }
-
-/* 
-@media (min-width: 1440px) and (max-width: 1919px){ // figma design
-}
-@media (min-width: 1201px) and (max-width: 1439px){
-}
-@media (min-width: 993px) and (max-width: 1200px){
-}
-@media (min-width: 769px) and (max-width: 992px){
-}
-@media (min-width: 390px) and (max-width: 768px){ // figma design
-}
-@media (max-width: 389px) {
-} */
 

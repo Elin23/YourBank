@@ -57,47 +57,47 @@ export const StoredTestimonialsData = TestimonialsData;
 const storedTestimonialsBusinessData = localStorage.getItem('TestimonialsBusinessData');
 const BusinessData = storedTestimonialsBusinessData ? JSON.parse(storedValueTestimonialsData) : [
   {
-    userName: "Paul T",
+    userName: "Sama Tell",
     opinion:
       "yourBank is What people want out of digitalization is this help to remove the grunt work and remove the data analysis and move straight into the mode of deciding on a course of action.",
   },
   {
-    userName: "Josef D",
+    userName: "Syrian Telecom",
     opinion:
       "Instead of having multiple tools and applications that we go to for various results, we're able to consolidate that into a single application that beomes the go-to app for our experts.",
   },
   {
-    userName: "Chris G",
+    userName: "Vodafone",
     opinion:
       "To be able to accelerate decision-making, to accelerate the ability to be predictive, is quintessential to any type of support that we do at yourBank into the defense industry.",
   },
   {
-    userName: "Rajat A",
+    userName: "Microsoft",
     opinion:
       "I don’t think a five out of five really encapsulates the work that they do. The work is top-notch. It’s what we ask for and more. They go the extra mile in terms of letting us know that whatever we need.",
   },
   {
-    userName: "Juan S",
+    userName: "Focal X",
     opinion:
       "yourBank's ability to take a problem that has very little structure around it, build an ontology, and provide an end-to-end solution was pretty impressive. You have to bring quite a few different skill sets to the table.",
   },
   {
-    userName: "Tim S",
+    userName: "Syrian Youth",
     opinion:
       "your Bank was always well prepared for our meetings, cognizant of the delivery schedule, communicative with us when there would be slippage. They also were forthright on the probabilistic nature of developing solutions to challenging problems.",
   },
   {
-    userName: "Naveen F",
+    userName: "MTN Syria",
     opinion:
       "We talked to 15-20 different companies. We chose to go with your Bank because they understood our problem better than other firms. your Bank is an expert in his occupation. He knows what he's doing and clearly understands this world.",
   },
   {
-    userName: "Dylan M",
+    userName: "Syriatel",
     opinion:
       "your bank most impressive characteristic is their passion for helping us solve our problems. They truly believe in what we’re trying to achieve — they’re excited about it. Their members see the value of our work and understand our vision.",
   },
   {
-    userName: "George R",
+    userName: "AE Team",
     opinion:
       "YourBank is an expert in NLP and machine learning. His team gave us regular progress updates, milestones, and deliverables, and showed a high level of professionalism. I’m very happy with our partnership.",
   }

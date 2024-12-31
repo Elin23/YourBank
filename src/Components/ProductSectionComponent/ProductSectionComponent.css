@@ -2,7 +2,7 @@
     background-color: var(--black10-color);
 }
 
-.AM-product-sec .title-tabs {
+.title-tabs {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -10,7 +10,7 @@
     gap: 20px;
 }
 
-.AM-product-sec .tabs {
+.tabs {
     width: 386px;
     display: flex;
     padding: 14px;
@@ -25,7 +25,7 @@
     max-width: 910px;
 }
 
-.AM-product-sec .tab {
+.tab {
     width: 181px;
     height: 55px;
     border-radius: 140px;
@@ -36,7 +36,7 @@
     text-align: center;
 }
 
-.AM-product-sec .active-tab {
+.active-tab {
     background-color: var(--green60-color);
     color: var(--black11-color);
 
@@ -66,12 +66,12 @@
         max-width: 831px;
     }
 
-    .AM-product-sec .tabs {
+    .tabs {
         width: 299px;
         padding: 12px;
     }
 
-    .AM-product-sec .tab {
+    .tab {
         width: 139px;
         height: 41px;
         font-size: 14px;
@@ -83,7 +83,7 @@
         max-width: 420px;
     }
 
-    .AM-product-sec .title-tabs {
+    .title-tabs {
         justify-content: center;
         text-align: center;
         flex-direction: column;
