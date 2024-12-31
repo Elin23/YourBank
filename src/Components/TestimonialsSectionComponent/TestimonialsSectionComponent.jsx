@@ -62,9 +62,9 @@ export default function TestimonialsSectionComponent() {
                  
                 <Swiper
                     loop={true}
-                    modules={[Autoplay,Navigation, Pagination, Scrollbar]}
+                    loopedSlides={currentTestimonialsData.length}
+                    modules={[Autoplay,Navigation]}
                     slidesPerView={3}
-                    centeredSlides={true}
                     autoplay={{
                         delay: 2500,
                         disableOnInteraction: false
