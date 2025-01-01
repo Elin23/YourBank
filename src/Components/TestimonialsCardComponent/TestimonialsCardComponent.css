@@ -1,6 +1,8 @@
 .AA-Testimony-Card {
     text-align: center;
     position: relative;
+    min-width: 404px;
+    margin-right: 80px;
 }
 
 .AA-pb-50 {
@@ -87,6 +89,12 @@
   
 /***laptop***/
 @media (max-width: 1919px) {
+
+    .AA-Testimony-Card{
+        min-width: 325.33px;
+        margin-right: 60px
+    }
+
     .AA-pb-50 {
         padding-bottom: 40px;
     }
@@ -102,12 +110,20 @@
     }
 }
 
+@media (max-width: 1300px){
+    .AA-Testimony-Card{
+        min-width: 246px !important;
+        margin-right: 40px;
+    }
+}
+
 /***tablet***/
 @media (max-width: 992px) {
     .AA-Testimony-Card {
         border: 1px solid var(--gray15-color);
         border-radius: 12px;
         padding: 20px;
+        width: 100%;
         min-height: 275px;
     }
 
@@ -160,7 +176,5 @@
         border-radius: 12px;
         padding: 20px;
     }
-
-    
 
 }

@@ -186,6 +186,7 @@
         height: 150px;
         gap: 10px;
     }
+
     .Af-UseCasesComponentSide-1-card {
         padding: 24px;
         gap: 14px;
@@ -328,7 +329,7 @@
 
     .Af-UseCasesComponentSide-1-card {
         padding: 20px 14px;
-        gap: 14px;
+        gap: 14px;  
         width: 48.88%;
     }
 

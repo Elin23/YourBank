@@ -20,6 +20,7 @@ export default function FAQSectionComponent() {
         title="Frequently Asked Questions"
         desc="Still you have any questions? Contact our Team via support@yourbank.com"
         highlightedWords={["Frequently"]}
+        fw={false}
       />
 
       <div className="MR-FAQ-card-container">
