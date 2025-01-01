@@ -51,7 +51,8 @@
         align-items: center;
         justify-content: center;
         gap: 6px;
-        p{
+        a{
+            text-decoration: none;
             color: var(--offwhite-90-color);
             margin-bottom: 0;
             font-size: 18px;
@@ -121,7 +122,31 @@
     background-color: var(--gray70-color);
 }
 
+/* <reset-style> ============================ */
 
+  /* <main-style> ============================ */
+  .hw-menu-link {
+    color: #fff;
+    line-height: 2;
+    position: relative;
+  }
+  
+  .hw-menu-link::before {
+    content: '';
+    width: 0;
+    height: 2px;
+    border-radius: 2px;
+    background-color: var(--green60-color);
+    position: absolute;
+    bottom: -.25rem;
+    right: 0;
+    transition: right .4s, width .4s, left .4s;
+  }
+  
+  .hw-menu-link:hover::before {
+    width: 100%;
+    left: 0;
+  }
 @media (max-width: 1919px){ 
     .hw-footer{
         padding-top:60px;
@@ -149,7 +174,7 @@
     .hw-footer .hw-Contacts{
         gap: 20px;
         >div{
-            p{
+            a{
                 font-size: 16px;
                 line-height: 24px;
             }
@@ -200,7 +225,7 @@
     .hw-footer .hw-Contacts{
         flex-wrap: wrap;
         >div{
-            p{
+            a{
                 font-size: 14px;
                 line-height: 21px;
             }
@@ -236,7 +261,7 @@
         justify-content:center;
         flex-wrap: wrap;
         >div{
-            p{
+            a{
                 font-size: 14px;
                 line-height: 21px;
             }

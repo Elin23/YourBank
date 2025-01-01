@@ -20,6 +20,7 @@
     justify-content: center;
     width: 100%;
     position: relative;
+
 }
 
 .AA-Testimony-Card div::before {
@@ -68,6 +69,7 @@
     width: 40.52478134%;
     height: 100%;
     background: linear-gradient(270deg, rgba(25, 25, 25, 0) 0%, var(--black10-color) 105.84%);
+
   }
   
   .AA-right-shadow-card {
@@ -80,6 +82,7 @@
     width: 40.52478134%;
     height: 100%;
     background: linear-gradient(270deg, #191919 10.8%, rgba(25, 25, 25, 0) 105.84%);
+
   }
   
 /***laptop***/

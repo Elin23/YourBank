@@ -18,16 +18,16 @@ export default function FooterComponent() {
         </div>
         <ul className="hw-footerLinks">
             <li>
-                <Link to={'/'}>Home</Link>
+                <Link to={'/'} className='hw-menu-link'>Home</Link>
             </li>
             <li>
-                <Link to={'/careers'}>Careers</Link>
+                <Link to={'/careers'} className='hw-menu-link'>Careers</Link>
             </li>
             <li>
-                <Link to={'/about'}>About</Link>
+                <Link to={'/about'} className='hw-menu-link'>About</Link>
             </li>
             <li>
-                <Link to={'/security'}>Security</Link>
+                <Link to={'/security'} className='hw-menu-link'>Security</Link>
             </li>
         </ul>
         <span className="hw-lineGray"></span>
@@ -36,19 +36,19 @@ export default function FooterComponent() {
                 <div className="hw-Contacts-icon">
                     <img src={icon1} alt="" />
                 </div>
-                <p>hello@skillbirdge.com</p>
+                <a href="mailto:hello@skillbirdge.com">hello@skillbirdge.com</a>
             </div>
             <div className='phoneNum'>
                 <div className="hw-Contacts-icon">
                     <img src={icon2} alt="" />
                 </div>
-                <p>+91 91813 23 2309</p>
+                <a href="tel:+91 91813 23 2309">+91 91813 23 2309</a>
             </div>
             <div className='location'>
                 <div className="hw-Contacts-icon">
                     <img src={icon3} alt="" />
                 </div>
-                <p>Somewhere in the World</p>
+                <a href="#">Somewhere in the World</a>
             </div>
         </div>
         <span className="hw-lineGray"></span>
