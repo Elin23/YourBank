@@ -21,7 +21,7 @@
     transition: .3s ease-in-out;
 }
 
-.AM-product-card .title:hover {
+.AM-product-card:hover .title{
     color: var(--green60-color);
 }
 
@@ -98,9 +98,13 @@
 
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 992px) {
     .AM-product-card {
         width: 86.66%;
+    }
+
+    .AM-product-card .desc {
+        max-width: 100%;
     }
 
     .AM-product-card:nth-child(2) {

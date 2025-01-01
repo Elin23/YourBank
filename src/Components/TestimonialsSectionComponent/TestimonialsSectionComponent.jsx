@@ -47,6 +47,7 @@ export default function TestimonialsSectionComponent() {
                     title="Our Testimonials"
                     desc="Discover how YourBank has transformed lives with innovative digital solutions and personalized customer service. See why our clients trust us for a secure and prosperous financial journey"
                     highlightedWords={["Testimonials"]}
+                    fw={false}
                 />
                 <div className="tabs">
                     {TestimonialsTabs.map((tab) => (
