@@ -55,7 +55,7 @@ export const StoredTestimonialsData = TestimonialsData;
 
 
 const storedTestimonialsBusinessData = localStorage.getItem('TestimonialsBusinessData');
-const BusinessData = storedTestimonialsBusinessData ? JSON.parse(storedValueTestimonialsData) : [
+const BusinessData = storedTestimonialsBusinessData ? JSON.parse(storedTestimonialsBusinessData) : [
   {
     userName: "Paul T",
     opinion:
@@ -103,7 +103,7 @@ const BusinessData = storedTestimonialsBusinessData ? JSON.parse(storedValueTest
   }
 ];
 
-if(!storedValueTestimonialsData){
+if(!storedTestimonialsBusinessData){
   localStorage.setItem('TestimonialsBusinessData',JSON.stringify(BusinessData));
 }
 

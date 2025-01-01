@@ -5,14 +5,14 @@ import Home from './Pages/Home/Home'
 import Login from './Pages/Login/Login'
 import Security from './Pages/Security/Security'
 import SignUp from './Pages/SignUp/SignUp'
-import "./App.css";
-import NavBarComponent from './Components/NavBarComponent/NavBarComponent'
-import FooterComponent from './Components/FooterComponent/FooterComponent';
+import FooterComponent from './Components/FooterComponent/FooterComponent'
+import './App.css'
+import NavBarComponent from './Components/NavBarComponent/NavBarComponent';
 
 function App() {
   return (
     <>
-      <NavBarComponent/>
+    <NavBarComponent />
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/about' element={<About />} />
@@ -21,7 +21,7 @@ function App() {
         <Route path='/login' element={<Login />} />
         <Route path='/signUp' element={<SignUp />} />
       </Routes>
-      <FooterComponent />
+      <FooterComponent/>
     </>
   )
 }
