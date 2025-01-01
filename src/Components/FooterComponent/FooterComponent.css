@@ -76,25 +76,12 @@
     background-color: #1A1A1A;
     border-radius: 100px;
 }
-.hw-footerBottom .hw-footerIcons{
-    display: flex;
-    align-items:center;
-    justify-content: center;
-    gap: 14px;
-}
-.hw-fotIconConta{
-    padding: 14px;
-    border-radius: 100px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: var(--green60-color);
-    cursor: pointer;
-}
+
 .hw-footerBottom > span{
     font-weight: 300;
     color: var(--gray70-color);
 }
+
 .hw-footerBottom .hw-footerPrivacy{
     display: flex;
     align-items: center;

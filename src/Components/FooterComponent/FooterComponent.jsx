@@ -8,7 +8,14 @@ import twitterIcon from './../../assets/imgs/Home icons/Icon (17).png'
 import linkdenIcon from './../../assets/imgs/Home icons/Vector.png'
 import logo from './../../assets/imgs/Logo.png'
 import yourBank from './../../assets/imgs/YourBanK.svg'
+import SocialFooterComponent from '../SocialFooterComponent/SocialFooterComponent'
+
 export default function FooterComponent() {
+    const socialIcons = [
+        { src: faceIcon, alt: 'Facebook Link' },
+        { src: twitterIcon, alt: 'Twitter Link' },
+        { src: linkdenIcon, alt: 'LinkedIn Link' },
+    ];
     return (
     <>
     <footer className='hw-footer px-162'>
@@ -34,43 +41,32 @@ export default function FooterComponent() {
         <div className="hw-Contacts">
             <div className='email'>
                 <div className="hw-Contacts-icon">
-                    <img src={icon1} alt="" />
+                    <img src={icon1} alt="Email address" />
                 </div>
                 <a href="mailto:hello@skillbirdge.com">hello@skillbirdge.com</a>
             </div>
             <div className='phoneNum'>
                 <div className="hw-Contacts-icon">
-                    <img src={icon2} alt="" />
+                    <img src={icon2} alt="Phone Number" />
                 </div>
                 <a href="tel:+91 91813 23 2309">+91 91813 23 2309</a>
             </div>
             <div className='location'>
                 <div className="hw-Contacts-icon">
-                    <img src={icon3} alt="" />
+                    <img src={icon3} alt="Location Information" />
                 </div>
                 <a href="#">Somewhere in the World</a>
             </div>
         </div>
         <span className="hw-lineGray"></span>
-
-        <div className="hw-footerBottom">
-            <div className="hw-footerIcons">
-                <div className="hw-fotIconConta">
-                    <img src={faceIcon} />
+            <div className="hw-footerBottom">
+                <SocialFooterComponent icons={socialIcons} />
+                <span className='f-18'>YourBank All Rights Reserved</span>
+                <div className="hw-footerPrivacy">
+                    <Link to={''} className='f-18'>Privacy Policy</Link>
+                    <span className="lineF"></span>
+                    <Link to={''} className='f-18'>Terms Of Service</Link>
                 </div>
-                <div className="hw-fotIconConta">
-                    <img src={twitterIcon} />
-                </div>
-                <div className="hw-fotIconConta">
-                    <img src={linkdenIcon}  />
-                </div>
-            </div>
-            <span>YourBank All Rights Reserved</span>
-            <div className="hw-footerPrivacy">
-                <Link to={''} >Privacy Policy</Link>
-                <span className="lineF"></span>
-                <Link to={''}>Terms Of Service</Link>
-            </div>
         </div>
     </footer>
     </>
