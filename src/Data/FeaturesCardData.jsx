@@ -2,7 +2,7 @@ import icon10 from "../assets/imgs/Home icons/Icon (10).png"
 
 const StoredFeaturesCardData = localStorage.getItem("FeaturesCardData");
 
-const FeaturesCardData = StoredFeaturesCardData ? JSON.parse(StoredFeaturesCardData) : [
+let FeaturesCardData = StoredFeaturesCardData ? JSON.parse(StoredFeaturesCardData) : [
   {
     filter: "Online Banking",
     btn: [

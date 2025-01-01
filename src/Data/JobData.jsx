@@ -1,6 +1,6 @@
 const storedJobData = localStorage.getItem('JobData');
 
-const JobData = storedJobData
+let JobData = storedJobData
   ? JSON.parse(storedJobData)
 : [
     {

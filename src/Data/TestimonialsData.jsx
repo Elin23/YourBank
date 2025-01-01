@@ -47,15 +47,15 @@ const TestimonialsData = storedValueTestimonialsData ? JSON.parse(storedValueTes
   }
 ];
 
-if(!storedValueTestimonialsData){
-  localStorage.setItem('ValueTestimonialsData',JSON.stringify(TestimonialsData));
+if (!storedValueTestimonialsData) {
+  localStorage.setItem('ValueTestimonialsData', JSON.stringify(TestimonialsData));
 }
 
 export const StoredTestimonialsData = TestimonialsData;
 
 
 const storedTestimonialsBusinessData = localStorage.getItem('TestimonialsBusinessData');
-const BusinessData = storedTestimonialsBusinessData ? JSON.parse(storedValueTestimonialsData) : [
+const BusinessData = storedTestimonialsBusinessData ? JSON.parse(storedTestimonialsBusinessData) : [
   {
     userName: "Sama Tell",
     opinion:
@@ -103,8 +103,8 @@ const BusinessData = storedTestimonialsBusinessData ? JSON.parse(storedValueTest
   }
 ];
 
-if(!storedValueTestimonialsData){
-  localStorage.setItem('TestimonialsBusinessData',JSON.stringify(BusinessData));
+if (!storedTestimonialsBusinessData) {
+  localStorage.setItem('TestimonialsBusinessData', JSON.stringify(BusinessData));
 }
 
 export const StoredTestimonialsBusinessData = BusinessData;

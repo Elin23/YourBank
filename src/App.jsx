@@ -11,7 +11,7 @@ import FooterComponent from './Components/FooterComponent/FooterComponent';
 
 function App() {
   return (
-    <>
+    <div className='bg-main'>
       <NavBarComponent/>
       <Routes>
         <Route path='/' element={<Home />} />
@@ -22,7 +22,7 @@ function App() {
         <Route path='/signUp' element={<SignUp />} />
       </Routes>
       <FooterComponent />
-    </>
+    </div>
   )
 }
 

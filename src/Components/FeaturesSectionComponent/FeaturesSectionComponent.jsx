@@ -19,10 +19,15 @@ export default function FeaturesSectionComponent() {
       txt: "Customer Support"
     }
   ]
-  const [activeBtn, setActiveBtn] = useState("Online Banking")
+  const [activeBtn, setActiveBtn] = useState("Online Banking");
+  const [fade, setFade] = useState(false);
 
   function activeTab(filter) {
-    setActiveBtn(filter)
+    setFade(true)
+    setTimeout(() => {
+      setActiveBtn(filter);
+      setFade(false);
+    }, 300)
   }
 
   return (
@@ -54,20 +59,22 @@ export default function FeaturesSectionComponent() {
         </div>
 
         <div className="features-cards">
-          {exportedFeaturesCardData.map((e) => {
-            if (activeBtn == e.filter) {
-              return e.btn.map((b, index) => {
-                return (
-                  <FeaturesCardComponent
-                    key={index}
-                    title={b.title}
-                    img={b.img}
-                    content={b.content}
-                  />
-                );
-              });
-            }
-          })}
+          <div className={`fading ${fade ? 'fade-out' : 'fade-in'}`}>
+            {exportedFeaturesCardData.map((e) => {
+              if (activeBtn == e.filter) {
+                return e.btn.map((b, index) => {
+                  return (
+                    <FeaturesCardComponent
+                      key={index}
+                      title={b.title}
+                      img={b.img}
+                      content={b.content}
+                    />
+                  );
+                });
+              }
+            })}
+          </div>
         </div>
       </div>
     </section>

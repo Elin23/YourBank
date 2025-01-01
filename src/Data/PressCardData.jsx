@@ -5,7 +5,7 @@ import image_4 from "../assets/imgs/Releases/Image4.png"
 
 const StoredPressCardData = localStorage.getItem("PressCardData");
 
-const PressCardData = StoredPressCardData ? JSON.parse(StoredPressCardData) : [
+let PressCardData = StoredPressCardData ? JSON.parse(StoredPressCardData) : [
   {
     image: image_1,
     title: "YourBank Launches New Rewards Program to Enhance Customer Loyalty and Satisfaction",
