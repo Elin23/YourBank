@@ -1,7 +1,7 @@
 import "./ProductCardComponent.css";
 export default function ProductCardComponent({ data }) {
   return (
-    <div className="AM-product-card">
+    <div className="AM-product-card ">
       <div className="border-icon">
         <div className="icon">
           <img src={data.icon} alt={data.alt} />
