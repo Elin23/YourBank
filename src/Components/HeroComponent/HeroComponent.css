@@ -1,26 +1,31 @@
 .es-hero-container {
     position: relative;
-    padding: 0 8.4375%;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    align-items: start;
     flex-wrap: wrap;
     gap: 6.25%;
     padding-top: 10.3125%;
     height: 100%;
     overflow: hidden;
     background-color: var(--black10-color);
-    margin-bottom: 7.943%;
 }
-.es-hero-container::before{
-    content: url('../../assets/imgs/Abstract Design5.png');
+
+.es-hero-container::before {
+    content: "";
+    background-image: url('../../assets/imgs/Abstract Design5.png');
+    background-position: center;
+    background-size: cover;
     position: absolute;
     top: 0;
     left: 0;
+    width: 759px;
+    height: 610.81px;
 }
+
 /*Left Side Start*/
 .es-hero-left-content {
     width: 51.7535%;
+    padding-top: 6.266%;
 }
 
 .es-hero-left-content .es-sub-title {
@@ -44,9 +49,11 @@
     margin-top: 20px;
     margin-bottom: 50px;
 }
-.es-hero-left-content .es-main-title .title{
+
+.es-hero-left-content .es-main-title .title {
     font-weight: 500;
 }
+
 .es-hero-left-content img {
     padding-left: 12px;
 }
@@ -85,14 +92,12 @@
     position: relative;
     display: flex;
     flex-direction: column;
-    background-color: var(--black11-color);
     gap: 26.01px;
     border-radius: 10.4px;
-    border-width: 0.87px;
-    border-style: solid;
-    /* border-image-source: linear-gradient(214.24deg, rgba(202, 255, 51, 0.2) 0%, rgba(202, 255, 51, 0) 11.24%, rgba(202, 255, 51, 0) 91.73%, rgba(202, 255, 51, 0.2) 99.95%); */
-    border-image-slice: 1;
-    z-index: 1;
+    border: 0.87px solid transparent;
+    background: linear-gradient(-214.85deg, rgba(202, 255, 51, 0.2) 0%,
+            rgba(202, 255, 51, 0) 11.24%, rgba(202, 255, 51, 0) 91.73%,
+            rgba(202, 255, 51, 0.2) 99.95%), rgba(38, 38, 38, 1) border-box;
 }
 
 .es-hero-right-content::before {
@@ -101,20 +106,23 @@
     height: 100%;
     top: 0;
     left: 0;
+    border-radius: 10.4px; 
     position: absolute;
-    background: linear-gradient(214.85deg,
-            rgba(26, 26, 26, 0) 0%,
-            rgba(26, 26, 26, 0.7) 30%,
-            #1A1A1A 60%);
+    background-color: var(--black10-color);
     z-index: 2;
 }
+
 .es-hero-right-content::after {
-    content: url('../../assets/imgs/Abstract Design.png');
-    position: absolute;
-    top: -2%;
-    right: -20%;
+    content: "";
+    background-image: url('../../assets/imgs/Abstract Design.png');
+    background-position: center;
+    background-size: cover;
+    width: 417.95px;
+    height: 382.73px;
     object-fit: cover;
-    z-index: -1;
+    position: absolute;
+    top: 0;
+    right: -35%;
 }
 
 .es-hero-right-content .bg-img {
@@ -123,10 +131,13 @@
     left: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    mix-blend-mode: screen;
-    opacity: 50%;
-    z-index: 1;
+    opacity: 0.5;
+    z-index: 2;
+    background: linear-gradient(214.85deg,
+            rgba(26, 26, 26, 0) 0%,
+            rgba(26, 26, 26, 0.7) 10%,
+            #1A1A1A 60%),
+        url('../../assets/imgs/blend.png');
 }
 
 .es-hero-right-content .es-your-trans h4,
@@ -266,9 +277,12 @@
     line-height: 26.01px;
     color: var(--white-color);
     border-right: 0.87px solid var(--gray15-color);
-    border-bottom: 0.87px solid var(--gray15-color);
 }
-
+.es-mini-box:nth-child(2) .es-currency-value,
+.es-mini-box:nth-child(2) .es-upper
+{
+    border-right:none;
+}
 .exchange-btn {
     width: 100%;
     position: relative;
@@ -384,14 +398,23 @@
 
     /* Left Side Start*/
     .es-hero-container {
-        padding: 0 5.5556%;
         gap: 6.95%;
         padding-top: 9.237%;
-        margin-bottom: 8.38%;
+    }
+
+    .es-hero-container::before {
+        width: 546.75px;
+        height: 440px;
     }
 
     .es-hero-left-content {
         width: 50.7664%;
+        padding-top: 4.687%;
+    }
+
+    .es-hero-right-content::after {
+        width: 300px;
+        height: 275px;
     }
 
     .es-hero-left-content .es-sub-title {
@@ -407,6 +430,7 @@
         margin-top: 16px;
         margin-bottom: 40px;
     }
+
     .es-hero-left-content img {
         padding-left: 9.88px;
     }
@@ -618,21 +642,25 @@
         height: 13.06px;
     }
 }
-@media (max-width: 1200px){
+
+@media (max-width: 1200px) {
     .es-hero-container {
         padding-left: 4.1%;
         padding-right: 4.1%;
         padding-top: 10.23%;
         gap: 5%;
     }
+
     .es-hero-left-content .es-main-title {
         margin-top: 12px;
         margin-bottom: 25px;
     }
-    .es-hero-left-content .es-main-title .title{
+
+    .es-hero-left-content .es-main-title .title {
         font-size: 32px;
         line-height: 45px;
     }
+
     .es-hero-right-content {
         /* width: 360px; */
         padding: 20px;
@@ -643,9 +671,11 @@
         height: 225px;
         right: -23%;
     }
+
     .es-hero-right-content .es-your-trans h4 {
         margin-bottom: 10px;
     }
+
     .op-100 {
         width: 320px;
     }
@@ -657,175 +687,226 @@
     .op-20 {
         width: 280px;
     }
+
     /* .es-exchange-box{
         width: 310px;
     } */
     .es-exchange-box .es-mini-box .es-upper {
         padding: 12px;
     }
+
     .es-upper img {
         width: 25px;
         height: 25px;
     }
+
     .es-upper .es-currency-name {
         font-size: 9px;
     }
+
     .es-currency-value {
         padding: 18px 10px 18px 10px;
-    } 
+    }
+
     .es-monthly-income {
         margin-bottom: -18px;
     }
+
     .es-supported-currency-container {
         margin-right: -30px;
     }
 }
-@media (max-width: 992px){
+
+@media (max-width: 992px) {
     .es-hero-container {
         min-height: fit-content;
         justify-content: center;
         align-items: flex-start;
         text-align: center;
-        padding-top: 20%;
+        padding-top: 25%;
+        gap: 54.43px;
     }
-    .es-hero-left-content{
+
+    .es-hero-left-content {
         width: 75%;
         display: flex;
         align-items: center;
         justify-content: center;
         flex-direction: column;
+        padding-top: 0;
     }
+
     .es-hero-right-content .es-your-trans h4,
     .es-hero-right-content .exchange h4,
     .es-currency-name,
-    .es-currency-value{
+    .es-currency-value {
         text-align: left;
     }
+
     .es-hero-left-content .es-main-title p {
         font-size: 14px;
         line-height: 21px;
     }
 }
+
 @media (max-width: 768px) {
-    .es-hero-left-content{
+    .es-hero-left-content {
         width: 100%;
     }
 }
+
 @media (max-width: 540px) {
+
     /* Left Side Start*/
     .es-hero-container {
-        padding: 0 4.1%;
-        /* gap: 13.95%; */
-        padding-top: 40%;
-        margin-bottom: 17.78%;
+        padding-top: 40.474%;
+        padding-bottom: 0;
+        margin-bottom: 17.76%;
     }
-    .es-hero-left-content{
+
+    .es-hero-container::before {
+        width: 382px;
+        height: 307.42px;
+    }
+
+    .es-hero-right-content::after {
+        width: 210px;
+        height: 201px;
+        top: -5%;
+    }
+
+    .es-hero-left-content {
         width: 100%;
     }
+
     .es-hero-left-content .es-main-title {
         margin-top: 12px;
         margin-bottom: 30px;
     }
+
     .es-hero-right-content::after {
         /* width: 220px;
         height: 201px; */
         right: -15%;
     }
-    .es-right-side{
+
+    .es-right-side {
         padding: 0 26.28px;
     }
+
     .es-hero-right-content {
         padding: 20.51px;
         gap: 15.38px;
         border-radius: 6.15px;
-        border-width: 0.51px; 
-    } 
+        border-width: 0.51px;
+    }
+
     .es-hero-right-content::after {
         width: 220px;
         height: 201px;
         right: -15%;
     }
+
     .es-hero-right-content .es-your-trans h4,
     .es-hero-right-content .exchange h4 {
         font-size: 10.26px;
         line-height: 15.38px;
         text-align: start;
     }
+
     .es-hero-right-content .es-your-trans h4 {
         margin-bottom: 10.62px;
     }
+
     .es-hero-right-content .exchange h4 {
         margin-bottom: 14.87px;
     }
+
     .es-hero-right-content .es-your-trans .es-trans-box {
         border-radius: 6.15px;
         border-width: 0.51px;
         padding: 8.2px 0 8.2px 12.31px;
     }
+
     .es-hero-right-content .es-your-trans .es-trans-box .es-icon {
         width: 22.6px;
         height: 22.6px;
         border-radius: 27.18px;
         padding: 5.13px;
     }
+
     .es-hero-right-content .es-trans-box .es-icon img {
         width: 9.82px;
         height: 9.82px;
     }
+
     .es-hero-right-content .es-tran-details span:nth-child(1) {
         font-size: 9.23px;
         line-height: 13.85px;
     }
+
     .es-hero-right-content .es-tran-details span:nth-child(2) {
         font-size: 10.26px;
         line-height: 15.38px;
     }
+
     .es-trans-box .es-trans-box-left {
         gap: 5.13px;
     }
+
     .es-trans-box .es-trans-box-right {
         font-size: 12.31px;
         line-height: 18.46px;
         padding-right: 12.31px;
     }
+
     .op-100 {
         width: 264.43px;
     }
+
     .op-50 {
         margin: 0 10.26px;
         width: 243.91px;
         margin-top: -14.32px;
     }
+
     .op-20 {
         margin: 0 20.51px;
         width: 223.4px;
         margin-top: -13.5px;
     }
+
     .es-hero-right-content .es-exchange-box {
         border-width: 0.51px;
         border-radius: 6.15px;
     }
+
     .es-exchange-box .es-mini-box .es-upper {
         gap: 5.13px;
         border-width: 0.51px;
         padding: 10.26px;
     }
+
     .es-upper .es-currency {
         gap: 5.13px;
     }
-    .es-currency .span{
+
+    .es-currency .span {
         font-size: 9.23px;
         line-height: 13.85px;
     }
+
     .es-upper .es-currency-name {
         font-size: 8.2px;
         line-height: 12.31px;
         text-align: start;
     }
+
     .es-upper img {
         width: 20.57px;
         height: 20.57px;
     }
+
     .es-currency-value {
         padding: 15.38px 10.26px;
         font-size: 10.26px;
@@ -833,6 +914,7 @@
         border-width: 0.51px;
         text-align: start;
     }
+
     .exchange-btn {
         margin-top: 14.87px;
         font-size: 9.23px;
@@ -840,6 +922,7 @@
         padding: 8.2px 15.38px;
         border-radius: 42.05px;
     }
+
     .es-monthly-income {
         gap: 5.13px;
         margin-bottom: -18px;
@@ -847,17 +930,21 @@
         padding: 8.2px 10.26px;
         border-radius: 6.15px;
     }
+
     .es-monthly-income .es-icon {
         width: 22.6px;
         height: 22.6px;
     }
+
     .es-icon img {
         width: 6.94px;
         height: 6.94px;
     }
+
     .es-monthly-income .es-plus-info {
         gap: 0.51px;
     }
+
     .es-plus-info span:nth-child(1) {
         font-size: 10.26px;
         line-height: 15.38px;
@@ -867,12 +954,14 @@
         font-size: 8.2px;
         line-height: 12.31px;
     }
+
     .es-supported-currency-container {
         margin-top: 10.46px;
         gap: 6.3px;
         border-radius: 41.02px;
         margin-right: -20px;
     }
+
     .es-hero-container .es-supported-currency .es-currency-icons {
         gap: 4.1px;
         margin: 5.13px 5.13px 5.13px 0;
@@ -880,11 +969,13 @@
         padding: 5.18px;
         border: 0.51px solid var(--gray15-color);
     }
+
     .es-supported-currency-container span {
         margin-left: 12.31px;
         font-size: 9.23px;
         line-height: 13.85px;
     }
+
     .es-currency-icons .es-currency-img {
         width: 20.646px;
         height: 20.46px;
@@ -893,25 +984,28 @@
     .es-currency-img img {
         width: 6.11px;
         height: 9.73px;
-    } 
-}
-@media (max-width: 389px) {
-    .es-hero-container{
-        padding-top: 40%;
     }
+}
+
+@media (max-width: 389px) {
+
     .es-hero-left-content .es-main-title .title,
     .es-hero-left-content .es-main-title .title span {
         font-size: 20px;
         line-height: 32px;
     }
+
     .es-hero-left-content .es-main-title .desc {
         font-size: 12px;
     }
-    .es-monthly-income{
+
+    .es-monthly-income {
         margin-left: -2%;
     }
-    .es-supported-currency-container{
+
+    .es-supported-currency-container {
         margin-right: 0;
     }
 }
+
 /*End Responsive*/

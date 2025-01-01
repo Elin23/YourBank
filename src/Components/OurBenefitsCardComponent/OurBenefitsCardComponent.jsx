@@ -1,10 +1,9 @@
 import React from 'react'
 import './OurBenefitsCardComponent.css'
-import icon from './../../assets/imgs/careers icons/Icon.png'
 import blend from './../../assets/imgs/blend.png'
 export default function OurBenefitsCardComponent({left ,data}) {
   return (
-    <div className={`hw-OurBenefitsCard ${left? 'hw-roundedCardLeft' : 'hw-roundedCardRight'}`}>
+    <div className={`hw-OurBenefitsCard p-50 ${left? 'hw-roundedCardLeft' : 'hw-roundedCardRight'}`}>
         <div className={`hw-gradient-bg ${left? 'hw-roundedCardLeft' : 'hw-roundedCardRight'}`}></div>
         <img src={blend} className={`hw-OurBenefitsBlendBg  ${left? 'hw-roundedCardLeft' : 'hw-roundedCardRight'}`} />
         <div className='hw-OurBenefitsCardHeading'>
@@ -14,10 +13,9 @@ export default function OurBenefitsCardComponent({left ,data}) {
                 <div className="circle circle3"></div>
                 <img src={data.icon} className='OurBenefitsCardIcon'/>
             </div>
-            {/* <img src={icon} className='OurBenefitsCardIcon'/> */}
-            <h3 className='hw-OurBenefitsCardTitle'>{data.title}</h3>
+            <h3 className='hw-OurBenefitsCardTitle fw-400 fs-24'>{data.title}</h3>
         </div>
-        <p className='OurBenefitsCardDescription'>
+        <p className='OurBenefitsCardDescription f-18 fw-300'>
             {data.desc}
         </p>
     </div>

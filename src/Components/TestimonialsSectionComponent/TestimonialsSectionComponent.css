@@ -2,54 +2,58 @@
     background-color: var(--black10-color);
     position: relative;
 }
+
+.AA-testimonials-section .title-tabs{
+    align-items: end;
+}
+
 .AA-testimonials-section .title-tabs .AM-title-comp{
     width: 57.01%;
 }
+
+.AA-testimonials-section .title-tabs .AM-title-comp .desc{
+    margin-bottom: 0 !important;
+}
+
 .swiper {
     position: relative;
-    /* width: 85.96491228%; */
+    width: 85.96491228%;
     display: flex;
     justify-content: center;
-    align-items: center;
     align-items: stretch;
 }
 
 .swiper-wrapper {
-    align-items: stretch;
-}
-
-.swiper .swiper-slide {
-    width: 29.44606414%;
-    padding-right: 40px;
+    justify-content: start;
 }
 
 .wrapper {
     position: relative;
     margin: 0 auto;
-    width: 85.96491228%;
   }
   
   .AA-left-shadow {
-    pointer-events: none;
-    position: absolute;
+    position: absolute; 
     top: 0;
     bottom: 0;
-    z-index: 10;
+    z-index: 2;
     left: -1px;
-    width: 40.52478134%;
+    width: 34.83709273182957%;
     height: 100%;
+    margin-left: 7.017543859649123%;
     background: linear-gradient(270deg, rgba(25, 25, 25, 0) 0%, var(--black10-color) 105.84%);
   }
   
   .AA-right-shadow {
-    pointer-events: none;
-    position: absolute;
+    position: absolute; 
     top: 0;
     bottom: 0;
-    z-index: 10;
+    z-index: 2;
+    margin-right: 7.017543859649123%;
     right: -1px;
+    height: 100%;
     background: linear-gradient(270deg, #191919 10.8%, rgba(25, 25, 25, 0) 105.84%);
-    width: 40.52478134%;
+    width: 30.07518796992481%;
   }
   
 
@@ -70,25 +74,31 @@
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: 15;
+    z-index: 0;
 }
 
 /***laptop ***/
 @media (max-width: 1919px) {
+
+    .AA-testimonials-section .mb-100{
+        margin-bottom: 6.25%;
+    }
     .AA-testimonials-section .title-tabs .AM-title-comp{
         width: 64.92%;
     }
+
+    .AA-testimonials-section .title-tabs .AM-title-comp .desc{
+        font-size: 14px;
+        line-height: 21px;
+    }
+
     .AA-custom-swiper-navigation-next,
     .AA-custom-swiper-navigation-prev {
         padding: 14px;
     }
 
-    .wrapper {
+    .swiper{
         width: 85.625%;
-    }
-
-    .swiper-slide {
-        padding-right: 60px ;
     }
 
     .AA-navigation-btns img {
@@ -100,27 +110,31 @@
         padding: 11px;
     }
 
-    .swiper::after {
-        width: 36.31356861%;
+    .AA-right-shadow {
+        width: 27.96875%;
     }
 
-    .swiper::before {
-        width: 32.66423358%;
+    .AA-left-shadow {
+        width: 31.09375%;
     }
 }
+
 @media (max-width: 1200px) {
     .AA-testimonials-section .title-tabs .AM-title-comp{
         width: 60.92%;
     }
 }
+
 /***tablet ***/
 @media (max-width: 992px) {
     .AA-testimonials-section .title-tabs .AM-title-comp{
         width: 100%;
     }
-    /* .AA-testimonials-section .title-tabs .desc{
-        width: 100%;
-    } */
+
+    .AA-testimonials-section .title-tabs{
+        align-items: center;
+    }
+
     .AA-navigation-btns {
         padding-top: 30px;
         position: static;
@@ -128,17 +142,11 @@
         gap: 20px;
     }
 
-    .wrapper {
-        width: 100%;
+    .swiper
+    {
+        width: 100%
     }
 
-    .swiper-wrapper {
-        align-items: end;
-    }
-
-    .swiper-slide{
-        padding-right: 0 !important;
-    }
     .AA-right-shadow,
     .AA-left-shadow{
         display: none;
@@ -147,6 +155,14 @@
 
 /***mobile ***/
 @media (max-width: 768px) {
+    .AA-testimonials-section .mb-100{
+        margin-bottom: 11.1731843575419%;
+    }
+
+    .AA-testimonials-section .title-tabs .AM-title-comp .title{
+        margin-bottom: 10px;
+    }
+
     .AA-navigation-btns {
         position: static;
         justify-content: center;
@@ -158,20 +174,5 @@
         padding: 0px !important;
         width: 100%;
         position: unset;
-    }
-
-    .swiper-slide{
-        padding-right: 0 !important;
-    }
-
-    .swiper-slide.swiper-slide-active {
-        width: 100% !important;
-        margin-right: 0px auto !important;
-    }
-    .swiper-slide .AA-Testimony-Card{
-        position: relative;
-    }
-    .swiper-wrapper {
-        align-items: end;
     }
 }
