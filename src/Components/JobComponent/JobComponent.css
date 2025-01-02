@@ -1,3 +1,7 @@
+.MR-SectionContiner .desc {
+  margin-bottom: 0;
+}
+
 .MR-SectionContiner {
   background-color: var(--black10-color);
   display: flex;

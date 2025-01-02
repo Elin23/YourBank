@@ -96,12 +96,16 @@ export default function TestimonialsSectionComponent() {
                 <div className="AA-navigation-btns">
                     <button
                         className="AA-custom-swiper-navigation-prev"
-                        onClick={prevHandler}>
+                        onClick={prevHandler}
+                        data-aos="fade-up"
+                        >
                         <img src={prevImage} alt="prev" />
                     </button>
                     <button
                         className="AA-custom-swiper-navigation-next"
-                        onClick={nextHandler}>
+                        onClick={nextHandler}
+                        data-aos="fade-up"
+                        >
                         <img src={nextImage} alt="next" />
                     </button>
                 </div>

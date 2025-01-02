@@ -1,5 +1,7 @@
 import "./TitleComponent.css";
+
 export default function TitleComponent({ title, desc, highlightedWords, fw }) {
+
   const highlightText = (text) => {
     if (!highlightedWords || highlightedWords.length === 0) return text;
     const regex = new RegExp(`(${highlightedWords.join("|")})`, "gi");

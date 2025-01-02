@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-
 import './FormComponent.css'
 import TitleComponent from '../TitleComponent/TitleComponent'
 import SocialButtonComponent from '../SocialLoginButtonComponent/SocialLoginButtonComponent'
@@ -20,8 +19,8 @@ export default function FormComponent({action}) {
         const [type, setType] = useState('password');
         const [messagePass, setMessagePass] = useState('');
         const [message, setMessage] = useState('');
-        const [messagefirstName, setMessagefirstName] = useState('');
-        const [messagelastName, setMessagelastName] = useState('');
+        const [messageFirstName, setMessageFirstName] = useState('');
+        const [messageLastName, setMessageLastName] = useState('');
 
         // password regexthe 
         // password is 8 or more characters long ((?=.{8,})),
@@ -29,31 +28,31 @@ export default function FormComponent({action}) {
         // password has at least one lowercase letter ((?=.*[a-z])) and contains at least one digit ((?=.*[0-9])).
         const passwordRegex = /(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.{8,})/;;
         // email regex
-        const emailregex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         //name regex 
-        const Nameregex =  /^[a-zA-Z][a-zA-Z0-9_]{5,19}$/;
+        const NameRegex =  /^[a-zA-Z][a-zA-Z0-9_]{5,19}$/;
 
         const handleFirstNameChange = (event) => {
             const { value } = event.target.value;
-            if(Nameregex.test(value)){
-                setMessagefirstName('FirstName is valid');
+            if(NameRegex.test(value)){
+                setMessageFirstName('FirstName is valid');
             }else{
                 if(value.length > 0)
-                    setMessagefirstName('FirstName not valid');
+                    setMessageFirstName('FirstName not valid');
                 else
-                    setMessagefirstName('');
+                    setMessageFirstName('');
             }
         };
         
         const handleLastNameChange = (event) => {
             const { value } = event.target.value;
-            if(Nameregex.test(value)){
-                setMessagelastName('LastName is valid');
+            if(NameRegex.test(value)){
+                setMessageLastName('LastName is valid');
             }else{
                 if(value.length > 0)
-                    setMessagelastName('LastName not valid');
+                    setMessageLastName('LastName not valid');
                 else
-                    setMessagelastName('');
+                    setMessageLastName('');
             }
         };
 
@@ -75,7 +74,7 @@ export default function FormComponent({action}) {
         const handleEmailChange = (e) => {
             const inputEmail = e.target.value;
 
-            if (emailregex.test(inputEmail)) {
+            if (emailRegex.test(inputEmail)) {
                 setMessage('Valid email address');
             } else {
                 if(inputEmail.length > 0)
@@ -115,12 +114,12 @@ export default function FormComponent({action}) {
                         {/* firstName input */}
                         <div className="AA-input-Fields AA-input-group">
                             <input className="AA-input f-18 fw-300" placeholder="Enter First Name" onChange={handleFirstNameChange} />
-                            <p className={`AA-error ${messagefirstName.length == 0 ? "AA-hide" : "AA-show" }`}>{messagefirstName}</p>                    
+                            <p className={`AA-error ${messageFirstName.length == 0 ? "AA-hide" : "AA-show" }`}>{messageFirstName}</p>                    
                         </div>
                         {/* lastName input */}
                         <div className="AA-input-Fields AA-input-group">
                             <input className="AA-input f-18 fw-300" placeholder="Enter Last Name" onChange={handleLastNameChange} />
-                            <p className={`AA-error ${messagelastName.length == 0 ? "AA-hide" : "AA-show" }`}>{messagelastName}</p>                    
+                            <p className={`AA-error ${messageLastName.length == 0 ? "AA-hide" : "AA-show" }`}>{messageLastName}</p>                    
                         </div>
                     </div> : <></>}
                     <div className="AA-inputs">
