@@ -10,7 +10,7 @@ import { FaXmark } from "react-icons/fa6";
 export default function NavBarComponent() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolling, setScrolling] = useState(false);
-  const [activeBtn, setActiveBtn] = useState(false);
+  const [activeBtn, setActiveBtn] = useState("login");
 
   useEffect(() => {
     const handleScroll = () => {
@@ -26,7 +26,7 @@ export default function NavBarComponent() {
   return (
     <>
       <nav className={`${scrolling ? "scrolled" : ""}`}>
-        <Link to="/" className="JS-logo">
+        <Link to="/">
           <img
             src={nav_logo}
             alt="logo"
@@ -47,7 +47,9 @@ export default function NavBarComponent() {
                 <NavLink
                   to={item.path}
                   className={({ isActive }) => (isActive ? "active-link" : "")}
-                  onClick={() => setMenuOpen(!menuOpen)} >
+                  onClick={() => (setMenuOpen(!menuOpen),
+                    setActiveBtn(activeBtn === "sign up" ? "login" : "login"))
+                  } >
                   {item.name}
                 </NavLink>
               </li>
@@ -56,17 +58,19 @@ export default function NavBarComponent() {
           <div className="et-nav-btns">
             <Link
               to={"/signup"}
-              className={`f-18 ${activeBtn ? "et-bg-green" : ""}`}
+              className={`f-18 ${activeBtn === "sign up" ? "et-bg-green" : ""}`}
               onClick={
-                () => (setActiveBtn(!activeBtn),
+                () =>
+                (setActiveBtn(activeBtn === "sign up" ? "sign up" : "sign up"),
                   setMenuOpen(!menuOpen))}>
               Sign up
             </Link>
             <Link
               to={"/login"}
-              className={`f-18 ${activeBtn ? "" : "et-bg-green"}`}
+              className={`f-18 ${activeBtn === "login" ? "et-bg-green" : ""}`}
               onClick={
-                () => (setActiveBtn(!activeBtn),
+                () =>
+                (setActiveBtn(activeBtn === "login" ? "login" : "login"),
                   setMenuOpen(!menuOpen))}>
               Login
             </Link>
