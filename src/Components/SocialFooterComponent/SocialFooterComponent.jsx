@@ -6,7 +6,7 @@ export default function SocialFooterComponent({ icons }) {
         <div className="hw-footerIcons">
             {icons.map((icon, index) => (
                 <div className="hw-fotIconConta" key={index} data-aos="flip-right">
-                    <img src={icon.src} alt={icon.alt} />
+                    <a href="#"  > <img src={icon.src} alt={icon.alt} /></a>
                 </div>
             ))}
         </div>
