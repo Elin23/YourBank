@@ -25,7 +25,7 @@ export default function JobCardComponent({
           <div className="MR-JobCard-subtitle">
             <h4 className="fs-24">Requirements & Qualifications</h4>
             <ul className="fw-300 f-18">
-              {Requirements.map((req, index) => (
+              {Array.isArray(Requirements) && Requirements.map((req, index) => (
                 <li key={index}>
                   <img
                     src="./../../src/assets/imgs/careers icons/Icon (3).png"

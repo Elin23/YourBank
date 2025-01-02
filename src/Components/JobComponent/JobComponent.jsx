@@ -22,8 +22,12 @@ export default function JobComponent() {
             jobDescription={data.jobDescription}
             Requirements={data.Requirements}
           />
+          
         ))}
       </div>
     </div>
   );
 }
+
+
+
