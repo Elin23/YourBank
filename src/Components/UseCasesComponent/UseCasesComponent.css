@@ -108,7 +108,6 @@
     width: 46.86%;
 }
 
-/* gap */
 .Af-UseCasesComponentSide-2-title {
     margin-bottom: 62px;
 }
@@ -286,13 +285,12 @@
     .Af-UseCasesComponentSide-2-secondDiv .Af-rate {
         width: 72.06%;
         text-align: center;
+        display: block;
     }
 
     .Af-divBorder {
-        width: 146px;
-        height: 1px;
-        background-image: linear-gradient(to right, var(--gray15-color) 50%, transparent 50%);
-        background-size: 20px 1px;
+        display: none;
+    
     }
     .Af-UseCasesComponentSide-2-title {
         text-align: center;
@@ -348,5 +346,12 @@
         font-size: 14px;
         line-height: 21px;
         font-weight: 300;
+    }
+    .Af-divBorder {
+        display: block;
+        width: 258px;
+        height: 1px;
+        background-image: linear-gradient(to right, var(--gray15-color) 50%, transparent 50%);
+        background-size: 20px 1px;
     }
 }
