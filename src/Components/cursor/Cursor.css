@@ -1,0 +1,14 @@
+body {
+    cursor: url('./src/assets/imgs/Mouse-default.png'), default;
+}
+
+
+button, button a, a, i, .hw-fotIconConta, .open-nav-btn, 
+.close-nav-btn {
+    cursor: url('./src/assets/imgs/Mouse-Pointer.png'), auto !important;
+}
+
+
+input {
+    cursor: url('./src/assets/imgs/Mouse-Inherit.png'), auto !important;
+}

@@ -1,6 +1,6 @@
 const storedFAQcardData = localStorage.getItem('FAQCardData');
 
-const FAQCardData = storedFAQcardData
+let FAQCardData = storedFAQcardData
   ? JSON.parse(storedFAQcardData)
   : [
       {

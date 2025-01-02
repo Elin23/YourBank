@@ -2,7 +2,7 @@ import icon10 from "../assets/imgs/Home icons/Icon (10).png"
 
 const StoredFeaturesCardData = localStorage.getItem("FeaturesCardData");
 
-const FeaturesCardData = StoredFeaturesCardData ? JSON.parse(StoredFeaturesCardData) : [
+let FeaturesCardData = StoredFeaturesCardData ? JSON.parse(StoredFeaturesCardData) : [
   {
     filter: "Online Banking",
     btn: [
@@ -45,11 +45,6 @@ const FeaturesCardData = StoredFeaturesCardData ? JSON.parse(StoredFeaturesCardD
         title: "Risk Management Tools",
         img: icon10,
         content: "Risk management is a key aspect of financial planning, especially when dealing with investments, businesses, and personal wealth. Financial tools in this category help individuals and organizations assess and minimize potential risks."
-      },
-      {
-        title: "Loan and Credit Management Tools",
-        img: icon10,
-        content: "Managing credit and loans is an important part of personal finance, and various financial tools assist with this process. Credit score monitoring tools, such as Credit Karma and FICO, help individuals keep track of their credit health and understand how their financial decisions impact their creditworthiness."
       }
     ]
   },

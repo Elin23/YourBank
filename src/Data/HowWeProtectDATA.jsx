@@ -5,7 +5,7 @@ import icon4 from './../assets/imgs/security icons/Subtract.png'
 
 const storedHowWeProtectDATA = localStorage.getItem('HowWeProtectDATA');
 
-const HowWeProtectDATA = storedHowWeProtectDATA ? JSON.parse(storedHowWeProtectDATA) : [
+let HowWeProtectDATA = storedHowWeProtectDATA ? JSON.parse(storedHowWeProtectDATA) : [
     {
         icon:icon1,
         title:'Secure Online Banking Platform',

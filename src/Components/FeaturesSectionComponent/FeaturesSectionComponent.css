@@ -44,12 +44,13 @@
 
 .features-cards {
   width: 78.822%;
+}
+.features-cards .fading{
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   gap: 30px;
 }
-
 /* figma design */
 @media (max-width: 1919px) {
   .features-title {
@@ -78,6 +79,8 @@
 
   .features-cards {
     width: 79.296%;
+  }
+  .features-cards .fading{
     gap: 20px;
   }
 }

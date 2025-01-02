@@ -15,6 +15,7 @@ import nextImage from "../../assets/imgs/TestimonialsIcons/right-arrow.png";
 export default function TestimonialsSectionComponent() {
     const [swiperRef, setSwiperRef] = useState(null);
     const [toggleState, setToggleState] = useState(1);
+    const [fade, setFade] = useState(false);
 
     const prevHandler = () => {
         swiperRef.slidePrev();
@@ -25,12 +26,16 @@ export default function TestimonialsSectionComponent() {
     };
 
     const toggleTab = (index) => {
-      setToggleState(index);
+        setFade(true);
+        setTimeout(() => {
+            setToggleState(index);
+            setFade(false);
+        }, 300);
     };
-  
+
     const TestimonialsTabs = [
-      { id: 1, label: "For Individuals", data: StoredTestimonialsData },
-      { id: 2, label: "For Businesses", data: StoredTestimonialsBusinessData },
+        { id: 1, label: "For Individuals", data: StoredTestimonialsData },
+        { id: 2, label: "For Businesses", data: StoredTestimonialsBusinessData },
     ];
 
     const currentTestimonialsData = TestimonialsTabs.find(tab => tab.id === toggleState).data;
@@ -42,6 +47,7 @@ export default function TestimonialsSectionComponent() {
                     title="Our Testimonials"
                     desc="Discover how YourBank has transformed lives with innovative digital solutions and personalized customer service. See why our clients trust us for a secure and prosperous financial journey"
                     highlightedWords={["Testimonials"]}
+                    fw={false}
                 />
                 <div className="tabs">
                     {TestimonialsTabs.map((tab) => (
@@ -57,48 +63,54 @@ export default function TestimonialsSectionComponent() {
                 </div>
             </div>
             <div className="wrapper">
-                
-            <div className="AA-left-shadow" ></div>
-                 
-                <Swiper
-                    loop={true}
-                    modules={[Autoplay,Navigation, Pagination, Scrollbar]}
-                    slidesPerView={3}
-                    autoplay={{
-                        delay: 2500,
-                        disableOnInteraction: false
-                      }}
-                    breakpoints={{
-                        0: { slidesPerView: 1 },
-                        993: { slidesPerView: 2 },
-                        1200: { slidesPerView: 3 },
-                    }}
-                    onSwiper={(swiper) => setSwiperRef(swiper)} >
 
-                    {currentTestimonialsData.map((e, index) => {
-                        return (
-                            <SwiperSlide key={index}>
-                                <TestimonialsCardComponent data={e}/>
-                            </SwiperSlide>
-                        );
-                    })}
-                </Swiper>
-                <div className="AA-right-shadow" ></div> 
+                <div className="AA-left-shadow" ></div>
+                <div className={`fading ${fade ? 'fade-out' : 'fade-in'}`}>
+                    <Swiper
+                        loop={true}
+                        // loopedSlides={currentTestimonialsData.length}
+                        modules={[Autoplay, Navigation]}
+                        slidesPerView={3}
+                        autoplay={{
+                            delay: 2500,
+                            disableOnInteraction: false
+                        }}
+                        breakpoints={{
+                            0: { slidesPerView: 1 },
+                            993: { slidesPerView: 2 },
+                            1200: { slidesPerView: 3 },
+                        }}
+                        onSwiper={(swiper) => setSwiperRef(swiper)} >
+
+                        {currentTestimonialsData.map((e, index) => {
+                            return (
+                                <SwiperSlide key={index}>
+                                    <TestimonialsCardComponent data={e} />
+                                </SwiperSlide>
+                            );
+                        })}
+                    </Swiper>
+                </div>
+                <div className="AA-right-shadow" ></div>
 
                 <div className="AA-navigation-btns">
                     <button
                         className="AA-custom-swiper-navigation-prev"
-                        onClick={prevHandler}>
+                        onClick={prevHandler}
+                        data-aos="fade-up"
+                        >
                         <img src={prevImage} alt="prev" />
                     </button>
                     <button
                         className="AA-custom-swiper-navigation-next"
-                        onClick={nextHandler}>
+                        onClick={nextHandler}
+                        data-aos="fade-up"
+                        >
                         <img src={nextImage} alt="next" />
                     </button>
                 </div>
             </div>
-            
+
         </section>
     );
 }

@@ -15,8 +15,9 @@
 .AM-mission-vision-card .mission-vision-img,
 .AM-mission-vision-card-reverse .mission-vision-img {
     background-image: url("../../../src//assets/imgs/Abstract\ Design6.png");
-    background-size: cover;
-    background-position: center;
+    background-size: contain;
+    /* background-position:left; */
+    background-repeat: no-repeat;
     width: 664px;
     padding: 60px;
     padding-bottom: 0px;
