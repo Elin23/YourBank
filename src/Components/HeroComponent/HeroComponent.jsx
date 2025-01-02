@@ -2,8 +2,6 @@ import React from 'react'
 import './HeroComponent.css'
 import tickIcon from '../../assets/imgs/Home icons/tick-Icon.png'
 import { Link } from 'react-router-dom'
-import imgScreen from '../../assets/imgs/blend.png'
-import TransIcon from '../../assets/imgs/Home icons/Vector2.png'
 import INRImg from '../../assets/imgs/Home icons/Image.png'
 import USDImg from '../../assets/imgs/Home icons/Image1.png'
 import DollarSign from '../../assets/imgs/Home icons/Shape.png'
@@ -11,7 +9,26 @@ import EuroSign from '../../assets/imgs/Home icons/euro-currency-symbol.png'
 import Bitcoin from '../../assets/imgs/Home icons/Shape2.png'
 import ethereum from '../../assets/imgs/Home icons/Group.png'
 import plus from '../../assets/imgs/Home icons/Vector3.png'
+import TransIcon from '../../assets/imgs/Home icons/Vector2.png'
 import TitleComponent from '../TitleComponent/TitleComponent'
+
+const TransactionBox = ({ name, amount, opacityClass, index }) => (
+  <div className={`es-trans-box ${opacityClass}`} data-aos="fade-up" data-aos-delay={index * 200}>
+    <div className="es-trans-box-left">
+      <div className="es-icon">
+        <img src={TransIcon} alt="Transaction Icon" />
+      </div>
+      <div className="es-tran-details">
+        <span className='fw-300'>Transaction</span>
+        <span className='fw-400'>{name}</span>
+      </div>
+    </div>
+    <div className="es-trans-box-right fw-500">
+      {amount}
+    </div>
+  </div>
+);
+
 export default function HeroComponent() {
   return (
     <>
@@ -47,51 +64,9 @@ export default function HeroComponent() {
             <div className='bg-img' alt="imgScreen" />
             <div className="es-your-trans">
               <h4 className='fw-500'>Your Transactions</h4>
-              {/* box-1- */}
-              <div className="es-trans-box op-100">
-                <div className="es-trans-box-left">
-                  <div className="es-icon">
-                    <img src={TransIcon} alt="Transaction Icon" />
-                  </div>
-                  <div className="es-tran-details">
-                    <span className='fw-300'>Transaction</span>
-                    <span className='fw-400'>Joel Kenley</span>
-                  </div>
-                </div>
-                <div className="es-trans-box-right fw-500">
-                  -$68.00
-                </div>
-              </div>
-              {/* box-2- */}
-              <div className="es-trans-box op-50">
-                <div className="es-trans-box-left">
-                  <div className="es-icon">
-                    <img src={TransIcon} alt="Transaction Icon" />
-                  </div>
-                  <div className="es-tran-details">
-                    <span className='fw-300'>Transaction</span>
-                    <span className='fw-400'>Mark Smith</span>
-                  </div>
-                </div>
-                <div className="es-trans-box-right fw-500">
-                  -$68.00
-                </div>
-              </div>
-              {/* box-3- */}
-              <div className="es-trans-box op-20">
-                <div className="es-trans-box-left">
-                  <div className="es-icon">
-                    <img src={TransIcon} alt="Transaction Icon" />
-                  </div>
-                  <div className="es-tran-details">
-                    <span className='fw-300'>Transaction</span>
-                    <span className='fw-400'>Lenen Roy</span>
-                  </div>
-                </div>
-                <div className="es-trans-box-right fw-500">
-                  -$68.00
-                </div>
-              </div>
+              <TransactionBox name="Joel Kenley" amount="-$68.00" opacityClass="op-100" index= '1'/>
+              <TransactionBox name="Mark Smith" amount="-$68.00" opacityClass="op-50" index= '2'/>
+              <TransactionBox name="Lenen Roy" amount="-$68.00" opacityClass="op-20" index= '3'/>
             </div>
             <div className="exchange">
               <h4 className='fw-500'>Money Exchange</h4>
@@ -128,18 +103,16 @@ export default function HeroComponent() {
             <div className="es-supported-currency-container">
               <span className='fw-400'>Supported Currency</span>
               <div className="es-currency-icons">
-                <div className="es-currency-img">
-                  <img src={DollarSign} alt="Dollar Sign" />
-                </div>
-                <div className="es-currency-img">
-                  <img src={EuroSign} alt="Euro Sign" />
-                </div>
-                <div className="es-currency-img">
-                  <img src={Bitcoin} alt="Bitcoin sign" />
-                </div>
-                <div className="es-currency-img">
-                  <img src={ethereum} alt="ethereum sign" />
-                </div>
+                {[
+                  { src: DollarSign, alt: "Dollar Sign" },
+                  { src: EuroSign, alt: "Euro Sign" },
+                  { src: Bitcoin, alt: "Bitcoin sign" },
+                  { src: ethereum, alt: "ethereum sign" }
+                ].map((currency, index) => (
+                  <div className="es-currency-img" key={index}>
+                    <img src={currency.src} alt={currency.alt} />
+                  </div>
+                ))}
               </div>
             </div>
           </div>

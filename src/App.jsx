@@ -9,8 +9,22 @@ import "./App.css";
 import NavBarComponent from "./Components/NavBarComponent/NavBarComponent";
 import FooterComponent from "./Components/FooterComponent/FooterComponent";
 import Cursor from "./Components/cursor/cursor";
+import { useEffect } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 function App() {
+
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      offset:0,
+      distance: '50px',
+      once: false,
+      mirror: true
+    });
+  }, []);
+
   return (
     <div className="bg-main">
       <Cursor />

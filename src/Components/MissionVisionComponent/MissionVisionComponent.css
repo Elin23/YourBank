@@ -1,5 +1,6 @@
 .AM-missionVision-sec {
     background-color: var(--black10-color);
+    overflow: hidden;
 }
 
 .AM-missionVision-sec .AM-title-comp .desc {

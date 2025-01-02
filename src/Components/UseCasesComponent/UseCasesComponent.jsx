@@ -8,7 +8,7 @@ export default function UseCasesComponent({ reverse }) {
     const [counterState, setCounterState] = useState(false)
 
     const renderCard = (index) => (
-        <div className='Af-UseCasesComponentSide-1-card'>
+        <div className='Af-UseCasesComponentSide-1-card' data-aos="flip-right" data-aos-delay="200">
             <div className='Af-UseCasesComponentSide-1-card-img'>
                 <div>
                     <img src={UseCaseData[reverse ? 1 : 0].properities[index].icon} alt="icon" />
@@ -21,7 +21,7 @@ export default function UseCasesComponent({ reverse }) {
     return (
         <>
             <div className={reverse ? 'Af-UseCasesComponentReverse ' : 'Af-UseCasesComponent'}>
-                <div className={reverse ? 'Af-UseCasesComponentSide-1Reverse ' : 'Af-UseCasesComponentSide-1'}>
+                <div className={reverse ? 'Af-UseCasesComponentSide-1Reverse ' : 'Af-UseCasesComponentSide-1'} data-aos="fade-left">
                     <div className='Af-cardTop'>
                         {renderCard(0)}
                         {renderCard(1)}
@@ -33,8 +33,8 @@ export default function UseCasesComponent({ reverse }) {
                 </div>
                 <div className='Af-UseCasesComponentSide-2'>
                     <div className='Af-UseCasesComponentSide-2-title'>
-                        <h4 className='fs-30'>{UseCaseData[reverse ? 1 : 0].heading.title}</h4>
-                        <p className='f-18 fw-300'>{UseCaseData[reverse ? 1 : 0].heading.desc}</p>
+                        <h4 className='fs-30' data-aos="fade-up">{UseCaseData[reverse ? 1 : 0].heading.title}</h4>
+                        <p className='f-18 fw-300' data-aos="fade-up" data-aos-delay="200">{UseCaseData[reverse ? 1 : 0].heading.desc}</p>
                     </div>
                     <ScrollTrigger onEnter={() => setCounterState(true)} onExit={() => setCounterState(false)}>
                         <div className='Af-UseCasesComponentSide-2-secondDiv'>
