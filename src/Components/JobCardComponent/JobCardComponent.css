@@ -3,6 +3,11 @@
   font-weight: 600;
   line-height: 45px;
   margin-bottom: 14px;
+  transition: .3s ease-in-out;
+}
+
+.MR-JobCardContainer:hover h3 {
+  color: var(--green60-color);
 }
 
 .MR-JobCard-Title span {
@@ -106,16 +111,17 @@
 
 /* Media query for screens smaller than 1439px */
 @media (max-width: 1439px) {
-  .MR-JobCard-Title  {
+  .MR-JobCard-Title {
     display: flex;
     flex-direction: column;
-    gap:6px;
+    gap: 6px;
   }
+
   .MR-JobCard-Title h3 {
     font-size: 20px;
     line-height: 30px;
   }
-  
+
   .MR-JobCard-Title span {
     padding: 6px 14px;
     font-size: 14px;
@@ -178,22 +184,28 @@
   .MR-JobCard-Title h3 {
     font-size: 16px;
   }
+
   .MR-JobCard-Title span {
     font-size: 12px;
   }
+
   .MR-JobCardContainer h4 {
     font-size: 14px;
   }
+
   .MR-JobCardContainer p {
     font-size: 12px;
   }
+
   .MR-JobCardContainer ul {
     font-size: 12px;
     gap: 12px;
   }
+
   .MR-JobCardContainer button {
     margin-top: 24px;
   }
+
   .MR-JobCardContainer button {
     padding: 10px 20px;
     margin-top: 24px;

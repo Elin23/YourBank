@@ -21,7 +21,7 @@
     transition: .3s ease-in-out;
 }
 
-.AM-product-card .title:hover {
+.AM-product-card:hover.AM-product-card .title {
     color: var(--green60-color);
 }
 

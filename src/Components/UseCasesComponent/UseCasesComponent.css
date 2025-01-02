@@ -112,6 +112,11 @@
 
 .Af-UseCasesComponentSide-2-title h4 {
     color: var(--white-color);
+    transition: .3s ease-in-out;
+}
+
+.Af-UseCasesComponentSide-2-title:hover.Af-UseCasesComponentSide-2-title h4 {
+    color: var(--green60-color);
 }
 
 .Af-UseCasesComponentSide-2-title p {
@@ -172,9 +177,11 @@
     .Af-UseCasesComponentSide-1-card span {
         font-size: 16px;
     }
-    .Af-UseCasesComponentSide-2-secondDiv .Af-rate p{
+
+    .Af-UseCasesComponentSide-2-secondDiv .Af-rate p {
         font-size: 16px;
     }
+
     .Af-UseCasesComponentSide-2-secondDiv .Af-rate h3 {
         font-size: 40px;
     }
@@ -233,9 +240,11 @@
         font-size: 12px;
         padding: 12px 15px 15px;
     }
-    .Af-UseCasesComponentSide-2-secondDiv{
+
+    .Af-UseCasesComponentSide-2-secondDiv {
         justify-content: center;
     }
+
     .Af-UseCasesComponentSide-2-secondDiv div p {
         font-size: 14px;
     }
@@ -253,6 +262,7 @@
     .Af-UseCasesComponentSide-2-title {
         text-align: center;
     }
+
     .Af-UseCasesComponentSide-2-button {
         display: flex;
         justify-content: center;

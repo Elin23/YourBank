@@ -14,7 +14,13 @@
 .MR-FAQ-Card span {
   color: var(--white-color);
   line-height: 25px;
+  transition: .3s ease-in-out;
 }
+
+.MR-FAQ-Card:hover.MR-FAQ-Card span {
+  color: var(--green60-color);
+}
+
 
 /* Horizontal line styling for separating sections */
 .MR-line {

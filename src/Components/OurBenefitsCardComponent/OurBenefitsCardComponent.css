@@ -4,10 +4,11 @@
 .hw-OurBenefitsCard h4,
 .hw-OurBenefitsCard h5,
 .hw-OurBenefitsCard h6,
-.hw-OurBenefitsCard p{
+.hw-OurBenefitsCard p {
     margin-bottom: 0;
 }
-.hw-OurBenefitsCard{
+
+.hw-OurBenefitsCard {
     padding: 50px;
     gap: 30px;
     display: flex;
@@ -15,11 +16,13 @@
     flex-direction: column;
     background-color: var(--black11-color);
     position: relative;
-    border-radius:20px;/*this is the default value*/
+    border-radius: 20px;
+    /*this is the default value*/
     min-height: 336px;
     overflow: hidden;
 }
-.hw-gradient-bg{
+
+.hw-gradient-bg {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -29,7 +32,8 @@
     opacity: 3%;
     z-index: 2;
 }
-.hw-OurBenefitsBlendBg{
+
+.hw-OurBenefitsBlendBg {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -39,7 +43,8 @@
     opacity: 50%;
     z-index: 3;
 }
-.hw-OurBenefitsCard::before{
+
+.hw-OurBenefitsCard::before {
     content: '';
     position: absolute;
     width: 100%;
@@ -48,61 +53,69 @@
     right: 0;
     z-index: 4;
     background: linear-gradient(90deg,
-    rgba(26 ,26,26 , 0) 0%,
-    rgba(26,26,26,0.7) 30%,
-    #1A1A1A 62%
-    );
+            rgba(26, 26, 26, 0) 0%,
+            rgba(26, 26, 26, 0.7) 30%,
+            #1A1A1A 62%);
 }
-.hw-OurBenefitsCardHeading{
+
+.hw-OurBenefitsCardHeading {
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 20px;
     z-index: 6;
 }
-.hw-iconContainer{
+
+.hw-iconContainer {
     position: relative;
     display: inline-block;
     text-align: center;
     width: 98px;
     height: 98px;
 }
-.hw-iconContainer .circle{
-    position: absolute; 
+
+.hw-iconContainer .circle {
+    position: absolute;
     top: 50%;
     left: 50%;
     background: linear-gradient(0deg, rgba(28, 28, 28, 1) 15%, rgba(28, 28, 28, 1) 18%, rgba(202, 255, 51, 1) 250%);
     border-radius: 50%;
     transform: translate(-50%, -50%);
 }
-.OurBenefitsCardIcon{
+
+.OurBenefitsCardIcon {
     position: absolute;
-    top: 50%; 
-    left: 50%; 
-    transform: translate(-50%, -50%); 
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
-.hw-iconContainer .circle1{
-    width: 74px; 
-    height: 74px; 
+
+.hw-iconContainer .circle1 {
+    width: 74px;
+    height: 74px;
     opacity: 0.3;
 }
-.hw-iconContainer .circle2{
+
+.hw-iconContainer .circle2 {
     width: 100%;
     height: 100%;
     opacity: 0.3;
 }
-.hw-iconContainer .circle3{
+
+.hw-iconContainer .circle3 {
     width: 77px;
     height: 77px;
     opacity: 0.3;
 }
-.hw-OurBenefitsCardTitle{
+
+.hw-OurBenefitsCardTitle {
     font-size: 24px;
     font-weight: 400;
     line-height: 36px;
     color: var(--white-color);
 }
-.OurBenefitsCardDescription{
+
+.OurBenefitsCardDescription {
     font-weight: 300;
     font-size: 18px;
     line-height: 27px;
@@ -111,122 +124,154 @@
     max-width: 648px;
 }
 
-@media (max-width:1919px){
-    .hw-OurBenefitsCard{
+@media (max-width:1919px) {
+    .hw-OurBenefitsCard {
         padding: 40px;
         gap: 24px;
         min-height: 276px;
     }
-    .hw-OurBenefitsCardHeading{
+
+    .hw-OurBenefitsCardHeading {
         gap: 14px;
     }
-    .hw-OurBenefitsCardTitle{
+
+    .hw-OurBenefitsCardTitle {
         font-size: 20px;
         line-height: 30px;
+        transition: .3s ease-in-out;
     }
-    .hw-iconContainer{
-        width:76px ;
-        height:76px ;
+
+    .hw-OurBenefitsCard:hover .hw-OurBenefitsCardTitle {
+        color: var(--green60-color);
     }
-    .OurBenefitsCardIcon{
+
+    .hw-iconContainer {
+        width: 76px;
+        height: 76px;
+    }
+
+    .OurBenefitsCardIcon {
         width: 28px;
         height: 28px;
     }
-    .hw-iconContainer .circle1{
+
+    .hw-iconContainer .circle1 {
         width: 60px;
         height: 60px;
     }
-    .hw-iconContainer .circle3{
+
+    .hw-iconContainer .circle3 {
         width: 63px;
         height: 63px;
     }
-    .OurBenefitsCardDescription{
+
+    .OurBenefitsCardDescription {
         font-size: 16px;
-        line-height:24px;
+        line-height: 24px;
         max-width: 530px;
         width: 530px;
     }
-    .hw-roundedCardLeft{
+
+    .hw-roundedCardLeft {
         border-radius: 40px 14px 40px 14px;
     }
-    .hw-roundedCardRight{
-        border-radius:14px 40px 14px 40px;
+
+    .hw-roundedCardRight {
+        border-radius: 14px 40px 14px 40px;
     }
 }
-@media (max-width:1439px){
-    .hw-OurBenefitsCard{
+
+@media (max-width:1439px) {
+    .hw-OurBenefitsCard {
         padding: 30px;
         gap: 20px;
         min-height: 250px;
     }
-    .hw-OurBenefitsCardHeading{
+
+    .hw-OurBenefitsCardHeading {
         gap: 10px;
     }
-    .hw-OurBenefitsCardTitle{
+
+    .hw-OurBenefitsCardTitle {
         font-size: 18px;
         line-height: 28px;
     }
-    .hw-iconContainer{
-        width:68px ;
-        height:68px ;
+
+    .hw-iconContainer {
+        width: 68px;
+        height: 68px;
     }
-    .OurBenefitsCardIcon{
+
+    .OurBenefitsCardIcon {
         width: 24px;
         height: 24px;
     }
-    .hw-iconContainer .circle1{
+
+    .hw-iconContainer .circle1 {
         width: 52px;
         height: 52px;
     }
-    .hw-iconContainer .circle3{
+
+    .hw-iconContainer .circle3 {
         width: 55px;
         height: 55px;
     }
-    .OurBenefitsCardDescription{
+
+    .OurBenefitsCardDescription {
         max-width: 530px;
         width: unset;
         font-size: 15px;
     }
 }
-@media (max-width:768px){
-    .hw-roundedCardRight,.hw-roundedCardLeft{
+
+@media (max-width:768px) {
+    .hw-roundedCardRight, .hw-roundedCardLeft {
         border-radius: 40px 40px 10px 10px;
     }
-    .hw-OurBenefitsCard{
+
+    .hw-OurBenefitsCard {
         padding: 24px;
         gap: 20px;
         min-height: 245px;
     }
-    .hw-OurBenefitsCardTitle{
+
+    .hw-OurBenefitsCardTitle {
         font-size: 18px;
         line-height: 27px;
     }
-    .OurBenefitsCardDescription{
+
+    .OurBenefitsCardDescription {
         max-width: 310px;
         font-size: 14px;
         line-height: 21px;
     }
-    .hw-iconContainer{
-        width:72px ;
-        height:72px ;
+
+    .hw-iconContainer {
+        width: 72px;
+        height: 72px;
     }
-    .OurBenefitsCardIcon{
+
+    .OurBenefitsCardIcon {
         width: 24px;
         height: 24px;
     }
-    .hw-iconContainer .circle1{
+
+    .hw-iconContainer .circle1 {
         width: 56px;
         height: 56px;
     }
-    .hw-iconContainer .circle3{
+
+    .hw-iconContainer .circle3 {
         width: 58px;
         height: 58px;
     }
-    .hw-dashed-lines-vr{
+
+    .hw-dashed-lines-vr {
         width: 358px;
         height: 2px;
     }
-    .hw-dashed-lines-hr{
+
+    .hw-dashed-lines-hr {
         width: 358px
     }
 }

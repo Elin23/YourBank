@@ -5,6 +5,7 @@
   background-color: var(--black11-color);
 }
 
+
 .et-card-title {
   display: flex;
   justify-content: space-between;
@@ -15,7 +16,12 @@
   font-size: 22px;
   line-height: 33px;
   color: var(--white-color);
+  /* transition: .3s ease-in-out; */
 }
+
+/* .features-card:hover.et-card-title span {
+  color: var(--green60-color);
+} */
 
 .features-card p {
   color: var(--gray70-color);
