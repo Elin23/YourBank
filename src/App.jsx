@@ -7,6 +7,7 @@ import Security from "./Pages/Security/Security";
 import SignUp from "./Pages/SignUp/SignUp";
 import "./App.css";
 import NavBarComponent from "./Components/NavBarComponent/NavBarComponent";
+import HandleLoadingComponent from './Components/HandleLoadingComponent/HandleLoadingComponent';
 import FooterComponent from "./Components/FooterComponent/FooterComponent";
 import Cursor from "./Components/cursor/cursor";
 import { useEffect } from 'react';
@@ -30,7 +31,7 @@ function App() {
       <Cursor />
       <NavBarComponent />
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<HandleLoadingComponent />} />
         <Route path="/about" element={<About />} />
         <Route path="/careers" element={<Careers />} />
         <Route path="/security" element={<Security />} />

@@ -49,6 +49,20 @@
     #1A1A1A 62%
     );
 }
+/* .hw-OurBenefitsCard::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    margin: -1px;
+    background: linear-gradient(-214.85deg ,rgba(202,255,51,0.2)0%,
+    rgba(202,255,51,0) 11.24%,
+    rgba(202,255,51,0) 91.73%,
+    rgba(202,255,51,0.2) 99.95%);
+    z-index: -1;
+} */
 .hw-OurBenefitsCardHeading{
     display: flex;
     align-items: center;
