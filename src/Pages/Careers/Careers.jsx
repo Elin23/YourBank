@@ -5,7 +5,8 @@ import IMG1 from '../../assets/imgs/Hero/HeroImage1.png'
 import OurValuesSectionComponent from '../../Components/OurValuesSectionComponent/OurValuesSectionComponent'
 import JobComponent from "../../Components/JobComponent/JobComponent";
 import OurBenefitsSectionComponenet from '../../Components/OurBenefitsSectionComponenet/OurBenefitsSectionComponenet'
-
+import AdSectionComponent from '../../Components/AdSectionComponent/AdSectionComponent'
+import {AdSecData} from './../../Data/AdSectionData'
 
 export default function Careers() {
   return (
@@ -20,7 +21,8 @@ export default function Careers() {
       <OurValuesSectionComponent/>
       <OurBenefitsSectionComponenet />
       <FAQSectionComponent />
-      <JobComponent />
+      {/* <JobComponent /> */}
+      <AdSectionComponent DATA={AdSecData[1]}/>
   </>
 
 
