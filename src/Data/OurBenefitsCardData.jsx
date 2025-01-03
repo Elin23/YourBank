@@ -5,7 +5,7 @@ import icon4 from './../assets/imgs/careers icons/Icon (1).png'
 
 const storedOurBenefitsCardData = localStorage.getItem('OurBenefitsCardData');
 
-const OurBenefitsCardData = storedOurBenefitsCardData ? JSON.parse(storedOurBenefitsCardData) : [
+let OurBenefitsCardData = storedOurBenefitsCardData ? JSON.parse(storedOurBenefitsCardData) : [
     {
         icon:icon1,
         title:'Competitive Compensation',

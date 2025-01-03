@@ -2,7 +2,7 @@ import icon1 from "../assets/imgs/Home icons/Icon (2).png";
 import icon2 from "../assets/imgs/Home icons/Icon (3).png";
 import icon3 from "../assets/imgs/Home icons/Icon (4).png";
 
-export const ProductCardData = [
+export let ProductCardData = [
   {
     icon: icon1,
     alt: "Icon-product-2",
@@ -22,23 +22,23 @@ export const ProductCardData = [
     desc: "Realize your dreams with our flexible loan and mortgage options. From personal loans to home mortgages, our experienced loan officers are here to guide you through the application process and help you secure the funds you need.",
   },
 ];
-export const ProductCardData2 = [
+export let ProductCardData2 = [
   {
     icon: icon1,
     alt: "Icon-product-2",
-    title: "Checking Accounts",
-    desc: " Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iste tenetur consequatur voluptatibus cumque quaerat, beatae voluptatum deleniti molestias  dolor sit amet consectetur.",
+    title: "Business Accounts",
+    desc: "Open a business checking account to manage your company's finances efficiently. Enjoy features like online banking, expense tracking, and dedicated customer support tailored for businesses.",
   },
   {
     icon: icon2,
     alt: "Icon-product-3",
-    title: "Savings Accounts",
-    desc: " Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iste tenetur consequatur voluptatibus cumque quaerat, beatae voluptatum deleniti  dolor sit amet consectetur.",
+    title: "High-Interest Savings Accounts",
+    desc: "Maximize your savings with our high-interest savings accounts. Benefit from higher interest rates and flexible withdrawal options to help you reach your financial goals faster.",
   },
   {
     icon: icon3,
     alt: "Icon-product-4",
-    title: "Loans and Mortgages",
-    desc: " Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iste tenetur consequatur voluptatibus cumque quaerat, beatae voluptatum deleniti molestias  dolor sit amet consectetur beatae voluptatum  beatae voluptatum deleniti.",
+    title: "Home Equity Loans",
+    desc: "Unlock the value of your home with our home equity loan options. Use the funds for renovations, debt consolidation, or major purchases, all while enjoying competitive rates and terms.",
   },
 ];

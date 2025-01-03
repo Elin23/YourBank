@@ -6,7 +6,8 @@ import icon5 from "../assets/imgs/Home icons/Icon (7).png";
 import icon6 from "../assets/imgs/Home icons/Icon (4).png";
 import icon7 from "../assets/imgs/Home icons/Icon (9).png";
 import icon8 from "../assets/imgs/Home icons/Subtract.png";
-export const UseCaseData = [
+
+export let UseCaseData = [
     {
         properities : [
             {

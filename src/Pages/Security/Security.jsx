@@ -8,6 +8,7 @@ export default function Security() {
   return (
     <>
       <HeroComponent2
+      bool={false}
         image={IMG3}
         head={"Your Security is Our Top Priority"}
         light={"Top Priority"}

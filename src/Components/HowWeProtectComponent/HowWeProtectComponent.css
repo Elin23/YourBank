@@ -6,8 +6,6 @@
     z-index: 10;
     margin-top: 117.56px;
     margin-bottom: 150px;
-    /* padding-left: 7px;
-    padding-right: 6px; */
 }
 .howWeProtctCardsContainer{
     display: flex;
@@ -34,7 +32,7 @@
     border-radius: 20px !important;
 }
 .howWeProtectBG{
-    width: 100%;
+    width: 99.812030%;
     z-index: 0;
     background-color: var(--black11-color);
     height: 631.11px;

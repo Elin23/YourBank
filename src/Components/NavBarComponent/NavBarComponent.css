@@ -2,10 +2,10 @@ nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 22px 34px;
+    padding: 20px 34px;
     border-radius: 100px;
     width: 83.125%;
-    /* height: 95px; */
+    height: 95px;
     position: fixed;
     top: 50px;
     z-index: 1000;
@@ -35,8 +35,6 @@ nav .JS-logo .js-yourbank {
 }
 
 nav .js-menu {
-    width: 56px;
-    height: 40px;
     border-radius: 82px;
     background-color: var(--green60-color);
     display: none;
@@ -45,6 +43,7 @@ nav .js-menu {
     position: absolute;
     z-index: 10;
     right: 14px;
+    padding: 6px 14px;
 }
 
 nav .js-menu img {
@@ -53,7 +52,7 @@ nav .js-menu img {
 }
 
 nav .nav-container {
-    width: 69%;
+    width: 62.1073298%;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -83,12 +82,15 @@ nav .nav-container {
     background-color: var(--black11-color);
     border-radius: 4px;
 }
+
 #bar2 {
     transition-duration: .8s;
 }
+
 #bar1 {
     width: 50%;
 }
+
 #checkbox:checked+.ES-toggle .ES-bars {
     position: absolute;
     transition-duration: .5s;
@@ -126,9 +128,9 @@ nav .nav-container ul {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 5px;
     list-style: none;
     margin: 0;
+    padding-left: 0;
 }
 
 nav ul li a {
@@ -136,53 +138,51 @@ nav ul li a {
     color: var(--white-color);
     border-radius: 82px;
     padding: 12px 24px;
-    border-radius: 82px;
 }
 
-nav ul li a:not(.active):hover,
 .active-link {
-    background-color: var(--gray20-color);
+    background-color: var(--gray15-color);
 }
 
-
-.JS-right-nav .js-btn1-nav {
-    background-color: transparent;
-    border: none;
-}
-
-.JS-right-nav .js-btn1-nav a {
+.et-nav-btns a {
     text-decoration: none;
-    color: var(--white-color);
+    padding: 14px 30px;
 }
 
-.JS-right-nav .js-btn2-nav {
+.et-white {
+    color: #ffffff;
+}
+
+.et-bg-green {
     background-color: var(--green60-color);
-    border: none;
-    width: 109px;
-    height: 55px;
     border-radius: 82px;
-    margin-left: 30px;
-}
-
-.JS-right-nav .js-btn2-nav a {
-    text-decoration: none;
     color: var(--black11-color);
 }
 
 /* Start Responsive */
+
+/* figma design */
 @media (max-width: 1919px) {
     nav {
         width: 88.889%;
+        height: 73px;
         left: 5.5555%;
         padding: 14px 24px;
         top: 30px;
     }
-    nav.scrolled {
-        padding: 14px 5.5%;
+
+    nav .nav-container {
+        width: 62.3782468%;
     }
 
-    nav .f-18 {
+    nav ul li a {
+        padding: 10px 18px;
         font-size: 14px;
+        line-height: 21px;
+    }
+
+    nav.scrolled {
+        padding: 14px 5.5%;
     }
 
     nav .JS-logo .js-logo-img {
@@ -193,56 +193,32 @@ nav ul li a:not(.active):hover,
     nav .JS-logo .js-yourbank {
         width: 83.75px;
         height: 13.75px;
-        margin-left: 3.2px;
+        margin-left: 3.12px;
     }
 
-    .JS-right-nav .js-btn2-nav {
-        width: 87px;
-        height: 45px;
-        border-radius: 82px;
-        margin-left: 20px;
+    .et-bg-green {
+        padding: 12px 24px;
     }
 
-}
-
-@media (max-width: 1439px) {
-    nav {
-        height: 63px;
-    }
-    /* nav .nav-container ul {
-        margin-right: 301.5px;
-    } */
-    /* nav .f-18 {
-        font-size: 10px;
-    } */
-
-    /* nav .JS-logo .js-logo-img {
-        width: 26px;
-        height: 26px;
-    } */
-
-    /* nav .JS-logo .js-yourbank {
-        width: 55.333px;
-        height: 9.16px;
-    } */
-
-    .JS-right-nav .js-btn2-nav {
-        width: 72.66px;
-        height: 36.66px;
-        margin-left: 20px;
+    .et-nav-btns a {
+        font-size: 14px;
+        line-height: 21px;
     }
 }
 
+@media (max-width: 1200px) {
+    nav .nav-container ul {
+        margin-left: -50px;
+    }
+}
+
+/* figma design */
 @media (max-width: 992px) {
     nav {
         width: 91.794%;
         left: 4.103%;
         height: 68px;
-        padding-left: 24px;
-        padding-right: 24px;
-        /* flex-direction: column;
-        align-items: start;
-        justify-content: center; */
+        top: 40px;
     }
 
     nav .nav-container {
@@ -268,11 +244,9 @@ nav ul li a:not(.active):hover,
     nav .nav-container ul {
         flex-direction: column;
         width: 100%;
-        gap: 0px;
         margin: 0;
         padding: 0;
         margin-bottom: 50px;
-        /* margin: 50px 0; */
     }
 
     nav .nav-container ul li {
@@ -303,43 +277,17 @@ nav ul li a:not(.active):hover,
         display: flex;
     }
 
-    .JS-right-nav {
+    .et-nav-btns {
         display: flex;
         flex-direction: column;
-        align-items: center;
-        justify-content: center;
+        padding: 0 10px;
         width: 100%;
     }
 
-    .JS-right-nav .js-btn1-nav {
-        background-color: transparent;
-        border: none;
-        width: 200px;
+    .et-nav-btns a {
+        text-align: center;
         margin-bottom: 25px;
         font-size: 18px;
+        line-height: 27px;
     }
-
-    .JS-right-nav .js-btn1-nav a {
-        text-decoration: none;
-        color: var(--white-color);
-    }
-
-    .JS-right-nav .js-btn2-nav {
-        background-color: transparent;
-        border: none;
-        width: 90%;
-        height: 51px;
-        margin: 0;
-        margin-bottom: 30px;
-        font-size: 18px;
-        background-color: var(--green60-color);
-
-    }
-
-    .JS-right-nav .js-btn2-nav a {
-        text-decoration: none;
-        color: var(--black11-color);
-    }
-
-
 }

@@ -11,6 +11,7 @@ export default function Careers() {
   return (
     <>
     <HeroComponent2 
+    bool={false}
     image={IMG1} 
     head={"Welcome to YourBank Careers!"} 
     light={"YourBank"}

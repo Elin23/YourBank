@@ -1,9 +1,9 @@
 import "./FeaturesCardComponent.css"
 
-export default function FeaturesCardComponent({ title, img, content }) {
+export default function FeaturesCardComponent({ title, img, content, index }) {
   return (
     <>
-      <div className="features-card p-50"  >
+      <div className="features-card p-50" data-aos="flip-right" data-aos-delay={index * 100}>
         <div className="et-card-title">
           <span className="fw-400"> {title} </span>
           <img src={img} alt="arrow icon" />

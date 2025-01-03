@@ -53,7 +53,6 @@ export default function FormComponent({ action }) {
     if (Nameregex.test(value)) {
       setMessagefirstName("FirstName is valid");
     } else {
-      console.log(value);
       if (value.length > 0) setMessagefirstName("FirstName not valid");
       else setMessagefirstName("");
     }
@@ -124,29 +123,42 @@ export default function FormComponent({ action }) {
 
   const submitForm = (event) => {
     event.preventDefault();
+    var titleSwal = "";
     if (action == "login") {
-        if(state.email.length > 0 && state.password.length > 0){
-            localStorage.setItem('user',JSON.stringify(state));
-            Swal.fire({
-                icon: 'success',
-                title: `You have been logged in successfully`,
-                showConfirmButton: false,
-                timer: 1500
-            });
-            navigate('/');
+        if (
+          state.email.length > 0 &&
+          state.password.length > 0 &&
+          emailregex.test(state.email)
+        ) {
+          //calling api login here
+          localStorage.setItem("user", JSON.stringify(state));
+          titleSwal = "You have been logged in successfully";
         }
     } else {
-        if(state.email.length > 0 && state.password.length > 0 && state.firstName.length > 0 && state.lastName.length > 0){
-            localStorage.setItem('user',JSON.stringify(state));
-            Swal.fire({
-                icon: 'success',
-                title: `An account has been created successfully`,
-                showConfirmButton: false,
-                timer: 1500
-            });
-            navigate('/');
+        if (
+          state.email.length > 0 &&
+          state.password.length > 0 &&
+          state.firstName.length > 0 &&
+          state.lastName.length > 0 && 
+          emailregex.test(state.email) &&
+          passwordRegex.test(state.password) && 
+          Nameregex.test(state.firstName) && 
+          Nameregex.test(state.lastName)
+        ) {
+          //calling api signup here
+          localStorage.setItem("user", JSON.stringify(state));
+          titleSwal = "An account has been created successfully";
         }
     }
+
+    Swal.fire({
+      icon: 'success',
+      title: titleSwal,
+      showConfirmButton: false,
+      timer: 1500
+    });
+
+    navigate('/');
   };
 
   return (
@@ -160,6 +172,7 @@ export default function FormComponent({ action }) {
             title={title}
             desc={desc}
             highlightedWords={[title]}
+            fw={false}
           />
           <form onSubmit={submitForm}>
             {action == "signup" ? (
