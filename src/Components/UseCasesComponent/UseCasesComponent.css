@@ -291,9 +291,13 @@
     }
 
     .Af-divBorder {
-        display: none;
-    
+        display: block;
+        width: 258px;
+        height: 1px;
+        background-image: linear-gradient(to right, var(--gray15-color) 50%, transparent 50%);
+        background-size: 20px 1px;
     }
+
     .Af-UseCasesComponentSide-2-title {
         text-align: center;
     }
@@ -349,11 +353,11 @@
         line-height: 21px;
         font-weight: 300;
     }
-    .Af-divBorder {
+    /* .Af-divBorder {
         display: block;
         width: 258px;
         height: 1px;
         background-image: linear-gradient(to right, var(--gray15-color) 50%, transparent 50%);
         background-size: 20px 1px;
-    }
+    } */
 }
