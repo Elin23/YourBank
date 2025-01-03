@@ -62,7 +62,7 @@ export default function TestimonialsSectionComponent() {
                  
                 <Swiper
                     loop={true}
-                    loopedSlides={currentTestimonialsData.length}
+                    loopedslides={currentTestimonialsData.length}
                     modules={[Autoplay,Navigation]}
                     slidesPerView={3}
                     autoplay={{

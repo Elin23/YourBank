@@ -1,13 +1,23 @@
 import React, { useEffect } from 'react'
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 import logo1 from "./../../assets/imgs/logo.png";
 import logo2 from "./../../assets/imgs/YourBanK.svg";
 import "./NavBarComponent.css";
 import { useState } from "react";
 
 export default function NavBarComponent() {
+  const navigate = useNavigate();
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolling, setScrolling] = useState(false);
+  //checking 
+  const [isLogin, setIsLogin] = useState(false);
+
+  useEffect(() => {
+    const StoredUser = JSON.parse(localStorage.getItem('user'));
+    if (StoredUser) {
+      setIsLogin(true);
+    }
+  },[navigate]);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -19,6 +29,11 @@ export default function NavBarComponent() {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
+  const handleLogout = (event) => {
+    localStorage.removeItem('user');
+    setIsLogin(false);
+  };
 
   return (
     <>
@@ -56,12 +71,21 @@ export default function NavBarComponent() {
           </ul>
 
           <div className="JS-right-nav">
-            <button className="js-btn1-nav f-18">
-              <Link to="/signUp">Sign Up</Link>
-            </button>
-            <button className="js-btn2-nav f-18">
-              <Link to="/login">Login</Link>
-            </button>
+            {
+              isLogin == false ? 
+              <>
+                <button className="js-btn1-nav f-18">
+                  <Link to="/signUp">Sign Up</Link>
+                </button>
+                <button className="js-btn2-nav f-18">
+                  <Link to="/login">Login</Link>
+                </button>
+              </> : 
+              <button className="js-btn2-nav f-18" onClick={handleLogout}>
+                Logout
+              </button>
+            }
+            
           </div>
         </div>
       </nav>
