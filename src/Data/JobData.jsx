@@ -14,8 +14,8 @@ let JobData = storedJobData
         "Minimum of 3 years of experience in sales or relationship management in the banking industry",
         "Proven track record of meeting and exceeding sales targets",
         "Excellent interpersonal and negotiation skills",
-        "Strong knowledge of banking products and services",
-      ],
+        "Strong knowledge of banking products and services"
+      ]
     },
     {
       Title: "Risk Analyst",
@@ -29,8 +29,8 @@ let JobData = storedJobData
         "Minimum of 2 years of experience in risk management or a similar role",
         "Proficiency in risk analysis tools and techniques",
         "Strong analytical and problem-solving skills",
-        "Knowledge of regulatory requirements and industry best practices",
-      ],
+        "Knowledge of regulatory requirements and industry best practices"
+      ]
     },
     {
       Title: "IT Security Specialist",
@@ -44,8 +44,8 @@ let JobData = storedJobData
         "Minimum of 5 years of experience in IT security or a similar role",
         "In-depth knowledge of network security protocols and technologies",
         "Familiarity with regulatory frameworks such as PCI DSS and GDPR",
-        "Professional certifications such as CISSP or CISM are preferred",
-      ],
+        "Professional certifications such as CISSP or CISM are preferred"
+      ]
     },
   ];
 

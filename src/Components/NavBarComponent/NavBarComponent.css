@@ -140,7 +140,6 @@ nav ul li a {
     padding: 12px 24px;
 }
 
-nav ul li a:not(.active):hover,
 .active-link {
     background-color: var(--gray15-color);
 }

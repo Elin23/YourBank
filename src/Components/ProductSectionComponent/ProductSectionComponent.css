@@ -22,6 +22,8 @@
 
 .AM-product-sec .AM-title-comp .desc {
     max-width: 910px;
+    margin-bottom: 0;
+
 }
 
 .tab {

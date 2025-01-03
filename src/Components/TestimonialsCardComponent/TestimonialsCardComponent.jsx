@@ -6,7 +6,7 @@ export default function TestimonialsCardComponent({data}) {
   return (
     <>
         <div className="AA-left-shadow-card" />
-        <div className="AA-Testimony-Card">
+        <div className="AA-Testimony-Card" data-aos="zoom-in">
 
             <div className="AA-pb-50">
               <img src={image} alt="icon"/>

@@ -42,7 +42,7 @@ export default function FeaturesSectionComponent() {
       </div>
 
       <div className="features-content">
-        <div className="et-btns p-50">
+        <div className="et-btns p-50" data-aos="fade-right" data-aos-duration="2000">
           {btns.map((btn, index) => {
             return (
               <button
@@ -69,6 +69,7 @@ export default function FeaturesSectionComponent() {
                       title={b.title}
                       img={b.img}
                       content={b.content}
+                      index={index}
                     />
                   );
                 });

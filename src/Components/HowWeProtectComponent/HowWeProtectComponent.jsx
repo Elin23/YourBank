@@ -3,8 +3,14 @@ import TitleComponent from "../TitleComponent/TitleComponent";
 import "./HowWeProtectComponent.css";
 import OurBenefitsCardComponent from "../OurBenefitsCardComponent/OurBenefitsCardComponent";
 import { exportedHowWeProtectData } from "./../../Data/HowWeProtectDATA";
-// import blend from './../../assets/imgs/blend.png'
+
 export default function HowWeProtectComponent() {
+  const renderBenefitsCards = () => {
+    return exportedHowWeProtectData.map((data, index) => (
+      <OurBenefitsCardComponent key={index} data={data} />
+    ));
+  };
+
   return (
     <section className="HowWeProtectComponent px-162 pb-150">
       <TitleComponent
@@ -22,12 +28,10 @@ export default function HowWeProtectComponent() {
         </div>
         <div className="howWeProtctCardsContainer">
           <div className="howProtectRow">
-            <OurBenefitsCardComponent data={exportedHowWeProtectData[0]} />
-            <OurBenefitsCardComponent data={exportedHowWeProtectData[1]} />
+            {renderBenefitsCards().slice(0, 2)}
           </div>
           <div className="howProtectRow">
-            <OurBenefitsCardComponent data={exportedHowWeProtectData[2]} />
-            <OurBenefitsCardComponent data={exportedHowWeProtectData[3]} />
+            {renderBenefitsCards().slice(2, 4)}
           </div>
         </div>
       </div>

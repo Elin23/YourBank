@@ -29,6 +29,8 @@
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 80px;
     margin-right: -260px;
+    margin-top: -1px;
+
 }
 
 .Af-HeroComponent2-heading-about {
@@ -41,6 +43,7 @@
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 80px;
     margin-right: -260px;
+    margin-top: -1px;
 }
 
 .Af-About-h4 {
