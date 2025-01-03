@@ -3,7 +3,6 @@ import PressReleasesSectionComponent from '../../Components/PressReleasesSection
 import HeroComponent2 from '../../Components/HeroComponent2/HeroComponent2'
 import IMG2 from '../../assets/imgs/Hero/HeroImage2.png'
 import MissionVisionComponent from '../../Components/MissionVisionComponent/MissionVisionComponent'
-
 export default function About() {
   return (
     <>

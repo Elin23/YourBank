@@ -7,7 +7,7 @@ import imgFacebook from '../../assets/imgs/login icons/Vector.png'
 import imgApple from '../../assets/imgs/login icons/Icon (3).png'
 import { Link } from "react-router-dom";
 import CustomButtonComponent from '../CustomButtonComponent/CustomButtonComponent'
-
+import IconGradient from '../IconGradient/IconGradient'
 export default function FormComponent({action}) {
 
         const [title, setTitle] = useState(action == 'login'? 'Login' : 'Sign Up');
@@ -146,9 +146,19 @@ export default function FormComponent({action}) {
                         <p>Or Continue with</p>
                     </div>
                     <div className="AA-social-login-btns">
-                        <SocialButtonComponent img={imgGmail}/>
-                        <SocialButtonComponent img={imgFacebook} />
-                        <SocialButtonComponent img={imgApple}/>
+                        <IconGradient 
+                        button={true}
+                        img={imgGmail}
+                        />
+                        <IconGradient
+                        button={true} 
+                        img={imgFacebook}
+                        />
+                        <IconGradient 
+                        button={true}
+                        img={imgApple}
+                        />
+                        
                     </div>
                 </form>
             </div>
