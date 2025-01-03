@@ -52,6 +52,21 @@
 
 .es-hero-left-content .es-main-title .title {
     font-weight: 500;
+    animation: moveGradient 5s infinite linear;
+    background: linear-gradient(90deg, #caff33, #E4E4E7, #d8ff66, #fff);
+    background-size: 200%;
+    background-clip: text;
+    color: transparent;
+}
+
+@keyframes moveGradient {
+    0% {
+        background-position: 200% 0;
+    }
+
+    100% {
+        background-position: -200% 0;
+    }
 }
 
 .es-hero-left-content img {
@@ -73,6 +88,31 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.es-hero-btn::before {
+    content: '';
+    width: 0;
+    height: 100%;
+    border-radius: 82px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: linear-gradient(to right, #caff33 40%, #BFBFBF 100%);
+    transition: .5s ease;
+    display: block;
+    z-index: -1;
+}
+
+.es-hero-btn:hover::before {
+    width: 100%;
+}
+
+.es-hero-btn:hover.es-hero-btn a {
+    color: var(--white-color);
 }
 
 .es-hero-btn a {
@@ -106,7 +146,7 @@
     height: 100%;
     top: 0;
     left: 0;
-    border-radius: 10.4px; 
+    border-radius: 10.4px;
     position: absolute;
     background-color: var(--black10-color);
     z-index: 2;
@@ -273,10 +313,10 @@
 }
 
 .es-mini-box:nth-child(2) .es-currency-value,
-.es-mini-box:nth-child(2) .es-upper
-{
-    border-right:none;
+.es-mini-box:nth-child(2) .es-upper {
+    border-right: none;
 }
+
 .exchange-btn {
     width: 100%;
     position: relative;

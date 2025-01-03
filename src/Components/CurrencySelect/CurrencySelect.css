@@ -47,7 +47,7 @@ select {
     padding: 0;
 }
 
-select option {
+.currency-dropdown option {
     background-color: var(--gray15-color);
 }
 @media (max-width: 1919px) {
