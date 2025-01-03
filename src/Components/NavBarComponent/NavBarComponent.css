@@ -2,17 +2,40 @@ nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 20px 34px;
-    border-radius: 100px;
+    background-color: var(--black11-color);
     width: 83.125%;
     height: 95px;
+    padding: 20px 34px;
+    border-radius: 100px;
     position: fixed;
     top: 50px;
     z-index: 1000;
     left: 8.4375%;
-    background-color: var(--black11-color);
     border: 1px solid var(--gray15-color);
     transition: top 0.8s ease, width 0.8s ease;
+}
+
+.nav-logo {
+    width: 155px;
+    height: 40px;
+}
+
+.responsive-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 62.1073298%;
+}
+
+.responsive-logo {
+    display: none;
+}
+
+.responsive-nav ul {
+    display: flex;
+    margin-bottom: 0;
+    list-style: none;
+    padding-left: 0;
 }
 
 nav.scrolled {
@@ -23,117 +46,27 @@ nav.scrolled {
     border-radius: 0px;
 }
 
-nav .JS-logo .js-logo-img {
-    width: 40px;
-    height: 40px;
-}
-
-nav .JS-logo .js-yourbank {
-    width: 111.67px;
-    height: 18.33px;
-    margin-left: 4.17px;
-}
-
-nav .js-menu {
-    border-radius: 82px;
+.open-nav-btn {
     background-color: var(--green60-color);
-    display: none;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    z-index: 10;
-    right: 14px;
+    border-radius: 82px;
     padding: 6px 14px;
-}
-
-nav .js-menu img {
-    width: 28px;
-    height: 28px;
-}
-
-nav .nav-container {
-    width: 62.1073298%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    transition: opacity 0.5s ease, visibility 0.5s ease, transform 0.5s ease;
-}
-
-#checkbox {
     display: none;
 }
 
-.ES-toggle {
-    position: relative;
-    width: 28px;
-    height: 28px;
+.close-nav-btn {
+    font-size: 45px;
+    color: var(--white-color);
+    margin-top: 40px;
+    display: none;
+    transition: 0.7s;
+}
+
+.close-nav-btn:hover {
+    color: var(--green60-color);
     cursor: pointer;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    justify-content: center;
-    gap: 5px;
-    transition-duration: .5s;
 }
 
-.ES-bars {
-    width: 28px;
-    height: 2px;
-    background-color: var(--black11-color);
-    border-radius: 4px;
-}
-
-#bar2 {
-    transition-duration: .8s;
-}
-
-#bar1 {
-    width: 50%;
-}
-
-#checkbox:checked+.ES-toggle .ES-bars {
-    position: absolute;
-    transition-duration: .5s;
-}
-
-#checkbox:checked+.ES-toggle #bar2 {
-    transform: scaleX(0);
-    transition-duration: .1s;
-}
-
-#checkbox:checked+.ES-toggle #bar1 {
-    width: 100%;
-    transform: rotate(45deg);
-    transition-duration: .5s;
-}
-
-#checkbox:checked+.ES-toggle #bar3 {
-    width: 100%;
-    transform: rotate(-45deg);
-    transition-duration: .5s;
-}
-
-#checkbox:checked+.ES-toggle {
-    transition-duration: .5s;
-    transform: rotate(180deg);
-}
-
-nav .nav-container.open {
-    visibility: visible;
-    opacity: 1;
-    transform: translateY(0);
-}
-
-nav .nav-container ul {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    list-style: none;
-    margin: 0;
-    padding-left: 0;
-}
-
-nav ul li a {
+.responsive-nav ul li a {
     text-decoration: none;
     color: var(--white-color);
     border-radius: 82px;
@@ -146,14 +79,11 @@ nav ul li a {
 
 .et-nav-btns a {
     text-decoration: none;
+    color: #ffffff;
     padding: 14px 30px;
 }
 
-.et-white {
-    color: #ffffff;
-}
-
-.et-bg-green {
+.et-nav-btns a.et-bg-green {
     background-color: var(--green60-color);
     border-radius: 82px;
     color: var(--black11-color);
@@ -171,11 +101,12 @@ nav ul li a {
         top: 30px;
     }
 
-    nav .nav-container {
-        width: 62.3782468%;
+    .nav-logo {
+        width: 116.87px;
+        height: 30px;
     }
 
-    nav ul li a {
+    .responsive-nav ul li a {
         padding: 10px 18px;
         font-size: 14px;
         line-height: 21px;
@@ -185,29 +116,19 @@ nav ul li a {
         padding: 14px 5.5%;
     }
 
-    nav .JS-logo .js-logo-img {
-        width: 30px;
-        height: 30px;
-    }
-
-    nav .JS-logo .js-yourbank {
-        width: 83.75px;
-        height: 13.75px;
-        margin-left: 3.12px;
-    }
-
     .et-bg-green {
         padding: 12px 24px;
     }
 
     .et-nav-btns a {
+        padding: 12px 24px;
         font-size: 14px;
         line-height: 21px;
     }
 }
 
 @media (max-width: 1200px) {
-    nav .nav-container ul {
+    .responsive-nav ul {
         margin-left: -50px;
     }
 }
@@ -221,73 +142,60 @@ nav ul li a {
         top: 40px;
     }
 
-    nav .nav-container {
-        flex-direction: column;
-        justify-content: center;
-        visibility: hidden;
-        opacity: 0;
-        width: 100vw;
-        height: 100vh;
-        background-color: var(--black11-color);
-        position: fixed;
-        left: 0px;
-        top: 0px;
-        padding-top: 100px;
-        transition: opacity 0.5s ease, visibility 0.5s ease, transform 0.5s ease;
-    }
-
-    nav .nav-container.open {
-        visibility: visible;
-        opacity: 1;
-    }
-
-    nav .nav-container ul {
-        flex-direction: column;
-        width: 100%;
-        margin: 0;
-        padding: 0;
-        margin-bottom: 50px;
-    }
-
-    nav .nav-container ul li {
-        display: flex;
-        justify-content: center;
-        width: 100%;
-        margin-bottom: 25px;
-        font-size: 18px;
-    }
-
-    nav .nav-container ul li a {
-        margin: 3px 6px;
-        padding: 12px 45%;
-    }
-
-    nav .JS-logo .js-logo-img {
-        width: 26px;
+    .nav-logo {
+        width: 101.29px;
         height: 26px;
     }
 
-    nav .JS-logo .js-yourbank {
-        width: 72.58px;
-        height: 11.9px;
-        margin-left: 2.71px;
+    .responsive-nav {
+        background-color: var(--black11-color);
+        flex-direction: column;
+        justify-content: center;
+        width: 100vw;
+        height: 100vh;
+        position: fixed;
+        left: 0;
+        top: 0;
+        transform: translateY(-100%);
+        transition: transform 0.7s ease;
     }
 
-    nav .js-menu {
+    .responsive-nav.open {
+        transform: translateY(0)
+    }
+
+    .responsive-logo.responsive-nav-logo {
+        display: block;
+    }
+
+    .close-nav-btn.open-menu {
+        display: flex;
+    }
+
+    .responsive-nav ul {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 50px;
+        margin-left: 0;
+    }
+
+    .responsive-nav ul li {
+        margin-bottom: 30px;
+        font-size: 18px;
+    }
+
+    .open-nav-btn {
         display: flex;
     }
 
     .et-nav-btns {
         display: flex;
         flex-direction: column;
-        padding: 0 10px;
-        width: 100%;
+        margin-top: 30px;
     }
 
     .et-nav-btns a {
         text-align: center;
         margin-bottom: 25px;
-        font-size: 18px;
-        line-height: 27px;
     }
 }

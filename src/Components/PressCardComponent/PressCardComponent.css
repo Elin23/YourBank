@@ -9,11 +9,13 @@
 .Press-Card-Component img {
   width: 100%;
   border-radius: 30px 30px 12px 12px;
+  height: 333px;
+  object-fit: cover;
 }
 
 .Press-Card-Content {
-  width: 92.337%;
-  margin: 51px auto 0 auto;
+  margin-top: 51px;
+  padding: 0 30px;
 }
 
 .Press-Card-Content h5 {
@@ -23,20 +25,24 @@
 
 .Press-Card-Content .et-card-info {
   margin-top: 20px;
+  width: max-content;
 }
 
-.Press-Card-Content span {
-  background-color: var(--black11-color);
+.Press-Card-Content .et-card-info span {
+  background-color: var(--black10-color);
   color: var(--gray70-color);
   border-radius: 68px;
   border: 1px solid var(--gray15-color);
-  padding: 8px 16px;
+  padding: 9px 16px;
   margin-right: 10px;
+}
+
+.Press-Card-Content .et-card-info span:nth-child(2) {
+  margin-right: 0;
 }
 
 .Press-Card-Content p {
   color: var(--gray70-color);
-  margin-bottom: 0;
   margin-top: 30px;
 }
 
@@ -48,8 +54,13 @@
     padding: 24px;
   }
 
+  .Press-Card-Component img {
+    height: 277px;
+  }
+
   .Press-Card-Content {
-    margin: 40px auto 0 auto;
+    margin-top: 40px;
+    padding: 0 24px;
   }
 
   .Press-Card-Content h5 {
@@ -59,17 +70,19 @@
 
   .Press-Card-Content .et-card-info {
     margin-top: 14px;
+    height: 36px;
   }
 
-  .Press-Card-Content span {
+  .Press-Card-Content .et-card-info span {
     font-size: 16px;
     line-height: 24px;
-    padding: 6px 14px;
+    padding: 7px 14px;
     margin-right: 6px;
   }
 
   .Press-Card-Content p {
     margin-top: 24px;
+    margin-bottom: 0;
     font-size: 16px;
     line-height: 24px;
   }
@@ -82,9 +95,14 @@
     padding: 20px;
   }
 
+  .Press-Card-Component img {
+    height: 206px;
+  }
+
   .Press-Card-Content {
     margin-top: 30px;
     width: 100%;
+    padding: 0;
   }
 
   .Press-Card-Content h5 {
@@ -94,9 +112,10 @@
 
   .Press-Card-Content .et-card-info {
     margin-top: 10px;
+    height: 33px;
   }
 
-  .Press-Card-Content span {
+  .Press-Card-Content .et-card-info span {
     font-size: 14px;
     line-height: 21px;
     padding: 6px 12px;
@@ -119,5 +138,6 @@
     flex-direction: column;
     gap: 10px;
     width: 70%;
+    height: fit-content;
   }
 }
