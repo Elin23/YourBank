@@ -19,7 +19,7 @@ function App() {
   useEffect(() => {
     AOS.init({
       duration: 1000,
-      offset:0,
+      offset: 0,
       distance: '50px',
       once: false,
       mirror: true
@@ -31,13 +31,14 @@ function App() {
       <Cursor />
       <NavBarComponent />
       <Routes>
-        <Route path='/' element={<HandleLoadingComponent />}/>
-        <Route index element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/careers" element={<Careers />} />
-        <Route path="/security" element={<Security />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/signUp" element={<SignUp />} />
+        <Route path='/' element={<HandleLoadingComponent />}>
+          <Route index element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/careers" element={<Careers />} />
+          <Route path="/security" element={<Security />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/signUp" element={<SignUp />} />
+        </Route>
       </Routes>
       <FooterComponent />
     </div>
