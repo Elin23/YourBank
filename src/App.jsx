@@ -31,7 +31,8 @@ function App() {
       <Cursor />
       <NavBarComponent />
       <Routes>
-        <Route path="/" element={<HandleLoadingComponent />} />
+        <Route path='/' element={<HandleLoadingComponent />}/>
+        <Route index element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/careers" element={<Careers />} />
         <Route path="/security" element={<Security />} />

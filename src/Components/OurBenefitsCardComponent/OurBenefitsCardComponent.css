@@ -69,21 +69,21 @@
     gap: 20px;
     z-index: 6;
 }
-.hw-iconContainer{
-    position: relative;
-    display: inline-block;
-    text-align: center;
+.hw-OurBenefitsCardHeading .Af-img-father{
     width: 98px;
     height: 98px;
+    padding: 12px;
 }
-.hw-iconContainer .circle{
-    position: absolute; 
-    top: 50%;
-    left: 50%;
-    background: linear-gradient(0deg, rgba(28, 28, 28, 1) 15%, rgba(28, 28, 28, 1) 18%, rgba(202, 255, 51, 1) 250%);
-    border-radius: 50%;
-    transform: translate(-50%, -50%);
+.hw-OurBenefitsCardHeading .Af-img-father .Af-img-son{
+    width: 74px;
+    height: 74px;
+    padding: 20px;
 }
+.hw-OurBenefitsCardHeading .Af-img-father .Af-img-son img{
+    width: 34px;
+    height: 34px;
+}
+
 .OurBenefitsCardIcon{
     position: absolute;
     top: 50%; 
@@ -127,21 +127,19 @@
         font-size: 20px;
         line-height: 30px;
     }
-    .hw-iconContainer{
-        width:76px ;
-        height:76px ;
+    .hw-OurBenefitsCardHeading .Af-img-father{
+        width: 76px;
+        height: 76px;
+        padding: 8px;
     }
-    .OurBenefitsCardIcon{
+    .hw-OurBenefitsCardHeading .Af-img-father .Af-img-son{
+        width: 60px;
+        height: 60px;
+        padding: 16px;
+    }
+    .hw-OurBenefitsCardHeading .Af-img-father .Af-img-son img{
         width: 28px;
         height: 28px;
-    }
-    .hw-iconContainer .circle1{
-        width: 60px;
-        height: 60px;
-    }
-    .hw-iconContainer .circle3{
-        width: 60px;
-        height: 60px;
     }
     .OurBenefitsCardDescription{
         font-size: 16px;
@@ -169,22 +167,6 @@
         font-size: 18px;
         line-height: 28px;
     }
-    .hw-iconContainer{
-        width:68px ;
-        height:68px ;
-    }
-    .OurBenefitsCardIcon{
-        width: 24px;
-        height: 24px;
-    }
-    .hw-iconContainer .circle1{
-        width: 52px;
-        height: 52px;
-    }
-    .hw-iconContainer .circle3{
-        width: 55px;
-        height: 55px;
-    }
     .OurBenefitsCardDescription{
         max-width: 530px;
         width: unset;
@@ -208,22 +190,6 @@
         max-width: 310px;
         font-size: 14px;
         line-height: 21px;
-    }
-    .hw-iconContainer{
-        width:72px ;
-        height:72px ;
-    }
-    .OurBenefitsCardIcon{
-        width: 24px;
-        height: 24px;
-    }
-    .hw-iconContainer .circle1{
-        width: 56px;
-        height: 56px;
-    }
-    .hw-iconContainer .circle3{
-        width: 58px;
-        height: 58px;
     }
     .hw-dashed-lines-vr{
         width: 358px;
