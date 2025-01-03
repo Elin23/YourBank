@@ -6,9 +6,14 @@ import ProductCardComponent from "../ProductCardComponent/ProductCardComponent";
 import { ProductCardData, ProductCardData2 } from "../../Data/ProductCardData";
 export default function ProductSectionComponent() {
   const [toggleState, setToggleState] = useState(1);
+  const [fade, setFade] = useState(false);
 
   const toggleTab = (index) => {
-    setToggleState(index);
+    setFade(true);
+    setTimeout(() => {
+        setToggleState(index);
+        setFade(false);
+    }, 300);
   };
 
   const productTabs = [
@@ -42,6 +47,7 @@ export default function ProductSectionComponent() {
           ))}
         </div>
       </div>
+      <div className={`fading ${fade ? 'fade-out' : 'fade-in'}`}>
       {productTabs.map((tab) => (
         <div
           key={tab.id}
@@ -54,6 +60,7 @@ export default function ProductSectionComponent() {
           ))}
         </div>
       ))}
+      </div>
     </section>
   );
 }

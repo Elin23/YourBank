@@ -9,7 +9,7 @@
     color: var(--gray30-color);
     font-size: 58px;
     line-height: 87px;
-    transition: .3s ease-in-out;
+    transition: .3s ease-in-out !important;
 }
 
 .ES-valueCardContainer:hover .ES-card-title {

@@ -1,6 +1,9 @@
 /* Google Fonts: Lexend*/
 @import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&family=Jaro:opsz@6..72&family=Lexend:wght@100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Rajdhani:wght@300;400;500;600;700&display=swap');
 
+/*AOS (Animate On Scroll) Library*/
+@import 'aos/dist/aos.css';
+
 /* Start Global */
 * {
   margin: 0;
@@ -8,7 +11,6 @@
   box-sizing: border-box;
   font-family: "Lexend", sans-serif;
 }
-
 :root {
   --white-color: #fff;
   --black-color: #000;
@@ -40,9 +42,7 @@
   --gray60-color: #98989A;
   --gray70-color: #B3B3B3;
   --gray75-color: #BFBFBF;
-
 }
-
 .pb-150 {
   padding-bottom: 7.8125%;
 }
@@ -61,7 +61,6 @@
 
 .mb-80 {
   margin-bottom: 5.0253%;
-  /*Added*/
 }
 
 .p-50 {
@@ -120,6 +119,41 @@
   font-size: 40px;
 }
 
+/* Start Scrollbar Customization */
+::-webkit-scrollbar {
+  width: 12px; 
+  height: 15px; 
+}
+
+::-webkit-scrollbar-track {
+  background: var(--gray20-color); 
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, var(--green-heavy),var(--green65-color), var(--green70-color));
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(to bottom, var(--green80-color), var(--green70-color));
+}
+/* End Scrollbar Customization */
+
+/* Fade Effect */
+
+.fading {
+  transition: opacity 350ms ease-in-out; 
+}
+
+.fade-in {
+  opacity: 1; 
+}
+
+.fade-out {
+  opacity: 0;
+}
+
+/*Start Responsive*/
 @media (max-width: 1919px) {
 
   /*edited*/
@@ -134,8 +168,6 @@
 }
 
 @media (max-width: 768px) {
-
-  /*edited*/
   .pb-150 {
     padding-bottom: 20.495%;
   }
@@ -151,16 +183,3 @@
 
 }
 
-/* 
-@media (min-width: 1440px) and (max-width: 1919px){ // figma design
-}
-@media (min-width: 1201px) and (max-width: 1439px){
-}
-@media (min-width: 993px) and (max-width: 1200px){
-}
-@media (min-width: 769px) and (max-width: 992px){
-}
-@media (min-width: 390px) and (max-width: 768px){ // figma design
-}
-@media (max-width: 389px) {
-} */

@@ -1,6 +1,6 @@
 const storedValueCardData = localStorage.getItem('ValueCardData'); 
 
-const ValueCardData = storedValueCardData ? JSON.parse(storedValueCardData) : [ 
+let ValueCardData = storedValueCardData ? JSON.parse(storedValueCardData) : [ 
     {
         title: "Integrity",
         description: "We conduct ourselves with utmost honesty, transparency, and ethical behavior. We believe in doing what is right for our customers, colleagues, and stakeholders, even when faced with difficult choices."

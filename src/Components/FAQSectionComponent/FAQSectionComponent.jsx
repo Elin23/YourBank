@@ -14,6 +14,16 @@ export default function FAQSectionComponent() {
   const upperFAQs = exportedFAQCardData.slice(0, 2);
   const lowerFAQs = exportedFAQCardData.slice(2, 4);
 
+  const renderFAQCards = (faqs) => {
+    return faqs.map((data, index) => (
+      <FAQCardComponent
+        key={index}
+        Qustion={data.Qustion}
+        Answer={data.Answer}
+      />
+    ));
+  };
+
   return (
     <div className="MR-FAQ-section-container px-162 pb-150">
       <TitleComponent
@@ -24,64 +34,43 @@ export default function FAQSectionComponent() {
       />
 
       <div className="MR-FAQ-card-container">
-        {/* upper FAQs Cards*/}
-        <div className="MR-Upper-FAQ-Card">
-          {upperFAQs.map((data, index) => (
-            <FAQCardComponent
-              key={index}
-              Qustion={data.Qustion}
-              Answer={data.Answer}
-            />
-          ))}
-        </div>
-
-        {/* Lower FAQs Cards*/}
-        <div
-          className={`MR-Lower-FAQ-Card ${
-            !isVisible ? "MR-FAQ-Gradient1" : ""
-          }`}
-        >
-          {lowerFAQs.map((data, index) => (
-            <FAQCardComponent
-              key={index}
-              Qustion={data.Qustion}
-              Answer={data.Answer}
-            />
-          ))}
-        </div>
-
-        {/* Hidden Card*/}
-        {isVisible && (
-          <>
+        <div className="MR-FAQ-ExpandedgGap">
+          <div>
             {/* upper FAQs Cards*/}
-            <div className="MR-Upper-FAQ-Card">
-              {upperFAQs.map((data, index) => (
-                <FAQCardComponent
-                  key={index}
-                  Qustion={data.Qustion}
-                  Answer={data.Answer}
-                />
-              ))}
+            <div className="MR-Upper-FAQ-Card ">
+              {renderFAQCards(upperFAQs)}
             </div>
 
             {/* Lower FAQs Cards*/}
             <div
               className={`MR-Lower-FAQ-Card ${
-                isVisible ? "MR-FAQ-Gradient1" : ""
+                !isVisible ? "MR-FAQ-Gradient1" : ""
               }`}
             >
-              {lowerFAQs.map((data, index) => (
-                <FAQCardComponent
-                  key={index}
-                  Qustion={data.Qustion}
-                  Answer={data.Answer}
-                />
-              ))}
+              {renderFAQCards(lowerFAQs)}
             </div>
-          </>
-        )}
+          </div>
 
-        <button className="MR-FAQ-Button fw-400" onClick={toggleFAQs}>
+          <div>
+            {/* Hidden Card*/}
+            {isVisible && (
+              <>
+                <div className="MR-Upper-FAQ-Card">
+                  {renderFAQCards(upperFAQs)}
+                </div>
+
+                <div
+                  className={`MR-Lower-FAQ-Card ${
+                    isVisible ? "MR-FAQ-Gradient1" : ""
+                  }`}
+                >
+                  {renderFAQCards(lowerFAQs)}
+                </div>
+              </>
+            )}
+          </div>
+        </div>
+        <button className="MR-FAQ-Button f-18 fw-400" onClick={toggleFAQs}>
           {isVisible ? "Hide FAQ's " : "Load All FAQ's "}
           <img
             src={

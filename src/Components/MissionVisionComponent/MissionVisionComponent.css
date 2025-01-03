@@ -1,5 +1,6 @@
 .AM-missionVision-sec {
     background-color: var(--black10-color);
+    overflow: hidden;
 }
 
 .AM-missionVision-sec .AM-title-comp .desc {
@@ -11,6 +12,7 @@
 /* media query */
 
 /* laptop */
+
 @media (max-width: 1919px) {
     .AM-missionVision-sec {
         padding: 0px 80px 120px 80px;
@@ -28,23 +30,12 @@
     }
 }
 
-@media (max-width: 1200px) {
-    .AM-missionVision-sec {
-        padding: 0px 20px 120px 20px;
-    }
-
-}
-
-/* medium */
-@media (max-width: 992px) {
+/* mobile */
+@media (max-width: 540px) {
     .AM-missionVision-sec {
         padding: 0px 16px 80px 16px;
     }
 
-}
-
-/* mobile */
-@media (max-width: 540px) {
     .AM-missionVision-sec .AM-title-comp .title {
         font-size: 28px;
     }
@@ -54,4 +45,3 @@
         line-height: 21px;
     }
 }
-
