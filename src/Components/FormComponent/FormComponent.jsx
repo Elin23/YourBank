@@ -89,7 +89,7 @@ export default function FormComponent({ action }) {
           localStorage.setItem("isLogin", JSON.stringify(true));
           localStorage.setItem("user", JSON.stringify(userData));
           titleSwal = "You have been logged in successfully";
-        } navigate('/');
+        } navigate('/YourBank/');
     } else {
         if (
           state.email.length > 0 &&
@@ -112,7 +112,7 @@ export default function FormComponent({ action }) {
           localStorage.setItem("user", JSON.stringify(userData));
           titleSwal = "An account has been created successfully";
         }
-        navigate('/login');
+        navigate('/YourBank/login');
     }
 
     Swal.fire({
