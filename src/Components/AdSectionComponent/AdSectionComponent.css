@@ -1,16 +1,17 @@
-.AdSectionComponent{
+.AdSectionComponent {
     background-color: transparent;
     padding-bottom: 7.8125%;
     padding-top: 7.8125%;
 }
-.hw-AdSectionContent{
-    background-color:  var(--black11-color);
+
+.hw-AdSectionContent {
+    background-color: var(--black11-color);
     border: 1px solid var(--gray15-color);
     border-radius: 20px;
     padding: 80px;
-    display:flex;
+    display: flex;
     align-items: center;
-    justify-content:space-between;
+    justify-content: space-between;
     position: relative;
     border-radius: 20px;
     overflow: hidden;
@@ -18,7 +19,8 @@
     background: linear-gradient(214deg, rgba(202, 255, 51, 0.2) 0%,
             rgba(202, 255, 51, 0) 11.24%, rgba(202, 255, 51, 0) 91.73%), rgba(38, 38, 38, 1) border-box;
 }
-.hw-AdSecBg{
+
+.hw-AdSecBg {
     position: absolute;
     height: 100%;
     top: 0;
@@ -27,7 +29,8 @@
     z-index: 1;
     mix-blend-mode: screen;
 }
-.hw-AdSectionContent::before{
+
+.hw-AdSectionContent::before {
     content: "";
     width: 100%;
     height: 100%;
@@ -38,213 +41,348 @@
     z-index: 2;
     border-radius: 20px;
 }
-.hw-AdSecRight{
+
+.hw-AdSecRight {
     display: flex;
     flex-direction: column;
     justify-content: center;
     margin-right: 150px;
     z-index: 10;
-    h3{
+
+    h3 {
         line-height: 60px;
         color: var(--white-color);
         margin-bottom: 14px;
-        span{
+
+        span {
             color: var(--green60-color);
         }
     }
-    .hw-AdSecPara{
+
+    .hw-AdSecPara {
         color: var(--gray70-color);
         font-size: 18px;
         margin-bottom: 0;
         line-height: 27px;
     }
 }
-.hw-AdSecleft{
-    padding: 18px 30px;
-    width: 183px;
-    height: 63px;
-    z-index: 10;
+
+.hw-AdSecleft {
+    padding: 18px 30px !important;
+    width: 183px !important;
+    height: 63px !important;
     background-color: var(--green60-color);
     border-radius: 82px;
     border: none;
-        a{
-            display: inline-block;
-            text-decoration: none;
-            color: inherit;
-            line-height: 27px;
-            font-weight: 400;
-            font-size: 18px;
-            width: 125px;
-        }
+    position: relative;
+    z-index: 10;
+    text-align: center;
+    transition: all 0.2s ease;
+
+    a {
+        display: inline-block;
+        text-decoration: none;
+        color: inherit;
+        line-height: 27px;
+        font-weight: 400;
+        font-size: 18px !important;
+        width: 125px;
+        /* z-index: 12 ; */
+    }
 }
-.hw-AdSectionContent .toRightDown{
+
+/* start styling button hover */
+.hw-AdSecleft:before,
+.hw-AdSecleft:after {
+    position: absolute;
+    content: "";
+    width: 150%;
+    left: 50%;
+    height: 100%;
+    transform: translateX(-50%);
+    z-index: -1000;
+    background-repeat: no-repeat;
+}
+
+.hw-AdSecleft:hover:before {
+    top: -70%;
+    background-image: radial-gradient(circle, var(--green60-color) 20%, transparent 20%),
+        radial-gradient(circle, transparent 20%, var(--green60-color) 20%, transparent 30%),
+        radial-gradient(circle, var(--green60-color) 20%, transparent 20%),
+        radial-gradient(circle, var(--green60-color) 20%, transparent 20%),
+        radial-gradient(circle, transparent 10%, var(--green60-color) 15%, transparent 20%),
+        radial-gradient(circle, var(--green60-color) 20%, transparent 20%),
+        radial-gradient(circle, var(--green60-color) 20%, transparent 20%),
+        radial-gradient(circle, var(--green60-color) 20%, transparent 20%),
+        radial-gradient(circle, var(--green60-color) 20%, transparent 20%);
+    background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%,
+        10% 10%, 18% 18%;
+    background-position: 50% 120%;
+    animation: greenTopBubbles 0.6s ease;
+}
+
+@keyframes greenTopBubbles {
+    0% {
+        background-position: 5% 90%, 10% 90%, 10% 90%, 15% 90%, 25% 90%, 25% 90%,
+            40% 90%, 55% 90%, 70% 90%;
+    }
+
+    50% {
+        background-position: 0% 80%, 0% 20%, 10% 40%, 20% 0%, 30% 30%, 22% 50%,
+            50% 50%, 65% 20%, 90% 30%;
+    }
+
+    100% {
+        background-position: 0% 70%, 0% 10%, 10% 30%, 20% -10%, 30% 20%, 22% 40%,
+            50% 40%, 65% 10%, 90% 20%;
+        background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+    }
+}
+
+.hw-AdSecleft:hover:after {
+    bottom: -70%;
+    background-image: radial-gradient(circle, var(--green60-color) 20%, transparent 20%),
+        radial-gradient(circle, var(--green60-color) 20%, transparent 20%),
+        radial-gradient(circle, transparent 10%, var(--green60-color) 15%, transparent 20%),
+        radial-gradient(circle, var(--green60-color) 20%, transparent 20%),
+        radial-gradient(circle, var(--green60-color) 20%, transparent 20%),
+        radial-gradient(circle, var(--green60-color) 20%, transparent 20%),
+        radial-gradient(circle, var(--green60-color) 20%, transparent 20%);
+    background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 20% 20%, 18% 18%;
+    background-position: 50% 0%;
+    animation: greenBottomBubbles 0.6s ease;
+}
+
+@keyframes greenBottomBubbles {
+    0% {
+        background-position: 10% -10%, 30% 10%, 55% -10%, 70% -10%, 85% -10%,
+            70% -10%, 70% 0%;
+    }
+
+    50% {
+        background-position: 0% 80%, 20% 80%, 45% 60%, 60% 100%, 75% 70%, 95% 60%,
+            105% 0%;
+    }
+
+    100% {
+        background-position: 0% 90%, 20% 90%, 45% 70%, 60% 110%, 75% 80%, 95% 70%,
+            110% 10%;
+        background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+    }
+}
+
+.hw-AdSecleft:active {
+    transform: scale(0.96);
+}
+
+/* end styling button hover */
+
+.hw-AdSectionContent .toRightDown {
     position: absolute;
     left: 0;
     top: 0;
     width: 298px;
-    height:283px;
+    height: 283px;
     z-index: 10;
     border-top-left-radius: 20px;
 }
-@media (max-width: 1919px){/*for the 1440px width,1920 and more are the main design*/
-    .AdSectionComponent{
+
+@media (max-width: 1919px) {
+
+    /*for the 1440px width,1920 and more are the main design*/
+    .AdSectionComponent {
         padding-bottom: 8.3333333%;
         padding-top: 8.333333%;
     }
-    .hw-AdSectionContent{
-        padding: 60px;/*ready for max*/
-        }
-    .hw-AdSecRight h3{
+
+    .hw-AdSectionContent {
+        padding: 60px;
+        /*ready for max*/
+    }
+
+    .hw-AdSecRight h3 {
         font-size: 30px;
-        margin-bottom: 10px;
         line-height: 45px;
     }
-    .hw-AdSecPara{
+
+    .hw-AdSecPara {
         font-size: 16px !important;
         line-height: 24px !important;
     }
-    .hw-AdSecleft{
+
+    .hw-AdSecleft {
         padding: 14px 20px;
         width: 136px;
         height: 49px;
-        display:flex;
-        a{
+
+        a {
             line-height: 21px;
             width: 96px;
             font-size: 14px !important;
         }
     }
-    .hw-AdSectionContent .toRightDown{
+
+    .hw-AdSectionContent .toRightDown {
         width: 202px;
         height: 192px;
     }
 }
-@media (max-width: 1439px){
-    .hw-AdSectionContent{
+
+@media (max-width: 1439px) {
+    .hw-AdSectionContent {
         padding: 43px;
     }
-    .hw-AdSecRight h3{
+
+    .hw-AdSecRight h3 {
         font-size: 28px;
         margin-bottom: 7px;
         line-height: 40px;
     }
-    .hw-AdSecPara{
+
+    .hw-AdSecPara {
         font-size: 14px !important;
         line-height: 22px !important;
     }
-    .hw-AdSecleft{
+
+    .hw-AdSecleft {
         padding: 10px 20px;
         width: 150px;
         font-size: 13px;
         height: 40px;
         font-weight: 400;
-        a{
+
+        a {
             width: 90px;
             font-size: 13px !important;
         }
     }
-    .hw-AdSectionContent .toRightDown{
+
+    .hw-AdSectionContent .toRightDown {
         width: 180px;
         height: 150px;
     }
 }
-@media (max-width: 1200px){
-    .hw-AdSectionContent{
+
+@media (max-width: 1200px) {
+    .hw-AdSectionContent {
         padding: 40px;
     }
-    .hw-AdSecRight h3{
+
+    .hw-AdSecRight h3 {
         font-size: 26px;
         margin-bottom: 14px;
         line-height: 36px;
+        max-width: 85.51%
     }
-    .hw-AdSecPara{
+
+    .hw-AdSecPara {
         font-size: 14px !important;
         line-height: 22px !important;
     }
-    .hw-AdSecRight{
+
+    .hw-AdSecRight {
         margin-right: 70px;
     }
-    .hw-AdSecleft{
+
+    .hw-AdSecleft {
         font-size: 13px;
         width: 150px;
         height: 40px;
-        a{
+
+        a {
             width: 90px;
             font-size: 13px !important;
         }
     }
-    .hw-AdSectionContent .toRightDown{
+
+    .hw-AdSectionContent .toRightDown {
         width: 160px;
         height: 150px;
     }
 }
-@media (max-width: 992px){
-    .hw-AdSectionContent{
+
+@media (max-width: 992px) {
+    .hw-AdSectionContent {
         flex-direction: column;
         padding: 40px;
     }
-    .hw-AdSecRight{
+
+    .hw-AdSecRight {
         margin-right: 0;
         margin-bottom: 24px;
         text-align: center;
     }
-    .hw-AdSecRight h3{
+
+    .hw-AdSecRight h3 {
         font-size: 28px;
         margin-bottom: 14px;
         line-height: 36px;
     }
-    .hw-AdSecPara{
+
+    .hw-AdSecPara {
         font-size: 16px !important;
         line-height: 21px !important;
     }
-    .hw-AdSecleft{
+
+    .hw-AdSecleft {
         width: 144px;
         height: 49px;
-        a{
+
+        a {
             line-height: 21px;
             width: 96px;
             font-size: 13px !important;
             height: 21px;
         }
     }
-    .hw-AdSectionContent .toRightDown{
+
+    .hw-AdSectionContent .toRightDown {
         width: 151px;
         height: 143px;
     }
 }
-@media (max-width: 768px){ 
-    .AdSectionComponent{
+
+@media (max-width: 768px) {
+    .AdSectionComponent {
         padding-bottom: 80px;
         padding-top: 80px;
     }
-    .hw-AdSectionContent{
+
+    .hw-AdSectionContent {
         padding: 30px;
     }
-    .hw-AdSecRight{
+
+    .hw-AdSecRight {
         width: 298px;
     }
-    .hw-AdSecRight h3{
+
+    .hw-AdSecRight h3 {
         font-size: 24px;
         margin-bottom: 14px;
         line-height: 36px;
     }
-    .hw-AdSecPara{
+
+    .hw-AdSecPara {
         font-size: 14px !important;
         line-height: 21px !important;
     }
-    .hw-AdSecleft{
+
+    .hw-AdSecleft {
         padding: 14px 24px;
     }
-    .hw-AdSectionContent .toRightDown{
+
+    .hw-AdSectionContent .toRightDown {
         width: 151px;
         height: 143px;
     }
 }
+
 @media (max-width: 389px) {
-    .hw-AdSecRight{
+    .hw-AdSecRight {
         width: unset;
     }
-    .hw-AdSecRight h3{
+
+    .hw-AdSecRight h3 {
         font-size: 22px;
         margin-bottom: 14px;
         line-height: 34px;

@@ -24,6 +24,11 @@
   font-weight: 600;
   line-height: 45px;
   margin-bottom: 0px;
+  transition: .3s ease-in-out;
+}
+
+.MR-JobCardContainer:hover h3 {
+  color: var(--green60-color);
 }
 
 /* Styles for LocationDepartment-Block */
@@ -98,6 +103,31 @@
   border: none;
   border-radius: 82px;
   font-weight: 500;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.MR-JobCardContainer button::before {
+  content: '';
+  width: 0;
+  height: 100%;
+  border-radius: 82px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: linear-gradient(to right, #caff33 40%, #BFBFBF 100%);
+  transition: .5s ease;
+  display: block;
+  z-index: -1;
+}
+
+.MR-JobCardContainer button:hover::before {
+  width: 100%;
+}
+
+.MR-JobCardContainer button:hover{
+  color: var(--white-color);
 }
 
 /* Media query for screens smaller than 1919px */

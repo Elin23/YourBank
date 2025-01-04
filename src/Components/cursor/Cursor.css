@@ -3,7 +3,7 @@ body {
 }
 
 
-button, button a, a, i, .hw-fotIconConta, .open-nav-btn, 
+button, button a, a, i, .hw-fotIconConta, .open-nav-btn,
 .close-nav-btn {
     cursor: url('./src/assets/imgs/Mouse-Pointer.png'), auto !important;
 }

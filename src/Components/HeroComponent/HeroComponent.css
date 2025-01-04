@@ -50,10 +50,15 @@
     margin-bottom: 50px;
 }
 
+/* /////////////////////////////// */
 .es-hero-left-content .es-main-title .title {
     font-weight: 500;
+    /* color: transparent; */
+    /* ///////// */
 }
 
+
+/* /////////////////////////////// */
 .es-hero-left-content img {
     padding-left: 12px;
 }
@@ -69,11 +74,99 @@
     background-color: var(--green60-color);
     width: fit-content;
     border-radius: 82px;
-    cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
+    z-index: 1;
+    transition: all 0.2s ease;
 }
+
+/* start styling button hover */
+.es-hero-btn:before,
+.es-hero-btn:after {
+    position: absolute;
+    content: "";
+    width: 150%;
+    left: 50%;
+    height: 100%;
+    transform: translateX(-50%);
+    z-index: -1000;
+    background-repeat: no-repeat;
+}
+
+.es-hero-btn:hover:before {
+    top: -70%;
+    background-image: radial-gradient(circle, var(--green60-color) 20%, transparent 20%),
+        radial-gradient(circle, transparent 20%, var(--green60-color) 20%, transparent 30%),
+        radial-gradient(circle, var(--green60-color) 20%, transparent 20%),
+        radial-gradient(circle, var(--green60-color) 20%, transparent 20%),
+        radial-gradient(circle, transparent 10%, var(--green60-color) 15%, transparent 20%),
+        radial-gradient(circle, var(--green60-color) 20%, transparent 20%),
+        radial-gradient(circle, var(--green60-color) 20%, transparent 20%),
+        radial-gradient(circle, var(--green60-color) 20%, transparent 20%),
+        radial-gradient(circle, var(--green60-color) 20%, transparent 20%);
+    background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%,
+        10% 10%, 18% 18%;
+    background-position: 50% 120%;
+    animation: greenTopBubbles 0.6s ease;
+}
+
+@keyframes greenTopBubbles {
+    0% {
+        background-position: 5% 90%, 10% 90%, 10% 90%, 15% 90%, 25% 90%, 25% 90%,
+            40% 90%, 55% 90%, 70% 90%;
+    }
+
+    50% {
+        background-position: 0% 80%, 0% 20%, 10% 40%, 20% 0%, 30% 30%, 22% 50%,
+            50% 50%, 65% 20%, 90% 30%;
+    }
+
+    100% {
+        background-position: 0% 70%, 0% 10%, 10% 30%, 20% -10%, 30% 20%, 22% 40%,
+            50% 40%, 65% 10%, 90% 20%;
+        background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+    }
+}
+
+.es-hero-btn:hover:after {
+    bottom: -70%;
+    background-image: radial-gradient(circle, var(--green60-color) 20%, transparent 20%),
+        radial-gradient(circle, var(--green60-color) 20%, transparent 20%),
+        radial-gradient(circle, transparent 10%, var(--green60-color) 15%, transparent 20%),
+        radial-gradient(circle, var(--green60-color) 20%, transparent 20%),
+        radial-gradient(circle, var(--green60-color) 20%, transparent 20%),
+        radial-gradient(circle, var(--green60-color) 20%, transparent 20%),
+        radial-gradient(circle, var(--green60-color) 20%, transparent 20%);
+    background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 20% 20%, 18% 18%;
+    background-position: 50% 0%;
+    animation: greenBottomBubbles 0.6s ease;
+}
+
+@keyframes greenBottomBubbles {
+    0% {
+        background-position: 10% -10%, 30% 10%, 55% -10%, 70% -10%, 85% -10%,
+            70% -10%, 70% 0%;
+    }
+
+    50% {
+        background-position: 0% 80%, 20% 80%, 45% 60%, 60% 100%, 75% 70%, 95% 60%,
+            105% 0%;
+    }
+
+    100% {
+        background-position: 0% 90%, 20% 90%, 45% 70%, 60% 110%, 75% 80%, 95% 70%,
+            110% 10%;
+        background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+    }
+}
+
+.es-hero-btn:active {
+    transform: scale(0.96);
+}
+
+/* end styling button hover */
 
 .es-hero-btn a {
     text-decoration: none;
@@ -106,7 +199,7 @@
     height: 100%;
     top: 0;
     left: 0;
-    border-radius: 10.4px; 
+    border-radius: 10.4px;
     position: absolute;
     background-color: var(--black10-color);
     z-index: 2;
@@ -256,21 +349,6 @@
     padding: 17.34px;
 }
 
-.es-upper .es-currency {
-    display: flex;
-    align-items: center;
-    gap: 8.67px;
-    color: var(--white-color);
-    font-size: 15.61px;
-    line-height: 23.41px;
-}
-
-.es-upper .es-currency-name {
-    color: var(--offwhite-90-color);
-    font-size: 13.87px;
-    line-height: 20.81px;
-}
-
 .es-currency-value {
     padding: 26.01px 17.34px 26.01px 17.34px;
     font-size: 17.34px;
@@ -278,11 +356,22 @@
     color: var(--white-color);
     border-right: 0.87px solid var(--gray15-color);
 }
-.es-mini-box:nth-child(2) .es-currency-value,
-.es-mini-box:nth-child(2) .es-upper
-{
-    border-right:none;
+
+.es-currency-value input.form-input {
+    background-color: transparent;
+    outline: none;
+    border: none;
+    color: var(--white-color);
+    font-size: 17.34px !important;
+    line-height: 26.01px !important;
+    /* font-weight: 500; */
 }
+
+.es-mini-box:nth-child(2) .es-currency-value,
+.es-mini-box:nth-child(2) .es-upper {
+    border-right: none;
+}
+
 .exchange-btn {
     width: 100%;
     position: relative;
@@ -542,32 +631,16 @@
         padding: 13.77px;
     }
 
-    .es-upper .es-currency {
-        gap: 6.89px;
-        font-size: 15.61px;
-        line-height: 23.41px;
-    }
-
-    .es-currency span {
-        font-size: 12.4px;
-        line-height: 18.59px;
-    }
-
-    .es-upper .es-currency-name {
-        font-size: 11.02px;
-        line-height: 16.53px;
-    }
-
-    .es-upper img {
-        width: 27.62px;
-        height: 27.47px;
-    }
-
     .es-currency-value {
         padding: 20.66px 13.77px 20.66px 13.77px;
         font-size: 13.77px;
         line-height: 20.66px;
         border-width: 0.69px;
+    }
+
+    .es-currency-value input.form-input {
+        font-size: 13.77px !important;
+        line-height: 20.66px !important;
     }
 
     .exchange-btn {
@@ -662,7 +735,6 @@
     }
 
     .es-hero-right-content {
-        /* width: 360px; */
         padding: 20px;
     }
 
@@ -688,20 +760,8 @@
         width: 280px;
     }
 
-    /* .es-exchange-box{
-        width: 310px;
-    } */
     .es-exchange-box .es-mini-box .es-upper {
         padding: 12px;
-    }
-
-    .es-upper img {
-        width: 25px;
-        height: 25px;
-    }
-
-    .es-upper .es-currency-name {
-        font-size: 9px;
     }
 
     .es-currency-value {
@@ -887,32 +947,17 @@
         padding: 10.26px;
     }
 
-    .es-upper .es-currency {
-        gap: 5.13px;
-    }
-
-    .es-currency .span {
-        font-size: 9.23px;
-        line-height: 13.85px;
-    }
-
-    .es-upper .es-currency-name {
-        font-size: 8.2px;
-        line-height: 12.31px;
-        text-align: start;
-    }
-
-    .es-upper img {
-        width: 20.57px;
-        height: 20.57px;
-    }
-
     .es-currency-value {
         padding: 15.38px 10.26px;
         font-size: 10.26px;
         line-height: 15.38px;
         border-width: 0.51px;
         text-align: start;
+    }
+
+    .es-currency-value input.form-input {
+        font-size: 10.26px !important;
+        line-height: 15.38px !important;
     }
 
     .exchange-btn {

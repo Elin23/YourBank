@@ -1,0 +1,20 @@
+.Af-img-father {
+    background-image: linear-gradient(to bottom, rgba(202, 255, 51, 0.05), rgba(202, 255, 51, 0));
+    border-radius: 50%;
+}
+
+.Af-img-son {
+    background-image: linear-gradient(to bottom, rgba(202, 255, 51, 0.1), rgba(202, 255, 51, 0));
+    border-radius: 50%;
+    border: 1px solid linear-gradient(to bottom, rgba(202, 255, 51, 0.2), rgba(202, 255, 51, 0));
+}
+
+.Af-img-button {
+    background: transparent;
+    background-image: linear-gradient(to bottom, rgba(202, 255, 51, 0.1), rgba(202, 255, 51, 0));
+    border-radius: 50%;
+    border: 1px solid linear-gradient(to bottom, rgba(202, 255, 51, 0.2), rgba(202, 255, 51, 0));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

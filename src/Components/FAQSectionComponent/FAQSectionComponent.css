@@ -57,7 +57,17 @@
   justify-content: center;
   align-items: center;
   font-family: "Inter", serif;
+  position: relative;
+  z-index: 1;
+  transition: all 0.5s;
 }
+
+.MR-FAQ-Button:hover {
+  background-color: var(--green60-color);
+  transform: translateY(-5px);
+  color: var(--black11-color);
+}
+
 
 /* Responsive styles for screens smaller than 1919px */
 @media (max-width: 1919px) {

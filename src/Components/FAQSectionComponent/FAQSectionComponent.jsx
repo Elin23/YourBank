@@ -18,7 +18,7 @@ export default function FAQSectionComponent() {
     return faqs.map((data, index) => (
       <FAQCardComponent
         key={index}
-        Qustion={data.Qustion}
+        Question={data.Question}
         Answer={data.Answer}
       />
     ));
@@ -43,9 +43,8 @@ export default function FAQSectionComponent() {
 
             {/* Lower FAQs Cards*/}
             <div
-              className={`MR-Lower-FAQ-Card ${
-                !isVisible ? "MR-FAQ-Gradient1" : ""
-              }`}
+              className={`MR-Lower-FAQ-Card ${!isVisible ? "MR-FAQ-Gradient1" : ""
+                }`}
             >
               {renderFAQCards(lowerFAQs)}
             </div>
@@ -60,9 +59,8 @@ export default function FAQSectionComponent() {
                 </div>
 
                 <div
-                  className={`MR-Lower-FAQ-Card ${
-                    isVisible ? "MR-FAQ-Gradient1" : ""
-                  }`}
+                  className={`MR-Lower-FAQ-Card ${isVisible ? "MR-FAQ-Gradient1" : ""
+                    }`}
                 >
                   {renderFAQCards(lowerFAQs)}
                 </div>

@@ -15,8 +15,7 @@
 .AM-mission-vision-card .mission-vision-img,
 .AM-mission-vision-card-reverse .mission-vision-img {
     background-image: url("../../../src//assets/imgs/Abstract\ Design6.png");
-    background-size: contain;
-    /* background-position:left; */
+    background-size: cover;
     background-repeat: no-repeat;
     width: 664px;
     padding: 60px;
@@ -41,12 +40,25 @@
     opacity: 25%;
 }
 
+.mission-vision-img img {
+    position: relative;
+    transition: 0.5s all ease-in-out;
+}
+.mission-vision-img img:hover {
+    transform: scale(1.1);
+}
 .AM-mission-vision-card .content .title,
 .AM-mission-vision-card-reverse .content .title {
     color: var(--white-color);
     font-size: 38px;
     line-height: 57px;
     margin-bottom: 14px;
+    transition: .3s ease-in-out;
+}
+
+.AM-mission-vision-card:hover.AM-mission-vision-card .content .title,
+.AM-mission-vision-card-reverse:hover.AM-mission-vision-card-reverse .content .title {
+    color: var(--green60-color);
 }
 
 .AM-mission-vision-card .content .desc,
