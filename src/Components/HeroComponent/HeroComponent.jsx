@@ -34,6 +34,8 @@ export default function HeroComponent() {
   const [toCurrency, setToCurrency] = useState("USD");
   const [result, setResult] = useState("12.000");
   const [isLoading, setIsLoading] = useState(false);
+  const [isLogin, setIsLogin] = useState(false);
+
 
   // function to fetch the exchange rate and update the result
 
@@ -64,6 +66,23 @@ export default function HeroComponent() {
   //fetch exchange rate on initial render
   useEffect(() => getExchangeRate, []);
 
+  // Hide the "Open Account" button when signed in and re-display it again upon logging out
+  useEffect(() => {
+
+    const StoredUser = JSON.parse(localStorage.getItem('user'));
+    setIsLogin(!!StoredUser);
+
+    const handleLoginStatusChange = () => {
+      const updatedUser = JSON.parse(localStorage.getItem('user'));
+      setIsLogin(!!updatedUser);
+    };
+
+    window.addEventListener('loginStatusChanged', handleLoginStatusChange);
+
+    return () => {
+      window.removeEventListener('loginStatusChanged', handleLoginStatusChange);
+    };
+  }, []);
 
   return (
     <>
@@ -81,9 +100,12 @@ export default function HeroComponent() {
               fw={false}
             />
           </div>
+          {!isLogin && (
           <div className="es-hero-btn f-18">
             <Link to='./signUp'>Open Account</Link>
           </div>
+        )}
+
         </div>
         <div className="es-right-side">
           <div className="es-monthly-income">

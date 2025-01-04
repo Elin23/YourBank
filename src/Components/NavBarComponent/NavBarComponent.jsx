@@ -45,6 +45,8 @@ export default function NavBarComponent() {
         localStorage.removeItem('user');
         localStorage.setItem('isLogin',false);
         setIsLogin(false);
+        
+        window.dispatchEvent(new Event('loginStatusChanged'));
       } 
     });
     
