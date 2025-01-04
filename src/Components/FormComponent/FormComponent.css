@@ -220,7 +220,20 @@
     right: 0;
     margin: auto;
 }
-
+.AA-social-login-btns .Af-img-father{
+width: 94px;
+height: 94px;
+padding: 12px;
+}
+.AA-social-login-btns .Af-img-father .Af-img-button{
+    width: 70px;
+    height: 70px;
+    padding: 20px;
+}
+.AA-social-login-btns .Af-img-father .Af-img-button img{
+    width: 30px;
+    height: 30px;
+}
 .AA-custom-btn{
     width: 50.48732943469786%;
     padding: 18px 20px 18px 20px;
@@ -249,24 +262,6 @@
 
 .AA-a-btn-black{
     color: var(--black-color);
-}
-
-/**style swal **/
-.swal2-modal{
-    background-color: var(--black11-color);   
-    border: 5px var(--gray15-color) solid;
-    border-radius: 14px; 
-}
-
-.swal2-html-container, .swal2-title{
-    color: white !important;
-  }
-div:where(.swal2-icon).swal2-success [class^=swal2-success-line]{
-    background-color: var(--green60-color);
-}
-
-div:where(.swal2-icon).swal2-success .swal2-success-ring {
-    border-color: var(--green60-color) ;
 }
 
 @media (max-width: 1919px) {
@@ -355,16 +350,26 @@ div:where(.swal2-icon).swal2-success .swal2-success-ring {
     .AA-form-section .AA-form-container .overlay .AA-continue-p::after {
         width: 31.9306930693%;
     }
+    .AA-social-login-btns .Af-img-father{
+        width: 68px;
+        height: 68px;
+        padding: 8px;
+        }
+        .AA-social-login-btns .Af-img-father .Af-img-button{
+            width: 52px;
+            height: 52px;
+            padding: 14px;
+        }
+        .AA-social-login-btns .Af-img-father .Af-img-button img{
+            width: 24px;
+            height: 24px;
+        }
 
     .AA-custom-btn{
         width: 60.8433734939759%;
         font-size: 14px;
         line-height: 21px;
     }
-
-    .swal2-html-container, .swal2-title{
-        font-size: 1.7em;
-      }
 }
 
 @media (max-width: 993px) {
@@ -386,9 +391,6 @@ div:where(.swal2-icon).swal2-success .swal2-success-ring {
     .AA-form-section .AA-form-container .overlay .AA-continue-p::after {
         width: 27.9306930693%;
     }
-    .swal2-html-container, .swal2-title{
-        font-size: 1.5em;
-      }
 }
 
 @media (max-width: 768px) {
@@ -469,7 +471,4 @@ div:where(.swal2-icon).swal2-success .swal2-success-ring {
         width: 100%;
     }
 
-    .swal2-html-container, .swal2-title{
-        font-size: 1.3em;
-      }
 }

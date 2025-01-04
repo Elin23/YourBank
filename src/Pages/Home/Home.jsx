@@ -8,18 +8,17 @@ import AdSectionComponent from './../../Components/AdSectionComponent/AdSectionC
 import {AdSecData} from './../../Data/AdSectionData'
 import TestimonialsSectionComponent from './../../Components/TestimonialsSectionComponent/TestimonialsSectionComponent'
 import './Home.css'
-
 export default function Home() {
   return (
-    <div className='Home'>
-      <HeroComponent/>
-      <ProductSectionComponent />
-      <UseCasesSectionComponent />
-      <FeaturesSectionComponent />
-      <FAQSectionComponent mode="Home" />
-      <TestimonialsSectionComponent/>
-      <AdSectionComponent DATA={AdSecData[0]} />
-    </div>
+      <div className='Home'>
+        <HeroComponent/>
+        <ProductSectionComponent />
+        <UseCasesSectionComponent />
+        <FeaturesSectionComponent />
+        <FAQSectionComponent mode="Home" />
+        <TestimonialsSectionComponent/>
+        <AdSectionComponent DATA={AdSecData[0]} />
+      </div>
   )
 }
 

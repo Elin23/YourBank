@@ -131,7 +131,14 @@ export default function FormComponent({ action }) {
           emailregex.test(state.email)
         ) {
           //calling api login here
-          localStorage.setItem("user", JSON.stringify(state));
+          const userData = {
+            userName: "",
+            email: state.email,
+            token: "api token"
+          };
+          //save return value from api in local storage 
+          localStorage.setItem("isLogin", JSON.stringify(true));
+          localStorage.setItem("user", JSON.stringify(userData));
           titleSwal = "You have been logged in successfully";
         }
     } else {
@@ -146,7 +153,14 @@ export default function FormComponent({ action }) {
           Nameregex.test(state.lastName)
         ) {
           //calling api signup here
-          localStorage.setItem("user", JSON.stringify(state));
+          const userData = {
+            userName: state.firstName + " " + state.lastName,
+            email: state.email,
+            token: "api token"
+          };
+          //save return value from api in local storage 
+          localStorage.setItem("isLogin", JSON.stringify(true));
+          localStorage.setItem("user", JSON.stringify(userData));
           titleSwal = "An account has been created successfully";
         }
     }
