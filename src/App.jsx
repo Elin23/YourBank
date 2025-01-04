@@ -29,7 +29,7 @@ function App() {
   return (
     <div className="bg-main">
       <Cursor />
-      <NavBarComponent />
+      <NavBarComponent  />
       <Routes>
         <Route path='/' element={<HandleLoadingComponent />}>
           <Route index element={<Home />} />
@@ -40,7 +40,7 @@ function App() {
           <Route path="/signUp" element={<SignUp />} />
         </Route>
       </Routes>
-      <FooterComponent />
+      <FooterComponent/>
     </div>
   );
 }
