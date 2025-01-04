@@ -21,7 +21,7 @@ export default function Careers() {
       <OurValuesSectionComponent/>
       <OurBenefitsSectionComponenet />
       <FAQSectionComponent />
-      {/* <JobComponent /> */}
+      <JobComponent />
       <AdSectionComponent DATA={AdSecData[1]}/>
   </>
 

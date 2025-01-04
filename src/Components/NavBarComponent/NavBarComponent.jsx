@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import { Link, NavLink } from "react-router-dom"
+import { Link, NavLink, useNavigate } from "react-router-dom"
 import nav_logo from "../../assets/imgs/nav-logo.png"
 import "./NavBarComponent.css"
 import { useState } from "react"
@@ -8,9 +8,19 @@ import menu from "../../assets/imgs/menu.png"
 import { FaXmark } from "react-icons/fa6";
 
 export default function NavBarComponent() {
+  const navigate = useNavigate();
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolling, setScrolling] = useState(false);
+  const [isLogin, setIsLogin] = useState(false);
   const [activeBtn, setActiveBtn] = useState(false);
+
+  useEffect(() => {
+    const StoredUser = JSON.parse(localStorage.getItem('user'));
+    if (StoredUser) {
+      setIsLogin(true);
+  
+    }
+  },[navigate]);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -22,6 +32,24 @@ export default function NavBarComponent() {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
+  const handleLogout = (event) => {
+    Swal.fire({
+      title: "Do you want to logout?",
+      showCancelButton: true,
+      confirmButtonText: "Confirm",
+      denyButtonText: `Cancel`
+    }).then((result) => {
+      if (result.isConfirmed) {
+        localStorage.removeItem('user');
+        localStorage.setItem('isLogin',false);
+        setIsLogin(false);
+        
+        window.dispatchEvent(new Event('loginStatusChanged'));
+      } 
+    });
+    
+  };
 
   return (
     <>
@@ -54,22 +82,33 @@ export default function NavBarComponent() {
             ))}
           </ul>
           <div className="et-nav-btns">
-            <Link
+            {
+              isLogin == false ? 
+              <>
+                <Link
               to={"/signup"}
               className={`f-18 ${activeBtn ? "et-bg-green" : ""}`}
-              onClick={
+                  onClick={
                 () => (setActiveBtn(!activeBtn),
                   setMenuOpen(!menuOpen))}>
               Sign up
             </Link>
-            <Link
-              to={"/login"}
+                <Link
+                  to={"/login"}
               className={`f-18 ${activeBtn ? "" : "et-bg-green"}`}
-              onClick={
+                  onClick={
                 () => (setActiveBtn(!activeBtn),
                   setMenuOpen(!menuOpen))}>
-              Login
-            </Link>
+                Login
+                </Link>
+              </> : 
+              <>
+                <Link className={`f-18 et-bg-green`} onClick={handleLogout}>
+                  Logout
+                </Link>
+              </>
+            }
+            
           </div>
           <FaXmark
             className={`close-nav-btn ${menuOpen ? "open-menu" : ""}`}

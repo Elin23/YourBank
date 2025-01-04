@@ -59,6 +59,11 @@
     font-weight: 500 !important;
     line-height: 75.4px !important;
     margin-bottom: 0px;
+    animation: moveGradient 5s infinite linear;
+    background: linear-gradient(90deg, #caff33, #E4E4E7, #d8ff66, #fff);
+    background-size: 200%;
+    background-clip: text;
+    color: transparent;
 
     span {
         font-size: 58px !important;

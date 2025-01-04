@@ -1,10 +1,11 @@
-.hw-footerBottom .hw-footerIcons{
+.hw-footerBottom .hw-footerIcons {
     display: flex;
-    align-items:center;
+    align-items: center;
     justify-content: center;
     gap: 14px;
 }
-.hw-fotIconConta{
+
+.hw-fotIconConta {
     padding: 14px;
     border-radius: 100px;
     display: flex;
@@ -12,4 +13,14 @@
     justify-content: center;
     background-color: var(--green60-color);
     cursor: pointer;
+}
+
+.hw-footerIcons .hw-fotIconConta {
+    transition: 0.4s all ease-in-out;
+
+}
+
+.hw-footerIcons .hw-fotIconConta:hover {
+    background-color: var(--green80-color);
+    transform: rotate(360deg) !important;
 }
