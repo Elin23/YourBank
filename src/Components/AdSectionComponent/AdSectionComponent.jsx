@@ -25,14 +25,3 @@ export default function AdSectionComponent({DATA}) {
         </div>
     )
 }
-
-/*                
-    <div className="hw-AdSecRight">
-    <h3  className='fs-40 fw-400'>
-        {DATA.title}<span>YourBank today!</span>
-    </h3>
-    <p className="hw-AdSecPara fw-300">
-        {DATA.desc}
-    </p>
-    </div>
- */
