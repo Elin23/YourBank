@@ -65,9 +65,11 @@ nav.scrolled {
     color: var(--green60-color);
     cursor: pointer;
 }
+
 .close-nav-btn:active {
     transform: rotate(180deg);
 }
+
 .responsive-nav ul li a {
     text-decoration: none;
     color: var(--white-color);
@@ -89,6 +91,27 @@ nav.scrolled {
     background-color: var(--green60-color);
     border-radius: 82px;
     color: var(--black11-color);
+}
+
+.Af-menu-link {
+    position: relative;
+}
+
+.Af-menu-link::before {
+    content: '';
+    width: 0;
+    height: 2px;
+    border-radius: 2px;
+    background-color: var(--green60-color);
+    position: absolute;
+    bottom: -.25rem;
+    right: 0;
+    transition: right .4s, width .4s, left .4s;
+}
+
+.Af-menu-link:hover::before {
+    width: 64%;
+    left: 15px;
 }
 
 /* Start Responsive */

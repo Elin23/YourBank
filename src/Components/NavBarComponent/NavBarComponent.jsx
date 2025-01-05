@@ -72,7 +72,7 @@ export default function NavBarComponent() {
             {NavData.map((item, index) => (
               <li
                 key={index}
-                className="f-18">
+                className="f-18 Af-menu-link">
                 <NavLink
                   to={item.path}
                   className={({ isActive }) => (activeIndex === index ? "active-link" : "")}
