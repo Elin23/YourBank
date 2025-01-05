@@ -1,4 +1,4 @@
-YourBank | Digital Banking Platform
+<!-- YourBank | Digital Banking Platform
 
 Welcome to YourBank, your premier digital banking platform. This React-based web application provides users with a modern and intuitive interface to manage their banking needs. With several advanced features and responsive design, YourBank delivers a seamless banking experience for all users.
 ------------------------------------------------------------------
@@ -152,4 +152,4 @@ The logout button clears this data, ensuring session security.
 
 Contact
 
-For questions or support, please reach out at elinshaia23@gmail.com
+For questions or support, please reach out at elinshaia23@gmail.com -->
