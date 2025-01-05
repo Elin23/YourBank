@@ -3,6 +3,7 @@ import FAQCardComponent from "../FAQCardComponent/FAQCardComponent";
 import "./FAQSectionComponent.css";
 import { exportedFAQCardData } from "./../../Data/FAQCardData";
 import TitleComponent from "../TitleComponent/TitleComponent";
+import { MdKeyboardArrowDown, MdKeyboardArrowUp } from "react-icons/md";
 
 export default function FAQSectionComponent() {
   const [isVisible, setIsVisible] = useState(false);
@@ -72,14 +73,11 @@ export default function FAQSectionComponent() {
         </div>
         <button className="MR-FAQ-Button f-18 fw-400" onClick={toggleFAQs}>
           {isVisible ? "Hide FAQ's " : "Load All FAQ's "}
-          <img
-            src={
-              isVisible
-                ? "./src/assets/imgs/Home icons/Vector 10.png"
-                : "./src/assets/imgs/Home icons/Vector 9.png"
-            }
-            alt="vector"
-          />
+
+              {isVisible
+                ? <MdKeyboardArrowUp />
+                : <MdKeyboardArrowDown />}
+
         </button>
       </div>
     </div>
