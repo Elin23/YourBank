@@ -86,7 +86,13 @@ export default function FormComponent({ action }) {
           //save return value from api in local storage
           localStorage.setItem("isLogin", JSON.stringify(true));
           localStorage.setItem("user", JSON.stringify(userData)); //add
-          titleSwal = "You have been logged in successfully";
+          Swal.fire({
+            icon: 'success',
+            title: "You have been logged in successfully",
+            showConfirmButton: false,
+            timer: 1500
+          });
+          
         } navigate('/YourBank/');
     } else {
         if (
@@ -108,18 +114,16 @@ export default function FormComponent({ action }) {
           //save return value from api in local storage
           localStorage.setItem("isLogin", JSON.stringify(true));
           localStorage.setItem("user", JSON.stringify(userData));
-          titleSwal = "welcome to yourbank " + state.firstName + " " + state.lastName;
         }
+        Swal.fire({
+          icon: 'success',
+          title: "Welcome to YourBank " + state.firstName + " " + state.lastName,
+          showConfirmButton: false,
+          timer: 1500
+        });
+
         navigate('/YourBank/login');
     }
-
-    Swal.fire({
-      icon: 'success',
-      title: titleSwal,
-      showConfirmButton: false,
-      timer: 1500
-    });
-
   };
 
   return (
