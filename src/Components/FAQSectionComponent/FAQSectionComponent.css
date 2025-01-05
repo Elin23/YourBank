@@ -57,6 +57,32 @@
   justify-content: center;
   align-items: center;
   font-family: "Inter", serif;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.MR-FAQ-Button::before {
+  content: '';
+  width: 0;
+  height: 100%;
+  border-radius: 82px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: linear-gradient(to right, #caff33 40%, #BFBFBF 100%);
+  transition: .5s ease;
+  display: block;
+  z-index: -1;
+}
+
+.MR-FAQ-Button:hover::before {
+  width: 100%;
+
+}
+
+.MR-FAQ-Button:hover{
+  color: var(--black10-color);
 }
 
 /* Responsive styles for screens smaller than 1919px */

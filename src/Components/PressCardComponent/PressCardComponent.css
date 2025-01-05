@@ -21,6 +21,11 @@
 .Press-Card-Content h5 {
   color: var(--white-color);
   margin-bottom: 0;
+  transition: .3s ease-in-out;
+}
+
+.Press-Card-Component:hover .Press-Card-Content h5 {
+  color: var(--green60-color);
 }
 
 .Press-Card-Content .et-card-info {
