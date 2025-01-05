@@ -1,10 +1,15 @@
 .AA-form-section {
-    padding-top: 10.3125%;
+    padding-top: 198px;
     background-color: var(--black10-color);
 }
 
 .AA-pb-40 {
-    padding-bottom: 3.898635477582846%;
+    padding-bottom: 3.898%;
+}
+/** for form padding **/
+.AA-px-297 {
+    padding-left: 15.46875%;
+    padding-right: 15.46875%;
 }
 
 /**style image design**/
@@ -33,25 +38,12 @@
 }
 
 /**style background of form**/
-.AA-form-section .AA-form-container .AA-bg-img {
-    background-image: url('../../assets/imgs/login-bg.png');
-    width: 100%;
-    height: 100vh;
-    background-color: var(--black11-color);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    opacity: 5%;
-    border-radius: 20px;
-    filter: grayscale(100%);
-}
-
-.AA-form-section .AA-form-container .overlay {
+.AA-form-section .AA-form-container .AA-form-container-bg {
     width: 100%;
     height: 100%;
 }
 
-.AA-form-section .AA-form-container .overlay:before {
+.AA-form-section .AA-form-container .AA-form-container-bg:before {
     position: absolute;
     background-image: url('../../assets/imgs/login-bg.png');
     display: inline-block;
@@ -69,80 +61,80 @@
 }
 
 /**style custom title**/
-.AA-form-section .AA-form-container .overlay .AM-title-comp {
-    padding-top: 7.5414781297%;
-    padding-bottom: 6.033182503770739%;
+.AA-form-section .AA-form-container .AA-form-container-bg .AM-title-comp {
+    padding-top: 7.54%;
+    padding-bottom: 6.033%;
 }
 
-.AA-form-section .AA-form-container .overlay .AM-title-comp .title,
-.AA-form-section .AA-form-container .overlay .AM-title-comp .highlight,
-.AA-form-section .AA-form-container .overlay .AM-title-comp .desc {
+.AA-form-section .AA-form-container .AA-form-container-bg .AM-title-comp .title,
+.AA-form-section .AA-form-container .AA-form-container-bg .AM-title-comp .highlight,
+.AA-form-section .AA-form-container .AA-form-container-bg .AM-title-comp .desc {
     text-align: center;
 }
 
-.AA-form-section .AA-form-container .overlay .AM-title-comp .desc {
+.AA-form-section .AA-form-container .AA-form-container-bg .AM-title-comp .desc {
     line-height: 22.5px;
     margin-bottom: 0;
 }
 
-.AA-form-section .AA-form-container .overlay .AM-title-comp .title,
-.AA-form-section .AA-form-container .overlay .AM-title-comp .highlight {
+.AA-form-section .AA-form-container .AA-form-container-bg .AM-title-comp .title,
+.AA-form-section .AA-form-container .AA-form-container-bg .AM-title-comp .highlight {
     line-height: 60px;
 }
 
-.AA-form-section .AA-form-container .overlay .AM-title-comp .title {
-    margin-bottom: 1.510574018126888%;
+.AA-form-section .AA-form-container .AA-form-container-bg .AM-title-comp .title {
+    margin-bottom: 1.51%;
 }
 
 /**style error message**/
-.AA-form-section .AA-form-container .overlay .AA-error {
+.AA-form-section .AA-form-container .AA-form-container-bg .AA-error {
     color: var(--white-color);
     padding: 10px 20px 0 20px;
     margin: 0;
 }
 
-.AA-form-section .AA-form-container .overlay .AA-hide {
+.AA-form-section .AA-form-container .AA-form-container-bg .AA-hide {
     display: none;
 }
 
-.AA-form-section .AA-form-container .overlay .AA-show {
+.AA-form-section .AA-form-container .AA-form-container-bg .AA-show {
     display: block;
 }
 
 /***style input field**/
-.AA-form-section .AA-form-container .overlay .AA-input-pb {
-    padding-bottom: 2.923976608187135%;
+.AA-form-section .AA-form-container .AA-form-container-bg .AA-input-Fields {
+    width: 100%;
 }
 
-.AA-form-section .AA-form-container .overlay .AA-input,
-.AA-form-section .AA-form-container .overlay .AA-password-input {
+.AA-form-section .AA-form-container .AA-form-container-bg .AA-input-pb {
+    padding-bottom: 2.923%;
+}
+
+.AA-form-section .AA-form-container .AA-form-container-bg .AA-input,
+.AA-form-section .AA-form-container .AA-form-container-bg .AA-password-input {
     color: var(--white-color);
     background-color: #1A1A1A;
     border: 1px solid #262626;
-    padding: 24px;
+    padding: 23.341px;
     border-radius: 88px;
     width: 100%;
 }
 
-.AA-form-section .AA-form-container .overlay .AA-inputs {
+/**style row of inputs**/
+.AA-form-section .AA-form-container .AA-form-container-bg .AA-inputs-row {
     width: 100%;
     display: flex;
     gap: 30px;
-    /* padding-bottom: 40px;  */
 }
 
 /***style password input **/
-.AA-form-section .AA-form-container .overlay .AA-input-Fields {
-    width: 100%;
-}
-
-.AA-form-section .AA-form-container .overlay .AA-input-group {
+.AA-form-section .AA-form-container .AA-form-container-bg .AA-input-group {
     width: 100%;
     position: relative;
     display: inline-block;
 }
 
-.AA-form-section .AA-form-container .overlay .eye-icon {
+.AA-form-section .AA-form-container .AA-form-container-bg .eye-icon {
     color: var(--gray35-color);
     position: absolute;
     font-size: 1.25rem;
@@ -155,102 +147,26 @@
 }
 
 /**style forget btn**/
-.AA-form-section .AA-form-container .overlay .AA-forget-pass-btn {
+.AA-form-section .AA-form-container .AA-form-container-bg .AA-forget-pass-btn {
     color: var(--white-color);
+    text-decoration: underline;
     padding-top: 3.898635477582846%;
     padding-bottom: 3.898635477582846%;
 }
 
-/**style social login div**/
-.AA-form-section .AA-form-container .overlay .AA-social-login-btns {
-    display: flex;
-    gap: 24px;
-}
-
-.AA-form-section .AA-form-container .overlay .AA-custom-btn {
-    margin-bottom: 2.339181286549708%;
-}
-
-.AA-form-section .AA-form-container .overlay form {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    padding: 0px 11.31221719457014% 7.5414781297% 11.31221719457014%;
-}
-
-.AA-px-297 {
-    padding-left: 15.46875%;
-    padding-right: 15.46875%;
-}
-
-/***style continue p***/
-.AA-form-section .AA-form-container .overlay .AA-continue-p {
-    position: relative;
-    color: var(--gray70-color);
-    width: 50.4873294347%;
-    text-align: center;
-    margin-bottom: 2.923976608187135%;
-}
-
-.AA-form-section .AA-form-container .overlay .AA-continue-p p {
-    margin: 0;
-    padding: 0;
-}
-
-.AA-form-section .AA-form-container .overlay .AA-continue-p::before {
-    content: "";
-    position: absolute;
-    width: 31.9498069498%;
-    height: 1px;
-    left: 0;
-    background: var(--gray70-color);
-    top: 50%;
-    margin: auto;
-}
-
-.AA-form-section .AA-form-container .overlay .AA-continue-p::after {
-    content: "";
-    position: absolute;
-    width: 31.9498069498%;
-    height: 1px;
-    background: var(--gray70-color);
-    top: 50%;
-    right: 0;
-    margin: auto;
-}
-.AA-social-login-btns .Af-img-father{
-width: 94px;
-height: 94px;
-padding: 12px;
-}
-.AA-social-login-btns .Af-img-father .Af-img-button{
-    width: 70px;
-    height: 70px;
-    padding: 20px;
-    
-}
-.AA-social-login-btns .Af-img-father .Af-img-button img{
-    width: 30px;
-    height: 30px;
-}
-.AA-custom-btn{
+/**style btn (login - signup) in form **/
+.AA-form-section .AA-form-container .AA-form-container-bg .AA-custom-btn {
     width: 50.48732943469786%;
     padding: 18px 20px 18px 20px;
     border-radius: 63px;
     border: none;
     text-align: center;
-}
-
-.AA-form-section .AA-form-container .overlay form a{
-    text-decoration: none;
+    margin-bottom: 2.3391%;
 }
 
 .AA-bg-btn-green-60{
     background-color: var(--green60-color);
 }
-
 
 .AA-bg-btn-gray-15{
     background: var(--gray15-color);
@@ -265,13 +181,75 @@ padding: 12px;
     color: var(--black-color);
 }
 
+/**style form login + signup form**/
+.AA-form-section .AA-form-container .AA-form-container-bg form {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 0px 11.312% 7.541% 11.312%;
+}
+
+/***style continue p***/
+.AA-form-section .AA-form-container .AA-form-container-bg .AA-continue-p {
+    position: relative;
+    color: var(--gray70-color);
+    width: 50.4873294347%;
+    text-align: center;
+    margin-bottom: 2.923976608187135%;
+    display: flex;
+    flex-direction: row;
+}
+
+.AA-form-section .AA-form-container .AA-form-container-bg .AA-continue-p p {
+    margin: 0;
+    padding: 0 20px;
+}
+
+.AA-form-section .AA-form-container .AA-form-container-bg .AA-continue-p::before,
+.AA-form-section .AA-form-container .AA-form-container-bg .AA-continue-p::after {
+    content: "";
+    flex: 1 1;
+    border-bottom: 1px solid;
+    margin: auto;
+}
+
+/**style social login div**/
+.AA-form-section .AA-form-container .AA-form-container-bg .AA-social-login-btns {
+    display: flex;
+    gap: 24px;
+}
+.AA-social-login-btns .Af-img-father{
+    width: 94px;
+    height: 94px;
+    padding: 12px;
+}
+
+.AA-social-login-btns .Af-img-father .Af-img-button{
+    width: 70px;
+    height: 70px;
+    padding: 20px;
+    
+}
+
+.AA-social-login-btns .Af-img-father .Af-img-button img{
+    width: 30px;
+    height: 30px;
+}
+
+.AA-form-section .AA-form-container .AA-form-container-bg form a{
+    text-decoration: none;
+}
+
+/** laptop **/
 @media (max-width: 1919px) {
     .AA-form-section {
-        padding-top: 10.625%;
+        padding-top: 153px;
     }
 
     .AA-pb-40 {
-        padding-bottom: 4.518072289156627%;
+        padding-bottom: 4.5180%;
     }
 
     .AA-px-297 {
@@ -279,128 +257,121 @@ padding: 12px;
         padding-right: 13.05555556%;
     }
 
+    /**style image design**/
     .AA-form-section .AA-design {
         width: 256px;
         height: 243px;
     }
 
-    .AA-form-section .AA-form-container .overlay form {
-        padding-bottom: 7.518796992481203%;
-        padding-left: 18.79699248120301%;
-        padding-right: 18.79699248120301%;
+     /**style custom title**/
+    .AA-form-section .AA-form-container .AA-form-container-bg .AM-title-comp {
+        padding: 7.518% 18.796% 5.639% 18.796%;
     }
 
-    .AA-form-section .AA-form-container .overlay .AM-title-comp {
-        padding-top: 7.518796992481203%;
-        padding-bottom: 5.639097744360902%;
-        padding-left: 18.79699248120301%;
-        padding-right: 18.79699248120301%;
+    .AA-form-section .AA-form-container .AA-form-container-bg .AM-title-comp .title {
+        margin-bottom: 2.4096%;
     }
 
-    .AA-form-section .AA-form-container .overlay .AM-title-comp .title {
-        margin-bottom: 2.409638554216867%;
-    }
-
-    .AA-form-section .AA-form-container .overlay .AM-title-comp .title,
-    .AA-form-section .AA-form-container .overlay .AM-title-comp .highlight {
+    .AA-form-section .AA-form-container .AA-form-container-bg .AM-title-comp .title,
+    .AA-form-section .AA-form-container .AA-form-container-bg .AM-title-comp .highlight {
         line-height: 47.5px;
     }
 
-    .AA-form-section .AA-form-container .overlay .AM-title-comp .desc {
+    .AA-form-section .AA-form-container .AA-form-container-bg .AM-title-comp .desc {
         line-height: 20px;
-        margin: 0;
     }
 
-    .AA-form-section .AA-form-container .overlay .AA-input-pb {
-        padding-bottom: 4.518072289156627%;
+    /**style form login + signup form**/
+    .AA-form-section .AA-form-container .AA-form-container-bg form {
+        padding: 0px 18.7969% 7.518% 18.7969%;
     }
 
-
-    .AA-form-section .AA-form-container .overlay .AA-forget-pass-btn {
-        padding-top: 4.518072289156627%;
-        padding-bottom: 4.518072289156627%;
+    .AA-form-section .AA-form-container .AA-form-container-bg .AA-input-pb {
+        padding-bottom: 4.518%;
     }
 
-    .AA-form-section .AA-form-container .overlay .AA-custom-btn {
-        margin-bottom: 3.614457831325301%;
-    }
-
-    .AA-form-section .AA-form-container .overlay .AA-social-login-btns {
-        gap: 20px;
-    }
-
-    .AA-form-section .AA-form-container .overlay .AA-inputs {
-        gap: 24px;
-    }
-
-    .AA-form-section .AA-form-container .overlay .AA-input,
-    .AA-form-section .AA-form-container .overlay .AA-password-input {
+    /**style forget btn**/
+    .AA-form-section .AA-form-container .AA-form-container-bg .AA-forget-pass-btn {
+        padding-top: 4.518%;
+        padding-bottom: 4.518%;
         font-size: 16px;
         line-height: 24px;
     }
 
-    .AA-form-section .AA-form-container .overlay .AA-continue-p {
-        width: 60.843373494%;
-        /* padding-top: 2.255639097744361%;
-        padding-bottom: 2.255639097744361%; */
-        margin-bottom: 3.614457831325301%;
-
+    /**style social login div**/
+    .AA-form-section .AA-form-container .AA-form-container-bg .AA-social-login-btns {
+        gap: 20px;
     }
 
-    .AA-form-section .AA-form-container .overlay .AA-continue-p::before,
-    .AA-form-section .AA-form-container .overlay .AA-continue-p::after {
-        width: 31.9306930693%;
-    }
     .AA-social-login-btns .Af-img-father{
         width: 68px;
         height: 68px;
         padding: 8px;
-        }
-        .AA-social-login-btns .Af-img-father .Af-img-button{
-            width: 52px;
-            height: 52px;
-            padding: 14px;
-        }
-        .AA-social-login-btns .Af-img-father .Af-img-button img{
-            width: 24px;
-            height: 24px;
-        }
+    }
 
-    .AA-custom-btn{
+    .AA-social-login-btns .Af-img-father .Af-img-button{
+        width: 52px;
+        height: 52px;
+        padding: 14px;
+    }
+
+    .AA-social-login-btns .Af-img-father .Af-img-button img{
+        width: 24px;
+        height: 24px;
+    }
+
+    /**style row of inputs**/
+    .AA-form-section .AA-form-container .AA-form-container-bg .AA-inputs-row {
+        gap: 24px;
+    }
+
+    /**style inputs**/
+    .AA-form-section .AA-form-container .AA-form-container-bg .AA-input,
+    .AA-form-section .AA-form-container .AA-form-container-bg .AA-password-input {
+        font-size: 16px;
+        line-height: 24px;
+        padding: 19.5px;
+    }
+
+    /***style continue p***/
+    .AA-form-section .AA-form-container .AA-form-container-bg .AA-continue-p {
+        width: 60.843373494%;
+        margin-bottom: 3.614457831325301%;
+    }
+
+    .AA-form-section .AA-form-container .AA-form-container-bg .AA-continue-p p{
+        font-size: 14px;
+        line-height: 21px;
+        padding: 0 16px;
+    }
+    
+    /**style btn (login - signup) in form **/
+    .AA-form-section .AA-form-container .AA-form-container-bg .AA-custom-btn{
         width: 60.8433734939759%;
         font-size: 14px;
         line-height: 21px;
+        margin-bottom: 3.6144%;
+        padding: 14px 20px 14px 20px;
     }
 }
 
+/**tablet**/
 @media (max-width: 993px) {
     .AA-form-section {
-        padding-top: 20%;
+        padding-top: 138px;
     }
-
-    .AA-form-section .AA-form-container .overlay .AA-inputs {
+    
+    /**style row of inputs**/
+    .AA-form-section .AA-form-container .AA-form-container-bg .AA-inputs-row {
         flex-wrap: wrap;
         gap: 20px;
         width: 100%;
-    }
-
-    .AA-form-section .AA-form-container .overlay .AA-continue-p {
-        width: 100%;
-    }
-
-    .AA-form-section .AA-form-container .overlay .AA-continue-p::before,
-    .AA-form-section .AA-form-container .overlay .AA-continue-p::after {
-        width: 27.9306930693%;
     }
 }
 
 @media (max-width: 768px) {
     .AA-pb-40 {
         padding-bottom: 8.053691275167785%;
-    }
-
-    .AA-form-section {
-        padding-top: 35.38461538461538%;
     }
 
     .AA-form-section .AA-design {
@@ -413,63 +384,80 @@ padding: 12px;
         padding-right: 4.1025641%;
     }
 
-    .AA-form-section .AA-form-container .AA-design::before {
-        height: 44.41340782122905%;
+    /**style custom title**/
+    .AA-form-section .AA-form-container .AA-form-container-bg .AM-title-comp {
+        padding: 8.379% 8.379% 11.173% 8.379%;
     }
 
-    .AA-form-section .AA-form-container .overlay .AM-title-comp {
-        padding-right: 8.379888268156425%;
-        padding-left: 8.379888268156425%;
-        padding-top: 8.379888268156425%;
-        padding-bottom: 11.1731843575419%;
-    }
-
-    .AA-form-section .AA-form-container .overlay .AM-title-comp .title,
-    .AA-form-section .AA-form-container .overlay .AM-title-comp .highlight {
+    .AA-form-section .AA-form-container .AA-form-container-bg .AM-title-comp .title,
+    .AA-form-section .AA-form-container .AA-form-container-bg .AM-title-comp .highlight {
         line-height: 35px;
     }
 
-    .AA-form-section .AA-form-container .overlay .AM-title-comp .title {
-        margin-bottom: 3.355704697986577%;
+    .AA-form-section .AA-form-container .AA-form-container-bg .AM-title-comp .title {
+        margin-bottom: 3.3557%;
     }
 
-    .AA-form-section .AA-form-container .overlay .AM-title-comp .desc {
+    .AA-form-section .AA-form-container .AA-form-container-bg .AM-title-comp .desc {
         line-height: 17.5px;
     }
 
-    .AA-form-section .AA-form-container .overlay .AA-input-pb {
-        padding-bottom: 6.711409395973154%;
+    /**style form login + signup form**/
+    .AA-form-section .AA-form-container .AA-form-container-bg form {
+        padding: 0px 8.3798% 8.3798% 8.3798%;
+    }
+    
+
+    .AA-form-section .AA-form-container .AA-form-container-bg .AA-input-pb {
+        padding-bottom: 6.7114%;
+    }
+    /**style form input**/
+    .AA-form-section .AA-form-container .AA-form-container-bg .AA-input,
+    .AA-form-section .AA-form-container .AA-form-container-bg .AA-password-input{
+        padding: 15.5px;
+     }
+
+    .AA-form-section .AA-form-container .AA-form-container-bg .AA-forget-pass-btn {
+        padding-top: 8.05369%;
+        padding-bottom: 8.05369%;
+        font-size: 14px;
+        line-height: 21px;
     }
 
-    .AA-form-section .AA-form-container .overlay .AA-forget-pass-btn {
-        padding-top: 8.053691275167785%;
-        padding-bottom: 8.053691275167785%;
-    }
-
-    .AA-form-section .AA-form-container .overlay .AA-custom-btn {
-        margin-bottom: 8.053691275167785%;
-    }
-
-    .AA-form-section .AA-form-container .overlay .AA-continue-p {
+    /***style continue p***/
+    .AA-form-section .AA-form-container .AA-form-container-bg .AA-continue-p {
         width: 100%;
         padding-top: 0;
-        margin-bottom: 8.053691275167785%;
+        margin-bottom: 8.0536%;
     }
-
-    .AA-form-section .AA-form-container .overlay .AA-continue-p::before {
-        width: 25.5033557047%;
-    }
-
-    .AA-form-section .AA-form-container .overlay .AA-continue-p::after {
-        width: 25.5033557047%;
-    }
-
-    .AA-form-section .AA-form-container .overlay form {
-        padding: 0px 8.379888268156425% 8.379888268156425% 8.379888268156425%;
-    }
-
-    .AA-custom-btn{
+    
+    /**style btn (login - signup) in form **/
+    .AA-form-section .AA-form-container .AA-form-container-bg .AA-custom-btn{
         width: 100%;
+        margin-bottom: 8.0536%;
+    }
+}
+
+
+@media (max-width: 389px) {
+    .AA-form-section .AA-design {
+        width: 140px;
+        height: 140px;
     }
 
+    /**style custom title**/
+    .AA-form-section .AA-form-container .AA-form-container-bg .AM-title-comp {
+        padding-right: 3.379%;
+        padding-left: 3.379%;
+    }
+
+    /**style form login + signup form**/
+    .AA-form-section .AA-form-container .AA-form-container-bg form {
+        padding: 0px 3.379% 3.379% 3.379%;
+    }
+
+    .AA-form-section .AA-form-container .AA-form-container-bg .AA-input,
+    .AA-form-section .AA-form-container .AA-form-container-bg .AA-password-input {
+        font-size: 14px;
+    }
 }

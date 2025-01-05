@@ -1,11 +1,9 @@
 import React, { useEffect, useState } from "react";
 import "./FormComponent.css";
 import TitleComponent from "../TitleComponent/TitleComponent";
-import SocialButtonComponent from "../SocialLoginButtonComponent/SocialLoginButtonComponent";
-import imgGmail from "../../assets/imgs/login icons/Icon.png";
-import imgFacebook from "../../assets/imgs/login icons/Vector.png";
-import imgApple from "../../assets/imgs/login icons/Icon (3).png";
+import { SocialLoginData } from '../../Data/SocialLoginData'
 import { Link, useNavigate } from "react-router-dom";
+import IconGradient from '../IconGradient/IconGradient'
 
 export default function FormComponent({ action }) {
   const navigate = useNavigate();
@@ -110,7 +108,7 @@ export default function FormComponent({ action }) {
           //save return value from api in local storage
           localStorage.setItem("isLogin", JSON.stringify(true));
           localStorage.setItem("user", JSON.stringify(userData));
-          titleSwal = "An account has been created successfully";
+          titleSwal = "welcome to yourbank " + state.firstName + " " + state.lastName;
         }
         navigate('/YourBank/login');
     }
@@ -130,7 +128,7 @@ export default function FormComponent({ action }) {
         <div className="AA-design">
           <img src="../../assets/imgs/Abstract Design4.png" alt="design" />
         </div>
-        <div className="overlay">
+        <div className="AA-form-container-bg">
           <TitleComponent
             title={title}
             desc={desc}
@@ -139,7 +137,7 @@ export default function FormComponent({ action }) {
           />
           <form onSubmit={submitForm}>
             {action === "signup" && (
-              <div className="AA-inputs AA-input-pb">
+              <div className="AA-inputs-row AA-input-pb">
                 {/* firstName and lastName inputs */}
                 {["firstName", "lastName"].map((field) => (
                   <div className="AA-input-Fields AA-input-group" key={field}>
@@ -158,7 +156,7 @@ export default function FormComponent({ action }) {
                 ))}
               </div>
             )}
-            <div className="AA-inputs">
+            <div className="AA-inputs-row">
               {/* email input */}
               <div className="AA-input-Fields AA-input-group">
                 <input
@@ -208,13 +206,16 @@ export default function FormComponent({ action }) {
             <Link className="AA-custom-btn f-18 fw-400 AA-custom-btn AA-border-btn AA-bg-btn-gray-15 AA-a-btn-white" to={action === "login" ? "/YourBank/signUp" : "/YourBank/login"}>
               {action === "login" ? "Sign Up" : "Login"}
             </Link>
-            <div className="AA-continue-p">
+            <div className="AA-continue-p f-18">
               <p>Or Continue with</p>
             </div>
             <div className="AA-social-login-btns">
-              <SocialButtonComponent img={imgGmail} />
-              <SocialButtonComponent img={imgFacebook} />
-              <SocialButtonComponent img={imgApple} />
+              {SocialLoginData.map((item, index) => (
+                <IconGradient key={index}
+                  button={true}
+                  img={item.img}
+                />
+              ))}
             </div>
           </form>
         </div>

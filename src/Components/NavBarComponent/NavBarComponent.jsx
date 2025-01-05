@@ -40,10 +40,11 @@ export default function NavBarComponent() {
 
   const handleLogout = (event) => {
     Swal.fire({
-      title: "Do you want to logout?",
+      icon: 'question',
+      title: " Are you sure you want to log out?",
       showCancelButton: true,
-      confirmButtonText: "Confirm",
-      denyButtonText: `Cancel`,
+      confirmButtonText: "Logout",
+      denyButtonText: `Cancel`
     }).then((result) => {
       if (result.isConfirmed) {
         localStorage.removeItem("user");
