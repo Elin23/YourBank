@@ -5,22 +5,22 @@
     <meta charset="utf-8" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
- 
-
     
     <title>YourBank | Digital Bank</title>
 
     <script type="text/javascript">
-        var l = window.location;
-      
-        window.location.replace(
-          l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
-          l.pathname + 
-          l.search +    
-          l.hash      
-        );
-      </script>
-    
+          var l = window.location;
+        
+          if (!l.search.includes("?p=")) {
+            window.location.replace(
+              l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
+              l.pathname +
+              "?p=" + l.pathname.slice(1) +
+              l.search +   
+              l.hash      
+            );
+          }
+        </script>
 </head>
 
 
