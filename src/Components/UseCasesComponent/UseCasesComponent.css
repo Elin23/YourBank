@@ -364,3 +364,10 @@
     }
 
 }
+@media(max-width:389px){
+
+    .Af-UseCasesComponentSide-1-card span {
+        font-size: 12px;
+        line-height: 14px;
+    }
+}

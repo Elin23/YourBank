@@ -121,6 +121,8 @@
   }
   
   .hw-menu-link:hover::before {
+    /* width: 70%;
+    left: 12px; */
     width: 100%;
     left: 0;
   }
