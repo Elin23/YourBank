@@ -13,7 +13,7 @@
         
           if (!l.search.includes("?p=")) {
             window.location.replace(
-              l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
+              l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') + "YourBank/" +
               "?p=" + l.pathname.slice(1) +
               l.search +   
               l.hash      
