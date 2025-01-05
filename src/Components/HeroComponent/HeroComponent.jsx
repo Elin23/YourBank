@@ -1,9 +1,7 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import './HeroComponent.css'
 import tickIcon from '../../assets/imgs/Home icons/tick-Icon.png'
 import { Link } from 'react-router-dom'
-import INRImg from '../../assets/imgs/Home icons/Image.png'
-import USDImg from '../../assets/imgs/Home icons/Image1.png'
 import DollarSign from '../../assets/imgs/Home icons/Shape.png'
 import EuroSign from '../../assets/imgs/Home icons/euro-currency-symbol.png'
 import Bitcoin from '../../assets/imgs/Home icons/Shape2.png'
@@ -11,6 +9,7 @@ import ethereum from '../../assets/imgs/Home icons/Group.png'
 import plus from '../../assets/imgs/Home icons/Vector3.png'
 import TransIcon from '../../assets/imgs/Home icons/Vector2.png'
 import TitleComponent from '../TitleComponent/TitleComponent'
+import CurrencySelect from '../CurrencySelect/CurrencySelect'
 
 const TransactionBox = ({ name, amount, opacityClass, index }) => (
   <div className={`es-trans-box ${opacityClass}`} data-aos="fade-up" data-aos-delay={index * 200}>
@@ -30,6 +29,42 @@ const TransactionBox = ({ name, amount, opacityClass, index }) => (
 );
 
 export default function HeroComponent() {
+  const [amount, setAmount] = useState('5,000');
+  const [fromCurrency, setFromCurrency] = useState("INR");
+  const [toCurrency, setToCurrency] = useState("USD");
+  const [result, setResult] = useState();
+  const [isLoading, setIsLoading] = useState(false);
+
+  // function to fetch the exchange rate and update the result
+
+  const getExchangeRate = async () => {
+    const API_KEY = import.meta.env.VITE_API_KEY;
+    const API_URL = `https://v6.exchangerate-api.com/v6/${API_KEY}/pair/${fromCurrency}/${toCurrency}`;
+
+    setIsLoading(true);
+    try {
+      const response = await fetch(API_URL);
+      if (!response.ok) throw Error("Something went wrong!");
+      const data = await response.json();
+      const numericAmount = parseFloat(amount);
+      const rate = (data.conversion_rate * numericAmount).toFixed(2);
+      setResult(`${rate}`)
+    } catch (error) {
+      console.log(error);
+    } finally {
+      setIsLoading(false)
+    }
+  }
+  // handle form submission
+  const handleFormSubmit = (e) => {
+    e.preventDefault();
+    getExchangeRate();
+  }
+
+  //fetch exchange rate on initial render
+  useEffect(() => getExchangeRate, []);
+
+
   return (
     <>
       <div className='es-hero-container px-162 pb-150'>
@@ -64,40 +99,44 @@ export default function HeroComponent() {
             <div className='bg-img' alt="imgScreen" />
             <div className="es-your-trans">
               <h4 className='fw-500'>Your Transactions</h4>
-              <TransactionBox name="Joel Kenley" amount="-$68.00" opacityClass="op-100" index= '1'/>
-              <TransactionBox name="Mark Smith" amount="-$68.00" opacityClass="op-50" index= '2'/>
-              <TransactionBox name="Lenen Roy" amount="-$68.00" opacityClass="op-20" index= '3'/>
+              <TransactionBox name="Joel Kenley" amount="-$68.00" opacityClass="op-100" index='1' />
+              <TransactionBox name="Mark Smith" amount="-$68.00" opacityClass="op-50" index='2' />
+              <TransactionBox name="Lenen Roy" amount="-$68.00" opacityClass="op-20" index='3' />
             </div>
-            <div className="exchange">
+            <form className="exchange converter-form" onSubmit={handleFormSubmit}>
               <h4 className='fw-500'>Money Exchange</h4>
               <div className="es-exchange-box">
                 <div className="es-mini-box">
                   <div className='es-upper'>
-                    <div className="es-currency">
-                      <img src={INRImg} alt="indian flag" />
-                      <span className='fw-400'>INR</span>
-                    </div>
-                    <div className="es-currency-name fw-300">Indian Rupees</div>
+                    <CurrencySelect
+                      selectedCurrency={fromCurrency}
+                      handleCurrency={e => setFromCurrency(e.target.value)}
+                    />
                   </div>
                   <div className="es-currency-value">
-                    5,0000
+                    <input
+                      type="text"
+                      className="form-input"
+                      value={amount}
+                      onChange={e => setAmount(e.target.value)}
+                      required
+                    />
                   </div>
                 </div>
                 <div className="es-mini-box">
                   <div className='es-upper'>
-                    <div className="es-currency">
-                      <img src={USDImg} alt="USA flag" />
-                      <span className='fw-400'>USD</span>
-                    </div>
-                    <div className="es-currency-name fw-300">United States Dollar</div>
+                    <CurrencySelect
+                      selectedCurrency={toCurrency}
+                      handleCurrency={e => setToCurrency(e.target.value)}
+                    />
                   </div>
-                  <div className="es-currency-value">
-                    12.00
+                  <div className="es-currency-value exchange-rate-result">
+                    {isLoading ? 0 : result}
                   </div>
                 </div>
               </div>
-              <button className='exchange-btn fw-400'>Exchange</button>
-            </div>
+              <button className={`exchange-btn submit-button fw-400 ${isLoading ? "loading" : ""}`}>Exchange</button>
+            </form>
           </div>
           <div className="es-supported-currency">
             <div className="es-supported-currency-container">

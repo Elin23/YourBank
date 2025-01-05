@@ -1,18 +1,16 @@
 import React, { useEffect } from 'react'
-import { Link, NavLink } from "react-router-dom";
-import logo1 from "./../../assets/imgs/logo.png";
-import logo2 from "./../../assets/imgs/YourBanK.svg";
-import "./NavBarComponent.css";
-import { useState } from "react";
+import { Link, NavLink } from "react-router-dom"
+import nav_logo from "../../assets/imgs/nav-logo.png"
+import "./NavBarComponent.css"
+import { useState } from "react"
+import { NavData } from '../../Data/NavData'
+import menu from "../../assets/imgs/menu.png"
+import { FaXmark } from "react-icons/fa6";
 
 export default function NavBarComponent() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolling, setScrolling] = useState(false);
   const [activeBtn, setActiveBtn] = useState(false);
-
-  const activeNavBtn = () => {
-    setActiveBtn(true)
-  }
 
   useEffect(() => {
     const handleScroll = () => {
@@ -29,53 +27,61 @@ export default function NavBarComponent() {
     <>
       <nav className={`${scrolling ? "scrolled" : ""}`}>
         <Link to="/" className="JS-logo">
-          <img src={logo1} alt="logo" className="js-logo-img" />
-          <img src={logo2} alt="logo" className="js-yourbank" />
+          <img
+            src={nav_logo}
+            alt="logo"
+            className="nav-logo" />
         </Link>
-        <div className="js-menu">
-          <input id="checkbox" type="checkbox" onClick={() => setMenuOpen(prev => !prev)} />
-          <label className="ES-toggle" htmlFor="checkbox">
-            <div id="bar3" className="ES-bars"></div>
-            <div id="bar3" className="ES-bars"></div>
-            <div id="bar1" className="ES-bars"></div>
-          </label>
-        </div>
-        <div className={`nav-container ${menuOpen ? "open" : ""}`}>
+        <div className={`responsive-nav ${menuOpen ? "open" : ""}`}>
+          <Link
+            to="/"
+            className={`responsive-logo ${menuOpen ? "responsive-nav-logo" : ""}`}
+            onClick={() => setMenuOpen(!menuOpen)}>
+            <img src={nav_logo} alt="logo" />
+          </Link>
           <ul>
-            {[
-              { name: "Home", path: "/" },
-              { name: "Careers", path: "/careers" },
-              { name: "About", path: "/about" },
-              { name: "Security", path: "/security" }
-            ].map((item, index) => (
-              <li key={index} className="f-18">
+            {NavData.map((item, index) => (
+              <li
+                key={index}
+                className="f-18">
                 <NavLink
                   to={item.path}
-                  className={({ isActive }) => (isActive ? "active-link" : "")} >
+                  className={({ isActive }) => (isActive ? "active-link" : "")}
+                  onClick={() => setMenuOpen(!menuOpen)} >
                   {item.name}
                 </NavLink>
               </li>
             ))}
           </ul>
-
           <div className="et-nav-btns">
             <Link
               to={"/signup"}
-              className={`f-18 ${activeBtn ? "et-bg-green" : "et-white"}`}
-              onClick={() => setActiveBtn(!activeBtn)}
-            >
+              className={`f-18 ${activeBtn ? "et-bg-green" : ""}`}
+              onClick={
+                () => (setActiveBtn(!activeBtn),
+                  setMenuOpen(!menuOpen))}>
               Sign up
             </Link>
             <Link
               to={"/login"}
-              className={`f-18 ${activeBtn ? "et-white" : "et-bg-green"}`}
-              onClick={() => setActiveBtn(!activeBtn)}>
+              className={`f-18 ${activeBtn ? "" : "et-bg-green"}`}
+              onClick={
+                () => (setActiveBtn(!activeBtn),
+                  setMenuOpen(!menuOpen))}>
               Login
             </Link>
           </div>
-
+          <FaXmark
+            className={`close-nav-btn ${menuOpen ? "open-menu" : ""}`}
+            onClick={() => setMenuOpen(!menuOpen)}
+          />
         </div>
-      </nav>
+        <img
+          src={menu}
+          alt="bars icon"
+          className="open-nav-btn"
+          onClick={() => setMenuOpen(!menuOpen)} />
+      </nav >
     </>
   )
 }

@@ -3,7 +3,7 @@ body {
 }
 
 
-button, button a, a, i, .hw-fotIconConta {
+button, button a, a, i, .hw-fotIconConta, select {
     cursor: url('./src/assets/imgs/Mouse-Pointer.png'), auto !important;
 }
 
