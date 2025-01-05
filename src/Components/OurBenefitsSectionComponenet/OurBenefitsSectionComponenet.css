@@ -2,7 +2,7 @@
     background-color: var(--black10-color);
 }
 .HW-OurBenefitsComponent .AM-title-comp .desc{
-    width: 1296px;
+    width: 81.2030075%;
 }
 .HW-OurBenefitsCardsContainer{
     display: flex;
@@ -76,9 +76,7 @@
     .HW-OurBenefitsCardsContainer {
         gap: 24px;
     }
-    .HW-OurBenefitsComponent .AM-title-comp .desc{
-        width: unset;
-    }
+
     .hw-OurBenefitsCardsRow{
         gap: 24px;
         flex-direction: column;

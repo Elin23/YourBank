@@ -111,9 +111,14 @@
 
 .Af-UseCasesComponentSide-2-title h4 {
     color: var(--white-color);
+    transition: .3s ease-in-out;
     font-size: 30px;
     font-weight: 500;
     line-height: 45px;
+}
+
+.Af-UseCasesComponentSide-2-title:hover.Af-UseCasesComponentSide-2-title h4 {
+    color: var(--green60-color);
 }
 
 .Af-UseCasesComponentSide-2-title p {
@@ -130,6 +135,7 @@
     flex-wrap: wrap;
     width: 100%;
 }
+
 
 .Af-divBorder {
     width: 1px;
@@ -165,6 +171,32 @@
     border: 1px solid var(--gray15-color);
     border-radius: 82px;
     padding: 18px 24px;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.Af-Btn::before {
+    content: '';
+    width: 0;
+    height: 100%;
+    border-radius: 82px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: linear-gradient(to right, #caff33 40%, #BFBFBF 100%);
+    transition: .5s ease;
+    display: block;
+    z-index: -1;
+}
+
+.Af-Btn:hover::before {
+    width: 100%;
+
+}
+
+.Af-Btn:hover {
+    color: var(--black10-color);
 }
 
 @media (max-width:1919px) {
@@ -218,6 +250,7 @@
     .Af-UseCasesComponentSide-1-card span {
         font-size: 16px;
     }
+
     .Af-UseCasesComponentSide-2-title {
         margin-bottom: 50px;
         width: 100%;
@@ -228,12 +261,14 @@
         line-height: 39px;
     }
 
+
     .Af-UseCasesComponentSide-2-title p {
         color: var(--gray70-color);
         font-size: 16px;
         line-height: 24px;
         font-weight: 300;
     }
+
 
     .Af-UseCasesComponentSide-2-secondDiv .Af-rate p {
         font-size: 16px;
@@ -298,6 +333,8 @@
     }
 
     .Af-divBorder {
+        display: none;
+
         display: block;
         width: 258px;
         height: 1px;
@@ -305,6 +342,7 @@
         background-size: 20px 1px;
 
     }
+
 
     .Af-UseCasesComponentSide-2-title {
         text-align: center;
@@ -314,6 +352,7 @@
         display: flex;
         justify-content: center;
     }
+
 
     .Af-UseCasesComponentSide-2-secondDiv .Af-rate p {
         font-size: 14px;
@@ -342,6 +381,7 @@
     .Af-UseCasesComponentSide-1-card {
         padding: 20px 14px;
         gap: 14px;
+        gap: 14px;
         width: 48.88%;
     }
 
@@ -350,11 +390,13 @@
         line-height: 21px;
     }
 
+
     .Af-UseCasesComponentSide-2-title h4 {
         color: var(--white-color);
         font-size: 20px;
         line-height: 30px;
     }
+
 
     .Af-UseCasesComponentSide-2-title p {
         color: var(--gray70-color);
