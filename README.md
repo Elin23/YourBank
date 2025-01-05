@@ -109,7 +109,7 @@ npm or yarn
 
 - Clone the repository:
 
-git clone https://github.com/your-username/YourBank.git
+git clone https://github.com/Elin23/YourBank.git
 cd YourBank
 
 - Install dependencies:
