@@ -81,13 +81,13 @@ export default function FormComponent({ action }) {
         ) {
           //calling api login here
           const userData = {
-            userName: "",
+            userName: state.email.split("@")[0], //add
             email: state.email,
-            token: "api token"
+            token: "api token",
           };
-          //save return value from api in local storage 
+          //save return value from api in local storage
           localStorage.setItem("isLogin", JSON.stringify(true));
-          localStorage.setItem("user", JSON.stringify(userData));
+          localStorage.setItem("user", JSON.stringify(userData)); //add
           titleSwal = "You have been logged in successfully";
         } navigate('/YourBank/');
     } else {
@@ -95,10 +95,10 @@ export default function FormComponent({ action }) {
           state.email.length > 0 &&
           state.password.length > 0 &&
           state.firstName.length > 0 &&
-          state.lastName.length > 0 && 
+          state.lastName.length > 0 &&
           emailRegex.test(state.email) &&
-          passwordRegex.test(state.password) && 
-          NameRegex.test(state.firstName) && 
+          passwordRegex.test(state.password) &&
+          NameRegex.test(state.firstName) &&
           NameRegex.test(state.lastName)
         ) {
           //calling api signup here
@@ -107,7 +107,7 @@ export default function FormComponent({ action }) {
             email: state.email,
             token: "api token"
           };
-          //save return value from api in local storage 
+          //save return value from api in local storage
           localStorage.setItem("isLogin", JSON.stringify(true));
           localStorage.setItem("user", JSON.stringify(userData));
           titleSwal = "An account has been created successfully";
@@ -121,7 +121,7 @@ export default function FormComponent({ action }) {
       showConfirmButton: false,
       timer: 1500
     });
-   
+
   };
 
   return (
