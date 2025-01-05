@@ -163,14 +163,24 @@
 .swal2-html-container, .swal2-title{
   color: white !important;
 }
-div:where(.swal2-icon).swal2-success [class^=swal2-success-line]{
+div:where(.swal2-icon).swal2-success [class^=swal2-success-line],
+div:where(.swal2-container) button:where(.swal2-styled):where(.swal2-confirm){
   background-color: var(--green60-color);
 }
 
-div:where(.swal2-icon).swal2-success .swal2-success-ring {
+div:where(.swal2-container) button:where(.swal2-styled):where(.swal2-confirm){
+  color: var(--black-color);
+}
+
+div:where(.swal2-icon).swal2-success .swal2-success-ring,
+div:where(.swal2-icon).swal2-question
+{
   border-color: var(--green60-color) ;
 }
 
+div:where(.swal2-icon).swal2-question{
+  color: var(--green60-color);
+}
 /*Start Responsive*/
 @media (max-width: 1919px) {
 

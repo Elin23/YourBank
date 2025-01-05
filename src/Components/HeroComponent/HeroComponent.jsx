@@ -32,7 +32,7 @@ export default function HeroComponent() {
   const [amount, setAmount] = useState('5,000');
   const [fromCurrency, setFromCurrency] = useState("INR");
   const [toCurrency, setToCurrency] = useState("USD");
-  const [result, setResult] = useState("12.000");
+  const [result, setResult] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   const [isLogin, setIsLogin] = useState(false);
 
@@ -153,7 +153,7 @@ export default function HeroComponent() {
                     />
                   </div>
                   <div className="es-currency-value exchange-rate-result">
-                    {isLoading ? 0.00 : result}
+                    {isLoading ? '0.00' : result}
                   </div>
                 </div>
               </div>

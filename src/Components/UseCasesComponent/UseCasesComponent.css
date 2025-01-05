@@ -405,12 +405,11 @@
         font-weight: 300;
     }
 
-    .Af-divBorder {
-        display: block;
-        width: 258px;
-        height: 1px;
-        background-image: linear-gradient(to right, var(--gray15-color) 50%, transparent 50%);
-        background-size: 20px 1px;
-    }
+}
+@media(max-width:389px){
 
+    .Af-UseCasesComponentSide-1-card span {
+        font-size: 12px;
+        line-height: 14px;
+    }
 }

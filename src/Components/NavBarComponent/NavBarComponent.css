@@ -15,6 +15,13 @@ nav {
     transition: top 0.8s ease, width 0.8s ease;
 }
 
+nav .user-name {
+    color: var(--white-color);
+    font-weight: 500;
+    margin-right: 20px;
+    margin-bottom: 10px;
+}
+
 .nav-logo {
     width: 155px;
     height: 40px;
@@ -65,9 +72,11 @@ nav.scrolled {
     color: var(--green60-color);
     cursor: pointer;
 }
+
 .close-nav-btn:active {
     transform: rotate(180deg);
 }
+
 .responsive-nav ul li a {
     text-decoration: none;
     color: var(--white-color);
@@ -89,6 +98,27 @@ nav.scrolled {
     background-color: var(--green60-color);
     border-radius: 82px;
     color: var(--black11-color);
+}
+
+.Af-menu-link {
+    position: relative;
+}
+
+.Af-menu-link a::before {
+    content: '';
+    width: 0;
+    height: 2px;
+    border-radius: 2px;
+    background-color: var(--green60-color);
+    position: absolute;
+    bottom: -.25rem;
+    right: 12px;
+    transition: right .4s ease-in-out, width .4s ease-in-out, left .4s ease-in-out;
+}
+
+.Af-menu-link a:not(.active-link):hover::before {
+    width: 75%;
+    left: 12px;
 }
 
 /* Start Responsive */
@@ -126,6 +156,12 @@ nav.scrolled {
         padding: 12px 24px;
         font-size: 14px;
         line-height: 21px;
+    }
+
+    nav .user-name {
+        font-size: 14px;
+        line-height: 21px;
+        margin-right: 10px;
     }
 }
 
