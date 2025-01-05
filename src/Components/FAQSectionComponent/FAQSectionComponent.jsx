@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import FAQCardComponent from "../FAQCardComponent/FAQCardComponent";
 import "./FAQSectionComponent.css";
+import vector1 from "../../assets/imgs/Home_icons/Vector_up.png";
+import vector2 from "../../assets/imgs/Home_icons/Vector_down.png";
 import { exportedFAQCardData } from "./../../Data/FAQCardData";
 import TitleComponent from "../TitleComponent/TitleComponent";
 import { MdKeyboardArrowDown, MdKeyboardArrowUp } from "react-icons/md";

@@ -13,6 +13,7 @@ export default function NavBarComponent() {
   const [scrolling, setScrolling] = useState(false);
   const [isLogin, setIsLogin] = useState(false);
   const [activeBtn, setActiveBtn] = useState(false);
+  const [activeIndex, setActiveIndex] = useState(0);
 
   useEffect(() => {
     const StoredUser = JSON.parse(localStorage.getItem('user'));
@@ -54,7 +55,7 @@ export default function NavBarComponent() {
   return (
     <>
       <nav className={`${scrolling ? "scrolled" : ""}`}>
-        <Link to="/" className="JS-logo">
+        <Link to="/YourBank/" className="JS-logo">
           <img
             src={nav_logo}
             alt="logo"
@@ -74,8 +75,11 @@ export default function NavBarComponent() {
                 className="f-18">
                 <NavLink
                   to={item.path}
-                  className={({ isActive }) => (isActive ? "active-link" : "")}
-                  onClick={() => setMenuOpen(!menuOpen)} >
+                  className={({ isActive }) => (activeIndex === index ? "active-link" : "")}
+                  onClick={() => {
+                    setMenuOpen(!menuOpen);
+                    setActiveIndex(index);
+                  }} >
                   {item.name}
                 </NavLink>
               </li>
@@ -86,7 +90,7 @@ export default function NavBarComponent() {
               isLogin == false ? 
               <>
                 <Link
-              to={"/signup"}
+              to={"/YourBank/signup"}
               className={`f-18 ${activeBtn ? "et-bg-green" : ""}`}
                   onClick={
                 () => (setActiveBtn(!activeBtn),
@@ -94,7 +98,7 @@ export default function NavBarComponent() {
               Sign up
             </Link>
                 <Link
-                  to={"/login"}
+                  to={"/YourBank/login"}
               className={`f-18 ${activeBtn ? "" : "et-bg-green"}`}
                   onClick={
                 () => (setActiveBtn(!activeBtn),
