@@ -1,5 +1,5 @@
 import "./JobCardComponent.css";
-
+import jobIcon from "../../assets/imgs/careers icons/Icon (2).png"
 export default function JobCardComponent({
   Title,
   location,
@@ -28,7 +28,7 @@ export default function JobCardComponent({
               {Array.isArray(Requirements) && Requirements.map((req, index) => (
                 <li key={index} data-aos="fade-up" data-aos-delay={index * 100}>
                   <img
-                    src="./../../src/assets/imgs/careers icons/Icon (3).png"
+                    src={jobIcon}
                     alt="icon"
                   />
                   {req}
