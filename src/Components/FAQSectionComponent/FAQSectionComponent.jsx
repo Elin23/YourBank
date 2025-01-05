@@ -77,8 +77,8 @@ export default function FAQSectionComponent() {
           {isVisible ? "Hide FAQ's " : "Load All FAQ's "}
 
               {isVisible
-                ? <MdKeyboardArrowUp />
-                : <MdKeyboardArrowDown />}
+                ? <MdKeyboardArrowUp className="MR-FAQ-Arrow-Button" />
+                : <MdKeyboardArrowDown className="MR-FAQ-Arrow-Button" />}
 
         </button>
       </div>
