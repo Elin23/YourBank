@@ -87,7 +87,7 @@ export default function FormComponent({ action }) {
           localStorage.setItem("isLogin", JSON.stringify(true));
           localStorage.setItem("user", JSON.stringify(userData));
           titleSwal = "You have been logged in successfully";
-        } navigate('/');
+        } navigate('/YourBank/');
     } else {
         if (
           state.email.length > 0 &&
@@ -110,7 +110,7 @@ export default function FormComponent({ action }) {
           localStorage.setItem("user", JSON.stringify(userData));
           titleSwal = "welcome to yourbank " + state.firstName + " " + state.lastName;
         }
-        navigate('/login');
+        navigate('/YourBank/login');
     }
 
     Swal.fire({
@@ -203,7 +203,7 @@ export default function FormComponent({ action }) {
             <button type="submit" className={`AA-custom-btn f-18 fw-400 ${true ? "AA-bg-btn-green-60" : "AA-border-btn AA-bg-btn-gray-15"}`}>
               {action === "login" ? "Login" : "Sign Up"}
             </button>
-            <Link className="AA-custom-btn f-18 fw-400 AA-custom-btn AA-border-btn AA-bg-btn-gray-15 AA-a-btn-white" to={action === "login" ? "/signUp" : "/login"}>
+            <Link className="AA-custom-btn f-18 fw-400 AA-custom-btn AA-border-btn AA-bg-btn-gray-15 AA-a-btn-white" to={action === "login" ? "/YourBank/signUp" : "/YourBank/login"}>
               {action === "login" ? "Sign Up" : "Login"}
             </Link>
             <div className="AA-continue-p f-18">
