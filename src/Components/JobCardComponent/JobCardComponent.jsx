@@ -1,5 +1,5 @@
 import "./JobCardComponent.css";
-import jobIcon from "../../assets/imgs/careers icons/Icon (2).png"
+import jobIcon from "../../assets/imgs/careers icons/Icon (3).png"
 export default function JobCardComponent({
   Title,
   location,
