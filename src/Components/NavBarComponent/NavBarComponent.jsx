@@ -19,7 +19,6 @@ export default function NavBarComponent() {
     const StoredUser = JSON.parse(localStorage.getItem('user'));
     if (StoredUser) {
       setIsLogin(true);
-  
     }
   },[navigate]);
 
