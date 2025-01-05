@@ -1,23 +1,30 @@
 <!DOCTYPE html>
 <html>
 <head>
+
     <meta charset="utf-8" />
+
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+ 
+
+    
     <title>YourBank | Digital Bank</title>
 
     <script type="text/javascript">
-        var segmentCount = 1;
-      
         var l = window.location;
+      
         window.location.replace(
           l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
           l.pathname + 
-          (l.search ? '&q=' + l.search.slice(1).replace(/&/g, '~and~') : '') +
-          l.hash
+          l.search +    
+          l.hash      
         );
       </script>
-
+    
 </head>
+
+
 <body>
-</body>
+  </body>
+
 </html>
