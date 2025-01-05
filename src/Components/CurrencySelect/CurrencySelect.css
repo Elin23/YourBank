@@ -13,12 +13,15 @@
     object-fit: cover;
     border-radius: 50%;
     overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .currency-select .flag-img img {
     width: 100%;
     height: 100%;
-    transform: scale(1.64);
+    transform: scale(1.7);
 }
 
 .currency-dropdown {
@@ -83,10 +86,8 @@ select {
     .currency-select {
         gap: 5.13px;
     }
-
-    .currency-dropdown {
-        font-size: 9.23px;
-        line-height: 13.85px;
+    .currency-select .flag-img img {
+        transform: scale(2);
     }
 
     .es-currency-name {
