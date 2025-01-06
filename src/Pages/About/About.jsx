@@ -1,7 +1,7 @@
 import React from 'react'
 import PressReleasesSectionComponent from '../../Components/PressReleasesSectionComponent/PressReleasesSectionComponent'
 import HeroComponent2 from '../../Components/HeroComponent2/HeroComponent2'
-import IMG2 from '../../assets/imgs/Hero/HeroImage2.png'
+import IMG2 from '../../assets/imgs/Hero/HeroImage2.webp'
 import MissionVisionComponent from '../../Components/MissionVisionComponent/MissionVisionComponent'
 export default function About() {
   return (
