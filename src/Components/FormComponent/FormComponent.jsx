@@ -77,23 +77,53 @@ export default function FormComponent({ action }) {
           state.password.length > 0 &&
           emailRegex.test(state.email)
         ) {
-          //calling api login here
-          const userData = {
-            userName: state.email.split("@")[0], //add
-            email: state.email,
-            token: "api token",
-          };
-          //save return value from api in local storage
-          localStorage.setItem("isLogin", JSON.stringify(true));
-          localStorage.setItem("user", JSON.stringify(userData)); //add
-          Swal.fire({
-            icon: 'success',
-            title: "You have been logged in successfully",
-            showConfirmButton: false,
-            timer: 1500
-          });
-          
-        } navigate('/YourBank/');
+          /*calling api login here          
+          *
+          *
+          * */
+
+          // fake process data (local storage) login
+          const users = JSON.parse(localStorage.getItem('users'));
+          //check if there is no users stored in db 
+          if(users){
+            //get user data from db 
+            const user = users.find(user => user.email === state.email);
+            if (user) {
+              if(user.password === state.password){
+                const userData = {
+                  userName: user.firstName + " " + user.lastName, //add
+                  email: user.email,
+                  token: "api token",
+                };
+                localStorage.setItem("isLogin", JSON.stringify(true));
+                localStorage.setItem("user", JSON.stringify(userData)); //add
+                Swal.fire({
+                  icon: 'success',
+                  title: "Welcome back, " + user.firstName + " " + user.lastName + "! You have successfully logged in. Enjoy your experience.",
+                  showConfirmButton: false,
+                  timer: 2000
+                });
+                navigate('/YourBank/');
+              }else{
+                //no account in db 
+                Swal.fire({
+                  icon: 'error',
+                  title: "Oops! The username or password you entered doesn't match our records. Please double-check and try again.",
+                  showConfirmButton: false,
+                  timer: 2000
+                });
+              }
+            } else {
+              //no account in db 
+              Swal.fire({
+                icon: 'error',
+                title: "Oops! The username or password you entered doesn't match our records. Please double-check and try again.",
+                showConfirmButton: false,
+                timer: 2000
+              });
+            }
+          }
+        } 
     } else {
         if (
           state.email.length > 0 &&
@@ -105,24 +135,48 @@ export default function FormComponent({ action }) {
           NameRegex.test(state.firstName) &&
           NameRegex.test(state.lastName)
         ) {
-          //calling api signup here
-          const userData = {
-            userName: state.firstName + " " + state.lastName,
-            email: state.email,
-            token: "api token"
-          };
-          //save return value from api in local storage
-          localStorage.setItem("isLogin", JSON.stringify(true));
-          localStorage.setItem("user", JSON.stringify(userData));
-        }
-        Swal.fire({
-          icon: 'success',
-          title: "Welcome to YourBank " + state.firstName + " " + state.lastName,
-          showConfirmButton: false,
-          timer: 1500
-        });
+           /*calling api signup here          
+          *
+          *
+          * */
 
-        navigate('/YourBank/login');
+          // fake process data (local storage) signup
+          let users = JSON.parse(localStorage.getItem('users'));
+          //check if there is no users stored in db
+          if(users){
+            //check if there is same email in db 
+            const user = users.find(user => user.email === state.email);
+            if (user) {
+              Swal.fire({
+                icon: 'error',
+                title: "It seems you already have an account with the email " + state.email + ". Please log in to access your account.",
+                showConfirmButton: false,
+                timer: 2000
+              });
+            }else{
+              //save user data in db             
+              users.push(state);
+              localStorage.setItem("users",JSON.stringify(users));
+              Swal.fire({
+                icon: 'success',
+                title: "Welcome to YourBank " + state.firstName + " " + state.lastName,
+                showConfirmButton: false,
+                timer: 2000
+              });
+              navigate('/YourBank/login');
+            }
+          }else{
+            //save user data in db  
+            localStorage.setItem("users",JSON.stringify([state]));
+            Swal.fire({
+              icon: 'success',
+              title: "Welcome to YourBank " + state.firstName + " " + state.lastName,
+              showConfirmButton: false,
+              timer: 2000
+            });
+            navigate('/YourBank/login');
+          }
+        }
     }
   };
 
