@@ -1,5 +1,6 @@
 body {
-    cursor: url('./src/assets/imgs/Mouse-default.png'), default;
+    /* cursor: url('./src/assets/imgs/Mouse-default.png'), default; */
+    cursor: url('../../assets/imgs/Mouse-default.png'), default;
 }
 
 
@@ -10,5 +11,6 @@ button, button a, a, i, .hw-fotIconConta, .open-nav-btn,
 
 
 input {
-    cursor: url('./src/assets/imgs/Mouse-Inherit.png'), auto !important;
+    /* cursor: url('./src/assets/imgs/Mouse-Inherit.png'), auto !important; */
+    cursor: url('../../assets/imgs/Mouse-Inherit.png'), auto !important;
 }

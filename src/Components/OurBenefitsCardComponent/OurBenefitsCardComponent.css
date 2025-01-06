@@ -7,7 +7,8 @@
 .hw-OurBenefitsCard p {
     margin-bottom: 0;
 }
-.hw-OurBenefitsCard{
+
+.hw-OurBenefitsCard {
     gap: 30px;
     display: flex;
     align-items: flex-start;
@@ -51,6 +52,11 @@
             rgba(26, 26, 26, 0.7) 30%,
             #1A1A1A 62%);
 }
+
+.hw-OurBenefitsCard:hover {
+    box-shadow: 0 4px 8px var(--green60-color);
+}
+
 /* .hw-OurBenefitsCard::after{
     content: '';
     position: absolute;
@@ -65,28 +71,31 @@
     rgba(202,255,51,0.2) 99.95%);
     z-index: -1;
 } */
-.hw-OurBenefitsCardHeading{
+.hw-OurBenefitsCardHeading {
     display: flex;
     align-items: center;
     gap: 20px;
     z-index: 6;
 }
-.hw-OurBenefitsCardHeading .Af-img-father{
+
+.hw-OurBenefitsCardHeading .Af-img-father {
     width: 98px;
     height: 98px;
     padding: 12px;
 }
-.hw-OurBenefitsCardHeading .Af-img-father .Af-img-son{
+
+.hw-OurBenefitsCardHeading .Af-img-father .Af-img-son {
     width: 74px;
     height: 74px;
     padding: 20px;
 }
-.hw-OurBenefitsCardHeading .Af-img-father .Af-img-son img{
+
+.hw-OurBenefitsCardHeading .Af-img-father .Af-img-son img {
     width: 34px;
     height: 34px;
 }
 
-.OurBenefitsCardIcon{
+.OurBenefitsCardIcon {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -110,10 +119,12 @@
     height: 77px;
     opacity: 0.3;
 }
-.hw-OurBenefitsCardTitle{
+
+.hw-OurBenefitsCardTitle {
     color: var(--white-color);
 }
-.OurBenefitsCardDescription{
+
+.OurBenefitsCardDescription {
     color: var(--gray70-color);
     z-index: 6;
     max-width: 648px;
@@ -139,17 +150,20 @@
     .hw-OurBenefitsCard:hover .hw-OurBenefitsCardTitle {
         color: var(--green60-color);
     }
-    .hw-OurBenefitsCardHeading .Af-img-father{
+
+    .hw-OurBenefitsCardHeading .Af-img-father {
         width: 76px;
         height: 76px;
         padding: 8px;
     }
-    .hw-OurBenefitsCardHeading .Af-img-father .Af-img-son{
+
+    .hw-OurBenefitsCardHeading .Af-img-father .Af-img-son {
         width: 60px;
         height: 60px;
         padding: 16px;
     }
-    .hw-OurBenefitsCardHeading .Af-img-father .Af-img-son img{
+
+    .hw-OurBenefitsCardHeading .Af-img-father .Af-img-son img {
         width: 28px;
         height: 28px;
     }
@@ -185,7 +199,8 @@
         font-size: 18px;
         line-height: 28px;
     }
-    .OurBenefitsCardDescription{
+
+    .OurBenefitsCardDescription {
         max-width: 530px;
         width: unset;
         font-size: 15px;
@@ -193,7 +208,9 @@
 }
 
 @media (max-width:768px) {
-    .hw-roundedCardRight, .hw-roundedCardLeft {
+
+    .hw-roundedCardRight,
+    .hw-roundedCardLeft {
         border-radius: 40px 40px 10px 10px;
     }
 
@@ -213,7 +230,8 @@
         font-size: 14px;
         line-height: 21px;
     }
-    .hw-dashed-lines-vr{
+
+    .hw-dashed-lines-vr {
         width: 358px;
         height: 2px;
     }

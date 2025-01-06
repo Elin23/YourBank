@@ -1,18 +1,18 @@
 import React, { useEffect, useState } from 'react'
 import './HeroComponent.css'
-import tickIcon from '../../assets/imgs/Home icons/tick-Icon.png'
+import tickIcon from '../../assets/imgs/Home_icons/tick-Icon.png'
 import { Link } from 'react-router-dom'
-import DollarSign from '../../assets/imgs/Home icons/Shape.png'
-import EuroSign from '../../assets/imgs/Home icons/euro-currency-symbol.png'
-import Bitcoin from '../../assets/imgs/Home icons/Shape2.png'
-import ethereum from '../../assets/imgs/Home icons/Group.png'
-import plus from '../../assets/imgs/Home icons/Vector3.png'
-import TransIcon from '../../assets/imgs/Home icons/Vector2.png'
+import DollarSign from '../../assets/imgs/Home_icons/Shape.png'
+import EuroSign from '../../assets/imgs/Home_icons/euro-currency-symbol.png'
+import Bitcoin from '../../assets/imgs/Home_icons/Shape2.png'
+import ethereum from '../../assets/imgs/Home_icons/Group.png'
+import plus from '../../assets/imgs/Home_icons/Vector3.png'
+import TransIcon from '../../assets/imgs/Home_icons/Vector2.png'
 import TitleComponent from '../TitleComponent/TitleComponent'
 import CurrencySelect from '../CurrencySelect/CurrencySelect'
 
 const TransactionBox = ({ name, amount, opacityClass, index }) => (
-  <div className={`es-trans-box ${opacityClass}`} data-aos="fade-up" data-aos-delay={index * 200}>
+  <div className={`es-trans-box ${opacityClass}`}>
     <div className="es-trans-box-left">
       <div className="es-icon">
         <img src={TransIcon} alt="Transaction Icon" />
@@ -32,8 +32,10 @@ export default function HeroComponent() {
   const [amount, setAmount] = useState('5,000');
   const [fromCurrency, setFromCurrency] = useState("INR");
   const [toCurrency, setToCurrency] = useState("USD");
-  const [result, setResult] = useState();
+  const [result, setResult] = useState('');
   const [isLoading, setIsLoading] = useState(false);
+  const [isLogin, setIsLogin] = useState(false);
+
 
   // function to fetch the exchange rate and update the result
 
@@ -64,6 +66,23 @@ export default function HeroComponent() {
   //fetch exchange rate on initial render
   useEffect(() => getExchangeRate, []);
 
+  // Hide the "Open Account" button when signed in and re-display it again upon logging out
+  useEffect(() => {
+
+    const StoredUser = JSON.parse(localStorage.getItem('user'));
+    setIsLogin(!!StoredUser);
+
+    const handleLoginStatusChange = () => {
+      const updatedUser = JSON.parse(localStorage.getItem('user'));
+      setIsLogin(!!updatedUser);
+    };
+
+    window.addEventListener('loginStatusChanged', handleLoginStatusChange);
+
+    return () => {
+      window.removeEventListener('loginStatusChanged', handleLoginStatusChange);
+    };
+  }, []);
 
   return (
     <>
@@ -81,9 +100,12 @@ export default function HeroComponent() {
               fw={false}
             />
           </div>
-          <div className="es-hero-btn f-18">
-            <Link to='./signUp'> Open Account </Link>
-          </div>
+          {!isLogin && (
+            <div className="es-hero-btn f-18">
+              <Link to='/YourBank/signUp'>Open Account</Link>
+            </div>
+          )}
+
         </div>
         <div className="es-right-side">
           <div className="es-monthly-income">
@@ -131,7 +153,7 @@ export default function HeroComponent() {
                     />
                   </div>
                   <div className="es-currency-value exchange-rate-result">
-                    {isLoading ? 0 : result}
+                    {isLoading ? '0.00' : result}
                   </div>
                 </div>
               </div>

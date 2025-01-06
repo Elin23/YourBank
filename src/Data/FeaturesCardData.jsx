@@ -1,4 +1,5 @@
-import icon10 from "../assets/imgs/Home icons/Icon (10).png"
+// import icon10 from "./src/assets/imgs/Home_icons/Icon(10).png"
+import icon10 from "../assets/imgs/Home_icons/IconArrow.png"
 
 const StoredFeaturesCardData = localStorage.getItem("FeaturesCardData");
 

@@ -15,6 +15,13 @@ nav {
     transition: top 0.8s ease, width 0.8s ease;
 }
 
+nav .user-name {
+    color: var(--white-color);
+    font-weight: 500;
+    margin-right: 20px;
+    margin-bottom: 10px;
+}
+
 .nav-logo {
     width: 155px;
     height: 40px;
@@ -64,14 +71,22 @@ nav.scrolled {
 .close-nav-btn:hover {
     color: var(--green60-color);
 }
+
 .close-nav-btn:active {
     transform: rotate(180deg);
 }
+
 .responsive-nav ul li a {
     text-decoration: none;
     color: var(--white-color);
     border-radius: 82px;
     padding: 12px 24px;
+    transition: 0.5s;
+}
+
+.responsive-nav ul li a:not(.active-link):hover,
+.et-nav-btns a:hover {
+    color: var(--green60-color);
 }
 
 .active-link {
@@ -82,6 +97,7 @@ nav.scrolled {
     text-decoration: none;
     color: #ffffff;
     padding: 14px 30px;
+    transition: 0.5s;
 }
 
 .et-nav-btns a.et-bg-green {
@@ -125,6 +141,12 @@ nav.scrolled {
         padding: 12px 24px;
         font-size: 14px;
         line-height: 21px;
+    }
+
+    nav .user-name {
+        font-size: 14px;
+        line-height: 21px;
+        margin-right: 10px;
     }
 }
 
@@ -187,6 +209,10 @@ nav.scrolled {
 
     .open-nav-btn {
         display: flex;
+    }
+
+    nav .user-name {
+        margin-right: 0;
     }
 
     .et-nav-btns {

@@ -26,6 +26,19 @@
 .es-hero-left-content {
     width: 51.7535%;
     padding-top: 6.266%;
+    animation: zoomInAnimation 3s ease-out forwards;
+}
+
+@keyframes zoomInAnimation {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
 }
 
 .es-hero-left-content .es-sub-title {
@@ -50,15 +63,27 @@
     margin-bottom: 50px;
 }
 
-/* /////////////////////////////// */
 .es-hero-left-content .es-main-title .title {
-    font-weight: 500;
-    /* color: transparent; */
-    /* ///////// */
+    animation: ghostEffect 5s infinite;
 }
 
+@keyframes ghostEffect {
+    0% {
+        opacity: 0;
+        transform: translateY(10px);
+    }
 
-/* /////////////////////////////// */
+    50% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+}
+
 .es-hero-left-content img {
     padding-left: 12px;
 }
@@ -178,6 +203,7 @@
 /*Right Side Start*/
 .es-right-side {
     position: relative;
+    animation: zoomInAnimation 3s ease-out forwards;
 }
 
 .es-hero-right-content {

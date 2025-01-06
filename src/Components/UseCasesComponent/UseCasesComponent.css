@@ -33,6 +33,10 @@
     border-radius: 20px;
 }
 
+.Af-UseCasesComponentSide-1-card:hover {
+    box-shadow: 0 4px 8px var(--green60-color);
+}
+
 .Af-UseCasesComponentSide-1Reverse {
     width: 46.86%;
     display: flex;
@@ -77,7 +81,7 @@
     height: 100%;
     border-radius: 16px;
     border: 1px solid var(--gray15-color);
-
+    transition: 0.5s;
 }
 
 .Af-UseCasesComponentSide-1-card span {
@@ -389,12 +393,12 @@
         font-weight: 300;
     }
 
-    .Af-divBorder {
-        display: block;
-        width: 258px;
-        height: 1px;
-        background-image: linear-gradient(to right, var(--gray15-color) 50%, transparent 50%);
-        background-size: 20px 1px;
-    }
+}
 
+@media(max-width:389px) {
+
+    .Af-UseCasesComponentSide-1-card span {
+        font-size: 12px;
+        line-height: 14px;
+    }
 }

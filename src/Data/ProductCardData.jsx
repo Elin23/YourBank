@@ -1,6 +1,6 @@
-import icon1 from "../assets/imgs/Home icons/Icon (2).png";
-import icon2 from "../assets/imgs/Home icons/Icon (3).png";
-import icon3 from "../assets/imgs/Home icons/Icon (4).png";
+import icon1 from "../assets/imgs/Home_icons/Icon (2).png";
+import icon2 from "../assets/imgs/Home_icons/Icon (3).png";
+import icon3 from "../assets/imgs/Home_icons/Icon (4).png";
 
 export let ProductCardData = [
   {

@@ -1,8 +1,11 @@
 import React, { useState } from "react";
 import FAQCardComponent from "../FAQCardComponent/FAQCardComponent";
 import "./FAQSectionComponent.css";
+import vector1 from "../../assets/imgs/Home_icons/Vector_up.png";
+import vector2 from "../../assets/imgs/Home_icons/Vector_down.png";
 import { exportedFAQCardData } from "./../../Data/FAQCardData";
 import TitleComponent from "../TitleComponent/TitleComponent";
+import { MdKeyboardArrowDown, MdKeyboardArrowUp } from "react-icons/md";
 
 export default function FAQSectionComponent() {
   const [isVisible, setIsVisible] = useState(false);
@@ -18,7 +21,7 @@ export default function FAQSectionComponent() {
     return faqs.map((data, index) => (
       <FAQCardComponent
         key={index}
-        Question={data.Question}
+        Qustion={data.Qustion}
         Answer={data.Answer}
       />
     ));
@@ -70,14 +73,11 @@ export default function FAQSectionComponent() {
         </div>
         <button className="MR-FAQ-Button f-18 fw-400" onClick={toggleFAQs}>
           {isVisible ? "Hide FAQ's " : "Load All FAQ's "}
-          <img
-            src={
-              isVisible
-                ? "./src/assets/imgs/Home icons/Vector 10.png"
-                : "./src/assets/imgs/Home icons/Vector 9.png"
-            }
-            alt="vector"
-          />
+
+          {isVisible
+            ? <MdKeyboardArrowUp className="MR-FAQ-Arrow-Button" />
+            : <MdKeyboardArrowDown className="MR-FAQ-Arrow-Button" />}
+
         </button>
       </div>
     </div>

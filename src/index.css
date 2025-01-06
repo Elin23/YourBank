@@ -153,6 +153,34 @@
   opacity: 0;
 }
 
+/**style swal Model **/
+.swal2-modal{
+  background-color: var(--black11-color);   
+  border: 5px var(--gray15-color) solid;
+  border-radius: 14px; 
+}
+
+.swal2-html-container, .swal2-title{
+  color: white !important;
+}
+div:where(.swal2-icon).swal2-success [class^=swal2-success-line],
+div:where(.swal2-container) button:where(.swal2-styled):where(.swal2-confirm){
+  background-color: var(--green60-color);
+}
+
+div:where(.swal2-container) button:where(.swal2-styled):where(.swal2-confirm){
+  color: var(--black-color);
+}
+
+div:where(.swal2-icon).swal2-success .swal2-success-ring,
+div:where(.swal2-icon).swal2-question
+{
+  border-color: var(--green60-color) ;
+}
+
+div:where(.swal2-icon).swal2-question{
+  color: var(--green60-color);
+}
 /*Start Responsive*/
 @media (max-width: 1919px) {
 
@@ -164,6 +192,16 @@
   .px-162 {
     padding-left: 5.55%;
     padding-right: 5.55%;
+  }
+  
+  .swal2-html-container, .swal2-title{
+    font-size: 1.7em;
+  }
+}
+
+@media (max-width: 993px) {
+  .swal2-html-container, .swal2-title{
+    font-size: 1.5em;
   }
 }
 
@@ -181,5 +219,8 @@
     margin-bottom: 15.3846154%;
   }
 
+  .swal2-html-container, .swal2-title{
+    font-size: 1.3em;
+  }
 }
 

@@ -1,10 +1,14 @@
 .features-card {
   width: 48.8%;
+  padding: 49.34px;
   border-radius: 12px;
   border: 1px solid var(--gray15-color);
   background-color: var(--black11-color);
 }
 
+.features-card:hover {
+  box-shadow: 0 4px 8px var(--green60-color);
+}
 
 .et-card-title {
   display: flex;
@@ -33,7 +37,7 @@
 @media (max-width: 1919px) {
   .features-card {
     width: 49.014%;
-    padding: 40px;
+    padding: 39.34px;
   }
 
   .et-card-title span {
@@ -66,7 +70,7 @@
 
 @media (max-width: 768px) {
   .features-card {
-    padding: 30px;
+    padding: 29.34px;
   }
 
   .et-card-title span {
