@@ -112,9 +112,9 @@
     width: 100%;
 }
 
-.es-hero-btn:hover.es-hero-btn a {
+/* .es-hero-btn:hover.es-hero-btn a {
     color: var(--white-color);
-}
+} */
 
 .es-hero-btn a {
     text-decoration: none;
