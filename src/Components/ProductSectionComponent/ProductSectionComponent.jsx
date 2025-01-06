@@ -8,14 +8,15 @@ export default function ProductSectionComponent() {
   const [toggleState, setToggleState] = useState(1);
   const [fade, setFade] = useState(false);
 
+  // function to move and fade effect of tabs
   const toggleTab = (index) => {
     setFade(true);
     setTimeout(() => {
-        setToggleState(index);
-        setFade(false);
+      setToggleState(index);
+      setFade(false);
     }, 300);
   };
-
+  // arr of tabs
   const productTabs = [
     { id: 1, label: "For Individuals", data: ProductCardData },
     { id: 2, label: "For Businesses", data: ProductCardData2 },
@@ -47,19 +48,19 @@ export default function ProductSectionComponent() {
           ))}
         </div>
       </div>
-      <div className={`fading ${fade ? 'fade-out' : 'fade-in'}`}>
-      {productTabs.map((tab) => (
-        <div
-          key={tab.id}
-          className={`row-cards px-162 ${
-            toggleState === tab.id ? "active-content" : ""
-          }`}
-        >
-          {tab.data.map((e, index) => (
-            <ProductCardComponent key={index} data={e} />
-          ))}
-        </div>
-      ))}
+      <div className={`fading ${fade ? "fade-out" : "fade-in"}`}>
+        {productTabs.map((tab) => (
+          <div
+            key={tab.id}
+            className={`row-cards px-162 ${
+              toggleState === tab.id ? "active-content" : ""
+            }`}
+          >
+            {tab.data.map((e, index) => (
+              <ProductCardComponent key={index} data={e} />
+            ))}
+          </div>
+        ))}
       </div>
     </section>
   );
