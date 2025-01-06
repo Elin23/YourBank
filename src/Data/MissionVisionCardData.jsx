@@ -1,5 +1,5 @@
-import img1 from "../assets/imgs/Vision/Image1.png";
-import img2 from "../assets/imgs/Vision/Image2.png";
+import img1 from '../assets/imgs/Vision/Image1.webp';
+import img2 from '../assets/imgs/Vision/Image2.webp';
 
 const storedMissionVisionCardData = localStorage.getItem("MissionVisionCardData");
 

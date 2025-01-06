@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 import './FooterComponent.css'
 import icon1 from './../../assets/imgs/Home_icons/Icon (13).png'
 import icon2 from './../../assets/imgs/Home_icons/Icon (14).png'
@@ -8,6 +8,7 @@ import twitterIcon from './../../assets/imgs/Home_icons/Icon (17).png'
 import linkdenIcon from './../../assets/imgs/Home_icons/Vector.png'
 import nav_logo from '../../assets/imgs/logo.png'
 import SocialFooterComponent from '../SocialFooterComponent/SocialFooterComponent'
+import { useEffect } from 'react'
 
 export default function FooterComponent() {
     const socialIcons = [
@@ -15,6 +16,17 @@ export default function FooterComponent() {
         { src: twitterIcon, alt: 'Twitter Link' },
         { src: linkdenIcon, alt: 'LinkedIn Link' },
     ];
+
+    const location = useLocation();
+
+    useEffect(() => {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+
+    }, [location]); 
+
+    const getActiveClass = (path) => location.pathname === path ? 'hw-menu-link active' : 'hw-menu-link';
+
+
     return (
         <>
             <footer className='hw-footer px-162'>

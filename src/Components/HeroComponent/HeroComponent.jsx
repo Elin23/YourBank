@@ -32,7 +32,7 @@ export default function HeroComponent() {
   const [amount, setAmount] = useState('5,000');
   const [fromCurrency, setFromCurrency] = useState("INR");
   const [toCurrency, setToCurrency] = useState("USD");
-  const [result, setResult] = useState('');
+  const [result, setResult] = useState('12.00');
   const [isLoading, setIsLoading] = useState(false);
   const [isLogin, setIsLogin] = useState(false);
 

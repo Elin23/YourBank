@@ -17,6 +17,7 @@
     position: relative;
     min-height: 336px;
     overflow: hidden;
+    border: 1px solid var(--gray15-color);
 }
 
 .hw-gradient-bg {
@@ -26,9 +27,10 @@
     left: 0;
     top: 0;
     background: linear-gradient(117deg, var(--green60-color) 0%, var(--black11-color) 34%);
-    opacity: 3%;
+    opacity: 0.04;
     z-index: 2;
 }
+
 
 .hw-OurBenefitsBlendBg {
     position: absolute;
@@ -102,7 +104,7 @@
     transform: translate(-50%, -50%);
 }
 
-.hw-iconContainer .circle1 {
+/* .hw-iconContainer .circle1 {
     width: 74px;
     height: 74px;
     opacity: 0.3;
@@ -118,9 +120,14 @@
     width: 77px;
     height: 77px;
     opacity: 0.3;
+<<<<<<< HEAD
 }
 
 .hw-OurBenefitsCardTitle {
+=======
+} */
+.hw-OurBenefitsCardTitle{
+>>>>>>> eb2c3cb755bd17aa58623276b35ba280ab73dc37
     color: var(--white-color);
 }
 
