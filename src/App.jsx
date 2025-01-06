@@ -31,13 +31,13 @@ function App() {
       <NavBarComponent  />
       <Routes>
           <Route path='/YourBank/' element={<HandleLoadingComponent />}>
-          <Route index element={<Home />} />
-          <Route path="/YourBank/about" element={<About />} />
-          <Route path="/YourBank/careers" element={<Careers />} />
-          <Route path="/YourBank/security" element={<Security />} />
-          <Route path="/YourBank/login" element={<Login />} />
-          <Route path="/YourBank/signUp" element={<SignUp />} />
-         </Route>
+            <Route index element={<Home />} />
+            <Route path="/YourBank/about" element={<About />} />
+            <Route path="/YourBank/careers" element={<Careers />} />
+            <Route path="/YourBank/security" element={<Security />} />
+            <Route path="/YourBank/login" element={<Login />} />
+            <Route path="/YourBank/signUp" element={<SignUp />} />
+          </Route>
       </Routes>
       <FooterComponent/>
     </div>
