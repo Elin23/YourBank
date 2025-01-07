@@ -10,11 +10,22 @@ import NavBarComponent from "./Components/NavBarComponent/NavBarComponent";
 import HandleLoadingComponent from './Components/HandleLoadingComponent/HandleLoadingComponent';
 import FooterComponent from "./Components/FooterComponent/FooterComponent";
 import Cursor from "./Components/cursor/cursor";
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import GiftComponent from "./Components/giftComponent/giftComponent";
 
 function App() {
+  const [isNewUser, setIsNewUser] = useState(false);
+  useEffect(() => {
+    const newUser = JSON.parse(localStorage.getItem("isNewUser")) === true;
+    setIsNewUser(newUser);
+
+    // if (newUser) {
+    //   localStorage.setItem("isNewUser", "false");
+    // }
+  }, []);
+
   useEffect(() => {
     AOS.init({
       duration: 1000,
@@ -39,6 +50,7 @@ function App() {
             <Route path="/YourBank/signUp" element={<SignUp />} />
           </Route>
       </Routes>
+      {isNewUser && <GiftComponent />}
       <FooterComponent/>
     </div>
   );

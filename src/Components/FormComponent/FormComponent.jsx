@@ -159,9 +159,10 @@ export default function FormComponent({ action }) {
                 title: "It seems you already have an account with the email " + state.email + ". Please log in to access your account.",                        
               });
             }else{
-              //save user data in db             
+              //save user data            
               users.push(state);
               localStorage.setItem("users",JSON.stringify(users));
+              localStorage.setItem("isNewUser", "true");
               const userData = {
                 userName: state.firstName + " " + state.lastName, //add
                 email: state.email,
@@ -176,7 +177,7 @@ export default function FormComponent({ action }) {
               navigate('/YourBank/');
             }
           }else{
-            //save user data in db  
+            //save user data  
             localStorage.setItem("users",JSON.stringify([state]));
             const userData = {
               userName: state.firstName + " " + state.lastName, //add

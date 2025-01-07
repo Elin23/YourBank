@@ -1,11 +1,9 @@
+import React from 'react'
 import './Cursor.css';
-
-function Cursor () {
+export default function Cursor() {
   return (
-    <div className="custom-cursor">
+    <div>
+      <div className="custom-cursor"></div>
     </div>
   )
 }
-
-export default Cursor
-

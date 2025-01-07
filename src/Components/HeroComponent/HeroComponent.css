@@ -662,8 +662,8 @@
 
 @media (max-width: 1200px) {
     .es-hero-container {
-        padding-left: 4.1%;
-        padding-right: 4.1%;
+        /* padding-left: 4.1%;
+        padding-right: 4.1%; */
         padding-top: 10.23%;
         gap: 5%;
     }
@@ -673,7 +673,8 @@
         margin-bottom: 25px;
     }
 
-    .es-hero-left-content .es-main-title .title {
+    .es-hero-left-content .es-main-title .title,
+    .es-hero-left-content .es-main-title .title span {
         font-size: 32px;
         line-height: 45px;
     }
