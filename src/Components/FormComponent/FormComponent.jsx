@@ -20,8 +20,13 @@ export default function FormComponent({ action }) {
   });
   const [icon, setIcon] = useState("show");
   const [type, setType] = useState("password");
-//   const [messagePass, setMessagePass] = useState("");
-//   const [message, setMessage] = useState("");
+
+  const Toast = Swal.mixin({
+    showConfirmButton: false,
+    timer: 2000,
+    didOpen : () => { document.body.style = 'padding-right: 0px !important'; },
+  });
+
   const [messages, setMessages] = useState({
     firstName: "",
     lastName: "",
@@ -97,31 +102,32 @@ export default function FormComponent({ action }) {
                 };
                 localStorage.setItem("isLogin", JSON.stringify(true));
                 localStorage.setItem("user", JSON.stringify(userData)); //add
-                Swal.fire({
+                Toast.fire({
                   icon: 'success',
                   title: "Welcome back, " + user.firstName + " " + user.lastName + "! You have successfully logged in. Enjoy your experience.",
-                  showConfirmButton: false,
-                  timer: 2000
                 });
                 navigate('/YourBank/');
               }else{
                 //no account in db 
-                Swal.fire({
+                Toast.fire({
                   icon: 'error',
-                  title: "Oops! The username or password you entered doesn't match our records. Please double-check and try again.",
-                  showConfirmButton: false,
-                  timer: 2000
+                  title: "Oops! The username or password you entered doesn't match our records. Please double-check and try again.",                
                 });
               }
             } else {
               //no account in db 
-              Swal.fire({
+              Toast.fire({
                 icon: 'error',
-                title: "Oops! The username or password you entered doesn't match our records. Please double-check and try again.",
-                showConfirmButton: false,
-                timer: 2000
+                title: "Oops! The username or password you entered doesn't match our records. Please double-check and try again.",                        
               });
             }
+          }
+          else{
+            //no account in db 
+            Toast.fire({
+              icon: 'error',
+              title: "Oops! The username or password you entered doesn't match our records. Please double-check and try again.",                
+            });
           }
         } 
     } else {
@@ -135,9 +141,9 @@ export default function FormComponent({ action }) {
           NameRegex.test(state.firstName) &&
           NameRegex.test(state.lastName)
         ) {
-           /*calling api signup here          
+           /*          
           *
-          *
+          *calling api signup here
           * */
 
           // fake process data (local storage) signup
@@ -147,34 +153,42 @@ export default function FormComponent({ action }) {
             //check if there is same email in db 
             const user = users.find(user => user.email === state.email);
             if (user) {
-              Swal.fire({
+              Toast.fire({
                 icon: 'error',
-                title: "It seems you already have an account with the email " + state.email + ". Please log in to access your account.",
-                showConfirmButton: false,
-                timer: 2000
+                title: "It seems you already have an account with the email " + state.email + ". Please log in to access your account.",                        
               });
             }else{
               //save user data in db             
               users.push(state);
               localStorage.setItem("users",JSON.stringify(users));
-              Swal.fire({
+              const userData = {
+                userName: state.firstName + " " + state.lastName, //add
+                email: state.email,
+                token: "api token",
+              };
+              localStorage.setItem("isLogin", JSON.stringify(true));
+              localStorage.setItem("user", JSON.stringify(userData));
+              Toast.fire({
                 icon: 'success',
-                title: "Welcome to YourBank " + state.firstName + " " + state.lastName,
-                showConfirmButton: false,
-                timer: 2000
+                title: "Welcome to YourBank " + state.firstName + " " + state.lastName,                        
               });
-              navigate('/YourBank/login');
+              navigate('/YourBank/');
             }
           }else{
             //save user data in db  
             localStorage.setItem("users",JSON.stringify([state]));
-            Swal.fire({
+            const userData = {
+              userName: state.firstName + " " + state.lastName, //add
+              email: state.email,
+              token: "api token",
+            };
+            localStorage.setItem("isLogin", JSON.stringify(true));
+            localStorage.setItem("user", JSON.stringify(userData));
+            Toast.fire({
               icon: 'success',
-              title: "Welcome to YourBank " + state.firstName + " " + state.lastName,
-              showConfirmButton: false,
-              timer: 2000
+              title: "Welcome to YourBank " + state.firstName + " " + state.lastName,                        
             });
-            navigate('/YourBank/login');
+            navigate('/YourBank/');
           }
         }
     }
