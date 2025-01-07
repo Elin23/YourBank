@@ -137,7 +137,7 @@
     animation: greenTopBubbles 0.6s ease;
 }
 
-<<<<<<< HEAD @keyframes greenTopBubbles {
+@keyframes greenTopBubbles {
     0% {
         background-position: 5% 90%, 10% 90%, 10% 90%, 15% 90%, 25% 90%, 25% 90%,
             40% 90%, 55% 90%, 70% 90%;
@@ -155,12 +155,7 @@
     }
 }
 
-=======
-
-/* .es-hero-btn:hover.es-hero-btn a {
-    color: var(--white-color);
-} */
->>>>>>>eb2c3cb755bd17aa58623276b35ba280ab73dc37 .es-hero-btn:hover:after {
+.es-hero-btn:hover:after {
     bottom: -70%;
     background-image: radial-gradient(circle, var(--green60-color) 20%, transparent 20%),
         radial-gradient(circle, var(--green60-color) 20%, transparent 20%),

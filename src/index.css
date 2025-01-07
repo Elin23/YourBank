@@ -139,7 +139,7 @@
 }
 /* End Scrollbar Customization */
 
-/* Fade Effect */
+/* start Fade Effect */
 
 .fading {
   transition: opacity 350ms ease-in-out; 
@@ -152,8 +152,9 @@
 .fade-out {
   opacity: 0;
 }
+/* End Fade Effect */
 
-/**style swal Model **/
+/** start style sweet Alert Model **/
 .swal2-modal{
   background-color: var(--black11-color);   
   border: 5px var(--gray15-color) solid;
@@ -181,6 +182,8 @@ div:where(.swal2-icon).swal2-question
 div:where(.swal2-icon).swal2-question{
   color: var(--green60-color);
 }
+/** End style sweet Alert Model **/
+
 /*Start Responsive*/
 @media (max-width: 1919px) {
 
@@ -223,4 +226,5 @@ div:where(.swal2-icon).swal2-question{
     font-size: 1.3em;
   }
 }
+
 
