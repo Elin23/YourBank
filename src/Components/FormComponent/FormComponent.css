@@ -6,6 +6,7 @@
 .AA-pb-40 {
     padding-bottom: 3.898%;
 }
+
 /** for form padding **/
 .AA-px-297 {
     padding-left: 15.46875%;
@@ -152,6 +153,11 @@
     text-decoration: underline;
     padding-top: 3.898635477582846%;
     padding-bottom: 3.898635477582846%;
+    transition: 0.5s;
+}
+
+.AA-form-section .AA-form-container .AA-form-container-bg .AA-forget-pass-btn:hover {
+    color: var(--green60-color);
 }
 
 /**style btn (login - signup) in form **/
@@ -164,20 +170,20 @@
     margin-bottom: 2.3391%;
 }
 
-.AA-bg-btn-green-60{
+.AA-bg-btn-green-60 {
     background-color: var(--green60-color);
 }
 
-.AA-bg-btn-gray-15{
+.AA-bg-btn-gray-15 {
     background: var(--gray15-color);
     border: 1px solid var(--gray20-color);
 }
 
-.AA-a-btn-white{
+.AA-a-btn-white {
     color: var(--white-color);
 }
 
-.AA-a-btn-black{
+.AA-a-btn-black {
     color: var(--black-color);
 }
 
@@ -220,25 +226,26 @@
     display: flex;
     gap: 24px;
 }
-.AA-social-login-btns .Af-img-father{
+
+.AA-social-login-btns .Af-img-father {
     width: 94px;
     height: 94px;
     padding: 12px;
 }
 
-.AA-social-login-btns .Af-img-father .Af-img-button{
+.AA-social-login-btns .Af-img-father .Af-img-button {
     width: 70px;
     height: 70px;
     padding: 20px;
-    
+
 }
 
-.AA-social-login-btns .Af-img-father .Af-img-button img{
+.AA-social-login-btns .Af-img-father .Af-img-button img {
     width: 30px;
     height: 30px;
 }
 
-.AA-form-section .AA-form-container .AA-form-container-bg form a{
+.AA-form-section .AA-form-container .AA-form-container-bg form a {
     text-decoration: none;
 }
 
@@ -263,7 +270,7 @@
         height: 243px;
     }
 
-     /**style custom title**/
+    /**style custom title**/
     .AA-form-section .AA-form-container .AA-form-container-bg .AM-title-comp {
         padding: 7.518% 18.796% 5.639% 18.796%;
     }
@@ -303,19 +310,19 @@
         gap: 20px;
     }
 
-    .AA-social-login-btns .Af-img-father{
+    .AA-social-login-btns .Af-img-father {
         width: 68px;
         height: 68px;
         padding: 8px;
     }
 
-    .AA-social-login-btns .Af-img-father .Af-img-button{
+    .AA-social-login-btns .Af-img-father .Af-img-button {
         width: 52px;
         height: 52px;
         padding: 14px;
     }
 
-    .AA-social-login-btns .Af-img-father .Af-img-button img{
+    .AA-social-login-btns .Af-img-father .Af-img-button img {
         width: 24px;
         height: 24px;
     }
@@ -339,14 +346,14 @@
         margin-bottom: 3.614457831325301%;
     }
 
-    .AA-form-section .AA-form-container .AA-form-container-bg .AA-continue-p p{
+    .AA-form-section .AA-form-container .AA-form-container-bg .AA-continue-p p {
         font-size: 14px;
         line-height: 21px;
         padding: 0 16px;
     }
-    
+
     /**style btn (login - signup) in form **/
-    .AA-form-section .AA-form-container .AA-form-container-bg .AA-custom-btn{
+    .AA-form-section .AA-form-container .AA-form-container-bg .AA-custom-btn {
         width: 60.8433734939759%;
         font-size: 14px;
         line-height: 21px;
@@ -360,7 +367,7 @@
     .AA-form-section {
         padding-top: 138px;
     }
-    
+
     /**style row of inputs**/
     .AA-form-section .AA-form-container .AA-form-container-bg .AA-inputs-row {
         flex-wrap: wrap;
@@ -406,16 +413,17 @@
     .AA-form-section .AA-form-container .AA-form-container-bg form {
         padding: 0px 8.3798% 8.3798% 8.3798%;
     }
-    
+
 
     .AA-form-section .AA-form-container .AA-form-container-bg .AA-input-pb {
         padding-bottom: 6.7114%;
     }
+
     /**style form input**/
     .AA-form-section .AA-form-container .AA-form-container-bg .AA-input,
-    .AA-form-section .AA-form-container .AA-form-container-bg .AA-password-input{
+    .AA-form-section .AA-form-container .AA-form-container-bg .AA-password-input {
         padding: 15.5px;
-     }
+    }
 
     .AA-form-section .AA-form-container .AA-form-container-bg .AA-forget-pass-btn {
         padding-top: 8.05369%;
@@ -430,14 +438,13 @@
         padding-top: 0;
         margin-bottom: 8.0536%;
     }
-    
+
     /**style btn (login - signup) in form **/
-    .AA-form-section .AA-form-container .AA-form-container-bg .AA-custom-btn{
+    .AA-form-section .AA-form-container .AA-form-container-bg .AA-custom-btn {
         width: 100%;
         margin-bottom: 8.0536%;
     }
 }
-
 
 @media (max-width: 389px) {
     .AA-form-section .AA-design {

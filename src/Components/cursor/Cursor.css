@@ -4,9 +4,9 @@ body {
 }
 
 
-button, button a, a, i, .hw-fotIconConta, select {
-    /* cursor: url('./src/assets/imgs/Mouse-Pointer.png'), auto !important; */
-    cursor: url('../../assets/imgs/Mouse-Pointer.png'), auto !important;
+button, button a, a, i, .hw-fotIconConta, .open-nav-btn,
+.close-nav-btn {
+    cursor: url('./src/assets/imgs/Mouse-Pointer.png'), auto !important;
 }
 
 

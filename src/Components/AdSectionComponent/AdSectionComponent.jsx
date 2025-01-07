@@ -8,7 +8,7 @@ import { useEffect, useState } from 'react';
 export default function AdSectionComponent({ DATA }) {
   const [isLogin, setIsLogin] = useState(false);
 
-// Hide the "Open Account" button when signed in and re-display it again upon logging out
+  // Hide the "Open Account" button when signed in and re-display it again upon logging out
   useEffect(() => {
 
     const StoredUser = JSON.parse(localStorage.getItem('user'));

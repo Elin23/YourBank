@@ -28,7 +28,6 @@
     position: relative;
     overflow: hidden;
 }
-
 .mission-vision-img::after {
     content: "";
     width: 50%;
@@ -44,9 +43,7 @@
     position: relative;
     transition: 0.5s all ease-in-out;
 }
-.mission-vision-img img:hover {
-    transform: scale(1.1);
-}
+
 .AM-mission-vision-card .content .title,
 .AM-mission-vision-card-reverse .content .title {
     color: var(--white-color);
