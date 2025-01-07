@@ -9,6 +9,8 @@
     gap: 20px;
 }
 
+/*tabs  styling */
+
 .tabs {
     width: 386px;
     display: flex;
@@ -17,12 +19,6 @@
     background-color: var(--black11-color);
     border: 1px solid var(--gray15-color);
     border-radius: 82px;
-
-}
-
-.AM-product-sec .AM-title-comp .desc {
-    max-width: 910px;
-    margin-bottom: 0;
 
 }
 
@@ -43,10 +39,22 @@
 
 }
 
+/* description of title component  styling */
+
+.AM-product-sec .AM-title-comp .desc {
+    max-width: 910px;
+    margin-bottom: 0;
+
+}
+
+/*non-active row cards styling */
+
 .AM-product-sec .row-cards {
     display: none;
     width: 100%;
 }
+
+/*active row cards styling */
 
 .AM-product-sec .active-content {
     display: flex;
@@ -75,6 +83,12 @@
         width: 139px;
         height: 41px;
         font-size: 14px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .AM-product-sec .active-content {
+        gap: 30px;
     }
 }
 
