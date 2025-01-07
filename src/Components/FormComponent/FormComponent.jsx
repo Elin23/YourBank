@@ -33,6 +33,7 @@ export default function FormComponent({ action }) {
   // password is 8 or more characters long ((?=.{8,})),
   // password has at least one uppercase letter ((?=.*[A-Z])),
   // password has at least one lowercase letter ((?=.*[a-z])) and contains at least one digit ((?=.*[0-9])).
+  
   const passwordRegex = /(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.{8,})/;
   // email regex
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
