@@ -15,6 +15,7 @@ export default function NavBarComponent() {
   const [activeBtn, setActiveBtn] = useState(false);
   const [activeIndex, setActiveIndex] = useState(0);
   const [userName, setUserName] = useState(""); // add
+  
 
   useEffect(() => {
     const StoredUser = JSON.parse(localStorage.getItem("user"));

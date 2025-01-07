@@ -117,8 +117,8 @@ nav.scrolled {
 }
 
 .Af-menu-link a:not(.active-link):hover::before {
-    width: 75%;
-    left: 12px;
+    width: calc(100% - 36px); 
+    left: 19px;
 }
 
 /* Start Responsive */
