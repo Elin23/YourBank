@@ -1,7 +1,7 @@
-import icon1 from './../assets/imgs/security icons/Union (1).png'
-import icon2 from './../assets/imgs/security icons/Union.png'
-import icon3 from './../assets/imgs/security icons/Icon.png'
-import icon4 from './../assets/imgs/security icons/Subtract.png'
+import icon1 from './../assets/imgs/security_icons/Union(1).png'
+import icon2 from './../assets/imgs/security_icons/Union.png'
+import icon3 from './../assets/imgs/security_icons/Icon.png'
+import icon4 from './../assets/imgs/security_icons/Subtract.png'
 
 const storedHowWeProtectDATA = localStorage.getItem('HowWeProtectDATA');
 

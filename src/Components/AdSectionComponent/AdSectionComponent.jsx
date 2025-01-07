@@ -1,5 +1,5 @@
 import './AdSectionComponent.css';
-import toRightDown from './../../assets/imgs/Abstract Design3.png';
+import toRightDown from './../../assets/imgs/AbstractDesign3.png';
 import { Link } from 'react-router-dom';
 import adSecBg from './../../assets/imgs/blend.png';
 import TitleComponent from '../TitleComponent/TitleComponent';

@@ -1,7 +1,7 @@
-import icon1 from './../assets/imgs/careers icons/Icon.png'
-import icon2 from './../assets/imgs/careers icons/Vector.png'
-import icon3 from './../assets/imgs/careers icons/Icon (2).png'
-import icon4 from './../assets/imgs/careers icons/Icon (1).png'
+import icon1 from './../assets/imgs/careers_icons/Icon.png'
+import icon2 from './../assets/imgs/careers_icons/Vector.png'
+import icon3 from './../assets/imgs/careers_icons/Icon2.png'
+import icon4 from './../assets/imgs/careers_icons/Icon1.png'
 
 const storedOurBenefitsCardData = localStorage.getItem('OurBenefitsCardData');
 
