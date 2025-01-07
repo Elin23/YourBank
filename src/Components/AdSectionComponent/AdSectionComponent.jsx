@@ -36,6 +36,7 @@ export default function AdSectionComponent({ DATA }) {
             title={DATA.title}
             desc={DATA.desc}
             highlightedWords={['YourBank today!']}
+            fw={true}
           />
         </div>
 
@@ -51,13 +52,3 @@ export default function AdSectionComponent({ DATA }) {
   );
 }
 
-/*                
-    <div className="hw-AdSecRight">
-    <h3  className='fs-40 fw-400'>
-        {DATA.title}<span>YourBank today!</span>
-    </h3>
-    <p className="hw-AdSecPara fw-300">
-        {DATA.desc}
-    </p>
-    </div>
- */
