@@ -13,6 +13,7 @@ import Cursor from "./Components/cursor/cursor";
 import { useEffect } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import ScrollToTop from "./Components/ScrollToTop/ScrollToTop";
 
 function App() {
 
@@ -29,6 +30,7 @@ function App() {
   return (
     <div className="bg-main">
       <Cursor />
+      <ScrollToTop />
       <NavBarComponent  />
       <Routes>
           <Route path='/YourBank/' element={<HandleLoadingComponent />}>
