@@ -14,7 +14,7 @@
 
 .es-hero-container::before {
     content: "";
-    background-image: url('../../assets/imgs/Abstract Design5.png');
+    background-image: url('../../assets/imgs/AbstractDesign5.png');
     background-position: center;
     background-size: cover;
     position: absolute;
@@ -233,7 +233,7 @@
 
 .es-hero-right-content::after {
     content: "";
-    background-image: url('../../assets/imgs/Abstract Design.png');
+    background-image: url('../../assets/imgs/AbstractDesign.png');
     background-position: center;
     background-size: cover;
     width: 417.95px;

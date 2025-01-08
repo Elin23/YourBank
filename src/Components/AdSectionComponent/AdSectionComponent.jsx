@@ -42,7 +42,7 @@ export default function AdSectionComponent({ DATA }) {
 
         {!isLogin && (
           <button className="hw-AdSecleft">
-            <Link to={'/YourBank/signUp'}>
+            <Link to={'/signUp'}>
               Open Account
             </Link>
           </button>

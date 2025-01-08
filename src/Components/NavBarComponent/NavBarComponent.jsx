@@ -61,7 +61,7 @@ export default function NavBarComponent() {
   return (
     <>
       <nav className={`${scrolling ? "scrolled" : ""}`}>
-        <Link to="/YourBank/">
+        <Link to="/">
           <img
             src={nav_logo}
             alt="logo"
@@ -96,7 +96,7 @@ export default function NavBarComponent() {
             {isLogin == false ? (
               <>
                 <Link
-                  to={"/YourBank/signup"}
+                  to={"/signup"}
                   className={`f-18 ${activeBtn === "sign up" ? "et-bg-green" : ""}`}
                   onClick={() =>
                   (setActiveBtn(activeBtn === "sign up" ? "sign up" : "sign up"),
@@ -104,7 +104,7 @@ export default function NavBarComponent() {
                   Sign up
                 </Link>
                 <Link
-                  to={"/YourBank/login"}
+                  to={"/login"}
                   className={`f-18 ${activeBtn === "login" ? "et-bg-green" : ""}`}
                   onClick={() =>
                   (setActiveBtn(activeBtn === "login" ? "login" : "login"),
