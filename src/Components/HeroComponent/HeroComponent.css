@@ -8,30 +8,31 @@
     height: 100%;
     overflow: hidden;
     background-color: var(--black10-color);
+    animation: zoomInAnimation 1.5s ease-in-out forwards;
 }
+
 
 .es-hero-container::before {
     content: "";
-    background-image: url('../../assets/imgs/AbstractDesign5.png');
+    background-image: url('../../assets/imgs/Abstract Design5.png');
     background-position: center;
     background-size: cover;
     position: absolute;
     top: 0;
     left: 0;
     width: 759px;
-    height: 610.81px;
+    height: 610.81px
 }
 
 /*Left Side Start*/
 .es-hero-left-content {
     width: 51.7535%;
     padding-top: 6.266%;
-    animation: zoomInAnimation 3s ease-out forwards;
 }
 
 @keyframes zoomInAnimation {
     0% {
-        transform: scale(0);
+        transform: scale(0.6);
         opacity: 0;
     }
 
@@ -64,23 +65,22 @@
 }
 
 .es-hero-left-content .es-main-title .title {
-    animation: ghostEffect 5s infinite;
+    font-weight: 500;
+    animation: moveGradient 5s infinite linear;
+    background: linear-gradient(90deg, #caff33, #E4E4E7, #d8ff66, #fff);
+    background-size: 200%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
 }
 
-@keyframes ghostEffect {
+@keyframes moveGradient {
     0% {
-        opacity: 0;
-        transform: translateY(10px);
-    }
-
-    50% {
-        opacity: 1;
-        transform: translateY(0);
+        background-position: 200% 0;
     }
 
     100% {
-        opacity: 0;
-        transform: translateY(-10px);
+        background-position: -200% 0;
     }
 }
 
@@ -233,7 +233,7 @@
 
 .es-hero-right-content::after {
     content: "";
-    background-image: url('../../assets/imgs/AbstractDesign.png');
+    background-image: url('../../assets/imgs/Abstract Design.png');
     background-position: center;
     background-size: cover;
     width: 417.95px;

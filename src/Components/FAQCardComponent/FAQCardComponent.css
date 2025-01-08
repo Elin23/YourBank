@@ -9,11 +9,6 @@
   flex-direction: column;
   gap: 30px;
 }
-
-.MR-FAQ-Card:hover {
-  box-shadow: 0 4px 8px var(--green60-color);
-}
-
 /* Styling for title elements inside the card */
 .MR-FAQ-Card span {
   color: var(--white-color);

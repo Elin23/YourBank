@@ -11,10 +11,6 @@
   padding: 49px 49.1px;
 }
 
-.MR-JobCardContainer:hover {
-  box-shadow: 0 4px 8px var(--green60-color);
-}
-
 /* Styles for each upper part of job card */
 .MR-JobCard-Title {
   display: flex;

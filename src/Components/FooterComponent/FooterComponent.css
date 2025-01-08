@@ -113,10 +113,7 @@
     position: relative;
 }
 
-.hw-menu-link::before,
-.email a::before,
-.phoneNum a::before,
-.location a::before {
+.hw-menu-link::before {
     content: '';
     width: 0;
     height: 2px;
@@ -128,10 +125,7 @@
     transition: right .4s, width .4s, left .4s;
 }
 
-.hw-menu-link:hover::before,
-.email a:hover::before,
-.phoneNum a:hover::before,
-.location a:hover::before {
+.hw-menu-link:hover::before{
     width: 100%;
     left: 0;
 }

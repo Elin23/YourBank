@@ -5,11 +5,6 @@
   border: 1px solid var(--gray15-color);
   background-color: var(--black11-color);
 }
-
-.features-card:hover {
-  box-shadow: 0 4px 8px var(--green60-color);
-}
-
 .et-card-title {
   display: flex;
   justify-content: space-between;

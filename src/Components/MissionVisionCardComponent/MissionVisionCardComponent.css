@@ -28,11 +28,6 @@
     position: relative;
     overflow: hidden;
 }
-
-.mission-vision-img:hover {
-    box-shadow: 0 4px 8px var(--green60-color);
-}
-
 .mission-vision-img::after {
     content: "";
     width: 50%;

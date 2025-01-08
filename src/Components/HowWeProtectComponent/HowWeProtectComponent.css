@@ -138,8 +138,9 @@
 }
 
 
-@media (max-width:992px) {
-    .HW-howWeProtectYouContainer {}
+@media (max-width:992px){
+    .HW-howWeProtectYouContainer{
+    }
 
     .howWeProtctCardsContainer {
         width: 100%;

@@ -100,85 +100,85 @@ export default function HeroComponent() {
               fw={false}
             />
           </div>
-          {!isLogin && (
-            <div className="es-hero-btn f-18">
-              <Link to='/YourBank/signUp'>Open Account</Link>
-            </div>
-          )}
+            {!isLogin && (
+              <div className="es-hero-btn f-18">
+                <Link to='/YourBank/signUp'>Open Account</Link>
+              </div>
+            )}
 
-        </div>
-        <div className="es-right-side">
-          <div className="es-monthly-income">
-            <div className="es-icon">
-              <img src={plus} alt="plus Icon" />
-            </div>
-            <div className="es-plus-info">
-              <span className='fw-400'>+ $5000,00</span>
-              <span className='fw-300'>Monthly Income</span>
-            </div>
           </div>
-          <div className='es-hero-right-content'>
-            <div className='bg-img' alt="imgScreen" />
-            <div className="es-your-trans">
-              <h4 className='fw-500'>Your Transactions</h4>
-              <TransactionBox name="Joel Kenley" amount="-$68.00" opacityClass="op-100" index='1' />
-              <TransactionBox name="Mark Smith" amount="-$68.00" opacityClass="op-50" index='2' />
-              <TransactionBox name="Lenen Roy" amount="-$68.00" opacityClass="op-20" index='3' />
-            </div>
-            <form className="exchange converter-form" onSubmit={handleFormSubmit}>
-              <h4 className='fw-500'>Money Exchange</h4>
-              <div className="es-exchange-box">
-                <div className="es-mini-box">
-                  <div className='es-upper'>
-                    <CurrencySelect
-                      selectedCurrency={fromCurrency}
-                      handleCurrency={e => setFromCurrency(e.target.value)}
-                    />
-                  </div>
-                  <div className="es-currency-value">
-                    <input
-                      type="text"
-                      className="form-input"
-                      value={amount}
-                      onChange={e => setAmount(e.target.value)}
-                      required
-                    />
-                  </div>
-                </div>
-                <div className="es-mini-box">
-                  <div className='es-upper'>
-                    <CurrencySelect
-                      selectedCurrency={toCurrency}
-                      handleCurrency={e => setToCurrency(e.target.value)}
-                    />
-                  </div>
-                  <div className="es-currency-value exchange-rate-result">
-                    {isLoading ? '0.00' : result}
-                  </div>
-                </div>
+          <div className="es-right-side">
+            <div className="es-monthly-income">
+              <div className="es-icon">
+                <img src={plus} alt="plus Icon" />
               </div>
-              <button className={`exchange-btn submit-button fw-400 ${isLoading ? "loading" : ""}`}>Exchange</button>
-            </form>
-          </div>
-          <div className="es-supported-currency">
-            <div className="es-supported-currency-container">
-              <span className='fw-400'>Supported Currency</span>
-              <div className="es-currency-icons">
-                {[
-                  { src: DollarSign, alt: "Dollar Sign" },
-                  { src: EuroSign, alt: "Euro Sign" },
-                  { src: Bitcoin, alt: "Bitcoin sign" },
-                  { src: ethereum, alt: "ethereum sign" }
-                ].map((currency, index) => (
-                  <div className="es-currency-img" key={index}>
-                    <img src={currency.src} alt={currency.alt} />
-                  </div>
-                ))}
+              <div className="es-plus-info">
+                <span className='fw-400'>+ $5000,00</span>
+                <span className='fw-300'>Monthly Income</span>
               </div>
             </div>
+            <div className='es-hero-right-content'>
+              <div className='bg-img' alt="imgScreen" />
+              <div className="es-your-trans">
+                <h4 className='fw-500'>Your Transactions</h4>
+                <TransactionBox name="Joel Kenley" amount="-$68.00" opacityClass="op-100" index='1' />
+                <TransactionBox name="Mark Smith" amount="-$68.00" opacityClass="op-50" index='2' />
+                <TransactionBox name="Lenen Roy" amount="-$68.00" opacityClass="op-20" index='3' />
+              </div>
+              <form className="exchange converter-form" onSubmit={handleFormSubmit}>
+                <h4 className='fw-500'>Money Exchange</h4>
+                <div className="es-exchange-box">
+                  <div className="es-mini-box">
+                    <div className='es-upper'>
+                      <CurrencySelect
+                        selectedCurrency={fromCurrency}
+                        handleCurrency={e => setFromCurrency(e.target.value)}
+                      />
+                    </div>
+                    <div className="es-currency-value">
+                      <input
+                        type="text"
+                        className="form-input"
+                        value={amount}
+                        onChange={e => setAmount(e.target.value)}
+                        required
+                      />
+                    </div>
+                  </div>
+                  <div className="es-mini-box">
+                    <div className='es-upper'>
+                      <CurrencySelect
+                        selectedCurrency={toCurrency}
+                        handleCurrency={e => setToCurrency(e.target.value)}
+                      />
+                    </div>
+                    <div className="es-currency-value exchange-rate-result">
+                      {isLoading ? '0.00' : result}
+                    </div>
+                  </div>
+                </div>
+                <button className={`exchange-btn submit-button fw-400 ${isLoading ? "loading" : ""}`}>Exchange</button>
+              </form>
+            </div>
+            <div className="es-supported-currency">
+              <div className="es-supported-currency-container">
+                <span className='fw-400'>Supported Currency</span>
+                <div className="es-currency-icons">
+                  {[
+                    { src: DollarSign, alt: "Dollar Sign" },
+                    { src: EuroSign, alt: "Euro Sign" },
+                    { src: Bitcoin, alt: "Bitcoin sign" },
+                    { src: ethereum, alt: "ethereum sign" }
+                  ].map((currency, index) => (
+                    <div className="es-currency-img" key={index}>
+                      <img src={currency.src} alt={currency.alt} />
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-    </>
-  )
+      </>
+      )
 }

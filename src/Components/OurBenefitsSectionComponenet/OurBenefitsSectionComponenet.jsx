@@ -3,7 +3,16 @@ import './OurBenefitsSectionComponenet.css'
 import TitleComponent from '../TitleComponent/TitleComponent'
 import OurBenefitsCardComponent from '../OurBenefitsCardComponent/OurBenefitsCardComponent'
 import {exportedData} from './../../Data/OurBenefitsCardData'
+
 export default function OurBenefitsSectionComponenet() {
+  const renderCardRow = (leftData, rightData) => (
+    <div className="hw-OurBenefitsCardsRow">
+      <OurBenefitsCardComponent left={true} data={leftData} />
+      <span className="hw-dashed-lines-vr"></span>
+      <OurBenefitsCardComponent left={false} data={rightData} />
+    </div>
+  );
+
   return (
     <section className="HW-OurBenefitsComponent px-162 pb-150">
       <div className="title-head">
@@ -17,17 +26,9 @@ export default function OurBenefitsSectionComponenet() {
         />
       </div>
       <div className="HW-OurBenefitsCardsContainer">
-        <div className="hw-OurBenefitsCardsRow">
-          <OurBenefitsCardComponent left={true} data={exportedData[0]} />
-          <span className="hw-dashed-lines-vr"></span>
-          <OurBenefitsCardComponent left={false} data={exportedData[1]} />
-        </div>
+        {renderCardRow(exportedData[0], exportedData[1])}
         <span className="hw-dashed-lines-hr"></span>
-        <div className="hw-OurBenefitsCardsRow">
-          <OurBenefitsCardComponent left={false} data={exportedData[2]} />
-          <span className="hw-dashed-lines-vr"></span>
-          <OurBenefitsCardComponent left={true} data={exportedData[3]} />
-        </div>
+        {renderCardRow(exportedData[2], exportedData[3])}
       </div>
     </section>
   );

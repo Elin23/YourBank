@@ -97,7 +97,7 @@ nav.scrolled {
     text-decoration: none;
     color: #ffffff;
     padding: 14px 30px;
-    transition: 0.5s;
+    transition: 0.3s;
 }
 
 .et-nav-btns a.et-bg-green {
@@ -106,30 +106,6 @@ nav.scrolled {
     color: var(--black11-color);
 }
 
-<<<<<<< HEAD
-=======
-.Af-menu-link {
-    position: relative;
-}
-
-.Af-menu-link a::before {
-    content: '';
-    width: 0;
-    height: 2px;
-    border-radius: 2px;
-    background-color: var(--green60-color);
-    position: absolute;
-    bottom: -.25rem;
-    right: 12px;
-    transition: right .4s ease-in-out, width .4s ease-in-out, left .4s ease-in-out;
-}
-
-.Af-menu-link a:not(.active-link):hover::before {
-    width: calc(100% - 36px); 
-    left: 19px;
-}
-
->>>>>>> eb2c3cb755bd17aa58623276b35ba280ab73dc37
 /* Start Responsive */
 
 /* figma design */

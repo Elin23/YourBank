@@ -6,10 +6,6 @@
   padding: 30px;
 }
 
-.Press-Card-Component:hover {
-  box-shadow: 0 4px 8px var(--green60-color);
-}
-
 .Press-Card-Component img {
   width: 100%;
   border-radius: 30px 30px 12px 12px;

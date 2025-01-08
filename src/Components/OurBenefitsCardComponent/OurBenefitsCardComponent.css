@@ -55,10 +55,6 @@
             #1A1A1A 62%);
 }
 
-.hw-OurBenefitsCard:hover {
-    box-shadow: 0 4px 8px var(--green60-color);
-}
-
 /* .hw-OurBenefitsCard::after{
     content: '';
     position: absolute;
@@ -240,4 +236,34 @@
     .hw-dashed-lines-hr {
         width: 358px
     }
+}
+
+@media (max-width:389px) {
+
+
+    .hw-OurBenefitsCard {
+        padding: 20px;
+        gap: 18px;
+    }
+
+    .OurBenefitsCardDescription {
+        max-width: fit-content;
+        font-size: 12px;
+    }
+
+    .hw-OurBenefitsCardTitle {
+        font-size: 16px;
+        line-height: 27px;
+    }
+
+
+    .hw-dashed-lines-vr{
+        width: 250px;
+        height: 2px;
+    }
+
+    .hw-dashed-lines-hr {
+        width: 250px
+    }
+
 }

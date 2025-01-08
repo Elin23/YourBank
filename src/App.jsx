@@ -10,11 +10,22 @@ import NavBarComponent from "./Components/NavBarComponent/NavBarComponent";
 import HandleLoadingComponent from './Components/HandleLoadingComponent/HandleLoadingComponent';
 import FooterComponent from "./Components/FooterComponent/FooterComponent";
 import Cursor from "./Components/cursor/cursor";
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import GiftComponent from "./Components/GiftComponent/GiftComponent";
 
 function App() {
+  const [isNewUser, setIsNewUser] = useState(false);
+  useEffect(() => {
+    const newUser = JSON.parse(localStorage.getItem("isNewUser")) === true;
+    setIsNewUser(newUser);
+
+    // if (newUser) {
+    //   localStorage.setItem("isNewUser", "false");
+    // }
+  }, []);
+
   useEffect(() => {
     AOS.init({
       duration: 1000,
@@ -28,18 +39,19 @@ function App() {
   return (
     <div className="bg-main">
       <Cursor />
-      <NavBarComponent  />
+      <NavBarComponent />
       <Routes>
-          <Route path='/YourBank/' element={<HandleLoadingComponent />}>
-            <Route index element={<Home />} />
-            <Route path="/YourBank/about" element={<About />} />
-            <Route path="/YourBank/careers" element={<Careers />} />
-            <Route path="/YourBank/security" element={<Security />} />
-            <Route path="/YourBank/login" element={<Login />} />
-            <Route path="/YourBank/signUp" element={<SignUp />} />
-          </Route>
+        <Route path='/YourBank/' element={<HandleLoadingComponent />}>
+          <Route index element={<Home />} />
+          <Route path="/YourBank/about" element={<About />} />
+          <Route path="/YourBank/careers" element={<Careers />} />
+          <Route path="/YourBank/security" element={<Security />} />
+          <Route path="/YourBank/login" element={<Login />} />
+          <Route path="/YourBank/signUp" element={<SignUp />} />
+        </Route>
       </Routes>
-      <FooterComponent/>
+      {isNewUser && <GiftComponent />}
+      <FooterComponent />
     </div>
   );
 }

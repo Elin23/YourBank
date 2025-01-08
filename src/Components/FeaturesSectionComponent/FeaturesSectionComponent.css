@@ -20,19 +20,17 @@
   border-radius: 12px;
 }
 
-.features-content .et-btns:hover {
-  box-shadow: 0 4px 8px var(--green60-color);
-  transition: box-shadow 0.3s ease;
-}
-
 .features-content .et-btns button {
   width: 100%;
   border-radius: 100px;
   border: 1px solid var(--gray15-color);
   padding: 17.341px 23px;
   text-align: start;
+  transition: .2s ease-in-out;
 }
-
+.features-content .et-btns button:not(.et-active-btn):hover {
+  background-color: var(--gray15-color);
+}
 .features-content .et-btns button:not(:last-child) {
   margin-bottom: 24px;
 }

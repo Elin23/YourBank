@@ -34,23 +34,6 @@ export default function FormComponent({ action }) {
     password: ""
   });
 
-  const [isNewUser, setIsNewUser] = useState(false)
-  useEffect(() => {
-    const newUser = localStorage.getItem("isNewUser")
-    if (newUser === "true") {
-      setIsNewUser("true")
-    }
-    else {
-      setIsNewUser("false");
-    }
-  })
-  const handleSignUp = () => {
-    // localStorage.setItem("isNewUser", "true")
-    console.log("hello");
-
-  }
-
-
   // password regexthe
   // password is 8 or more characters long ((?=.{8,})),
   // password has at least one uppercase letter ((?=.*[A-Z])),
@@ -176,9 +159,10 @@ export default function FormComponent({ action }) {
               title: "It seems you already have an account with the email " + state.email + ". Please log in to access your account.",
             });
           } else {
-            //save user data in db             
+            //save user data            
             users.push(state);
             localStorage.setItem("users", JSON.stringify(users));
+            localStorage.setItem("isNewUser", "true");
             const userData = {
               userName: state.firstName + " " + state.lastName, //add
               email: state.email,
@@ -193,7 +177,7 @@ export default function FormComponent({ action }) {
             navigate('/YourBank/');
           }
         } else {
-          //save user data in db  
+          //save user data  
           localStorage.setItem("users", JSON.stringify([state]));
           const userData = {
             userName: state.firstName + " " + state.lastName, //add
@@ -290,11 +274,7 @@ export default function FormComponent({ action }) {
             ) : (
               <div className="AA-pb-40"></div>
             )}
-            <button
-              ///////////////
-              onClick={action === "Login" ? handleSignUp : null}
-              ///////////////
-              type="submit" className={`AA-custom-btn f-18 fw-400 ${true ? "AA-bg-btn-green-60" : "AA-border-btn AA-bg-btn-gray-15"}`}>
+            <button type="submit" className={`AA-custom-btn f-18 fw-400 ${true ? "AA-bg-btn-green-60" : "AA-border-btn AA-bg-btn-gray-15"}`}>
               {action === "login" ? "Login" : "Sign Up"}
             </button>
             <Link className="AA-custom-btn f-18 fw-400 AA-custom-btn AA-border-btn AA-bg-btn-gray-15 AA-a-btn-white" to={action === "login" ? "/YourBank/signUp" : "/YourBank/login"}>
