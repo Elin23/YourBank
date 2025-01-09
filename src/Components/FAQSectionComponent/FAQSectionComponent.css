@@ -27,7 +27,7 @@
 }
 
 /* Gap Between (3&4) & (5&6) card */
-.MR-FAQ-ExpandedgGap {
+.MR-FAQ-ExpandedGap {
   display: flex;
   flex-direction: column;
   gap: 30px;
@@ -89,7 +89,7 @@
     gap: 20px;
   }
 
-  .MR-FAQ-ExpandedgGap {
+  .MR-FAQ-ExpandedGap {
     gap: 20px;
   }
 
