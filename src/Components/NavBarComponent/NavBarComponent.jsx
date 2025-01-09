@@ -83,11 +83,10 @@ export default function NavBarComponent() {
                 className="f-18 Af-menu-link">
                 <NavLink
                   to={item.path}
-                  className={({ isActive }) => (activeIndex === index ? "active-link" : "")}
-                  onClick={() => {
-                    setMenuOpen(!menuOpen);
-                    setActiveIndex(index);
-                  }} >
+                  end
+                  className={({ isActive }) => (isActive ? "active-link" : "")}
+                  onClick={() => setMenuOpen(false)}
+                >
                   {item.name}
                 </NavLink>
               </li>
