@@ -1,18 +1,18 @@
 export const NavData = [
   {
     name: "Home",
-    path: "/YourBank/"
+    path: "/"
   },
   {
     name: "Careers",
-    path: "/YourBank/careers"
+    path: "/careers"
   },
   {
     name: "About",
-    path: "/YourBank/about"
+    path: "/about"
   },
   {
     name: "Security",
-    path: "/YourBank/security"
+    path: "/security"
   }
 ]

@@ -1,4 +1,4 @@
-import { Routes, Route } from "react-router-dom";
+import { HashRouter as Router, Route, Routes } from 'react-router-dom';
 import About from "./Pages/About/About";
 import Careers from "./Pages/Careers/Careers";
 import Home from "./Pages/Home/Home";
@@ -41,13 +41,13 @@ function App() {
       <Cursor />
       <NavBarComponent  />
       <Routes>
-          <Route path='/YourBank/' element={<HandleLoadingComponent />}>
+          <Route path='/' element={<HandleLoadingComponent />}>
             <Route index element={<Home />} />
-            <Route path="/YourBank/about" element={<About />} />
-            <Route path="/YourBank/careers" element={<Careers />} />
-            <Route path="/YourBank/security" element={<Security />} />
-            <Route path="/YourBank/login" element={<Login />} />
-            <Route path="/YourBank/signUp" element={<SignUp />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/careers" element={<Careers />} />
+            <Route path="/security" element={<Security />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/signUp" element={<SignUp />} />
           </Route>
       </Routes>
       {isNewUser && <GiftComponent />}

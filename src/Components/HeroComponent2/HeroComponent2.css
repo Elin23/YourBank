@@ -7,7 +7,7 @@
 
 .Af-HeroComponent2 {
     background-color: var(--black11-color);
-    background-image: url(/src/assets/imgs/Abstract\ Design4.png);
+    background-image: url('../../assets/imgs/AbstractDesign4.png');
     background-repeat: no-repeat;
     background-position: top right;
     background-size: 31.58%;
@@ -16,7 +16,6 @@
     border-radius: 20px;
     display: flex;
     justify-content: space-between;
-
 }
 
 .Af-HeroComponent2-heading {
