@@ -46,7 +46,7 @@
 
 .AA-form-section .AA-form-container .AA-form-container-bg:before {
     position: absolute;
-    background-image: url('../../assets/imgs/login-bg.png');
+    background-image: url('../../assets/imgs/login-bg.webp');
     display: inline-block;
     content: '';
     width: 100%;
