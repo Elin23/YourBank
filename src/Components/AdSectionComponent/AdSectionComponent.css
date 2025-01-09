@@ -19,6 +19,7 @@
     background: linear-gradient(214deg, rgba(202, 255, 51, 0.2) 0%,
             rgba(202, 255, 51, 0) 11.24%, rgba(202, 255, 51, 0) 91.73%), rgba(38, 38, 38, 1) border-box;
 }
+
 .hw-AdSecBg {
     position: absolute;
     height: 100%;
@@ -44,14 +45,17 @@
 .hw-AdSecRight {
     z-index: 10;
 }
+
 .hw-AdSecRight .AM-title-comp .title,
-.hw-AdSecRight .AM-title-comp .title > span{
-    font-size:40px;
-    Line-height:60px;
+.hw-AdSecRight .AM-title-comp .title>span {
+    font-size: 40px;
+    Line-height: 60px;
 }
-.hw-AdSecRight .AM-title-comp{
-    max-width: 88.16956%; 
+
+.hw-AdSecRight .AM-title-comp {
+    max-width: 88.16956%;
 }
+
 .hw-AdSecleft {
     padding: 18px 30px;
     width: 183px;
@@ -182,25 +186,30 @@
     .hw-AdSectionContent {
         padding: 60px;
     }
+
     .hw-AdSecRight .AM-title-comp .title,
-    .hw-AdSecRight .AM-title-comp .title > span{
-    font-size:30px;
-    Line-height:45px;
-}
-    .hw-AdSecRight .AM-title-comp{
-        max-width:85.503%;
-        }
+    .hw-AdSecRight .AM-title-comp .title>span {
+        font-size: 30px;
+        Line-height: 45px;
+    }
+
+    .hw-AdSecRight .AM-title-comp {
+        max-width: 85.503%;
+    }
+
     .hw-AdSecleft {
         padding: 14px 20px;
         width: 136px;
         height: 49px;
         display: flex;
+
         a {
             line-height: 21px;
             width: 96px;
             font-size: 14px !important;
         }
     }
+
     .hw-AdSectionContent .toRightDown {
         width: 202px;
         height: 192px;
@@ -211,22 +220,27 @@
     .hw-AdSectionContent {
         padding: 40px;
     }
+
     .hw-AdSecRight .AM-title-comp .title,
-    .hw-AdSecRight .AM-title-comp .title > span{
-    font-size:28px;
-    Line-height:36px;
+    .hw-AdSecRight .AM-title-comp .title>span {
+        font-size: 28px;
+        Line-height: 36px;
     }
-    .hw-AdSecRight .AM-title-comp{
-        max-width:83.503%;
+
+    .hw-AdSecRight .AM-title-comp {
+        max-width: 83.503%;
     }
+
     .hw-AdSecleft {
         font-size: 13px;
         width: 150px;
+
         a {
             width: 90px;
             font-size: 13px !important;
         }
     }
+
     .hw-AdSectionContent .toRightDown {
         width: 160px;
         height: 150px;
@@ -238,22 +252,27 @@
         flex-direction: column;
         padding: 40px;
     }
-    .hw-AdSecRight{
+
+    .hw-AdSecRight {
         display: flex;
         flex-direction: column;
         align-items: center;
     }
+
     .hw-AdSecRight .AM-title-comp .title,
-    .hw-AdSecRight .AM-title-comp .title > span{
-    font-size:28px;
-    Line-height:30px;
+    .hw-AdSecRight .AM-title-comp .title>span {
+        font-size: 28px;
+        Line-height: 30px;
     }
-    .hw-AdSecRight .AM-title-comp{
-        max-width:unset;
+
+    .hw-AdSecRight .AM-title-comp {
+        max-width: unset;
     }
+
     .hw-AdSecleft {
         width: 144px;
         height: 49px;
+
         a {
             line-height: 21px;
             width: 96px;
@@ -261,39 +280,48 @@
             height: 21px;
         }
     }
+
     .hw-AdSectionContent .toRightDown {
         width: 151px;
         height: 143px;
     }
 }
+
 @media (max-width: 768px) {
     .AdSectionComponent {
         padding-bottom: 80px;
         padding-top: 80px;
     }
+
     .hw-AdSectionContent {
         padding: 30px;
         gap: 24px;
     }
+
     .hw-AdSecRight .AM-title-comp .title,
-    .hw-AdSecRight .AM-title-comp .title > span{
-    font-size:24px;
-    Line-height:36px;
+    .hw-AdSecRight .AM-title-comp .title>span {
+        font-size: 24px;
+        Line-height: 36px;
     }
+
     .hw-AdSecleft {
         padding: 14px 24px;
     }
+
     .hw-AdSectionContent .toRightDown {
         width: 151px;
         height: 143px;
     }
-    .hw-AdSecRight .AM-title-comp .title{
+
+    .hw-AdSecRight .AM-title-comp .title {
         margin-bottom: 14px;
     }
-    .hw-AdSecRight .AM-title-comp .desc{
+
+    .hw-AdSecRight .AM-title-comp .desc {
         margin-bottom: 0;
     }
 }
+
 @media (max-width: 389px) {
     .hw-AdSecRight {
         width: unset;

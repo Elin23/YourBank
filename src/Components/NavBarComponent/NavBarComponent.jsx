@@ -40,6 +40,7 @@ export default function NavBarComponent() {
   }, []);
 
   const handleLogout = (event) => {
+
     Swal.fire({
       icon: 'question',
       title: " Are you sure you want to log out?",
@@ -52,7 +53,8 @@ export default function NavBarComponent() {
         localStorage.setItem("isLogin", false);
         setIsLogin(false);
         window.dispatchEvent(new Event('loginStatusChanged'));
-
+        localStorage.setItem("isVisible", false);
+        window.dispatchEvent(new Event('StatusVisibleChanged'));
         setUserName(""); //add
       }
     });
