@@ -1,8 +1,6 @@
 import React, { useState } from "react";
 import FAQCardComponent from "../FAQCardComponent/FAQCardComponent";
 import "./FAQSectionComponent.css";
-import vector1 from "../../assets/imgs/Home_icons/Vector_up.png";
-import vector2 from "../../assets/imgs/Home_icons/Vector_down.png";
 import { exportedFAQCardData } from "./../../Data/FAQCardData";
 import TitleComponent from "../TitleComponent/TitleComponent";
 import { MdKeyboardArrowDown, MdKeyboardArrowUp } from "react-icons/md";
@@ -37,7 +35,7 @@ export default function FAQSectionComponent() {
       />
 
       <div className="MR-FAQ-card-container">
-        <div className="MR-FAQ-ExpandedgGap">
+        <div className={`${isVisible ? "MR-FAQ-ExpandedGap" : ""}`}>
           <div>
             {/* upper FAQs Cards*/}
             <div className="MR-Upper-FAQ-Card ">
@@ -46,9 +44,8 @@ export default function FAQSectionComponent() {
 
             {/* Lower FAQs Cards*/}
             <div
-              className={`MR-Lower-FAQ-Card ${
-                !isVisible ? "MR-FAQ-Gradient1" : ""
-              }`}
+              className={`MR-Lower-FAQ-Card ${!isVisible ? "MR-FAQ-Gradient1" : ""
+                }`}
             >
               {renderFAQCards(lowerFAQs)}
             </div>
@@ -63,9 +60,8 @@ export default function FAQSectionComponent() {
                 </div>
 
                 <div
-                  className={`MR-Lower-FAQ-Card ${
-                    isVisible ? "MR-FAQ-Gradient1" : ""
-                  }`}
+                  className={`MR-Lower-FAQ-Card ${isVisible ? "MR-FAQ-Gradient1" : ""
+                    }`}
                 >
                   {renderFAQCards(lowerFAQs)}
                 </div>
@@ -76,9 +72,9 @@ export default function FAQSectionComponent() {
         <button className="MR-FAQ-Button f-18 fw-400" onClick={toggleFAQs}>
           {isVisible ? "Hide FAQ's " : "Load All FAQ's "}
 
-              {isVisible
-                ? <MdKeyboardArrowUp className="MR-FAQ-Arrow-Button" />
-                : <MdKeyboardArrowDown className="MR-FAQ-Arrow-Button" />}
+          {isVisible
+            ? <MdKeyboardArrowUp className="MR-FAQ-Arrow-Button" />
+            : <MdKeyboardArrowDown className="MR-FAQ-Arrow-Button" />}
 
         </button>
       </div>

@@ -27,7 +27,7 @@
     gap: 20px;
     padding: 50px;
     background-color: var(--black11-color);
-    background-image: url('/src/assets/imgs/Abstract\ Design3.png');
+    background-image: url('../../assets/imgs/AbstractDesign3.png');
     background-repeat: no-repeat;
     background-position: top left;
     border-radius: 20px;
@@ -42,7 +42,7 @@
     gap: 20px;
     padding: 50px;
     background-color: var(--black11-color);
-    background-image: url(/src/assets/imgs/Abstract\ Design4.png);
+    background-image: url("../../assets/imgs/AbstractDesign4.png");
     background-repeat: no-repeat;
     background-position: top right;
     border-radius: 20px;
@@ -77,7 +77,7 @@
     height: 100%;
     border-radius: 16px;
     border: 1px solid var(--gray15-color);
-
+    transition: 0.5s;
 }
 
 .Af-UseCasesComponentSide-1-card span {
@@ -172,31 +172,14 @@
     border-radius: 82px;
     padding: 18px 24px;
     position: relative;
-    overflow: hidden;
     z-index: 1;
-}
-
-.Af-Btn::before {
-    content: '';
-    width: 0;
-    height: 100%;
-    border-radius: 82px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-image: linear-gradient(to right, #caff33 40%, #BFBFBF 100%);
-    transition: .5s ease;
-    display: block;
-    z-index: -1;
-}
-
-.Af-Btn:hover::before {
-    width: 100%;
-
+    transition: all 0.5s;
 }
 
 .Af-Btn:hover {
-    color: var(--black10-color);
+    background-color: var(--green60-color);
+    transform: translateY(-5px);
+    color: var(--black11-color);
 }
 
 @media (max-width:1919px) {
@@ -255,6 +238,7 @@
         margin-bottom: 50px;
         width: 100%;
     }
+
     .Af-UseCasesComponentSide-2-title h4 {
         color: var(--white-color);
         font-size: 26px;
@@ -406,7 +390,8 @@
     }
 
 }
-@media(max-width:389px){
+
+@media(max-width:389px) {
 
     .Af-UseCasesComponentSide-1-card span {
         font-size: 12px;

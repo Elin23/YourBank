@@ -70,7 +70,6 @@ nav.scrolled {
 
 .close-nav-btn:hover {
     color: var(--green60-color);
-    cursor: pointer;
 }
 
 .close-nav-btn:active {
@@ -82,6 +81,12 @@ nav.scrolled {
     color: var(--white-color);
     border-radius: 82px;
     padding: 12px 24px;
+    transition: 0.5s;
+}
+
+.responsive-nav ul li a:not(.active-link):hover,
+.et-nav-btns a:hover {
+    color: var(--green60-color);
 }
 
 .active-link {
@@ -92,33 +97,13 @@ nav.scrolled {
     text-decoration: none;
     color: #ffffff;
     padding: 14px 30px;
+    transition: 0.3s;
 }
 
 .et-nav-btns a.et-bg-green {
     background-color: var(--green60-color);
     border-radius: 82px;
     color: var(--black11-color);
-}
-
-.Af-menu-link {
-    position: relative;
-}
-
-.Af-menu-link a::before {
-    content: '';
-    width: 0;
-    height: 2px;
-    border-radius: 2px;
-    background-color: var(--green60-color);
-    position: absolute;
-    bottom: -.25rem;
-    right: 12px;
-    transition: right .4s ease-in-out, width .4s ease-in-out, left .4s ease-in-out;
-}
-
-.Af-menu-link a:not(.active-link):hover::before {
-    width: 75%;
-    left: 12px;
 }
 
 /* Start Responsive */
@@ -224,6 +209,10 @@ nav.scrolled {
 
     .open-nav-btn {
         display: flex;
+    }
+
+    nav .user-name {
+        margin-right: 0;
     }
 
     .et-nav-btns {

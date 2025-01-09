@@ -9,7 +9,6 @@
   flex-direction: column;
   gap: 30px;
 }
-
 /* Styling for title elements inside the card */
 .MR-FAQ-Card span {
   color: var(--white-color);

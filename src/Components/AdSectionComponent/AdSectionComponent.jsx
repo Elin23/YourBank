@@ -1,5 +1,5 @@
 import './AdSectionComponent.css';
-import toRightDown from './../../assets/imgs/Abstract Design3.png';
+import toRightDown from './../../assets/imgs/AbstractDesign3.png';
 import { Link } from 'react-router-dom';
 import adSecBg from './../../assets/imgs/blend.png';
 import TitleComponent from '../TitleComponent/TitleComponent';
@@ -8,7 +8,7 @@ import { useEffect, useState } from 'react';
 export default function AdSectionComponent({ DATA }) {
   const [isLogin, setIsLogin] = useState(false);
 
-// Hide the "Open Account" button when signed in and re-display it again upon logging out
+  // Hide the "Open Account" button when signed in and re-display it again upon logging out
   useEffect(() => {
 
     const StoredUser = JSON.parse(localStorage.getItem('user'));
@@ -36,12 +36,13 @@ export default function AdSectionComponent({ DATA }) {
             title={DATA.title}
             desc={DATA.desc}
             highlightedWords={['YourBank today!']}
+            fw={true}
           />
         </div>
 
         {!isLogin && (
           <button className="hw-AdSecleft">
-            <Link to={'/YourBank/signUp'}>
+            <Link to={'/signUp'}>
               Open Account
             </Link>
           </button>
@@ -51,13 +52,3 @@ export default function AdSectionComponent({ DATA }) {
   );
 }
 
-/*                
-    <div className="hw-AdSecRight">
-    <h3  className='fs-40 fw-400'>
-        {DATA.title}<span>YourBank today!</span>
-    </h3>
-    <p className="hw-AdSecPara fw-300">
-        {DATA.desc}
-    </p>
-    </div>
- */
