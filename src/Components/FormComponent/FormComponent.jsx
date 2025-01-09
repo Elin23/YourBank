@@ -107,7 +107,7 @@ export default function FormComponent({ action }) {
                 icon: 'success',
                 title: "Welcome back, " + user.firstName + " " + user.lastName + "! You have successfully logged in. Enjoy your experience.",
               });
-              navigate('/YourBank/');
+              navigate('/');
             } else {
               //no account in db 
               Toast.fire({
@@ -174,7 +174,7 @@ export default function FormComponent({ action }) {
               icon: 'success',
               title: "Welcome to YourBank " + state.firstName + " " + state.lastName,
             });
-            navigate('/YourBank/');
+            navigate('/');
           }
         } else {
           //save user data  
@@ -190,7 +190,7 @@ export default function FormComponent({ action }) {
             icon: 'success',
             title: "Welcome to YourBank " + state.firstName + " " + state.lastName,
           });
-          navigate('/YourBank/');
+          navigate('/');
         }
       }
     }
@@ -277,7 +277,7 @@ export default function FormComponent({ action }) {
             <button type="submit" className={`AA-custom-btn f-18 fw-400 ${true ? "AA-bg-btn-green-60" : "AA-border-btn AA-bg-btn-gray-15"}`}>
               {action === "login" ? "Login" : "Sign Up"}
             </button>
-            <Link className="AA-custom-btn f-18 fw-400 AA-custom-btn AA-border-btn AA-bg-btn-gray-15 AA-a-btn-white" to={action === "login" ? "/YourBank/signUp" : "/YourBank/login"}>
+            <Link className="AA-custom-btn f-18 fw-400 AA-custom-btn AA-border-btn AA-bg-btn-gray-15 AA-a-btn-white" to={action === "login" ? "/signUp" : "/login"}>
               {action === "login" ? "Sign Up" : "Login"}
             </Link>
             <div className="AA-continue-p f-18">

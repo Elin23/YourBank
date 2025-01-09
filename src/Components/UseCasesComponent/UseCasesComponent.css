@@ -27,7 +27,7 @@
     gap: 20px;
     padding: 50px;
     background-color: var(--black11-color);
-    background-image: url('/src/assets/imgs/Abstract\ Design3.png');
+    background-image: url('../../assets/imgs/AbstractDesign3.png');
     background-repeat: no-repeat;
     background-position: top left;
     border-radius: 20px;
@@ -42,7 +42,7 @@
     gap: 20px;
     padding: 50px;
     background-color: var(--black11-color);
-    background-image: url(/src/assets/imgs/Abstract\ Design4.png);
+    background-image: url("../../assets/imgs/AbstractDesign4.png");
     background-repeat: no-repeat;
     background-position: top right;
     border-radius: 20px;

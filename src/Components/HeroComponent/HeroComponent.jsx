@@ -102,7 +102,7 @@ export default function HeroComponent() {
           </div>
             {!isLogin && (
               <div className="es-hero-btn f-18">
-                <Link to='/YourBank/signUp'>Open Account</Link>
+                <Link to='/signUp'>Open Account</Link>
               </div>
             )}
 
