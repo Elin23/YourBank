@@ -14,13 +14,15 @@ export default function NavBarComponent() {
   const [isLogin, setIsLogin] = useState(false);
   const [activeBtn, setActiveBtn] = useState(false);
   const [activeIndex, setActiveIndex] = useState(0);
-  const [userName, setUserName] = useState(""); // add
+  const [userName, setUserName] = useState("");
+  // add
 
   useEffect(() => {
     const StoredUser = JSON.parse(localStorage.getItem("user"));
     if (StoredUser) {
       setIsLogin(true);
-      setUserName(StoredUser.userName); // add
+      setUserName(StoredUser.userName);
+      // add
       console.log(userName);
     } else {
       setUserName("");
@@ -52,7 +54,8 @@ export default function NavBarComponent() {
         setIsLogin(false);
         window.dispatchEvent(new Event('loginStatusChanged'));
 
-        setUserName(""); //add
+        setUserName("");
+        //add
       }
     });
   };
