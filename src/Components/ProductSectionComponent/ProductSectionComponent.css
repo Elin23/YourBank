@@ -101,8 +101,13 @@
         flex-wrap: nowrap;
     }
 
+    .AM-product-sec .AM-title-comp .desc {
+        max-width: 100%;
+    }
+    
     .AM-product-sec .row-cards, .AM-product-sec .active-content {
         flex-wrap: wrap;
+        justify-content: stretch;
     }
 
 }

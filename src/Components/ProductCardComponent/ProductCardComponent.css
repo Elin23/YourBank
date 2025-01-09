@@ -116,7 +116,7 @@
 
 @media (max-width: 992px) {
     .AM-product-card {
-        width: 86.66%;
+        width: 100%;
     }
 
     .AM-product-card .desc {
@@ -124,7 +124,7 @@
     }
 
     .AM-product-card:nth-child(2) {
-        width: 86.66%;
+        width: 100%;
         padding: 30px 0px;
         border-top: 1px solid var(--gray15-color);
         border-bottom: 1px solid var(--gray15-color);

@@ -161,6 +161,7 @@
   border-radius: 14px; 
 }
 
+
 .swal2-html-container, .swal2-title{
   color: white !important;
 }
@@ -205,6 +206,10 @@ div:where(.swal2-icon).swal2-question{
 @media (max-width: 993px) {
   .swal2-html-container, .swal2-title{
     font-size: 1.5em;
+  }
+  .px-162 {
+      padding-left: 7.459677419354839%;
+      padding-right: 7.459677419354839%;
   }
 }
 

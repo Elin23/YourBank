@@ -24,7 +24,22 @@ export default function FormComponent({ action }) {
   const Toast = Swal.mixin({
     showConfirmButton: false,
     timer: 2000,
-    didOpen : () => { document.body.style = 'padding-right: 0px !important'; },
+    scrollbarPadding: false,
+    heightAuto: false, 
+    showClass: {
+      popup: `
+        animate__animated
+        animate__fadeInUp
+        animate__faster
+      `
+    },
+    hideClass: {
+      popup: `
+        animate__animated
+        animate__fadeOutDown
+        animate__faster
+      `
+    },
   });
 
   const [messages, setMessages] = useState({

@@ -30,6 +30,16 @@
     }
 }
 
+@media (max-width: 992px){
+    .AM-missionVision-sec {
+        padding-left: 7.459677419354839%;
+        padding-right: 7.459677419354839%;
+    }
+    .AM-mission-vision-card .content .desc, .AM-mission-vision-card-reverse .content .desc {
+        max-width: 100%;
+    }
+}
+
 /* mobile */
 @media (max-width: 540px) {
     .AM-missionVision-sec {
