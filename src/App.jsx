@@ -14,6 +14,7 @@ import { useEffect, useState } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import ScrollToTop from "./Components/ScrollToTop/ScrollToTop";
+import GiftComponent from './Components/GiftComponent/GiftComponent';
 
 function App() {
  // State for new user
