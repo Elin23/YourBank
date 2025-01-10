@@ -107,7 +107,6 @@
     
     .AM-product-sec .row-cards, .AM-product-sec .active-content {
         flex-wrap: wrap;
-        justify-content: stretch;
     }
 
 }

@@ -118,9 +118,11 @@
     .AM-product-card {
         width: 100%;
     }
-
+    
     .AM-product-card .desc {
         max-width: 100%;
+        padding-left: 30px;
+        padding-right: 30px;
     }
 
     .AM-product-card:nth-child(2) {

@@ -70,11 +70,11 @@ export default function HeroComponent() {
   useEffect(() => {
 
     const StoredUser = JSON.parse(localStorage.getItem('user'));
-    setIsLogin(!!StoredUser);
+    setIsLogin(StoredUser);
 
     const handleLoginStatusChange = () => {
       const updatedUser = JSON.parse(localStorage.getItem('user'));
-      setIsLogin(!!updatedUser);
+      setIsLogin(updatedUser);
     };
 
     window.addEventListener('loginStatusChanged', handleLoginStatusChange);

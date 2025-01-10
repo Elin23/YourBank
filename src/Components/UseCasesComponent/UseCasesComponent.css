@@ -285,6 +285,10 @@
 }
 
 @media (max-width:992px) {
+    .Af-UseCasesComponentSide-2-title p{
+        padding-left: 30px;
+        padding-right: 30px;
+    }
 
     .Af-UseCasesComponent,
     .Af-UseCasesComponentReverse {

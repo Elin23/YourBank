@@ -27,7 +27,7 @@ export default function AdSectionComponent({ DATA }) {
   }, []);
 
   return (
-    <div className='AdSectionComponent px-162'>
+    <div className='AdSectionComponent px-162 pb-150'>
       <div className="hw-AdSectionContent" data-aos="zoom-in" data-aos-delay="200">
         <img src={adSecBg} className='hw-AdSecBg' />
         <img src={toRightDown} className='toRightDown' />

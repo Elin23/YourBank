@@ -44,6 +44,22 @@ export default function NavBarComponent() {
     Swal.fire({
       icon: 'question',
       title: " Are you sure you want to log out?",
+      scrollbarPadding: false,
+      heightAuto: false, 
+      showClass: {
+        popup: `
+          animate__animated
+          animate__fadeInUp
+          animate__faster
+        `
+      },
+      hideClass: {
+        popup: `
+          animate__animated
+          animate__fadeOutDown
+          animate__faster
+        `
+      },
       showCancelButton: true,
       confirmButtonText: "Logout",
       denyButtonText: `Cancel`
