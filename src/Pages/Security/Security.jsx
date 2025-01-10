@@ -2,7 +2,7 @@ import React from 'react'
 import JobComponent from "../../Components/JobComponent/JobComponent";
 
 import HeroComponent2 from '../../Components/HeroComponent2/HeroComponent2'
-import IMG3 from '../../assets/imgs/Hero/HeroImage3.png'
+import IMG3 from '../../assets/imgs/Hero/HeroImage3.webp'
 import HowWeProtectComponent from '../../Components/HowWeProtectComponent/HowWeProtectComponent';
 export default function Security() {
   return (

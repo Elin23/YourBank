@@ -44,9 +44,8 @@ export default function FAQSectionComponent() {
 
             {/* Lower FAQs Cards*/}
             <div
-              className={`MR-Lower-FAQ-Card ${
-                !isVisible ? "MR-FAQ-Gradient1" : ""
-              }`}
+              className={`MR-Lower-FAQ-Card ${!isVisible ? "MR-FAQ-Gradient1" : ""
+                }`}
             >
               {renderFAQCards(lowerFAQs)}
             </div>
@@ -61,9 +60,8 @@ export default function FAQSectionComponent() {
                 </div>
 
                 <div
-                  className={`MR-Lower-FAQ-Card ${
-                    isVisible ? "MR-FAQ-Gradient1" : ""
-                  }`}
+                  className={`MR-Lower-FAQ-Card ${isVisible ? "MR-FAQ-Gradient1" : ""
+                    }`}
                 >
                   {renderFAQCards(lowerFAQs)}
                 </div>
@@ -74,9 +72,9 @@ export default function FAQSectionComponent() {
         <button className="MR-FAQ-Button f-18 fw-400" onClick={toggleFAQs}>
           {isVisible ? "Hide FAQ's " : "Load All FAQ's "}
 
-              {isVisible
-                ? <MdKeyboardArrowUp className="MR-FAQ-Arrow-Button" />
-                : <MdKeyboardArrowDown className="MR-FAQ-Arrow-Button" />}
+          {isVisible
+            ? <MdKeyboardArrowUp className="MR-FAQ-Arrow-Button" />
+            : <MdKeyboardArrowDown className="MR-FAQ-Arrow-Button" />}
 
         </button>
       </div>

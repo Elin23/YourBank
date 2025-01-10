@@ -16,11 +16,18 @@
 }
 
 .hw-footerIcons .hw-fotIconConta {
-    transition: 0.4s all ease-in-out;
-
+    transition: all 0.4s;
 }
 
 .hw-footerIcons .hw-fotIconConta:hover {
-    background-color: var(--green80-color);
-    transform: rotate(360deg) !important;
+    transform: translateY(-5px);
+    background-color: var(--green70-color);
+}
+
+@media (max-width: 1919px) {
+    .hw-fotIconConta {
+        padding: 12px;
+        width: 44px;
+        height: 44px;
+    }
 }

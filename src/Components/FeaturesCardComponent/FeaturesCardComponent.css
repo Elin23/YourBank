@@ -1,11 +1,10 @@
 .features-card {
   width: 48.8%;
+  padding: 49.34px;
   border-radius: 12px;
   border: 1px solid var(--gray15-color);
   background-color: var(--black11-color);
 }
-
-
 .et-card-title {
   display: flex;
   justify-content: space-between;
@@ -33,7 +32,7 @@
 @media (max-width: 1919px) {
   .features-card {
     width: 49.014%;
-    padding: 40px;
+    padding: 39.34px;
   }
 
   .et-card-title span {
@@ -66,7 +65,7 @@
 
 @media (max-width: 768px) {
   .features-card {
-    padding: 30px;
+    padding: 29.34px;
   }
 
   .et-card-title span {

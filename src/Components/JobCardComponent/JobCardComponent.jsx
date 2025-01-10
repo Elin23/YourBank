@@ -1,5 +1,5 @@
 import "./JobCardComponent.css";
-import Icon3 from "./../../assets/imgs/careers icons/icon (3).png";
+import Icon3 from "../../assets/imgs/careers_icons/icon3.png";
 
 
 export default function JobCardComponent({
