@@ -57,6 +57,10 @@ function App() {
     };
   }, []);
 
+
+
+
+
   useEffect(() => {
     AOS.init({
       duration: 1000,
@@ -71,6 +75,7 @@ function App() {
     <div className="bg-main">
       <ScrollToTop/>
       <Cursor />
+      <NavBarComponent />
       <NavBarComponent />
       <Routes>
         <Route path='/' element={<HandleLoadingComponent />}>
