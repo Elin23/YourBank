@@ -1,16 +1,13 @@
 .es-hero-container {
     position: relative;
     display: flex;
-    align-items: start;
     flex-wrap: wrap;
-    gap: 6.25%;
+    gap: 7.5%;
     padding-top: 10.3125%;
-    height: 100%;
+    /* height: 100%; */
     overflow: hidden;
     background-color: var(--black10-color);
-    animation: zoomInAnimation 1.5s ease-in-out forwards;
 }
-
 
 .es-hero-container::before {
     content: "";
@@ -28,18 +25,6 @@
 .es-hero-left-content {
     width: 51.7535%;
     padding-top: 6.266%;
-}
-
-@keyframes zoomInAnimation {
-    0% {
-        transform: scale(0.6);
-        opacity: 0;
-    }
-
-    100% {
-        transform: scale(1);
-        opacity: 1;
-    }
 }
 
 .es-hero-left-content .es-sub-title {
@@ -74,15 +59,6 @@
     color: transparent;
 }
 
-@keyframes moveGradient {
-    0% {
-        background-position: 200% 0;
-    }
-
-    100% {
-        background-position: -200% 0;
-    }
-}
 
 .es-hero-left-content img {
     padding-left: 12px;
@@ -137,24 +113,6 @@
     animation: greenTopBubbles 0.6s ease;
 }
 
-@keyframes greenTopBubbles {
-    0% {
-        background-position: 5% 90%, 10% 90%, 10% 90%, 15% 90%, 25% 90%, 25% 90%,
-            40% 90%, 55% 90%, 70% 90%;
-    }
-
-    50% {
-        background-position: 0% 80%, 0% 20%, 10% 40%, 20% 0%, 30% 30%, 22% 50%,
-            50% 50%, 65% 20%, 90% 30%;
-    }
-
-    100% {
-        background-position: 0% 70%, 0% 10%, 10% 30%, 20% -10%, 30% 20%, 22% 40%,
-            50% 40%, 65% 10%, 90% 20%;
-        background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
-    }
-}
-
 .es-hero-btn:hover:after {
     bottom: -70%;
     background-image: radial-gradient(circle, var(--green60-color) 20%, transparent 20%),
@@ -167,24 +125,6 @@
     background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 20% 20%, 18% 18%;
     background-position: 50% 0%;
     animation: greenBottomBubbles 0.6s ease;
-}
-
-@keyframes greenBottomBubbles {
-    0% {
-        background-position: 10% -10%, 30% 10%, 55% -10%, 70% -10%, 85% -10%,
-            70% -10%, 70% 0%;
-    }
-
-    50% {
-        background-position: 0% 80%, 20% 80%, 45% 60%, 60% 100%, 75% 70%, 95% 60%,
-            105% 0%;
-    }
-
-    100% {
-        background-position: 0% 90%, 20% 90%, 45% 70%, 60% 110%, 75% 80%, 95% 70%,
-            110% 10%;
-        background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
-    }
 }
 
 .es-hero-btn:active {
@@ -275,81 +215,6 @@
 .es-hero-right-content .exchange h4 {
     margin-bottom: 25.14px;
 }
-
-.es-hero-right-content .es-your-trans .es-trans-box {
-    background-color: var(--black11-color);
-    position: relative;
-    border-radius: 10.4px;
-    padding: 13.87px 0 13.87px 20.81px;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-    border: 0.87px solid var(--gray15-color);
-}
-
-.es-hero-right-content .es-your-trans .es-trans-box .es-icon {
-    width: 38.15px;
-    height: 38.15px;
-    border-radius: 36.5px;
-    padding: 6.89px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: var(--green60-color);
-}
-
-.es-hero-right-content .es-tran-details {
-    display: flex;
-    flex-direction: column;
-    color: var(--white-color);
-}
-
-.es-hero-right-content .es-tran-details span:nth-child(1) {
-    font-size: 15.61px;
-    line-height: 23.41px;
-}
-
-.es-hero-right-content .es-tran-details span:nth-child(2) {
-    font-size: 17.34px;
-    line-height: 26.01px;
-}
-
-.es-trans-box .es-trans-box-left {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 8.67px;
-}
-
-.es-trans-box .es-trans-box-right {
-    color: var(--white-color);
-    font-size: 20.81px;
-    line-height: 31.21px;
-    padding-right: 20.81px;
-}
-
-
-.op-100 {
-    width: 445.66px;
-    z-index: 5;
-}
-
-.op-50 {
-    margin: 0 17.34px;
-    width: 410.98px;
-    opacity: 50% !important;
-    margin-top: -24.75px;
-    z-index: 4;
-}
-
-.op-20 {
-    margin: 0 30.68px;
-    width: 376.29px;
-    opacity: 20% !important;
-    margin-top: -24.75px;
-    z-index: 3;
-}
-
 .es-hero-right-content .es-exchange-box {
     position: relative;
     z-index: 2;
@@ -390,7 +255,7 @@
     color: var(--white-color);
     font-size: 17.34px !important;
     line-height: 26.01px !important;
-    /* font-weight: 500; */
+    font-weight: 500;
 }
 
 .es-mini-box:nth-child(2) .es-currency-value,
@@ -411,8 +276,11 @@
     color: var(--green65-color);
     font-size: 15.61px;
     line-height: 23.41px;
+    transition: all 0.3s ease;
 }
-
+.exchange-btn:hover {
+    box-shadow: rgba(154, 215, 67, 0.24) 0px 0px 5px 0px, rgba(154, 215, 67, 0.24) 0px 0px 1px 0px;
+}
 .es-supported-currency {
     width: 100%;
     display: flex;
@@ -431,8 +299,11 @@
     background-color: var(--green-heavy);
     border-radius: 69.36px;
     margin-right: -50px;
+    transition: all 0.3s ease;
 }
-
+.es-supported-currency-container:hover {
+    box-shadow: rgba(154, 215, 67, 0.24) 0px 0px 5px 0px, rgba(154, 215, 67, 0.24) 0px 0px 1px 0px;
+}
 .es-hero-container .es-supported-currency .es-currency-icons {
     display: flex;
     align-items: center;
@@ -444,7 +315,9 @@
     padding: 8.67px;
     border: 0.87px solid var(--gray15-color);
 }
-
+.es-hero-container .es-supported-currency:hover .es-currency-img{
+    box-shadow: rgba(154, 215, 67, 0.24) 0px 0px 5px 0px, rgba(154, 215, 67, 0.24) 0px 0px 1px 0px;
+}
 .es-supported-currency-container span {
     margin-left: 20.81px;
     font-size: 15.61px;
@@ -592,60 +465,6 @@
         margin-bottom: 19.97px;
     }
 
-    .es-hero-right-content .es-your-trans .es-trans-box {
-        border-radius: 8.26px;
-        border-width: 0.69px;
-        padding: 11.02px 0 11.02px 16.35px;
-    }
-
-    .es-hero-right-content .es-your-trans .es-trans-box .es-icon {
-        width: 30.35px;
-        height: 30.35px;
-        border-radius: 36.5px;
-        padding: 6.89px;
-    }
-
-    .es-hero-right-content .es-trans-box .es-icon img {
-        width: 13.26px;
-        height: 13.19px;
-    }
-
-    .es-hero-right-content .es-tran-details span:nth-child(1) {
-        font-size: 12.4px;
-        line-height: 18.59px;
-    }
-
-    .es-hero-right-content .es-tran-details span:nth-child(2) {
-        font-size: 13.77px;
-        line-height: 20.66px;
-    }
-
-    .es-trans-box .es-trans-box-left {
-        gap: 6.89px;
-    }
-
-    .es-trans-box .es-trans-box-right {
-        font-size: 16.53px;
-        line-height: 24.79px;
-        padding-right: 16.53px;
-    }
-
-    .op-100 {
-        width: 355.1px;
-    }
-
-    .op-50 {
-        margin: 0 13.77px;
-        width: 327.55px;
-        margin-top: -19.32px;
-    }
-
-    .op-20 {
-        margin: 0 27.55px;
-        width: 300.01px;
-        margin-top: -19.32px;
-    }
-
     .es-hero-right-content .es-exchange-box {
         border-width: 0.69px;
         border-radius: 8.26px;
@@ -744,9 +563,9 @@
 
 @media (max-width: 1200px) {
     .es-hero-container {
-        padding-left: 4.1%;
-        padding-right: 4.1%;
-        padding-top: 10.23%;
+        /* padding-left: 4.1%;
+        padding-right: 4.1%; */
+        padding-top: 11.23%;
         gap: 5%;
     }
 
@@ -755,7 +574,8 @@
         margin-bottom: 25px;
     }
 
-    .es-hero-left-content .es-main-title .title {
+    .es-hero-left-content .es-main-title  .title,
+    .es-hero-left-content .es-main-title .title span {
         font-size: 32px;
         line-height: 45px;
     }
@@ -772,18 +592,6 @@
 
     .es-hero-right-content .es-your-trans h4 {
         margin-bottom: 10px;
-    }
-
-    .op-100 {
-        width: 320px;
-    }
-
-    .op-50 {
-        width: 300px;
-    }
-
-    .op-20 {
-        width: 280px;
     }
 
     .es-exchange-box .es-mini-box .es-upper {
@@ -811,7 +619,7 @@
         justify-content: center;
         align-items: flex-start;
         text-align: center;
-        padding-top: 25%;
+        padding-top: 23%;
         gap: 54.43px;
     }
 
@@ -847,7 +655,7 @@
 
     /* Left Side Start*/
     .es-hero-container {
-        padding-top: 40.474%;
+        padding-top: 158px;
         padding-bottom: 0;
         margin-bottom: 17.76%;
     }
@@ -908,60 +716,6 @@
 
     .es-hero-right-content .exchange h4 {
         margin-bottom: 14.87px;
-    }
-
-    .es-hero-right-content .es-your-trans .es-trans-box {
-        border-radius: 6.15px;
-        border-width: 0.51px;
-        padding: 8.2px 0 8.2px 12.31px;
-    }
-
-    .es-hero-right-content .es-your-trans .es-trans-box .es-icon {
-        width: 22.6px;
-        height: 22.6px;
-        border-radius: 27.18px;
-        padding: 5.13px;
-    }
-
-    .es-hero-right-content .es-trans-box .es-icon img {
-        width: 9.82px;
-        height: 9.82px;
-    }
-
-    .es-hero-right-content .es-tran-details span:nth-child(1) {
-        font-size: 9.23px;
-        line-height: 13.85px;
-    }
-
-    .es-hero-right-content .es-tran-details span:nth-child(2) {
-        font-size: 10.26px;
-        line-height: 15.38px;
-    }
-
-    .es-trans-box .es-trans-box-left {
-        gap: 5.13px;
-    }
-
-    .es-trans-box .es-trans-box-right {
-        font-size: 12.31px;
-        line-height: 18.46px;
-        padding-right: 12.31px;
-    }
-
-    .op-100 {
-        width: 264.43px;
-    }
-
-    .op-50 {
-        margin: 0 10.26px;
-        width: 243.91px;
-        margin-top: -14.32px;
-    }
-
-    .op-20 {
-        margin: 0 20.51px;
-        width: 223.4px;
-        margin-top: -13.5px;
     }
 
     .es-hero-right-content .es-exchange-box {
@@ -1082,3 +836,53 @@
 }
 
 /*End Responsive*/
+
+/* Start Animation */
+
+@keyframes moveGradient {
+    0% {
+        background-position: 200% 0;
+    }
+
+    100% {
+        background-position: -200% 0;
+    }
+}
+
+/* Start Animation for "open account" Button*/
+@keyframes greenBottomBubbles {
+    0% {
+        background-position: 10% -10%, 30% 10%, 55% -10%, 70% -10%, 85% -10%,
+            70% -10%, 70% 0%;
+    }
+
+    50% {
+        background-position: 0% 80%, 20% 80%, 45% 60%, 60% 100%, 75% 70%, 95% 60%,
+            105% 0%;
+    }
+
+    100% {
+        background-position: 0% 90%, 20% 90%, 45% 70%, 60% 110%, 75% 80%, 95% 70%,
+            110% 10%;
+        background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+    }
+}
+
+@keyframes greenTopBubbles {
+    0% {
+        background-position: 5% 90%, 10% 90%, 10% 90%, 15% 90%, 25% 90%, 25% 90%,
+            40% 90%, 55% 90%, 70% 90%;
+    }
+
+    50% {
+        background-position: 0% 80%, 0% 20%, 10% 40%, 20% 0%, 30% 30%, 22% 50%,
+            50% 50%, 65% 20%, 90% 30%;
+    }
+
+    100% {
+        background-position: 0% 70%, 0% 10%, 10% 30%, 20% -10%, 30% 20%, 22% 40%,
+            50% 40%, 65% 10%, 90% 20%;
+        background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+    }
+}
+/* End Animation for "open account" Button*/

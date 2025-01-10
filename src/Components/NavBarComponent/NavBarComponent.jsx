@@ -15,13 +15,14 @@ export default function NavBarComponent() {
   const [activeBtn, setActiveBtn] = useState("login");
   const [activeIndex, setActiveIndex] = useState(0);
   const [userName, setUserName] = useState(""); // add
-  
+  const [activeLink, setActiveLink] = useState('')
 
   useEffect(() => {
     const StoredUser = JSON.parse(localStorage.getItem("user"));
     if (StoredUser) {
       setIsLogin(true);
-      setUserName(StoredUser.userName); // add
+      setUserName(StoredUser.userName);
+      // add
       console.log(userName);
     } else {
       setUserName("");
@@ -75,7 +76,20 @@ export default function NavBarComponent() {
       }
     });
   };
+//handle the footer Links Navigation
+  useEffect(() => {
+    const handleActivePathChange = () => {
+      const activePath = JSON.parse(localStorage.getItem('activePath'));
+      setActiveLink(activePath);
+    };
 
+    window.addEventListener('activePathChanged' , handleActivePathChange);
+    
+    return () => {
+      window.removeEventListener('activePathChanged' , handleActivePathChange)
+    }
+  }, [])
+  
   return (
     <>
       <nav className={`${scrolling ? "scrolled" : ""}`}>
@@ -99,14 +113,14 @@ export default function NavBarComponent() {
               <li
                 key={index}
                 className="f-18">
-                <NavLink
-                  to={item.path}
-                  className={({ isActive }) => (activeIndex === index ? "active-link" : "")}
-                  onClick={() => (setMenuOpen(!menuOpen),
-                    setActiveIndex(index),
-                    setActiveBtn(activeBtn === "sign up" ? "login" : "login"))}>
-                  {item.name}
-                </NavLink>
+                  <NavLink
+                    to={item.path}
+                    className={({ isActive }) => (isActive || activeLink == item.path ? "active-link" : "")}
+                    onClick={() => (setMenuOpen(!menuOpen)
+                    )}
+                  >
+                    {item.name}
+                  </NavLink>
               </li>
             ))}
           </ul>

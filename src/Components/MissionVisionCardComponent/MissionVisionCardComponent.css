@@ -28,6 +28,9 @@
     position: relative;
     overflow: hidden;
 }
+
+/* add layer(img) of main img */
+
 .mission-vision-img::after {
     content: "";
     width: 50%;
@@ -44,25 +47,10 @@
     transition: 0.5s all ease-in-out;
 }
 
-.AM-mission-vision-card .content .title,
-.AM-mission-vision-card-reverse .content .title {
-    color: var(--white-color);
-    font-size: 38px;
-    line-height: 57px;
-    margin-bottom: 14px;
-    transition: .3s ease-in-out;
-}
+/* add scale effect on img of card */
 
-.AM-mission-vision-card:hover.AM-mission-vision-card .content .title,
-.AM-mission-vision-card-reverse:hover.AM-mission-vision-card-reverse .content .title {
-    color: var(--green60-color);
-}
-
-.AM-mission-vision-card .content .desc,
-.AM-mission-vision-card-reverse .content .desc {
-    max-width: 882px;
-    color: var(--gray70-color);
-    margin-bottom: 0;
+.mission-vision-img img:hover {
+    transform: scale(1.1);
 }
 
 .AM-mission-vision-card .content {
@@ -73,6 +61,30 @@
 .AM-mission-vision-card-reverse .content {
     padding-right: 50px;
     border-right: 1px solid var(--green60-color);
+}
+
+.AM-mission-vision-card .content .title,
+.AM-mission-vision-card-reverse .content .title {
+    color: var(--white-color);
+    font-size: 38px;
+    line-height: 57px;
+    margin-bottom: 14px;
+    transition: .3s ease-in-out;
+}
+
+/* add hover effect on title of card */
+
+.AM-mission-vision-card:hover.AM-mission-vision-card .content .title,
+.AM-mission-vision-card-reverse:hover.AM-mission-vision-card-reverse .content .title {
+    color: var(--green60-color);
+}
+
+
+.AM-mission-vision-card .content .desc,
+.AM-mission-vision-card-reverse .content .desc {
+    max-width: 882px;
+    color: var(--gray70-color);
+    margin-bottom: 0;
 }
 
 /* media query */

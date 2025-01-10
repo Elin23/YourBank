@@ -9,7 +9,6 @@ export default function GiftComponent() {
     useEffect(() => {
         const handleStorageChange = () => {
             const isNewUser = localStorage.getItem("isNewUser");
-            console.log("isNewUser changed:", isNewUser);
         };
 
         window.addEventListener('storage', handleStorageChange);

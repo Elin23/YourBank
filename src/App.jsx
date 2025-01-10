@@ -14,6 +14,7 @@ import { useEffect, useState } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import GiftComponent from "./Components/GiftComponent/GiftComponent";
+import ScrollToTop from './Components/ScrollToTop/ScrollToTop';
 
 function App() {
  // State for new user
@@ -56,6 +57,10 @@ function App() {
     };
   }, []);
 
+
+
+
+
   useEffect(() => {
     AOS.init({
       duration: 1000,
@@ -68,7 +73,9 @@ function App() {
 
   return (
     <div className="bg-main">
+      <ScrollToTop/>
       <Cursor />
+      <NavBarComponent />
       <NavBarComponent />
       <Routes>
         <Route path='/' element={<HandleLoadingComponent />}>

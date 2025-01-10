@@ -62,7 +62,7 @@ export const currencyNames = {
     IDR: "Indonesian Rupiah",
     ILS: "Israeli New Shekel",
     IMP: "Isle of Man Pound",
-    INR: "Indian Rupee",
+    INR: "Indian Rupees",
     IQD: "Iraqi Dinar",
     IRR: "Iranian Rial",
     ISK: "Icelandic Króna",
