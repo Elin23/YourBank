@@ -26,6 +26,10 @@ function App() {
     // }
   }, []);
 
+
+
+
+
   useEffect(() => {
     AOS.init({
       duration: 1000,
@@ -39,7 +43,7 @@ function App() {
   return (
     <div className="bg-main">
       <Cursor />
-      <NavBarComponent  />
+      <NavBarComponent />
       <Routes>
           <Route path='/' element={<HandleLoadingComponent />}>
             <Route index element={<Home />} />
@@ -51,7 +55,7 @@ function App() {
           </Route>
       </Routes>
       {isNewUser && <GiftComponent />}
-      <FooterComponent/>
+      <FooterComponent />
     </div>
   );
 }

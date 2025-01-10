@@ -1,4 +1,4 @@
-import { Link, useLocation } from 'react-router-dom'
+import { Link,useLocation} from 'react-router-dom'
 import './FooterComponent.css'
 import icon1 from './../../assets/imgs/Home_icons/Icon (13).png'
 import icon2 from './../../assets/imgs/Home_icons/Icon (14).png'
@@ -8,7 +8,7 @@ import twitterIcon from './../../assets/imgs/Home_icons/Icon (17).png'
 import linkdenIcon from './../../assets/imgs/Home_icons/Vector.png'
 import nav_logo from '../../assets/imgs/logo.png'
 import SocialFooterComponent from '../SocialFooterComponent/SocialFooterComponent'
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 
 export default function FooterComponent() {
     const socialIcons = [
@@ -16,6 +16,24 @@ export default function FooterComponent() {
         { src: twitterIcon, alt: 'Twitter Link' },
         { src: linkdenIcon, alt: 'LinkedIn Link' },
     ];
+    const footerLinks =[
+        {
+            name: "Home",
+            path: "/"
+        },
+        {
+            name: "Careers",
+            path: "/careers"
+        },
+        {
+            name: "About",
+            path: "/about"
+        },
+        {
+            name: "Security",
+            path: "/security"
+        }
+    ]
 
     const location = useLocation();
 
@@ -24,26 +42,33 @@ export default function FooterComponent() {
 
     }, [location]); 
 
-    const getActiveClass = (path) => location.pathname === path ? 'hw-menu-link active' : 'hw-menu-link';
+    // const getActiveClass = (path) => location.pathname === path ? 'hw-menu-link active' : 'hw-menu-link';
 
-
+    const[activePath,setActivePath] = useState('/');
+    // const handelActivePath = (path) =>{
+    //     setActivePath(path)
+    // }
     return (
         <>
             <footer className='hw-footer px-162'>
                 <img src={nav_logo} className="logo" data-aos="fade-up" />
                 <ul className="hw-footerLinks" data-aos="fade-up">
-                    <li>
-                        <Link to={'/YourBank/'} className='hw-menu-link'>Home</Link>
-                    </li>
-                    <li>
-                        <Link to={'/YourBank/careers'} className='hw-menu-link'>Careers</Link>
-                    </li>
-                    <li>
-                        <Link to={'/YourBank/about'} className='hw-menu-link'>About</Link>
-                    </li>
-                    <li>
-                        <Link to={'/YourBank/security'} className='hw-menu-link'>Security</Link>
-                    </li>
+                {footerLinks.map((item, index) => (
+                <li key={index}>
+                    <Link
+                    to={item.path}
+                    className='hw-menu-link'
+                    onClick={()=> {
+                        setActivePath(item.path),
+                        localStorage.setItem('activePath' , item.path)//set the active path in the local storage so the navbar would know when the path is changed
+                        window.dispatchEvent(new Event('activePathChanged'));//trigger an event that the navBar will listen to.
+                    }}
+                    >
+                        {item.name}
+                    </Link>
+                </li>
+                ))}
+
                 </ul>
                 <span className="hw-lineGray"></span>
                 <div className="hw-Contacts">
