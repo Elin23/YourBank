@@ -13,8 +13,8 @@ import Cursor from "./Components/cursor/cursor";
 import { useEffect, useState } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import GiftComponent from "./Components/GiftComponent/GiftComponent";
-import ScrollToTop from './Components/ScrollToTop/ScrollToTop';
+import ScrollToTop from "./Components/ScrollToTop/ScrollToTop";
+import GiftComponent from './Components/GiftComponent/GiftComponent';
 
 function App() {
  // State for new user
@@ -75,8 +75,8 @@ function App() {
     <div className="bg-main">
       <ScrollToTop/>
       <Cursor />
-      <NavBarComponent />
-      <NavBarComponent />
+      <ScrollToTop />
+      <NavBarComponent  />
       <Routes>
         <Route path='/' element={<HandleLoadingComponent />}>
           <Route index element={<Home />} />
