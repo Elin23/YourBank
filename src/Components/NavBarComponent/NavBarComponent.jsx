@@ -21,7 +21,8 @@ export default function NavBarComponent() {
     const StoredUser = JSON.parse(localStorage.getItem("user"));
     if (StoredUser) {
       setIsLogin(true);
-      setUserName(StoredUser.userName); // add
+      setUserName(StoredUser.userName);
+      // add
       console.log(userName);
     } else {
       setUserName("");

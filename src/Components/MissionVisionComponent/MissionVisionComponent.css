@@ -11,8 +11,6 @@
 
 /* media query */
 
-/* laptop */
-
 @media (max-width: 1919px) {
     .AM-missionVision-sec {
         padding: 0px 80px 120px 80px;
@@ -30,7 +28,6 @@
     }
 }
 
-/* mobile */
 @media (max-width: 540px) {
     .AM-missionVision-sec {
         padding: 0px 16px 80px 16px;
