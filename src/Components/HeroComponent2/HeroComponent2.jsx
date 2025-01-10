@@ -5,8 +5,14 @@ export default function HeroComponent2({ image, head, disc, light, bool }) {
     return (
         <>
             <div className=' pb-150 Af-HeroComponent2-father'>
-                <div className=' Af-HeroComponent2'>
-                    <div className={bool ? 'Af-HeroComponent2-heading-about' : 'Af-HeroComponent2-heading'}>
+                <div 
+                className=' Af-HeroComponent2' 
+                data-aos="zoom-in" 
+                data-aos-duration="2000">
+                    <div 
+                    data-aos="zoom-in" 
+                    data-aos-duration="2000"
+                    className={bool ? 'Af-HeroComponent2-heading-about' : 'Af-HeroComponent2-heading'}>
                         {bool && <h4 className='Af-About-h4'>Welcome to YourBank</h4>}
                         <TitleComponent
                             title={head}
@@ -15,7 +21,11 @@ export default function HeroComponent2({ image, head, disc, light, bool }) {
                             fw={false}
                         />
                     </div>
-                    <img src={image} alt="HeroImg" />
+                    <img 
+                    src={image} 
+                    alt="HeroImg" 
+                    data-aos="zoom-in" 
+                    data-aos-duration="2000" />
                 </div>
             </div>
         </>
