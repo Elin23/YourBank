@@ -141,7 +141,8 @@ export default function FormComponent({ action }) {
           });
           navigate('/');
         }
-    } else {
+    }
+  } else {
       if (
         state.email.length > 0 &&
         state.password.length > 0 &&
@@ -170,7 +171,8 @@ export default function FormComponent({ action }) {
             title: "It seems you already have an account with the email " + state.email + ". Please log in to access your account.",
           });
         } else {
-          //save user data            
+          //save user data  
+          console.log(users);          
           users.push(state);
           localStorage.setItem("users", JSON.stringify(users));
           localStorage.setItem("isNewUser", "true");
@@ -191,7 +193,6 @@ export default function FormComponent({ action }) {
         }       
       }
     }
-  }
 };
 
   return (
