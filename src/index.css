@@ -203,7 +203,7 @@ div:where(.swal2-icon).swal2-question{
   }
 }
 
-@media (max-width: 993px) {
+@media (max-width: 992px) {
   .swal2-html-container, .swal2-title{
     font-size: 1.5em;
   }

@@ -39,11 +39,11 @@
         text-align: center;
     }
 
-    .AM-title-comp .title,
+    /* .AM-title-comp .title,
     .AM-title-comp .desc{
         padding-left: 30px;
         padding-right: 30px;
-    }
+    } */
 }
 
 @media (max-width: 540px) {
