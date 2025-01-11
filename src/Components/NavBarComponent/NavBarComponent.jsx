@@ -97,16 +97,6 @@ export default function NavBarComponent() {
               <li
                 key={index}
                 className="f-18">
-<<<<<<< HEAD
-                  <NavLink
-                    to={item.path}
-                    className={({ isActive }) => (isActive || activeLink == item.path ? "active-link" : "")}
-                    onClick={() => (setMenuOpen(!menuOpen)
-                    )}
-                  >
-                    {item.name}
-                  </NavLink>
-=======
                 <NavLink
                   to={item.path}
                   end
@@ -115,7 +105,7 @@ export default function NavBarComponent() {
                 >
                   {item.name}
                 </NavLink>
->>>>>>> 75ec75eb8808c8037db9fbd8b90802269be61545
+
               </li>
             ))}
           </ul>

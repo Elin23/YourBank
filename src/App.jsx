@@ -21,6 +21,7 @@ function App() {
   const [isNewUser, setIsNewUser] = useState(false);
   // State for visibility
   const [isVisible, setIsVisible] = useState(true); 
+  
   /* The isVisible state variable is necessary
    to ensure that the user does not lose access to their special gift
    when they log out without opening it.
@@ -57,10 +58,6 @@ function App() {
     };
   }, []);
 
-
-
-
-
   useEffect(() => {
     AOS.init({
       duration: 1000,
@@ -73,7 +70,6 @@ function App() {
 
   return (
     <div className="bg-main">
-      <ScrollToTop/>
       <Cursor />
       <ScrollToTop />
       <NavBarComponent  />

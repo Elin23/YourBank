@@ -1,5 +1,4 @@
 import React, { useState, useEffect, useRef } from "react";
-import Swal from "sweetalert2";
 import surprise from "../../assets/imgs/surprise.png";
 import giftImage from "../../assets/imgs/gift.svg";
 import Fireworks from "fireworks-js";
@@ -10,11 +9,11 @@ export default function GiftComponent() {
   const [isNewUser, setIsNewUser] = useState(true);
   const fireworkContainerRef = useRef(null);
 
-<<<<<<< HEAD
-    useEffect(() => {
-        const handleStorageChange = () => {
-            const isNewUser = localStorage.getItem("isNewUser");
-=======
+// <<<<<<< HEAD
+//     useEffect(() => {
+//         const handleStorageChange = () => {
+//             const isNewUser = localStorage.getItem("isNewUser");
+// =======
   useEffect(() => {
     const storedIsNewUser = localStorage.getItem("isNewUser");
     setIsNewUser(storedIsNewUser === null || storedIsNewUser === "true");
@@ -57,7 +56,6 @@ export default function GiftComponent() {
           },
           mouse: { click: false, move: false },
           sound: { enable: false },
->>>>>>> 75ec75eb8808c8037db9fbd8b90802269be61545
         };
 
         const fireworks = new Fireworks(container, options);
@@ -77,9 +75,8 @@ export default function GiftComponent() {
   }, [showFireworks]);
 
   const handleGiftClick = () => {
-    localStorage.setItem("isNewUser", "false");
     setIsNewUser(false);
-
+    localStorage.setItem("isNewUser", "false");
     setShowFireworks(true);
 
     Swal.fire({
