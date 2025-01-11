@@ -9,11 +9,6 @@ export default function GiftComponent() {
   const [isNewUser, setIsNewUser] = useState(true);
   const fireworkContainerRef = useRef(null);
 
-// <<<<<<< HEAD
-//     useEffect(() => {
-//         const handleStorageChange = () => {
-//             const isNewUser = localStorage.getItem("isNewUser");
-// =======
   useEffect(() => {
     const storedIsNewUser = localStorage.getItem("isNewUser");
     setIsNewUser(storedIsNewUser === null || storedIsNewUser === "true");
@@ -75,8 +70,9 @@ export default function GiftComponent() {
   }, [showFireworks]);
 
   const handleGiftClick = () => {
-    setIsNewUser(false);
     localStorage.setItem("isNewUser", "false");
+    setIsNewUser(false);
+
     setShowFireworks(true);
 
     Swal.fire({
@@ -85,7 +81,7 @@ export default function GiftComponent() {
       imageAlt: "gift image",
       title: "Congratulations!",
       text: "You’ve won $50 as a reward for signing up!",
-      background: "#333333",
+      // background: "#1C1C1C",
       customClass: {
         title: "custom-title",
         confirmButton: "custom-confirm-btn",

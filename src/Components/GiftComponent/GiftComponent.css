@@ -20,20 +20,15 @@
 
 .custom-confirm-btn {
   background-color: var(--green60-color);
-  color: var(--light-green-97-color);
+  color: var(--black11-color);
   font-size: 20px;
   padding: 5px 20px;
-}
-
-.custom-confirm-btn:hover {
-  background-color: var(--green65-color);
 }
 
 .swal2-image {
   margin: 0 auto 0;
   width: 100px !important;
 }
-
 
 @keyframes bounceIn {
   0% {

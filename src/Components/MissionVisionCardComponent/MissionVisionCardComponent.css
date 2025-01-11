@@ -1,17 +1,16 @@
-.AM-mission-vision-card {
+.AM-mission-vision-card-reverse,
+.AM-mission-vision-card{
     display: flex;
     align-items: center;
     justify-content: space-between;
+}
+.AM-mission-vision-card {
     margin-bottom: -114.5px;
 }
 
 .AM-mission-vision-card-reverse {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
     flex-direction: row-reverse;
 }
-
 .AM-mission-vision-card .mission-vision-img,
 .AM-mission-vision-card-reverse .mission-vision-img {
     background-image: url("../../assets/imgs/AbstractDesign6.png");
@@ -26,9 +25,12 @@
 
 .mission-vision-img {
     position: relative;
-    overflow: hidden;
 }
-
+.img-container{
+  transition: 0.4s;
+  overflow: hidden;
+  border-radius: 30px 30px 0 0;
+}
 /* add layer(img) of main img */
 
 .mission-vision-img::after {
@@ -49,7 +51,8 @@
 
 /* add scale effect on img of card */
 
-.mission-vision-img img:hover {
+.AM-mission-vision-card:hover img,
+.AM-mission-vision-card-reverse:hover img{
     transform: scale(1.1);
 }
 

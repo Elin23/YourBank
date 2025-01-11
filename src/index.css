@@ -156,7 +156,7 @@
 
 /** start style sweet Alert Model **/
 .swal2-modal{
-  background-color: var(--black11-color);   
+  background-color: var(--black11-color) !important;   
   border: 5px var(--gray15-color) solid;
   border-radius: 14px; 
 }
