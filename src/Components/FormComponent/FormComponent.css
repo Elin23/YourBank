@@ -26,7 +26,7 @@
     top: 0%;
     right: 0%;
     object-fit: cover;
-    z-index: 2;
+    z-index: 0;
 }
 
 /**style form container**/
@@ -387,8 +387,8 @@
     }
 
     .AA-px-297 {
-        padding-left: 4.1025641%;
-        padding-right: 4.1025641%;
+        padding-left: 4.101%;
+        padding-right: 4.101%;
     }
 
     /**style custom title**/

@@ -200,12 +200,12 @@
     .AM-mission-vision-card-reverse .content {
         padding-top: 30px;
         border-top: 1px solid var(--green60-color);
-        width: 75%;
+        width: 100%;
     }
 
     .AM-mission-vision-card .mission-vision-img,
     .AM-mission-vision-card-reverse .mission-vision-img {
-        width: 75%;
+        width: 100%;
         display: flex;
         justify-content: center;
         border-radius: 50px 50px 0 0;
