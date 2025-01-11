@@ -13,18 +13,53 @@ import Cursor from "./Components/cursor/cursor";
 import { useEffect, useState } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import GiftComponent from "./Components/giftComponent/giftComponent";
+import GiftComponent from "./Components/GiftComponent/GiftComponent";
+import ScrollToTop from './Components/ScrollToTop/ScrollToTop';
 
 function App() {
+ // State for new user
   const [isNewUser, setIsNewUser] = useState(false);
-  useEffect(() => {
-    const newUser = JSON.parse(localStorage.getItem("isNewUser")) === true;
-    setIsNewUser(newUser);
+  // State for visibility
+  const [isVisible, setIsVisible] = useState(true); 
+  /* The isVisible state variable is necessary
+   to ensure that the user does not lose access to their special gift
+   when they log out without opening it.
+   By managing the visibility of the gift based on this state, we can maintain the user's
+  experience and ensure that the gift remains available for them when they return. */
 
-    // if (newUser) {
-    //   localStorage.setItem("isNewUser", "false");
-    // }
+  useEffect(() => {
+    // Retrieve new user status from local storage
+    const storedStatus = JSON.parse(localStorage.getItem('isNewUser'));
+    setIsNewUser(storedStatus);
+
+    // Retrieve visibility state from local storage
+    const visibleState = JSON.parse(localStorage.getItem('isVisible'));
+    setIsVisible(visibleState);
+
+    // Function to handle status changes
+    const handleStatusChange = () => {
+      // Update new user status
+      const updatedStatus = JSON.parse(localStorage.getItem('isNewUser'));
+      setIsNewUser(updatedStatus);
+
+      // Update visibility state
+      const updateVisibleState = JSON.parse(localStorage.getItem('isVisible'));
+      setIsVisible(updateVisibleState);
+    };
+    // Add event listeners for status changes
+    window.addEventListener('StatusChanged', handleStatusChange);
+    window.addEventListener('StatusVisibleChanged', handleStatusChange);
+
+    // Cleanup event listeners on unmount
+    return () => {
+      window.removeEventListener('StatusChanged', handleStatusChange);
+      window.removeEventListener('StatusVisibleChanged', handleStatusChange);
+    };
   }, []);
+
+
+
+
 
   useEffect(() => {
     AOS.init({
@@ -38,20 +73,21 @@ function App() {
 
   return (
     <div className="bg-main">
+      <ScrollToTop/>
       <Cursor />
       <NavBarComponent  />
       <Routes>
-          <Route path='/' element={<HandleLoadingComponent />}>
-            <Route index element={<Home />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/careers" element={<Careers />} />
-            <Route path="/security" element={<Security />} />
-            <Route path="/login" element={<Login />} />
-            <Route path="/signUp" element={<SignUp />} />
-          </Route>
+        <Route path='/' element={<HandleLoadingComponent />}>
+          <Route index element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/careers" element={<Careers />} />
+          <Route path="/security" element={<Security />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/signUp" element={<SignUp />} />
+        </Route>
       </Routes>
-      {isNewUser && <GiftComponent />}
-      <FooterComponent/>
+      {isNewUser && isVisible && <GiftComponent />}
+      <FooterComponent />
     </div>
   );
 }

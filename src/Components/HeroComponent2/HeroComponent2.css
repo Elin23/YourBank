@@ -231,6 +231,10 @@
         margin-top: 14px;
 
     }
+    .Af-HeroComponent2-father{
+        padding-left: 4.10%;
+        padding-right: 4.10%;
+    }
 }
 
 @media (max-width: 389px) {

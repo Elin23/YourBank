@@ -15,13 +15,14 @@ export default function NavBarComponent() {
   const [activeBtn, setActiveBtn] = useState("login");
   const [activeIndex, setActiveIndex] = useState(0);
   const [userName, setUserName] = useState(""); // add
-  
+  const [activeLink, setActiveLink] = useState('')
 
   useEffect(() => {
     const StoredUser = JSON.parse(localStorage.getItem("user"));
     if (StoredUser) {
       setIsLogin(true);
-      setUserName(StoredUser.userName); // add
+      setUserName(StoredUser.userName);
+      // add
       console.log(userName);
     } else {
       setUserName("");
@@ -40,6 +41,7 @@ export default function NavBarComponent() {
   }, []);
 
   const handleLogout = (event) => {
+
     Swal.fire({
       icon: 'question',
       title: " Are you sure you want to log out?",
@@ -52,11 +54,25 @@ export default function NavBarComponent() {
         localStorage.setItem("isLogin", false);
         setIsLogin(false);
         window.dispatchEvent(new Event('loginStatusChanged'));
-
+        localStorage.setItem("isVisible", false);
+        window.dispatchEvent(new Event('StatusVisibleChanged'));
         setUserName(""); //add
       }
     });
   };
+  //handle the footer Links Navigation
+  useEffect(() => {
+    const handleActivePathChange = () => {
+      const activePath = JSON.parse(localStorage.getItem('activePath'));
+      setActiveLink(activePath);
+    };
+
+    window.addEventListener('activePathChanged', handleActivePathChange);
+
+    return () => {
+      window.removeEventListener('activePathChanged', handleActivePathChange)
+    }
+  }, [])
 
   return (
     <>
@@ -83,10 +99,11 @@ export default function NavBarComponent() {
                 className="f-18">
                 <NavLink
                   to={item.path}
-                  className={({ isActive }) => (activeIndex === index ? "active-link" : "")}
+                  className={({ isActive }) => (isActive || activeLink == item.path ? "active-link" : "")}
                   onClick={() => (setMenuOpen(!menuOpen),
-                    setActiveIndex(index),
-                    setActiveBtn(activeBtn === "sign up" ? "login" : "login"))}>
+                    
+                  )}
+                >
                   {item.name}
                 </NavLink>
               </li>

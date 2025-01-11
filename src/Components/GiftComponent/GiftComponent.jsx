@@ -1,11 +1,22 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import surprise from '../../assets/imgs/surprise.png'
 import giftImage from "../../assets/imgs/gift.svg"
 import "./GiftComponent.css"
-import Swal from 'sweetalert2';
 
 export default function GiftComponent() {
     const [showMessage, setShowMessage] = useState(false);
+
+    useEffect(() => {
+        const handleStorageChange = () => {
+            const isNewUser = localStorage.getItem("isNewUser");
+        };
+
+        window.addEventListener('storage', handleStorageChange);
+
+        return () => {
+            window.removeEventListener('storage', handleStorageChange);
+        };
+    }, []);
 
     const handleGiftClick = () => {
         setShowMessage(true);
@@ -40,6 +51,7 @@ export default function GiftComponent() {
 
     if (showMessage === true) {
         localStorage.setItem("isNewUser", "false");
+        window.dispatchEvent(new Event('StatusChanged'));
     }
     return (
         <>

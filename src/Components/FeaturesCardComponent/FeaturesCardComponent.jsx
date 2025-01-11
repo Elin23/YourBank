@@ -3,8 +3,8 @@ import "./FeaturesCardComponent.css"
 export default function FeaturesCardComponent({ title, img, content, index }) {
   return (
     <>
-      <div className="features-card" data-aos="flip-right" data-aos-delay={index * 100}>
-        <div className="et-card-title">
+      <div className="featuresCard" data-aos="flip-right" data-aos-delay={index * 100}>
+        <div className="ET-cardTitle">
           <span className="fw-400"> {title} </span>
           <img src={img} alt="arrow icon" />
         </div>

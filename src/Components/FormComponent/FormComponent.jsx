@@ -103,6 +103,8 @@ export default function FormComponent({ action }) {
               };
               localStorage.setItem("isLogin", JSON.stringify(true));
               localStorage.setItem("user", JSON.stringify(userData)); //add
+              localStorage.setItem("isVisible", true);
+              window.dispatchEvent(new Event('StatusVisibleChanged'));
               Toast.fire({
                 icon: 'success',
                 title: "Welcome back, " + user.firstName + " " + user.lastName + "! You have successfully logged in. Enjoy your experience.",
@@ -163,6 +165,9 @@ export default function FormComponent({ action }) {
             users.push(state);
             localStorage.setItem("users", JSON.stringify(users));
             localStorage.setItem("isNewUser", "true");
+            window.dispatchEvent(new Event('StatusChanged'));
+            localStorage.setItem("isVisible", true);
+            window.dispatchEvent(new Event('StatusVisibleChanged'));
             const userData = {
               userName: state.firstName + " " + state.lastName, //add
               email: state.email,
@@ -200,7 +205,7 @@ export default function FormComponent({ action }) {
     <section className="AA-form-section AA-px-297 pb-150">
       <div className="AA-form-container">
         <div className="AA-design">
-          <img src="../../assets/imgs/Abstract Design4.png" alt="design" />
+          <img src="../../assets/imgs/AbstractDesign4.png" alt="design" />
         </div>
         <div className="AA-form-container-bg">
           <TitleComponent
@@ -274,10 +279,19 @@ export default function FormComponent({ action }) {
             ) : (
               <div className="AA-pb-40"></div>
             )}
-            <button type="submit" className={`AA-custom-btn f-18 fw-400 ${true ? "AA-bg-btn-green-60" : "AA-border-btn AA-bg-btn-gray-15"}`}>
+            <button type="submit"
+              className={`AA-custom-btn f-18 fw-400 ${true ? "AA-bg-btn-green-60" : "AA-border-btn AA-bg-btn-gray-15"}`}>
               {action === "login" ? "Login" : "Sign Up"}
             </button>
-            <Link className="AA-custom-btn f-18 fw-400 AA-custom-btn AA-border-btn AA-bg-btn-gray-15 AA-a-btn-white" to={action === "login" ? "/signUp" : "/login"}>
+            <Link
+              ////////////////
+              onClick={() => {
+                localStorage.setItem("activePath", action)
+                window.dispatchEvent(new Event("activePathChanged"))
+              }
+              }
+              ////////////////
+              className="AA-custom-btn f-18 fw-400 AA-custom-btn AA-border-btn AA-bg-btn-gray-15 AA-a-btn-white" to={action === "login" ? "/signUp" : "/login"}>
               {action === "login" ? "Sign Up" : "Login"}
             </Link>
             <div className="AA-continue-p f-18">
