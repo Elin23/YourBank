@@ -1,4 +1,4 @@
-.currency-select {
+.currencySelect {
     display: flex;
     align-items: center;
     gap: 8.67px;
@@ -7,7 +7,7 @@
     line-height: 23.41px;
 }
 
-.currency-select .flag-img {
+.currencySelect .flagImg {
     width: 34.68px;
     height: 34.68px;
     object-fit: cover;
@@ -18,20 +18,20 @@
     justify-content: center;
 }
 
-.currency-select .flag-img img {
+.currencySelect .flagImg img {
     width: 100%;
     height: 100%;
     transform: scale(1.7);
 }
 
-.currency-dropdown {
+.currencyDropdown {
     background-color: transparent;
     color: var(--white-color);
     font-size: 15.61px;
     line-height: 23.41px;
     border: none;
 }
-.es-currency-name {
+.ES-currencyName {
     color: var(--offwhite-90-color);
     font-size: 13.87px;
     line-height: 20.81px;
@@ -50,55 +50,58 @@ select {
     padding: 0;
 }
 
-.currency-dropdown option {
+.currencyDropdown option {
     background-color: var(--gray15-color);
 }
+
+/*Start Responsive*/
 @media (max-width: 1919px) {
-    .currency-select {
+    .currencySelect {
         gap: 6.89px;
         font-size: 15.61px;
         line-height: 23.41px;
     }
-    .currency-dropdown{
+    .currencyDropdown{
         font-size: 12.4px;
         line-height: 18.59px;
     }
-    .es-currency-name {
+    .ES-currencyName {
         font-size: 11.02px;
         line-height: 16.53px;
     }
-    .currency-select .flag-img{
+    .currencySelect .flagImg{
         width: 27.62px;
         height: 27.47px;
     }
 }
 @media (max-width: 1200px){
-    .currency-select .flag-img {
+    .currencySelect .flagImg {
         width: 25px;
         height: 25px;
     }
 
-    .es-currency-name {
+    .ES-currencyName {
         font-size: 9px;
     }
 }
 @media (max-width: 540px){
-    .currency-select {
+    .currencySelect {
         gap: 5.13px;
     }
-    .currency-select .flag-img img {
+    .currencySelect .flagImg img {
         transform: scale(2);
     }
 
-    .es-currency-name {
+    .ES-currencyName {
         font-size: 8.2px;
         line-height: 12.31px;
         text-align: start;
     }
 
-    .currency-select .flag-img {
+    .currencySelect .flagImg{
         width: 20.57px;
         height: 20.57px;
     }
 
 }
+/*End Responsive*/

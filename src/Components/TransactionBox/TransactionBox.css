@@ -1,4 +1,4 @@
-.es-trans-box {
+.es-transBox {
     background-color: var(--black11-color);
     position: relative;
     border-radius: 10.4px;
@@ -9,7 +9,7 @@
     border: 0.87px solid var(--gray15-color);
 }
 
-.es-trans-box .es-icon {
+.es-transBox .es-icon {
     width: 38.15px;
     height: 38.15px;
     border-radius: 36.5px;
@@ -20,30 +20,30 @@
     background-color: var(--green60-color);
 }
 
-.es-tran-details {
+.es-transDetails {
     display: flex;
     flex-direction: column;
     color: var(--white-color);
 }
 
-.es-tran-details span:nth-child(1) {
+.es-transDetails span:nth-child(1) {
     font-size: 15.61px;
     line-height: 23.41px;
 }
 
-.es-tran-details span:nth-child(2) {
+.es-transDetails span:nth-child(2) {
     font-size: 17.34px;
     line-height: 26.01px;
 }
 
-.es-trans-box .es-trans-box-left {
+.es-transBox .es-transBoxLeft {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 8.67px;
 }
 
-.es-trans-box .es-trans-box-right {
+.es-transBox .es-transBoxRight {
     color: var(--white-color);
     font-size: 20.81px;
     line-height: 31.21px;
@@ -74,39 +74,39 @@
 
 @media (max-width: 1919px) {
     
-    .es-your-trans .es-trans-box {
+    .es-transBox {
         border-radius: 8.26px;
         border-width: 0.69px;
         padding: 11.02px 0 11.02px 16.35px;
     }
 
-    .es-your-trans .es-trans-box .es-icon {
+    .es-transBox .es-icon {
         width: 30.35px;
         height: 30.35px;
         border-radius: 36.5px;
         padding: 6.89px;
     }
 
-    .es-trans-box .es-icon img {
+    .es-transBox .es-icon img {
         width: 13.26px;
         height: 13.19px;
     }
 
-    .es-tran-details span:nth-child(1) {
+    .es-transDetails span:nth-child(1) {
         font-size: 12.4px;
         line-height: 18.59px;
     }
 
-    .es-tran-details span:nth-child(2) {
+    .es-transDetails span:nth-child(2) {
         font-size: 13.77px;
         line-height: 20.66px;
     }
 
-    .es-trans-box .es-trans-box-left {
+    .es-transBox .es-transBoxLeft {
         gap: 6.89px;
     }
 
-    .es-trans-box .es-trans-box-right {
+    .es-transBox .es-transBoxRight {
         font-size: 16.53px;
         line-height: 24.79px;
         padding-right: 16.53px;
@@ -143,39 +143,39 @@
     }
 }
 @media (max-width: 540px)  {
-    .es-hero-right-content .es-your-trans .es-trans-box {
+    .es-transBox {
         border-radius: 6.15px;
         border-width: 0.51px;
         padding: 8.2px 0 8.2px 12.31px;
     }
 
-    .es-hero-right-content .es-your-trans .es-trans-box .es-icon {
+    .es-transBox .es-icon {
         width: 22.6px;
         height: 22.6px;
         border-radius: 27.18px;
         padding: 5.13px;
     }
 
-    .es-hero-right-content .es-trans-box .es-icon img {
+    .es-transBox .es-icon img {
         width: 9.82px;
         height: 9.82px;
     }
 
-    .es-hero-right-content .es-tran-details span:nth-child(1) {
+    .es-transDetails span:nth-child(1) {
         font-size: 9.23px;
         line-height: 13.85px;
     }
 
-    .es-hero-right-content .es-tran-details span:nth-child(2) {
+    .es-transDetails span:nth-child(2) {
         font-size: 10.26px;
         line-height: 15.38px;
     }
 
-    .es-trans-box .es-trans-box-left {
+    .es-transBox .es-transBoxLeft {
         gap: 5.13px;
     }
 
-    .es-trans-box .es-trans-box-right {
+    .es-transBox .es-transBoxRight {
         font-size: 12.31px;
         line-height: 18.46px;
         padding-right: 12.31px;

@@ -25,16 +25,16 @@ export default function HeroComponent() {
 
   // function to fetch the exchange rate and update the result
   const getExchangeRate = async () => {
-    const API_KEY = import.meta.env.VITE_API_KEY;
+    const API_KEY = import.meta.env.VITE_API_KEY; // Load API key from environment variables
     const API_URL = `https://v6.exchangerate-api.com/v6/${API_KEY}/pair/${fromCurrency}/${toCurrency}`;
-
+    
     setIsLoading(true);
     try {
       const response = await fetch(API_URL);
       if (!response.ok) throw Error("Something went wrong!");
       const data = await response.json();
-      const numericAmount = parseFloat(amount);
-      const rate = (data.conversion_rate * numericAmount).toFixed(2);
+      const numericAmount = parseFloat(amount); // Convert amount to number
+      const rate = (data.conversion_rate * numericAmount).toFixed(2); // Calculate exchange result
       setResult(`${rate}`)
     } catch (error) {
       console.log(error);
@@ -62,9 +62,10 @@ export default function HeroComponent() {
       const updatedUser = JSON.parse(localStorage.getItem('user'));
       setIsLogin(updatedUser);
     };
-
+    // Listen for custom login status change events
     window.addEventListener('loginStatusChanged', handleLoginStatusChange);
 
+    //  Cleanup event listener on component unmount
     return () => {
       window.removeEventListener('loginStatusChanged', handleLoginStatusChange);
     };
@@ -72,14 +73,14 @@ export default function HeroComponent() {
 
   return (
     <>
-      <div className='es-hero-container px-162 pb-150'>
+      <div className='es-heroContainer px-162 pb-150'>
          {/* Left Section */}
-        <div className='es-hero-left-content' data-aos="zoom-in" data-aos-duration="2000">
-          <div className='es-sub-title'>
+        <div className='es-heroLeftContent' data-aos="zoom-in" data-aos-duration="2000">
+          <div className='es-subTitle'>
             <img src={tickIcon} alt="tick-icon" />
             <span className='fw-300'>No LLC Required, No Credit Check.</span>
           </div>
-          <div className="es-main-title">
+          <div className="es-mainTitle">
             <TitleComponent
               title="Welcome to YourBank Empowering Your Financial Journey"
               desc="At YourBank, our mission is to provide comprehensive banking solutions that empower individuals and businesses to achieve their financial goals. We are committed to delivering personalized and innovative services that prioritize our customers' needs."
@@ -87,30 +88,30 @@ export default function HeroComponent() {
               fw={false}
             />
           </div>
-          {!isLogin && (
-            <div className="es-hero-btn f-18">
+          {!isLogin && ( // Show "Open Account" button only if not logged in
+            <div className="es-heroBtn f-18">
               <Link to='/signUp'>Open Account</Link>
             </div>
           )}
 
         </div>
 
-         {/* Right Section */}
-        <div className="es-right-side" data-aos="zoom-in" data-aos-duration="2000">
+         {/* Right Section: Contains transaction and exchange-related features*/}
+        <div className="es-rightSide" data-aos="zoom-in" data-aos-duration="2000">
            {/* Monthly Income Section */}
-          <div className="es-monthly-income">
+          <div className="es-monthlyIncome">
             <div className="es-icon">
               <img src={plus} alt="plus Icon" />
             </div>
-            <div className="es-plus-info">
+            <div className="es-plusInfo">
               <span className='fw-400'>+ $5000,00</span>
               <span className='fw-300'>Monthly Income</span>
             </div>
           </div>
-          <div className='es-hero-right-content'>
+          <div className='es-heroRightContent'>
             <div className='bg-img' alt="imgScreen" />
             {/* Transactions Section */}
-            <div className="es-your-trans">
+            <div className="es-yourTrans">
               <h4 className='fw-500'>Your Transactions</h4>
               {[
                 { name: "Joel Kenley", amount: "-$68.00", opacityClass: "op-100" },
@@ -127,41 +128,41 @@ export default function HeroComponent() {
             </div>
 
             {/* Exchange Form */}
-            <form className="exchange converter-form" onSubmit={handleFormSubmit}>
+            <form className="exchange converterForm" onSubmit={handleFormSubmit}>
               <h4 className='fw-500'>Money Exchange</h4>
-              <div className="es-exchange-box">
-                <div className="es-mini-box">
+              <div className="es-exchangeBox">
+                <div className="es-miniBox">
                   <div className='es-upper'>
                     <CurrencySelect
                       selectedCurrency={fromCurrency}
-                      handleCurrency={e => setFromCurrency(e.target.value)}
+                      handleCurrency={e => setFromCurrency(e.target.value)} // Update selected currency
                     />
                   </div>
-                  <div className="es-currency-value">
+                  <div className="es-currencyValue">
                     <input
                       type="text"
-                      className="form-input"
+                      className="formInput"
                       value={amount}
                       onChange={e => setAmount(e.target.value)}
                       required
                     />
                   </div>
                 </div>
-                <div className="es-mini-box">
+                <div className="es-miniBox">
                   <div className='es-upper'>
                     <CurrencySelect
                       selectedCurrency={toCurrency}
                       handleCurrency={e => setToCurrency(e.target.value)}
                     />
                   </div>
-                  <div className="es-currency-value exchange-rate-result">
-                    {isLoading ? '0.00' : result}
+                  <div className="es-currencyValue exchange-rate-result">
+                    {isLoading ? '0.00' : result} {/* Display result or loading state */}
                   </div>
                 </div>
               </div>
               <button
                 type="submit"
-                className={`exchange-btn submit-button fw-400 ${isLoading ? "loading" : ""}`}
+                className={`exchangeBtn submit-button fw-400 ${isLoading ? "loading" : ""}`}
                 disabled={isLoading}
               >
                 {isLoading ? 'Loading...' : 'Exchange'}
@@ -170,17 +171,17 @@ export default function HeroComponent() {
           </div>
 
           {/* Supported Currency Section */}
-          <div className="es-supported-currency">
-            <div className="es-supported-currency-container">
+          <div className="es-supportedCurrency">
+            <div className="es-supportedCurrencyContainer">
               <span className='fw-400'>Supported Currency</span>
-              <div className="es-currency-icons">
+              <div className="es-currencyIcons">
                 {[
                   { src: DollarSign, alt: "Dollar Sign" },
                   { src: EuroSign, alt: "Euro Sign" },
                   { src: Bitcoin, alt: "Bitcoin sign" },
                   { src: ethereum, alt: "ethereum sign" }
                 ].map((currency, index) => (
-                  <div className="es-currency-img" key={index}>
+                  <div className="es-currencyImg" key={index}>
                     <img src={currency.src} alt={currency.alt} />
                   </div>
                 ))}
