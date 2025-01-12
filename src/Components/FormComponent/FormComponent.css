@@ -363,7 +363,7 @@
 }
 
 /**tablet**/
-@media (max-width: 993px) {
+@media (max-width: 1200px) {
     .AA-form-section {
         padding-top: 138px;
     }
@@ -372,6 +372,10 @@
     .AA-form-section .AA-form-container .AA-form-container-bg .AA-inputs-row {
         flex-wrap: wrap;
         gap: 20px;
+        width: 100%;
+    }
+
+    .AA-form-section .AA-form-container .AA-form-container-bg .AA-custom-btn {
         width: 100%;
     }
 }
@@ -441,7 +445,6 @@
 
     /**style btn (login - signup) in form **/
     .AA-form-section .AA-form-container .AA-form-container-bg .AA-custom-btn {
-        width: 100%;
         margin-bottom: 8.0536%;
     }
 }

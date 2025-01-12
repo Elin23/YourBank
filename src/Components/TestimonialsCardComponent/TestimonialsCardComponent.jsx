@@ -5,15 +5,18 @@ import './TestimonialsCardComponent.css'
 export default function TestimonialsCardComponent({data}) {
   return (
     <>
+        {/* left shadow for card in small screen */}
         <div className="AA-left-shadow-card" />
-        <div className="AA-Testimony-Card" data-aos="zoom-in">
-
-            <div className="AA-pb-50">
-              <img src={image} alt="icon"/>
+        {/* start card testimony*/}
+        <div className="AA-testimony-card" data-aos="zoom-in">
+            <div className="AA-icon-container">
+              <img className="AA-icon" src={image} alt="icon"/>
             </div>
-            <p className="f-18 fw-400 AA-pb-50 AA-m-0">{data.opinion}</p>
-            <span className="f-18 fw-500">{data.userName}</span>
+            <p className="AA-card-desc f-18 fw-400">{data.opinion}</p>
+            <span className="AA-card-name AA-f-18 fw-500">{data.userName}</span>
         </div>
+        {/* end card testimony*/}
+        {/* right shadow for card in small screen */}
         <div className="AA-right-shadow-card" />
       </>
 
