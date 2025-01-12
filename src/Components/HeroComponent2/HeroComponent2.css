@@ -82,6 +82,7 @@
     margin-top: 23px;
 }
 
+/* media  */
 @media (max-width: 1919px) {
 
     .Af-HeroComponent2-heading .title,
@@ -114,14 +115,11 @@
     .Af-HeroComponent2-heading {
         padding: 5%;
         margin-right: -174px;
-        margin-top: -1px;
     }
 
     .Af-HeroComponent2-heading-about {
         padding: 4.52%;
         margin-right: -174px;
-        margin-top: -1px;
-
     }
 
     .Af-HeroComponent2 img {
@@ -179,8 +177,6 @@
         width: 100%;
         height: 550px;
     }
-
-
 }
 
 @media (max-width: 768px) {
@@ -236,7 +232,8 @@
         margin-top: 14px;
 
     }
-    .Af-HeroComponent2-father{
+
+    .Af-HeroComponent2-father {
         padding-left: 4.10%;
         padding-right: 4.10%;
     }
@@ -245,7 +242,6 @@
 @media (max-width: 389px) {
     .Af-HeroComponent2 {
         width: 290px;
-        margin: 0 auto;
         padding: 10px;
     }
 

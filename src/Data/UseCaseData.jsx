@@ -9,7 +9,7 @@ import icon8 from "../assets/imgs/Home_icons/Subtract.png";
 
 export let UseCaseData = [
     {
-        properities : [
+        properities: [
             {
                 icon: icon1,
                 desc: "Managing Personal Finances"
@@ -26,24 +26,24 @@ export let UseCaseData = [
                 icon: icon4,
                 desc: "Education Funding"
             }],
-        heading :{
-            title:"For Individuals",
+        heading: {
+            title: "For Individuals",
             desc: "For individuals, our mortgage services pave the way to homeownership, and our flexible personal loans provide vital support during various life milestones. We also prioritize retirement planning, ensuring a financially secure future for our customers"
         },
-        rating:[
+        rating: [
             {
-                desc:'Secure Retirement Planning'
+                desc: 'Secure Retirement Planning'
             },
             {
-                desc:'Manageable Debt Consolidation'
+                desc: 'Manageable Debt Consolidation'
             },
             {
-                desc:'Reducing financial burdens'
+                desc: 'Reducing financial burdens'
             }
         ]
     },
     {
-        properities : [
+        properities: [
             {
                 icon: icon5,
                 desc: "Startups and Entrepreneurs"
@@ -61,21 +61,21 @@ export let UseCaseData = [
                 desc: "Payment Solutions"
             }
         ],
-        heading :{
-            title:"For Business",
+        heading: {
+            title: "For Business",
             desc: " For businesses, we empower growth with working capital solutions that optimize cash flow, and our tailored financing options fuel business expansion. Whatever your financial aspirations, YourBank is committed to providing the right tools and support to achieve them"
         },
-        rating:[
+        rating: [
             {
-                desc:'Cash Flow Management'
+                desc: 'Cash Flow Management'
             },
             {
-                desc:'Drive Business Expansion'
+                desc: 'Drive Business Expansion'
             },
             {
-                desc:'Streamline payroll processing'
+                desc: 'Streamline payroll processing'
             }
         ]
     }
-    
-    ]
+
+]
