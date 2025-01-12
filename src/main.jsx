@@ -4,11 +4,11 @@ import { HashRouter } from 'react-router-dom';
 import './index.css'
 import App from './App.jsx'
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { BrowserRouter } from 'react-router-dom'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <HashRouter>
+    {/* Note: I used HashRouter because it's the only way to make the app work on github pages without 404 errors */}
+    <HashRouter> 
       <App />
     </HashRouter>
   </React.StrictMode>

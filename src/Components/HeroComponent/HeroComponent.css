@@ -4,7 +4,6 @@
     flex-wrap: wrap;
     gap: 7.5%;
     padding-top: 10.3125%;
-    /* height: 100%; */
     overflow: hidden;
     background-color: var(--black10-color);
 }
@@ -679,7 +678,9 @@
         margin-top: 12px;
         margin-bottom: 30px;
     }
-
+    .es-hero-left-content .es-main-title .desc{
+        margin-bottom: 0;
+    }
     .es-hero-right-content::after {
         /* width: 220px;
         height: 201px; */
@@ -788,7 +789,6 @@
         border-radius: 41.02px;
         margin-right: -20px;
     }
-
     .es-hero-container .es-supported-currency .es-currency-icons {
         gap: 4.1px;
         margin: 5.13px 5.13px 5.13px 0;

@@ -20,13 +20,9 @@
 
 .custom-confirm-btn {
   background-color: var(--green60-color);
-  color: var(--light-green-97-color);
+  color: var(--black11-color);
   font-size: 20px;
   padding: 5px 20px;
-}
-
-.custom-confirm-btn:hover {
-  background-color: var(--green65-color);
 }
 
 .swal2-image {
@@ -34,14 +30,18 @@
   width: 100px !important;
 }
 
-@keyframes bounce {
-  0%, 20%, 50%, 80%, 100% {
-    transform: translateY(0);
+@keyframes bounceIn {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
   }
-  40% {
-    transform: translateY(-20px);
+
+  80% {
+    transform: scale(1.1);
+    opacity: 1;
   }
-  60% {
-    transform: translateY(-10px);
+
+  100% {
+    transform: scale(1);
   }
 }
