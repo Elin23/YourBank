@@ -232,7 +232,7 @@
     }
 
     .OurBenefitsCardDescription {
-        /* max-width: 310px; */
+        width: 100.64% !important;
         font-size: 14px;
         line-height: 21px;
     }
@@ -244,6 +244,11 @@
 
     .hw-dashed-lines-hr {
         width: 358px
+    }
+    .hw-OurBenefitsCardHeading .Af-img-father {
+        width: 72px;
+        height: 72px;
+        padding: 6px;
     }
 }
 

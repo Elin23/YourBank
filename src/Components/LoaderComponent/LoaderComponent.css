@@ -1,4 +1,4 @@
-.loaderCOmponent{
+.loaderComponent{
     width: 100%;
     height: 100vh;
     display: flex;
@@ -7,7 +7,7 @@
     flex-direction: column;
     gap: 50px;
     position: relative;
-    background-color: #000000bb;
+    background-color: var(--black10-color);
     z-index: 1000;
     position: fixed;
     top: 0;
