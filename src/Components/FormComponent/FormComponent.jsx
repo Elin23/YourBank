@@ -273,10 +273,19 @@ export default function FormComponent({ action }) {
             ) : (
               <div className="AA-pb-40"></div>
             )}
-            <button type="submit" className={`AA-custom-btn f-18 fw-400 ${true ? "AA-bg-btn-green-60" : "AA-border-btn AA-bg-btn-gray-15"}`}>
+            <button type="submit"
+              className={`AA-custom-btn f-18 fw-400 ${true ? "AA-bg-btn-green-60" : "AA-border-btn AA-bg-btn-gray-15"}`}>
               {action === "login" ? "Login" : "Sign Up"}
             </button>
-            <Link className="AA-custom-btn f-18 fw-400 AA-custom-btn AA-border-btn AA-bg-btn-gray-15 AA-a-btn-white" to={action === "login" ? "/signUp" : "/login"}>
+            <Link
+              ////////////////
+              onClick={() => {
+                localStorage.setItem("activePath", action)
+                window.dispatchEvent(new Event("activePathChanged"))
+              }
+              }
+              ////////////////
+              className="AA-custom-btn f-18 fw-400 AA-custom-btn AA-border-btn AA-bg-btn-gray-15 AA-a-btn-white" to={action === "login" ? "/signUp" : "/login"}>
               {action === "login" ? "Sign Up" : "Login"}
             </Link>
             <div className="AA-continue-p f-18">
