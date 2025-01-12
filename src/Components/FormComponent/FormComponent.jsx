@@ -19,6 +19,14 @@ export default function FormComponent({ action }) {
     email: "",
     password: ""
   });
+
+  const [messages, setMessages] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    password: ""
+  });
+
   const [icon, setIcon] = useState("show");
   const [type, setType] = useState("password");
 
@@ -43,18 +51,10 @@ export default function FormComponent({ action }) {
     },
   });
 
-  const [messages, setMessages] = useState({
-    firstName: "",
-    lastName: "",
-    email: "",
-    password: ""
-  });
-
   // password regexthe
   // password is 8 or more characters long ((?=.{8,})),
   // password has at least one uppercase letter ((?=.*[A-Z])),
   // password has at least one lowercase letter ((?=.*[a-z])) and contains at least one digit ((?=.*[0-9])).
-
   const passwordRegex = /(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.{8,})/;
   // email regex
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -125,20 +125,22 @@ export default function FormComponent({ action }) {
             icon: 'error',
             title: "Oops! The username or password you entered doesn't match our records. Please double-check and try again.",
           });
-        } else {
-          //login successfully
+        } else { //login successfully
+          //save name of user + api token in local storage to check user login or not 
           localStorage.setItem("isLogin", JSON.stringify(true));
           localStorage.setItem("user", JSON.stringify({
-            userName: user.firstName + " " + user.lastName, //add
+            userName: user.firstName + " " + user.lastName, 
             email: user.email,
             token: "api token",
           })); 
           localStorage.setItem("isVisible", true);
           window.dispatchEvent(new Event('StatusVisibleChanged'));
+          //show welcome message       
           Toast.fire({
             icon: 'success',
             title: "Welcome back, " + user.firstName + " " + user.lastName + "! You have successfully logged in. Enjoy your experience.",
           });
+          //redirecte to home page
           navigate('/');
         }
     }
@@ -172,23 +174,27 @@ export default function FormComponent({ action }) {
           });
         } else {
           //save user data  
-          console.log(users);          
           users.push(state);
+          //save email + password + name in db (local storage users array)
           localStorage.setItem("users", JSON.stringify(users));
+          //for showing git (50$) for new user register in website
           localStorage.setItem("isNewUser", "true");
           window.dispatchEvent(new Event('StatusChanged'));
           localStorage.setItem("isVisible", true);
           window.dispatchEvent(new Event('StatusVisibleChanged'));
+          //save name of user + api token in local storage to check user login or not 
           localStorage.setItem("isLogin", JSON.stringify(true));
           localStorage.setItem("user", JSON.stringify({
-            userName: state.firstName + " " + state.lastName, //add
+            userName: state.firstName + " " + state.lastName,
             email: state.email,
             token: "api token",
-          }));        
+          })); 
+          //show welcome message       
           Toast.fire({
             icon: 'success',
             title: "Welcome to YourBank " + state.firstName + " " + state.lastName,
           });
+          //redirecte to home page
           navigate('/');
         }       
       }
@@ -213,15 +219,18 @@ export default function FormComponent({ action }) {
               <div className="AA-inputs-row AA-input-pb">
                 {/* firstName and lastName inputs */}
                 {["firstName", "lastName"].map((field) => (
-                  <div className="AA-input-Fields AA-input-group" key={field}>
-                    <input
-                      id={field}
-                      className="AA-input f-18 fw-300"
-                      placeholder={`Enter ${field.charAt(0).toUpperCase() + field.slice(1)}`}
-                      value={state[field]}
-                      onChange={handleInputChange}
-                      required
-                    />
+                  <div className="AA-input-Fields" key={field}>
+                    <div className=" AA-input-group">
+                      <input
+                        id={field}
+                        className="AA-input f-18 fw-300"
+                        placeholder={`Enter ${field.charAt(0).toUpperCase() + field.slice(1)}`}
+                        value={state[field]}
+                        onChange={handleInputChange}
+                        required
+                      />
+                    </div>
+                    {/* error message */}
                     <p className={`AA-error ${messages[field].length === 0 ? "AA-hide" : "AA-show"}`}>
                       {messages[field]}
                     </p>
@@ -231,16 +240,19 @@ export default function FormComponent({ action }) {
             )}
             <div className="AA-inputs-row">
               {/* email input */}
-              <div className="AA-input-Fields AA-input-group">
-                <input
-                  id="email"
-                  type="email"
-                  className="AA-input f-18 fw-300"
-                  placeholder="Enter your Email"
-                  value={state.email}
-                  onChange={handleInputChange}
-                  required
-                />
+              <div className="AA-input-Fields">
+                <div className="AA-input-group">
+                  <input
+                    id="email"
+                    type="email"
+                    className="AA-input f-18 fw-300"
+                    placeholder="Enter your Email"
+                    value={state.email}
+                    onChange={handleInputChange}
+                    required
+                  />
+                </div>
+                {/* error message */}
                 <p className={`AA-error ${messages.email.length === 0 ? "AA-hide" : "AA-show"}`}>
                   {messages.email}
                 </p>
@@ -261,6 +273,7 @@ export default function FormComponent({ action }) {
                     <i className={`eye-icon ${icon === "show" ? "fa-solid fa-eye" : "fa-regular fa-eye-slash"}`}></i>
                   </span>
                 </div>
+                {/* error message */}
                 <p className={`AA-error ${messages.password.length === 0 ? "AA-hide" : "AA-show"}`}>
                   {messages.password}
                 </p>
@@ -273,12 +286,13 @@ export default function FormComponent({ action }) {
             ) : (
               <div className="AA-pb-40"></div>
             )}
-            <button type="submit" className={`AA-custom-btn f-18 fw-400 ${true ? "AA-bg-btn-green-60" : "AA-border-btn AA-bg-btn-gray-15"}`}>
+            <button type="submit" className={`AA-custom-btn f-18 fw-400 AA-bg-btn-green-60`}>
               {action === "login" ? "Login" : "Sign Up"}
             </button>
-            <Link className="AA-custom-btn f-18 fw-400 AA-custom-btn AA-border-btn AA-bg-btn-gray-15 AA-a-btn-white" to={action === "login" ? "/signUp" : "/login"}>
+            <Link className="AA-custom-btn f-18 fw-400 AA-custom-btn AA-bg-btn-gray-15 AA-btn-white" to={action === "login" ? "/signUp" : "/login"}>
               {action === "login" ? "Sign Up" : "Login"}
             </Link>
+            {/* login socials btn */}
             <div className="AA-continue-p f-18">
               <p>Or Continue with</p>
             </div>

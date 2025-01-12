@@ -128,11 +128,10 @@
     gap: 30px;
 }
 
-/***style password input **/
+/***style input with inside icon **/
 .AA-form-section .AA-form-container .AA-form-container-bg .AA-input-group {
     width: 100%;
     position: relative;
-    display: inline-block;
 }
 
 .AA-form-section .AA-form-container .AA-form-container-bg .eye-icon {
@@ -176,10 +175,10 @@
 
 .AA-bg-btn-gray-15 {
     background: var(--gray15-color);
-    border: 1px solid var(--gray20-color);
+    border: 1px solid var(--gray20-color) !important;
 }
 
-.AA-a-btn-white {
+.AA-btn-white {
     color: var(--white-color);
 }
 
