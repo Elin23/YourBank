@@ -114,11 +114,11 @@ export default function NavBarComponent() {
                 key={index}
                 className="f-18">
                 <NavLink
-                  to={item.path}
-                  end
-                  className={({ isActive }) => (isActive ? "active-link" : "")}
-                  onClick={() => setMenuOpen(false)}
-                >
+                    to={item.path} end
+                    className={({ isActive }) => (isActive || activeLink == item.path ? "active-link" : "")}
+                    onClick={() => (setMenuOpen(!menuOpen), setActiveBtn(activeBtn === "sign up" ? "login" : "login")
+                    )}
+                  >
                   {item.name}
                 </NavLink>
 
