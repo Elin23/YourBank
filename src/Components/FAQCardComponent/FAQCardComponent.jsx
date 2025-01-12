@@ -1,6 +1,6 @@
 import "./FAQCardComponent.css";
 
-export default function FAQCardComponent({ Qustion, Answer, index }) {
+export default function FAQCardComponent({ Question, Answer, index }) {
   return (
     <>
       {/* Container for the FAQ card */}
@@ -11,7 +11,7 @@ export default function FAQCardComponent({ Qustion, Answer, index }) {
           data-aos="fade-up"
           data-aos-delay={(index || 0) * 200}
         >
-          {Qustion}
+          {Question}
         </span>
 
         {/* Divider line between the question and answer */}

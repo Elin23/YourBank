@@ -36,7 +36,7 @@ export default function FAQSectionComponent() {
             {displayedFAQs.map((data, index) => (
               <FAQCardComponent
                 key={index}
-                Qustion={data.Qustion}
+                Question={data.Question}
                 Answer={data.Answer}
               />
             ))}
