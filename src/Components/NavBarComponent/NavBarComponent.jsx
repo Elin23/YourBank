@@ -79,7 +79,7 @@ export default function NavBarComponent() {
 //handle the footer Links Navigation
   useEffect(() => {
     const handleActivePathChange = () => {
-      const activePath = JSON.parse(localStorage.getItem('activePath'));
+      const activePath = localStorage.getItem('activePath');
       setActiveLink(activePath);
     };
 
