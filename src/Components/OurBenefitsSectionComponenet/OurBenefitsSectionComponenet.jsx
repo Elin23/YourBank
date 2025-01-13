@@ -1,12 +1,14 @@
-import React from 'react'
-import './OurBenefitsSectionComponenet.css'
-import TitleComponent from '../TitleComponent/TitleComponent'
-import OurBenefitsCardComponent from '../OurBenefitsCardComponent/OurBenefitsCardComponent'
-import {exportedData} from './../../Data/OurBenefitsCardData'
+import React from "react";
+import "./OurBenefitsSectionComponenet.css";
+import TitleComponent from "../TitleComponent/TitleComponent";
+import OurBenefitsCardComponent from "../OurBenefitsCardComponent/OurBenefitsCardComponent";
+import { exportedData } from "./../../Data/OurBenefitsCardData";
 
 export default function OurBenefitsSectionComponenet() {
   return (
     <section className="HW-OurBenefitsComponent px-162 pb-150">
+      {/* Display the section title and description */}
+
       <div className="title-head">
         <TitleComponent
           title={"Our Benefits"}
@@ -17,6 +19,7 @@ export default function OurBenefitsSectionComponenet() {
           fw={false}
         />
       </div>
+      {/* Render the cards */}
       <div className="HW-OurBenefitsCardsContainer">
           <div className="hw-OurBenefitsCardsRow">
             <OurBenefitsCardComponent left={true} data={exportedData[0]} />
