@@ -50,7 +50,7 @@
   align-items: center;
   font-family: "Inter", serif;
   position: relative;
-  z-index: 10000000;
+  z-index: 101;
   transition: all 0.5s;
 }
 
