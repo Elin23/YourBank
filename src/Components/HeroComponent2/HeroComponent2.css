@@ -42,7 +42,7 @@
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 80px;
     margin-right: -260px;
-    margin-top: -1px;
+    margin-top: -2px;
 }
 
 .Af-About-h4 {
@@ -58,7 +58,12 @@
     font-weight: 500 !important;
     line-height: 75.4px !important;
     margin-bottom: 0px;
-    animation: ghostEffect 3s infinite;
+    animation: moveGradient 5s infinite linear;
+    background: linear-gradient(90deg, #caff33, #E4E4E7, #d8ff66, #fff);
+    background-size: 200%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
 
 
     span {
@@ -162,7 +167,7 @@
 
     .Af-HeroComponent2-heading,
     .Af-HeroComponent2-heading-about {
-        width: 92.15%;
+        width: 100%;
         margin-right: 0;
         margin-top: -50px;
         border-radius: 20px;
@@ -271,5 +276,15 @@
     .Af-HeroComponent2-heading .desc,
     .Af-HeroComponent2-heading-about .desc {
         font-size: 12px !important;
+    }
+}
+
+@keyframes moveGradient {
+    0% {
+        background-position: 200% 0;
+    }
+
+    100% {
+        background-position: -200% 0;
     }
 }

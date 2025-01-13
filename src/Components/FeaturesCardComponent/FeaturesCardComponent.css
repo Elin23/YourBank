@@ -5,6 +5,7 @@
   border: 1px solid var(--gray15-color);
   background-color: var(--black11-color);
 }
+
 .ET-cardTitle {
   display: flex;
   justify-content: space-between;
@@ -28,7 +29,9 @@
   margin-bottom: 0;
 }
 
+/* start responsive */
 
+/* figma design */
 @media (max-width: 1919px) {
   .featuresCard {
     width: 49.014%;
@@ -63,6 +66,7 @@
   }
 }
 
+/* figma design */
 @media (max-width: 768px) {
   .featuresCard {
     padding: 29.34px;

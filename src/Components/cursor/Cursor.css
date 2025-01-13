@@ -3,8 +3,14 @@ body {
 }
 
 
-button, button a, a, i, .hw-fotIconConta, .open-nav-btn,
-.close-nav-btn, select {
+button,
+button a,
+a,
+i,
+.hw-fotIconConta,
+.openNavBtn,
+.closeNavBtn,
+select {
     cursor: url('../../assets/imgs/Mouse-Pointer.png'), auto !important;
 }
 

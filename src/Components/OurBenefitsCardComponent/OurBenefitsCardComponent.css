@@ -204,6 +204,15 @@
     }
 }
 
+@media (max-width: 992px){
+    .hw-OurBenefitsCard {
+        width: 100%;
+    }
+    .OurBenefitsCardDescription{
+        width: 100% !important;
+    }
+}
+
 @media (max-width:768px) {
 
     .hw-roundedCardRight,
@@ -223,7 +232,7 @@
     }
 
     .OurBenefitsCardDescription {
-        max-width: 310px;
+        /* max-width: 310px; */
         font-size: 14px;
         line-height: 21px;
     }

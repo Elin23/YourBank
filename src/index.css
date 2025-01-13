@@ -156,10 +156,11 @@
 
 /** start style sweet Alert Model **/
 .swal2-modal{
-  background-color: var(--black11-color);   
+  background-color: var(--black11-color) !important;   
   border: 5px var(--gray15-color) solid;
   border-radius: 14px; 
 }
+
 
 .swal2-html-container, .swal2-title{
   color: white !important;
@@ -202,9 +203,13 @@ div:where(.swal2-icon).swal2-question{
   }
 }
 
-@media (max-width: 993px) {
+@media (max-width: 992px) {
   .swal2-html-container, .swal2-title{
     font-size: 1.5em;
+  }
+  .px-162 {
+      padding-left: 7.459677419354839%;
+      padding-right: 7.459677419354839%;
   }
 }
 

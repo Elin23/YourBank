@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./ScrollToTop.css";
-import { FaArrowUp } from "react-icons/fa";
+import { IoMdArrowUp } from "react-icons/io";
 
 export default function ScrollToTop() {
   const [isVisible, setIsVisible] = useState(false);
@@ -27,7 +27,7 @@ export default function ScrollToTop() {
       onClick={scrollToTop}
       className={`MR-scroll-to-top ${isVisible ? "MR-Scroll-show" : ""}`}
     >
-      <FaArrowUp className="MR-ScrollArrow" />
+      <IoMdArrowUp className="MR-ScrollArrow" />
     </button>
   );
 }

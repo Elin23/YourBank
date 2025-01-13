@@ -92,6 +92,8 @@
     .hw-OurBenefitsCardsRow {
         gap: 24px;
         flex-direction: column;
+        width: 100%;
+
     }
 
     .hw-dashed-lines-vr {
@@ -108,11 +110,11 @@
     }
 
     .hw-dashed-lines-vr {
-        width: 590px;
+        width: 100%;
         height: 2px;
     }
 
     .hw-dashed-lines-hr {
-        width: 590px
+        width: 100%
     }
 }

@@ -12,10 +12,12 @@ export default function MissionVisionCardComponent({ reverse }) {
       data-aos-delay={reverse ? '100' : '500'}
     >
       <div className="mission-vision-img" data-aos="flip-left" data-aos-delay="500">
-        <img
-          src={exportedMissionVisionCardData[index].img}
-          alt={exportedMissionVisionCardData[index].alt}
-        />
+        <div className="img-container">
+          <img
+            src={exportedMissionVisionCardData[index].img}
+            alt={exportedMissionVisionCardData[index].alt}
+          />
+        </div>
       </div>
 
       <div className="content" data-aos="zoom-in">

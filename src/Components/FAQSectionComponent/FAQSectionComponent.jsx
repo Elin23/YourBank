@@ -35,7 +35,7 @@ export default function FAQSectionComponent() {
       />
 
       <div className="MR-FAQ-card-container">
-        <div className={`${isVisible ? "MR-FAQ-ExpandedGap" : ""}`}>
+        <div className={`${isVisible ? "MR-FAQ-ExpandedgGap" : ""}`}>
           <div>
             {/* upper FAQs Cards*/}
             <div className="MR-Upper-FAQ-Card ">
