@@ -1,28 +1,28 @@
-.features-card {
+.featuresCard {
   width: 48.8%;
   padding: 49.34px;
   border-radius: 12px;
   border: 1px solid var(--gray15-color);
   background-color: var(--black11-color);
 }
-.et-card-title {
+.ET-cardTitle {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.et-card-title span {
+.ET-cardTitle span {
   font-size: 22px;
   line-height: 33px;
   color: var(--white-color);
   transition: .3s ease-in-out;
 }
 
-.features-card:hover .et-card-title span {
+.featuresCard:hover .ET-cardTitle span {
   color: var(--green60-color);
 }
 
-.features-card p {
+.featuresCard p {
   color: var(--gray70-color);
   margin-top: 30px;
   margin-bottom: 0;
@@ -30,21 +30,21 @@
 
 
 @media (max-width: 1919px) {
-  .features-card {
+  .featuresCard {
     width: 49.014%;
     padding: 39.34px;
   }
 
-  .et-card-title span {
+  .ET-cardTitle span {
     font-size: 18px;
     line-height: 27px;
   }
 
-  .et-card-title img {
+  .ET-cardTitle img {
     width: 24px;
   }
 
-  .features-card p {
+  .featuresCard p {
     font-size: 16px;
     line-height: 24px;
     margin-top: 24px;
@@ -52,28 +52,28 @@
 }
 
 @media (max-width: 1439px) {
-  .features-card {
+  .featuresCard {
     width: 48.014%;
   }
 }
 
 @media (max-width: 992px) {
-  .features-card {
+  .featuresCard {
     width: 100%;
   }
 }
 
 @media (max-width: 768px) {
-  .features-card {
+  .featuresCard {
     padding: 29.34px;
   }
 
-  .et-card-title span {
+  .ET-cardTitle span {
     font-size: 18px;
     line-height: 27px;
   }
 
-  .features-card p {
+  .featuresCard p {
     font-size: 14px;
     line-height: 21px;
     margin-top: 20px;

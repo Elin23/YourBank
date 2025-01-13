@@ -1,7 +1,9 @@
+/* Removes the bottom margin of the description text inside the section container */
 .MR-SectionContiner .desc {
   margin-bottom: 0;
 }
 
+/* Main container styling for the section */
 .MR-SectionContiner {
   background-color: var(--black10-color);
   display: flex;

@@ -1,8 +1,8 @@
-.press-releases {
+.pressReleases {
   background-color: var(--black10-color);
 }
 
-.press-cards {
+.pressCards {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -12,35 +12,35 @@
 
 /* figma design */
 @media (max-width: 1919px) {
-  .press-title {
+  .pressTitle {
     margin-bottom: 60px;
   }
 
-  .press-cards {
+  .pressCards {
     gap: 20px;
   }
 }
 
 @media (max-width: 1439px) {
-  .press-cards {
+  .pressCards {
     gap: 15px;
   }
 }
 
 @media (max-width: 1200px) {
-  .press-cards {
+  .pressCards {
     gap: 12px;
   }
 }
 
 /* figma design */
 @media (max-width: 992px) {
-  .press-title {
+  .pressTitle {
     margin-bottom: 40px;
     width: 98%;
   }
 
-  .press-cards {
+  .pressCards {
     gap: 20px;
   }
 }
