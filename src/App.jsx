@@ -1,4 +1,4 @@
-import { HashRouter as Router, Route, Routes } from 'react-router-dom';
+import { HashRouter as Router, Route, Routes, useLocation } from 'react-router-dom';
 import About from "./Pages/About/About";
 import Careers from "./Pages/Careers/Careers";
 import Home from "./Pages/Home/Home";
@@ -17,16 +17,23 @@ import ScrollToTop from "./Components/ScrollToTop/ScrollToTop";
 import GiftComponent from './Components/GiftComponent/GiftComponent';
 
 function App() {
- // State for new user
   const [isNewUser, setIsNewUser] = useState(false);
-  // State for visibility
-  const [isVisible, setIsVisible] = useState(true); 
-  
-  /* The isVisible state variable is necessary
-   to ensure that the user does not lose access to their special gift
-   when they log out without opening it.
-   By managing the visibility of the gift based on this state, we can maintain the user's
-  experience and ensure that the gift remains available for them when they return. */
+  const [isVisible, setIsVisible] = useState(true);
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsLoading(false); // Hide loader after 2 seconds
+      AOS.init({
+        duration: 1000,
+        offset: 0,
+        once: false,
+        mirror: false,
+      });
+    }, 2000);
+
+    return () => clearTimeout(timer);
+  }, []);
 
   useEffect(() => {
     // Retrieve new user status from local storage
@@ -47,6 +54,7 @@ function App() {
       const updateVisibleState = JSON.parse(localStorage.getItem('isVisible'));
       setIsVisible(updateVisibleState);
     };
+
     // Add event listeners for status changes
     window.addEventListener('StatusChanged', handleStatusChange);
     window.addEventListener('StatusVisibleChanged', handleStatusChange);
@@ -58,21 +66,18 @@ function App() {
     };
   }, []);
 
+  const location = useLocation();
+
   useEffect(() => {
-    AOS.init({
-      duration: 1000,
-      offset: 0,
-      distance: '50px',
-      once: false,
-      mirror: true
-    });
-  }, []);
+    // Refresh AOS animations on route change
+    AOS.refresh();
+  }, [location]);
 
   return (
     <div className="bg-main">
       <Cursor />
       <ScrollToTop />
-      <NavBarComponent  />
+      <NavBarComponent />
       <Routes>
         <Route path='/' element={<HandleLoadingComponent />}>
           <Route index element={<Home />} />

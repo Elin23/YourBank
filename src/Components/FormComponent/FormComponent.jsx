@@ -62,28 +62,16 @@ export default function FormComponent({ action }) {
   //At least a letter after the first letter
   const NameRegex = /^[a-zA-Z]([a-zA-Z]{1,39})+$/;
 
-  const validateInput = (id, value) => { // edited from if else to switch case
-    if (!value) return "";
-    switch (id) {
-      case "firstName":
-      case "lastName":
-        return regexPatterns.name.test(value)
-          ? `${id.charAt(0).toUpperCase() + id.slice(1)} is valid`
-          : `${id.charAt(0).toUpperCase() + id.slice(1)} not valid`;
-      case "email":
-        return regexPatterns.email.test(value)
-          ? "Valid email address"
-          : "Invalid email address";
-      case "password":
-        if (action === "signup") {
-          return regexPatterns.password.test(value)
-            ? "Password is valid"
-            : "Password must be at least 8 characters long and include both letters and numbers";
-        }
-        break;
-      default:
-        return "";
+  const validateInput = (id, value) => {
+    let message = "";
+    if (id === "firstName" || id === "lastName") {
+      message = NameRegex.test(value) ? `${id.charAt(0).toUpperCase() + id.slice(1)} is valid` : (value.length > 0 ? `${id.charAt(0).toUpperCase() + id.slice(1)} not valid` : "");
+    } else if (id === "email") {
+      message = emailRegex.test(value) ? "Valid email address" : (value.length > 0 ? "Invalid email address" : "");
+    } else if (id === "password" && action === "signup") {
+      message = passwordRegex.test(value) ? "Password is valid" : (value.length > 0 ? "Password must be at least 8 characters long and include both letters and numbers" : "");
     }
+    return message;
   };
 
   const handleInputChange = (e) => {
@@ -92,9 +80,14 @@ export default function FormComponent({ action }) {
     setMessages(prevMessages => ({ ...prevMessages, [id]: validateInput(id, value) }));
   };
 
-const handleTogglePasswordVisibility = () => { // edited from if else to ? :
-    setType((prevType) => (prevType === "password" ? "text" : "password"));
-    setIcon((prevIcon) => (prevIcon === "show" ? "hide" : "show"));
+  const handleToggle = () => {
+    if (type === "password") {
+      setIcon("hide");
+      setType("text");
+    } else {
+      setIcon("show");
+      setType("password");
+    }
   };
 
   const submitForm = (event) => {

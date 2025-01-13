@@ -1,155 +1,145 @@
-<!-- YourBank | Digital Banking Platform
+# YourBank | Digital Banking Platform
 
-Welcome to YourBank, your premier digital banking platform. This React-based web application provides users with a modern and intuitive interface to manage their banking needs. With several advanced features and responsive design, YourBank delivers a seamless banking experience for all users.
-------------------------------------------------------------------
+Welcome to YourBank, your premier digital banking platform. This React-based web application provides users with a modern and intuitive interface to manage their banking needs. With advanced features and a responsive design, YourBank delivers a seamless banking experience for all users.
 
-Table of Contents
+---
 
-1-Overview
+## Table of Contents
 
-2-Features
+1. [Overview](#overview)
+2. [Features](#features)
+3. [Technologies Used](#technologies-used)
+4. [Pages](#pages)
+5. [Getting Started](#getting-started)
+6. [API Integration](#api-integration)
+7. [Local Storage Usage](#local-storage-usage)
+8. [Contact](#contact)
 
-3-Technologies Used
+---
 
-4-Pages
+## Overview
 
-5-Getting Started
+YourBank is a digital banking platform designed for users seeking an efficient and visually appealing solution for managing their finances. With a focus on accessibility and ease of use, YourBank is fully responsive, delivering a smooth user experience across all devices.
 
-6-API Integration
+---
 
-7-Local Storage Usage
+## Features
 
-8-Contact
+- **Login and sign-up functionality:**.
+  - Displays user’s name and a logout button after successful login.
+  - Persistent data storage for user sessions.
 
-------------------------------------------------------------------
+- **Welcome Bonus Notification:**
+  - One-time notification granting the user $50 upon successful account creation.
 
-Overview
+- **Currency Converter:**
+  - Real-time conversion rates using an integrated API.
 
-YourBank is a digital banking platform designed to cater to users seeking an efficient and visually appealing solution for managing their finances. With a focus on accessibility and ease of use, YourBank is fully responsive and delivers a smooth user experience across devices.
+- **Local Storage Integration:**
+  - Persistent storage of user session data.
 
-------------------------------------------------------------------
+- **Responsive Design:**
+  - Optimized for desktops, tablets, and smartphones.
 
-Features
+- **Dynamic User Interface:**
+  - Aesthetic and interactive front-end components.
 
-- Authentication:
+---
 
-Login and sign up functionality.
+## Technologies Used
 
-Display user’s name and a logout button after successful login.
+- **React (with Vite):** For fast and modular front-end development.
+- **CSS:** For styling and responsiveness.
+- **JavaScript:** For functionality and API integration.
+- **Local Storage:** For storing user session data.
+- **API Integration:** For real-time currency conversion functionality.
 
-- Currency Converter:
+---
 
-Real-time conversion rates using an integrated API.
+## Pages
 
-- Local Storage Integration:
+1. **Home:**
+   - Welcome page with a brief overview of services.
 
-Persistent data storage for user sessions and preferences.
+2. **Careers:**
+   - Information about job opportunities and career paths.
 
-- Responsive Design:
+3. **Security:**
+   - Details about data protection and security measures.
 
-Optimized for all devices including desktops, tablets, and smartphones.
+4. **About:**
+   - Learn more about YourBank’s mission and vision.
 
-- Dynamic User Interface:
+5. **Login:**
+   - User authentication page for existing customers.
 
-Aesthetic and interactive front-end components.
+6. **Signup:**
+   - Registration page for new users.
 
-------------------------------------------------------------------
+---
 
-Technologies Used
+## Getting Started
 
-- React (with Vite): For fast and modular front-end development.
+### Prerequisites
 
-- CSS: For styling and responsiveness.
+- **Node.js** (version 16 or higher recommended)
+- **npm** or **yarn**
 
-- JavaScript: For functionality and API integration.
+### Installation
 
-- Local Storage: For storing user session data.
+1. Clone the repository:
 
-- API Integration: For real-time currency conversion functionality.
+   ```bash
+   git clone https://github.com/Elin23/YourBank.git
+   cd YourBank
+   ```
 
-------------------------------------------------------------------
+2. Install dependencies:
 
-Pages
+   ```bash
+   npm install
+   ```
 
-1- Home:
+3. Start the development server:
 
-Welcome page with a brief overview of services.
+   ```bash
+   npm run dev
+   ```
 
-2- Careers:
+4. Open the app in your browser at [http://localhost:5173](http://localhost:5173).
 
-Information about job opportunities and career paths.
+---
 
-3- Security:
+## API Integration
 
-Details about data protection and security measures.
+YourBank uses an external currency converter API to provide real-time exchange rates. Ensure that your `.env` file is configured with the correct API key:
 
-4- About:
-
-Learn more about YourBank’s mission and vision.
-
-5- Login:
-
-User authentication page for existing customers.
-
-6- Signup:
-
-Registration page for new users.
-
-------------------------------------------------------------------
-
-Getting Started
-
-1- Prerequisites:
-
-Node.js (version 16 or higher recommended)
-
-npm or yarn
-
-2- Installation:
-
-- Clone the repository:
-
-git clone https://github.com/Elin23/YourBank.git
-cd YourBank
-
-- Install dependencies:
-
-npm install
-
-- Start the development server:
-
-npm run dev
-
-- Open the app in your browser at http://localhost:5173
-
-------------------------------------------------------------------
-
-API Integration
-
-YourBank uses an external currency converter API to provide real-time exchange rates. Ensure that your .env file is configured with the correct API key:
-
+```env
 VITE_API_KEY=your_api_key_here
+```
 
-For more information about the API, visit the Currency Converter API Documentation.
+For more information about the API, visit [Exchangerate API](https://www.exchangerate-api.com).
 
-------------------------------------------------------------------
+---
 
-Local Storage Usage
+## Local Storage Usage
 
-- YourBank leverages local storage for:
+YourBank leverages local storage for:
 
-Storing user session data.
+- Storing user session data.
+- Simulating user information storage locally.
+- Maintaining user preferences across sessions.
 
-Maintaining user preferences across sessions.
+### Example:
 
-- Example:
+- Upon login, the user’s name and login status are saved in local storage.
+- The logout button clears this data, ensuring session security.
 
-Upon login, the user’s name and login status are saved in local storage.
+---
 
-The logout button clears this data, ensuring session security.
+## Contact
 
-------------------------------------------------------------------
+For questions or support, please reach out at:
 
-Contact
+- **Email:** [elinshaia23@gmail.com](mailto:elinshaia23@gmail.com)
 
-For questions or support, please reach out at elinshaia23@gmail.com -->
