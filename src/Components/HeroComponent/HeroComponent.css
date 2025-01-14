@@ -614,8 +614,8 @@
 
 @media (max-width: 992px) {
     .es-heroContainer {
-        padding-left: 7.459677419354839%;
-        padding-right: 7.459677419354839%;
+        /* padding-left: 7.459677419354839%;
+        padding-right: 7.459677419354839%; */
         min-height: fit-content;
         justify-content: center;
         align-items: flex-start;
@@ -680,7 +680,15 @@
         margin-top: 12px;
         margin-bottom: 30px;
     }
+    .es-heroLeftContent .es-mainTitle .title,
+    .es-heroLeftContent .es-mainTitle .title span {
+        font-size: 28px;
+        line-height: 42px;
+        margin-top: 12px;
+        margin-bottom: 8px;
+    }
     .es-heroLeftContent .es-mainTitle .desc{
+        width: 100%;
         margin-bottom: 0;
     }
     .es-heroRightContent::after {
