@@ -8,7 +8,6 @@ export default function OurBenefitsSectionComponenet() {
   return (
     <section className="HW-OurBenefitsComponent px-162 pb-150">
       {/* Display the section title and description */}
-
       <div className="title-head">
         <TitleComponent
           title={"Our Benefits"}
@@ -22,15 +21,15 @@ export default function OurBenefitsSectionComponenet() {
       {/* Render the cards */}
       <div className="HW-OurBenefitsCardsContainer">
           <div className="hw-OurBenefitsCardsRow">
-            <OurBenefitsCardComponent left={true} data={exportedData[0]} />
+            <OurBenefitsCardComponent cardType={'left'} data={exportedData[0]} />
             <span className="hw-dashed-lines-vr"></span>
-            <OurBenefitsCardComponent left={false} data={exportedData[1]} />
+            <OurBenefitsCardComponent cardType={''} data={exportedData[1]} />
           </div>
         <span className="hw-dashed-lines-hr"></span>
         <div className="hw-OurBenefitsCardsRow">
-            <OurBenefitsCardComponent left={false} data={exportedData[2]} />
+            <OurBenefitsCardComponent cardType={''} data={exportedData[2]} />
             <span className="hw-dashed-lines-vr"></span>
-            <OurBenefitsCardComponent left={true} data={exportedData[3]} />
+            <OurBenefitsCardComponent cardType={'left'} data={exportedData[3]} />
           </div>
       </div>
     </section>

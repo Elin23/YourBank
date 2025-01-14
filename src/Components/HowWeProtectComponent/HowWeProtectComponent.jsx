@@ -3,14 +3,12 @@ import TitleComponent from "../TitleComponent/TitleComponent";
 import "./HowWeProtectComponent.css";
 import OurBenefitsCardComponent from "../OurBenefitsCardComponent/OurBenefitsCardComponent";
 import { exportedHowWeProtectData } from "./../../Data/HowWeProtectDATA";
-
 export default function HowWeProtectComponent() {
   const renderBenefitsCards = () => {
     return exportedHowWeProtectData.map((data, index) => (
       <OurBenefitsCardComponent key={index} data={data} />
     ));
   };
-
   return (
     <section className="HowWeProtectComponent px-162 pb-150">
       <TitleComponent
