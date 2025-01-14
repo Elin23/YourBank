@@ -5,21 +5,21 @@
     border-left: 1px solid var(--green60-color);
 }
 
-.ES-card-title {
+.ES-cardTitle {
     color: var(--gray30-color);
     font-size: 58px;
     line-height: 87px;
     transition: .3s ease-in-out !important;
 }
 
-.ES-valueCardContainer:hover .ES-card-title {
+.ES-valueCardContainer:hover .ES-cardTitle {
     color: var(--green60-color);
 }
 
-.ES-card-description {
+.ES-cardDescription {
     color: var(--gray70-color);
 }
-
+/*Start Responsive*/
 @media (max-width: 1919px) {
     .ES-valueCardContainer {
         padding-left: 24px;
@@ -28,12 +28,12 @@
         gap: 20px;
     }
 
-    .ES-card-title {
+    .ES-cardTitle {
         font-size: 40px;
         line-height: 60px;
     }
 
-    .ES-card-description {
+    .ES-cardDescription {
         font-size: 16px;
         line-height: 24px;
     }
@@ -46,12 +46,12 @@
         gap: 20px;
     }
 
-    .ES-card-title {
+    .ES-cardTitle {
         font-size: 35px;
         line-height: 50px;
     }
 
-    .ES-card-description {
+    .ES-cardDescription {
         font-size: 14px;
         line-height: 20px;
     }
@@ -60,7 +60,7 @@
 @media (max-width: 992px) {
     .ES-valueCardContainer {
         flex: none;
-        min-width: 85%;
+        min-width: 100%;
     }
 }
 
@@ -71,7 +71,7 @@
         gap: 14px;
     }
 
-    .ES-card-title {
+    .ES-cardTitle {
         font-size: 30px;
         line-height: 45px;
     }
@@ -87,7 +87,7 @@
         gap: 10px;
     }
 
-    .ES-card-title {
+    .ES-cardTitle {
         font-size: 22px;
         line-height: 40px;
     }
@@ -97,3 +97,4 @@
         line-height: 18px;
     }
 }
+/*End Responsive*/

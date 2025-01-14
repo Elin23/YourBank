@@ -1,50 +1,42 @@
-/* Font for Bottom*/
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+/* Importing font from Google Fonts for the FAQ section */
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 
-/* Main container for FAQ cards */
-.MR-FAQ-section-container {
+/* Main container for the FAQ section */
+.MR-faqSectionContainer {
   background-color: var(--black10-color);
 }
 
-.MR-FAQ-card-container {
+/* Container for FAQ cards */
+.MR-faqCardContainer {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-top: 80px;
+  position: relative;
 }
 
-/* Styling for the upper FAQ card section */
-.MR-Upper-FAQ-Card {
+/* List of FAQ cards */
+.MR-faqCardList {
   display: flex;
+  flex-wrap: wrap;
   gap: 30px;
-  margin-bottom: 30px;
+  z-index: 1;
 }
 
-/* Styling for the lower FAQ card section */
-.MR-Lower-FAQ-Card {
-  display: flex;
-  gap: 30px;
+/* Gradient layer for fading effect at the bottom */
+.MR-linearGradient {
+  width: 100%;
+  height: 275px;
+  position: absolute;
+  bottom: 0;
+  background: linear-gradient(to bottom,
+      rgba(25, 25, 25, 0) 0%,
+      rgb(25, 25, 25, 1) 71%);
+  z-index: 100;
 }
 
-/* Gap Between (3&4) & (5&6) card */
-.MR-FAQ-ExpandedGap {
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-}
-
-/* Gradient */
-.MR-FAQ-Gradient1 {
-  -webkit-mask-image: linear-gradient(to bottom,
-      rgba(25, 25, 25, 1),
-      rgba(25, 25, 25, 0));
-  mask-image: linear-gradient(to bottom, rgba(25, 25, 25, 1) 0%, rgb(25, 25, 25, 0) 100%);
-  -webkit-mask-repeat: no-repeat;
-  mask-repeat: no-repeat;
-}
-
-/* Button styling for the FAQ section */
-.MR-FAQ-Button {
+/* Styling for the button to toggle FAQ visibility */
+.MR-faqButton {
   width: fit-content;
   height: 63px;
   border: var(--gray15-color) 1px solid;
@@ -58,50 +50,43 @@
   align-items: center;
   font-family: "Inter", serif;
   position: relative;
-  z-index: 1;
+  z-index: 101;
   transition: all 0.5s;
 }
 
-.MR-FAQ-Arrow-Button{
+/* Icon inside the button */
+.MR-faqArrowButton {
   width: 22px;
   height: 22px;
 }
 
-.MR-FAQ-Button:hover {
+/* Hover effect for the button */
+
+.MR-faqButton:hover {
   background-color: var(--green60-color);
   transform: translateY(-5px);
   color: var(--black11-color);
 }
 
-
 /* Responsive styles for screens smaller than 1919px */
 @media (max-width: 1919px) {
-  .MR-FAQ-card-container {
+  .MR-faqCardContainer {
     margin-top: 60px;
   }
 
-  .MR-Upper-FAQ-Card {
-    gap: 20px;
-    margin-bottom: 20px;
-  }
-
-  .MR-Lower-FAQ-Card {
+  .MR-faqCardList {
     gap: 20px;
   }
 
-  .MR-FAQ-ExpandedGap {
-    gap: 20px;
-  }
-
-  .MR-FAQ-Button {
-    height: 50px;
+  .MR-faqButton {
+    height: 49px;
     gap: 4px;
-    padding: 14px 20px 14px 20px;
+    padding: 14px 20px;
     font-size: 14px;
     line-height: 21px;
   }
 
-  .MR-FAQ-Arrow-Button{
+  .MR-faqArrowButton {
     width: 18px;
     height: 18px;
   }
@@ -109,21 +94,7 @@
 
 /* Responsive styles for screens smaller than 992px */
 @media (max-width: 992px) {
-  .MR-FAQ-card-container {
+  .MR-faqCardContainer {
     margin-top: 50px;
-  }
-
-  .MR-Upper-FAQ-Card {
-    width: 100%;
-    flex-wrap: wrap;
-  }
-
-  .MR-Lower-FAQ-Card {
-    width: 100%;
-    flex-wrap: wrap;
-  }
-
-  .MR-FAQ-Gradient1 {
-    mask-image: linear-gradient(to bottom, rgba(25, 25, 25, 1) 65%, rgb(25, 25, 25, 0) 100%);
   }
 }

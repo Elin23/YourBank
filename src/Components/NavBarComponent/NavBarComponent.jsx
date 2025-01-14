@@ -45,6 +45,22 @@ export default function NavBarComponent() {
     Swal.fire({
       icon: 'question',
       title: " Are you sure you want to log out?",
+      scrollbarPadding: false,
+      heightAuto: false, 
+      showClass: {
+        popup: `
+          animate__animated
+          animate__fadeInUp
+          animate__faster
+        `
+      },
+      hideClass: {
+        popup: `
+          animate__animated
+          animate__fadeOutDown
+          animate__faster
+        `
+      },
       showCancelButton: true,
       confirmButtonText: "Logout",
       denyButtonText: `Cancel`
@@ -60,20 +76,20 @@ export default function NavBarComponent() {
       }
     });
   };
-//handle the footer Links Navigation
+  //handle the footer Links Navigation
   useEffect(() => {
     const handleActivePathChange = () => {
       const activePath = JSON.parse(localStorage.getItem('activePath'));
       setActiveLink(activePath);
     };
 
-    window.addEventListener('activePathChanged' , handleActivePathChange);
-    
+    window.addEventListener('activePathChanged', handleActivePathChange);
+
     return () => {
-      window.removeEventListener('activePathChanged' , handleActivePathChange)
+      window.removeEventListener('activePathChanged', handleActivePathChange)
     }
   }, [])
-  
+
   return (
     <>
       <nav className={`${scrolling ? "scrolled" : ""}`}>
@@ -97,14 +113,15 @@ export default function NavBarComponent() {
               <li
                 key={index}
                 className="f-18">
-                  <NavLink
-                    to={item.path}
+                <NavLink
+                    to={item.path} end
                     className={({ isActive }) => (isActive || activeLink == item.path ? "active-link" : "")}
-                    onClick={() => (setMenuOpen(!menuOpen)
+                    onClick={() => (setMenuOpen(!menuOpen), setActiveBtn(activeBtn === "sign up" ? "login" : "login")
                     )}
                   >
-                    {item.name}
-                  </NavLink>
+                  {item.name}
+                </NavLink>
+
               </li>
             ))}
           </ul>

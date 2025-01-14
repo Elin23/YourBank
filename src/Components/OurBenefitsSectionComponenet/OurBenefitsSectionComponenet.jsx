@@ -1,20 +1,34 @@
-import React from 'react'
-import './OurBenefitsSectionComponenet.css'
-import TitleComponent from '../TitleComponent/TitleComponent'
-import OurBenefitsCardComponent from '../OurBenefitsCardComponent/OurBenefitsCardComponent'
-import {exportedData} from './../../Data/OurBenefitsCardData'
+import React from "react";
+import "./OurBenefitsSectionComponenet.css";
+import TitleComponent from "../TitleComponent/TitleComponent";
+import OurBenefitsCardComponent from "../OurBenefitsCardComponent/OurBenefitsCardComponent";
+import { exportedData } from "./../../Data/OurBenefitsCardData";
 
 export default function OurBenefitsSectionComponenet() {
-  const renderCardRow = (leftData, rightData) => (
+  // Function to render a row of two cards with a dashed line in between
+  const renderCardRow = (leftData, rightData, isFirstRow) => (
     <div className="hw-OurBenefitsCardsRow">
-      <OurBenefitsCardComponent left={true} data={leftData} />
-      <span className="hw-dashed-lines-vr"></span>
-      <OurBenefitsCardComponent left={false} data={rightData} />
+      <OurBenefitsCardComponent
+        left={true}
+        data={leftData}
+        cardType={isFirstRow ? "left" : "right"} // Determines card style based on row position
+      />
+
+      {/* Add a dashed vertical line between the two cards */}
+      <span className="hw-dashed-lines-vr "></span>{" "}
+
+      <OurBenefitsCardComponent
+        left={false}
+        data={rightData}
+        cardType={isFirstRow ? "right" : "left"}
+      />
     </div>
   );
 
   return (
     <section className="HW-OurBenefitsComponent px-162 pb-150">
+      {/* Display the section title and description */}
+
       <div className="title-head">
         <TitleComponent
           title={"Our Benefits"}
@@ -25,10 +39,11 @@ export default function OurBenefitsSectionComponenet() {
           fw={false}
         />
       </div>
+      {/* Render the cards */}
       <div className="HW-OurBenefitsCardsContainer">
-        {renderCardRow(exportedData[0], exportedData[1])}
+        {renderCardRow(exportedData[0], exportedData[1], true)}
         <span className="hw-dashed-lines-hr"></span>
-        {renderCardRow(exportedData[2], exportedData[3])}
+        {renderCardRow(exportedData[2], exportedData[3], false)}
       </div>
     </section>
   );

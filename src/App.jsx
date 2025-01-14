@@ -13,14 +13,15 @@ import Cursor from "./Components/cursor/cursor";
 import { useEffect, useState } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import GiftComponent from "./Components/GiftComponent/GiftComponent";
-import ScrollToTop from './Components/ScrollToTop/ScrollToTop';
+import ScrollToTop from "./Components/ScrollToTop/ScrollToTop";
+import GiftComponent from './Components/GiftComponent/GiftComponent';
 
 function App() {
  // State for new user
   const [isNewUser, setIsNewUser] = useState(false);
   // State for visibility
   const [isVisible, setIsVisible] = useState(true); 
+  
   /* The isVisible state variable is necessary
    to ensure that the user does not lose access to their special gift
    when they log out without opening it.
@@ -57,10 +58,6 @@ function App() {
     };
   }, []);
 
-
-
-
-
   useEffect(() => {
     AOS.init({
       duration: 1000,
@@ -73,10 +70,9 @@ function App() {
 
   return (
     <div className="bg-main">
-      <ScrollToTop/>
       <Cursor />
-      <NavBarComponent />
-      <NavBarComponent />
+      <ScrollToTop />
+      <NavBarComponent  />
       <Routes>
         <Route path='/' element={<HandleLoadingComponent />}>
           <Route index element={<Home />} />

@@ -1,15 +1,15 @@
-.es-hero-container {
+.es-heroContainer {
     position: relative;
     display: flex;
     flex-wrap: wrap;
     gap: 7.5%;
     padding-top: 10.3125%;
-    /* height: 100%; */
     overflow: hidden;
     background-color: var(--black10-color);
 }
 
-.es-hero-container::before {
+/* The image at the top left of the section */
+.es-heroContainer::before {
     content: "";
     background-image: url('../../assets/imgs/AbstractDesign5.png');
     background-position: center;
@@ -22,12 +22,12 @@
 }
 
 /*Left Side Start*/
-.es-hero-left-content {
+.es-heroLeftContent {
     width: 51.7535%;
     padding-top: 6.266%;
 }
 
-.es-hero-left-content .es-sub-title {
+.es-heroLeftContent .es-subTitle {
     width: fit-content;
     display: flex;
     align-items: center;
@@ -39,17 +39,17 @@
     background-color: var(--gray15-color);
 }
 
-.es-hero-left-content .es-sub-title span {
+.es-heroLeftContent .es-subTitle span {
     font-size: 18px;
     line-height: 24px;
 }
 
-.es-hero-left-content .es-main-title {
+.es-heroLeftContent .es-mainTitle {
     margin-top: 20px;
     margin-bottom: 50px;
 }
 
-.es-hero-left-content .es-main-title .title {
+.es-heroLeftContent .es-mainTitle .title {
     font-weight: 500;
     animation: moveGradient 5s infinite linear;
     background: linear-gradient(90deg, #caff33, #E4E4E7, #d8ff66, #fff);
@@ -60,17 +60,17 @@
 }
 
 
-.es-hero-left-content img {
+.es-heroLeftContent img {
     padding-left: 12px;
 }
 
-.es-hero-left-content span {
+.es-heroLeftContent span {
     font-size: 18px;
     line-height: 27px;
     color: var(--white-color);
 }
 
-.es-hero-btn {
+.es-heroBtn {
     padding: 18px 30px;
     background-color: var(--green60-color);
     width: fit-content;
@@ -84,8 +84,8 @@
 }
 
 /* start styling button hover */
-.es-hero-btn:before,
-.es-hero-btn:after {
+.es-heroBtn:before,
+.es-heroBtn:after {
     position: absolute;
     content: "";
     width: 150%;
@@ -96,7 +96,7 @@
     background-repeat: no-repeat;
 }
 
-.es-hero-btn:hover:before {
+.es-heroBtn:hover:before {
     top: -70%;
     background-image: radial-gradient(circle, var(--green60-color) 20%, transparent 20%),
         radial-gradient(circle, transparent 20%, var(--green60-color) 20%, transparent 30%),
@@ -113,7 +113,7 @@
     animation: greenTopBubbles 0.6s ease;
 }
 
-.es-hero-btn:hover:after {
+.es-heroBtn:hover:after {
     bottom: -70%;
     background-image: radial-gradient(circle, var(--green60-color) 20%, transparent 20%),
         radial-gradient(circle, var(--green60-color) 20%, transparent 20%),
@@ -127,13 +127,13 @@
     animation: greenBottomBubbles 0.6s ease;
 }
 
-.es-hero-btn:active {
+.es-heroBtn:active {
     transform: scale(0.96);
 }
 
 /* end styling button hover */
 
-.es-hero-btn a {
+.es-heroBtn a {
     text-decoration: none;
     color: var(--black11-color);
 }
@@ -141,12 +141,12 @@
 /* Left Side End*/
 
 /*Right Side Start*/
-.es-right-side {
+.es-rightSide {
     position: relative;
     animation: zoomInAnimation 3s ease-out forwards;
 }
 
-.es-hero-right-content {
+.es-heroRightContent {
     padding: 34.68px;
     position: relative;
     display: flex;
@@ -159,7 +159,7 @@
             rgba(202, 255, 51, 0.2) 99.95%), rgba(38, 38, 38, 1) border-box;
 }
 
-.es-hero-right-content::before {
+.es-heroRightContent::before {
     content: "";
     width: 100%;
     height: 100%;
@@ -171,7 +171,8 @@
     z-index: 2;
 }
 
-.es-hero-right-content::after {
+/* Green Arrows Img styling*/
+.es-heroRightContent::after {
     content: "";
     background-image: url('../../assets/imgs/AbstractDesign.png');
     background-position: center;
@@ -184,7 +185,7 @@
     right: -35%;
 }
 
-.es-hero-right-content .bg-img {
+.es-heroRightContent .bg-img {
     position: absolute;
     top: 0;
     left: 0;
@@ -199,8 +200,8 @@
         url('../../assets/imgs/blend.png');
 }
 
-.es-hero-right-content .es-your-trans h4,
-.es-hero-right-content .exchange h4 {
+.es-heroRightContent .es-yourTrans h4,
+.es-heroRightContent .exchange h4 {
     position: relative;
     color: var(--white-color);
     z-index: 4;
@@ -208,14 +209,14 @@
     line-height: 26.01px;
 }
 
-.es-hero-right-content .es-your-trans h4 {
+.es-heroRightContent .es-yourTrans h4 {
     margin-bottom: 17.34px;
 }
 
-.es-hero-right-content .exchange h4 {
+.es-heroRightContent .exchange h4 {
     margin-bottom: 25.14px;
 }
-.es-hero-right-content .es-exchange-box {
+.es-heroRightContent .es-exchangeBox {
     position: relative;
     z-index: 2;
     display: flex;
@@ -226,11 +227,11 @@
     border-radius: 10.4px;
 }
 
-.es-exchange-box .es-mini-box {
+.es-exchangeBox .es-miniBox {
     width: 50%;
 }
 
-.es-exchange-box .es-mini-box .es-upper {
+.es-exchangeBox .es-miniBox .es-upper {
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -240,7 +241,7 @@
     padding: 17.34px;
 }
 
-.es-currency-value {
+.es-currencyValue {
     padding: 26.01px 17.34px 26.01px 17.34px;
     font-size: 17.34px;
     line-height: 26.01px;
@@ -248,7 +249,7 @@
     border-right: 0.87px solid var(--gray15-color);
 }
 
-.es-currency-value input.form-input {
+.es-currencyValue input.formInput {
     background-color: transparent;
     outline: none;
     border: none;
@@ -258,12 +259,12 @@
     font-weight: 500;
 }
 
-.es-mini-box:nth-child(2) .es-currency-value,
-.es-mini-box:nth-child(2) .es-upper {
+.es-miniBox:nth-child(2) .es-currencyValue,
+.es-miniBox:nth-child(2) .es-upper {
     border-right: none;
 }
 
-.exchange-btn {
+.exchangeBtn {
     width: 100%;
     position: relative;
     z-index: 2;
@@ -278,10 +279,10 @@
     line-height: 23.41px;
     transition: all 0.3s ease;
 }
-.exchange-btn:hover {
+.exchangeBtn:hover {
     box-shadow: rgba(154, 215, 67, 0.24) 0px 0px 5px 0px, rgba(154, 215, 67, 0.24) 0px 0px 1px 0px;
 }
-.es-supported-currency {
+.es-supportedCurrency {
     width: 100%;
     display: flex;
     align-items: center;
@@ -289,7 +290,7 @@
     color: var(--white-color);
 }
 
-.es-supported-currency-container {
+.es-supportedCurrencyContainer {
     margin-top: 12.52px;
     display: flex;
     align-items: center;
@@ -301,10 +302,10 @@
     margin-right: -50px;
     transition: all 0.3s ease;
 }
-.es-supported-currency-container:hover {
+.es-supportedCurrencyContainer:hover {
     box-shadow: rgba(154, 215, 67, 0.24) 0px 0px 5px 0px, rgba(154, 215, 67, 0.24) 0px 0px 1px 0px;
 }
-.es-hero-container .es-supported-currency .es-currency-icons {
+.es-heroContainer .es-supportedCurrency .es-currencyIcons {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -315,16 +316,16 @@
     padding: 8.67px;
     border: 0.87px solid var(--gray15-color);
 }
-.es-hero-container .es-supported-currency:hover .es-currency-img{
+.es-heroContainer .es-supportedCurrency:hover .es-currencyImg{
     box-shadow: rgba(154, 215, 67, 0.24) 0px 0px 5px 0px, rgba(154, 215, 67, 0.24) 0px 0px 1px 0px;
 }
-.es-supported-currency-container span {
+.es-supportedCurrencyContainer span {
     margin-left: 20.81px;
     font-size: 15.61px;
     line-height: 23.41px;
 }
 
-.es-currency-icons .es-currency-img {
+.es-currencyIcons .es-currencyImg {
     width: 34.68px;
     height: 34.68px;
     background-color: var(--gray15-color);
@@ -334,7 +335,7 @@
     justify-content: center;
 }
 
-.es-monthly-income {
+.es-monthlyIncome {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -349,7 +350,7 @@
     z-index: 3;
 }
 
-.es-monthly-income .es-icon {
+.es-monthlyIncome .es-icon {
     width: 38.15px;
     height: 38.15px;
     border-radius: 50%;
@@ -360,20 +361,20 @@
     z-index: 5;
 }
 
-.es-monthly-income .es-plus-info {
+.es-monthlyIncome .es-plusInfo {
     display: flex;
     flex-direction: column;
     justify-content: center;
     gap: 0.87px;
 }
 
-.es-plus-info span:nth-child(1) {
+.es-plusInfo span:nth-child(1) {
     font-size: 17.34px;
     color: var(--white-color);
     line-height: 26.01px;
 }
 
-.es-plus-info span:nth-child(2) {
+.es-plusInfo span:nth-child(2) {
     font-size: 13.87px;
     line-height: 20.81px;
     color: var(--offwhite-90-color);
@@ -385,51 +386,51 @@
 @media (max-width: 1919px) {
 
     /* Left Side Start*/
-    .es-hero-container {
+    .es-heroContainer {
         gap: 6.95%;
         padding-top: 9.237%;
     }
 
-    .es-hero-container::before {
+    .es-heroContainer::before {
         width: 546.75px;
         height: 440px;
     }
 
-    .es-hero-left-content {
+    .es-heroLeftContent {
         width: 50.7664%;
         padding-top: 4.687%;
     }
 
-    .es-hero-right-content::after {
+    .es-heroRightContent::after {
         width: 300px;
         height: 275px;
     }
 
-    .es-hero-left-content .es-sub-title {
+    .es-heroLeftContent .es-subTitle {
         gap: 4px;
         padding: 8px 16px 8px 0;
     }
 
-    .es-hero-left-content .es-sub-title span {
+    .es-heroLeftContent .es-subTitle span {
         font-size: 14px;
     }
 
-    .es-hero-left-content .es-main-title {
+    .es-heroLeftContent .es-mainTitle {
         margin-top: 16px;
         margin-bottom: 40px;
     }
 
-    .es-hero-left-content img {
+    .es-heroLeftContent img {
         padding-left: 9.88px;
     }
 
-    .es-hero-btn {
+    .es-heroBtn {
         padding: 14px 24px;
         width: 144px;
         height: 49px;
     }
 
-    .es-hero-btn a {
+    .es-heroBtn a {
         font-size: 14px;
         line-height: 21px;
     }
@@ -437,58 +438,58 @@
     /* Left Side start*/
 
     /*Right Side Start*/
-    .es-hero-right-content {
+    .es-heroRightContent {
         padding: 27.55px;
         gap: 20.66px;
         border-radius: 8.26px;
         border-width: 0.69px;
     }
 
-    .es-hero-right-content::after {
+    .es-heroRightContent::after {
         width: 300px;
         height: 275px;
         right: -35%;
 
     }
 
-    .es-hero-right-content .es-your-trans h4,
-    .es-hero-right-content .exchange h4 {
+    .es-heroRightContent .es-yourTrans h4,
+    .es-heroRightContent .exchange h4 {
         font-size: 13.77px;
         line-height: 20.66px;
     }
 
-    .es-hero-right-content .es-your-trans h4 {
+    .es-heroRightContent .es-yourTrans h4 {
         margin-bottom: 13.77px;
     }
 
-    .es-hero-right-content .exchange h4 {
+    .es-heroRightContent .exchange h4 {
         margin-bottom: 19.97px;
     }
 
-    .es-hero-right-content .es-exchange-box {
+    .es-heroRightContent .es-exchangeBox {
         border-width: 0.69px;
         border-radius: 8.26px;
     }
 
-    .es-exchange-box .es-mini-box .es-upper {
+    .es-exchangeBox .es-miniBox .es-upper {
         gap: 6.89px;
         border-width: 0.69px;
         padding: 13.77px;
     }
 
-    .es-currency-value {
+    .es-currencyValue {
         padding: 20.66px 13.77px 20.66px 13.77px;
         font-size: 13.77px;
         line-height: 20.66px;
         border-width: 0.69px;
     }
 
-    .es-currency-value input.form-input {
+    .es-currencyValue input.formInput {
         font-size: 13.77px !important;
         line-height: 20.66px !important;
     }
 
-    .exchange-btn {
+    .exchangeBtn {
         margin-top: 19.97px;
         font-size: 12.4px;
         line-height: 18.59px;
@@ -496,7 +497,7 @@
         border-radius: 56.47px;
     }
 
-    .es-monthly-income {
+    .es-monthlyIncome {
         gap: 6.89px;
         margin-bottom: -25px;
         margin-left: -50px;
@@ -504,7 +505,7 @@
         border-radius: 8.26px;
     }
 
-    .es-monthly-income .es-icon {
+    .es-monthlyIncome .es-icon {
         width: 30.35px;
         height: 30.26px;
     }
@@ -514,28 +515,28 @@
         height: 9.27px;
     }
 
-    .es-monthly-income .es-plus-info {
+    .es-monthlyIncome .es-plusInfo {
         gap: 0.69px;
     }
 
-    .es-plus-info span:nth-child(1) {
+    .es-plusInfo span:nth-child(1) {
         font-size: 13.77px;
         line-height: 20.66px;
     }
 
-    .es-plus-info span:nth-child(2) {
+    .es-plusInfo span:nth-child(2) {
         font-size: 11.02px;
         line-height: 16.53px;
     }
 
-    .es-supported-currency-container {
+    .es-supportedCurrencyContainer {
         margin-top: 13.95px;
         gap: 9.66px;
         border-radius: 55.09px;
         margin-right: -50px;
     }
 
-    .es-hero-container .es-supported-currency .es-currency-icons {
+    .es-heroContainer .es-supportedCurrency .es-currencyIcons {
         gap: 6.94px;
         margin: 6.89px 6.89px 6.89px 0;
         border-radius: 37.88px;
@@ -543,76 +544,78 @@
         border: 0.69px solid var(--gray15-color);
     }
 
-    .es-supported-currency-container span {
+    .es-supportedCurrencyContainer span {
         margin-left: 16.53px;
         font-size: 12.4px;
         line-height: 18.59px;
 
     }
 
-    .es-currency-icons .es-currency-img {
+    .es-currencyIcons .es-currencyImg {
         width: 27.62px;
         height: 27.62px;
     }
 
-    .es-currency-img img {
+    .es-currencyImg img {
         width: 8.2px;
         height: 13.06px;
     }
 }
 
 @media (max-width: 1200px) {
-    .es-hero-container {
+    .es-heroContainer {
         /* padding-left: 4.1%;
         padding-right: 4.1%; */
         padding-top: 11.23%;
         gap: 5%;
     }
 
-    .es-hero-left-content .es-main-title {
+    .es-heroLeftContent .es-mainTitle {
         margin-top: 12px;
         margin-bottom: 25px;
     }
 
-    .es-hero-left-content .es-main-title  .title,
-    .es-hero-left-content .es-main-title .title span {
+    .es-heroLeftContent .es-mainTitle  .title,
+    .es-heroLeftContent .es-mainTitle .title span {
         font-size: 32px;
         line-height: 45px;
     }
 
-    .es-hero-right-content {
+    .es-heroRightContent {
         padding: 20px;
     }
 
-    .es-hero-right-content::after {
+    .es-heroRightContent::after {
         width: 250px;
         height: 225px;
         right: -23%;
     }
 
-    .es-hero-right-content .es-your-trans h4 {
+    .es-heroRightContent .es-yourTrans h4 {
         margin-bottom: 10px;
     }
 
-    .es-exchange-box .es-mini-box .es-upper {
+    .es-exchangeBox .es-miniBox .es-upper {
         padding: 12px;
     }
 
-    .es-currency-value {
+    .es-currencyValue {
         padding: 18px 10px 18px 10px;
     }
 
-    .es-monthly-income {
+    .es-monthlyIncome {
         margin-bottom: -18px;
     }
 
-    .es-supported-currency-container {
+    .es-supportedCurrencyContainer {
         margin-right: -30px;
     }
 }
 
 @media (max-width: 992px) {
-    .es-hero-container {
+    .es-heroContainer {
+        padding-left: 7.459677419354839%;
+        padding-right: 7.459677419354839%;
         min-height: fit-content;
         justify-content: center;
         align-items: flex-start;
@@ -621,8 +624,8 @@
         gap: 54.43px;
     }
 
-    .es-hero-left-content {
-        width: 75%;
+    .es-heroLeftContent {
+        width: 100%;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -630,21 +633,21 @@
         padding-top: 0;
     }
 
-    .es-hero-right-content .es-your-trans h4,
-    .es-hero-right-content .exchange h4,
+    .es-heroRightContent .es-yourTrans h4,
+    .es-heroRightContent .exchange h4,
     .es-currency-name,
-    .es-currency-value {
+    .es-currencyValue {
         text-align: left;
     }
 
-    .es-hero-left-content .es-main-title p {
+    .es-heroLeftContent .es-mainTitle p {
         font-size: 14px;
         line-height: 21px;
     }
 }
 
 @media (max-width: 768px) {
-    .es-hero-left-content {
+    .es-heroLeftContent {
         width: 100%;
     }
 }
@@ -652,82 +655,84 @@
 @media (max-width: 540px) {
 
     /* Left Side Start*/
-    .es-hero-container {
+    .es-heroContainer {
         padding-top: 158px;
         padding-bottom: 0;
         margin-bottom: 17.76%;
     }
 
-    .es-hero-container::before {
+    .es-heroContainer::before {
         width: 382px;
         height: 307.42px;
     }
 
-    .es-hero-right-content::after {
+    .es-heroRightContent::after {
         width: 210px;
         height: 201px;
         top: -5%;
     }
 
-    .es-hero-left-content {
+    .es-heroLeftContent {
         width: 100%;
     }
 
-    .es-hero-left-content .es-main-title {
+    .es-heroLeftContent .es-mainTitle {
         margin-top: 12px;
         margin-bottom: 30px;
     }
-
-    .es-hero-right-content::after {
+    .es-heroLeftContent .es-mainTitle .desc{
+        margin-bottom: 0;
+    }
+    .es-heroRightContent::after {
         /* width: 220px;
         height: 201px; */
         right: -15%;
     }
 
-    .es-right-side {
+    .es-rightSide {
         padding: 0 26.28px;
     }
 
-    .es-hero-right-content {
+    .es-heroRightContent {
         padding: 20.51px;
         gap: 15.38px;
         border-radius: 6.15px;
         border-width: 0.51px;
     }
 
-    .es-hero-right-content::after {
+    .es-heroRightContent::after {
         width: 220px;
         height: 201px;
         right: -15%;
     }
 
-    .es-hero-right-content .es-your-trans h4,
-    .es-hero-right-content .exchange h4 {
+    .es-heroRightContent .es-yourTrans h4,
+    .es-heroRightContent .exchange h4 {
         font-size: 10.26px;
         line-height: 15.38px;
         text-align: start;
     }
 
-    .es-hero-right-content .es-your-trans h4 {
+    .es-heroRightContent .es-yourTrans h4 {
         margin-bottom: 10.62px;
     }
 
-    .es-hero-right-content .exchange h4 {
+    .es-heroRightContent .exchange h4 {
         margin-bottom: 14.87px;
     }
 
-    .es-hero-right-content .es-exchange-box {
+    .es-heroRightContent .es-exchangeBox {
         border-width: 0.51px;
         border-radius: 6.15px;
     }
 
-    .es-exchange-box .es-mini-box .es-upper {
+    .es-exchangeBox .es-miniBox .es-upper {
         gap: 5.13px;
         border-width: 0.51px;
         padding: 10.26px;
     }
 
-    .es-currency-value {
+    .es-currencyValue {
         padding: 15.38px 10.26px;
         font-size: 10.26px;
         line-height: 15.38px;
@@ -735,12 +740,12 @@
         text-align: start;
     }
 
-    .es-currency-value input.form-input {
+    .es-currencyValue input.formInput {
         font-size: 10.26px !important;
         line-height: 15.38px !important;
     }
 
-    .exchange-btn {
+    .exchangeBtn {
         margin-top: 14.87px;
         font-size: 9.23px;
         line-height: 13.85px;
@@ -748,7 +753,7 @@
         border-radius: 42.05px;
     }
 
-    .es-monthly-income {
+    .es-monthlyIncome {
         gap: 5.13px;
         margin-bottom: -18px;
         margin-left: -30px;
@@ -756,7 +761,7 @@
         border-radius: 6.15px;
     }
 
-    .es-monthly-income .es-icon {
+    .es-monthlyIncome .es-icon {
         width: 22.6px;
         height: 22.6px;
     }
@@ -766,28 +771,27 @@
         height: 6.94px;
     }
 
-    .es-monthly-income .es-plus-info {
+    .es-monthlyIncome .es-plusInfo {
         gap: 0.51px;
     }
 
-    .es-plus-info span:nth-child(1) {
+    .es-plusInfo span:nth-child(1) {
         font-size: 10.26px;
         line-height: 15.38px;
     }
 
-    .es-plus-info span:nth-child(2) {
+    .es-plusInfo span:nth-child(2) {
         font-size: 8.2px;
         line-height: 12.31px;
     }
 
-    .es-supported-currency-container {
+    .es-supportedCurrencyContainer {
         margin-top: 10.46px;
         gap: 6.3px;
         border-radius: 41.02px;
         margin-right: -20px;
     }
-
-    .es-hero-container .es-supported-currency .es-currency-icons {
+    .es-heroContainer .es-supportedCurrency .es-currencyIcons {
         gap: 4.1px;
         margin: 5.13px 5.13px 5.13px 0;
         border-radius: 28.2px;
@@ -795,18 +799,18 @@
         border: 0.51px solid var(--gray15-color);
     }
 
-    .es-supported-currency-container span {
+    .es-supportedCurrencyContainer span {
         margin-left: 12.31px;
         font-size: 9.23px;
         line-height: 13.85px;
     }
 
-    .es-currency-icons .es-currency-img {
+    .es-currencyIcons .es-currencyImg {
         width: 20.646px;
         height: 20.46px;
     }
 
-    .es-currency-img img {
+    .es-currencyImg img {
         width: 6.11px;
         height: 9.73px;
     }
@@ -814,21 +818,21 @@
 
 @media (max-width: 389px) {
 
-    .es-hero-left-content .es-main-title .title,
-    .es-hero-left-content .es-main-title .title span {
+    .es-heroLeftContent .es-mainTitle .title,
+    .es-heroLeftContent .es-mainTitle .title span {
         font-size: 20px;
         line-height: 32px;
     }
 
-    .es-hero-left-content .es-main-title .desc {
+    .es-heroLeftContent .es-mainTitle .desc {
         font-size: 12px;
     }
 
-    .es-monthly-income {
+    .es-monthlyIncome {
         margin-left: -2%;
     }
 
-    .es-supported-currency-container {
+    .es-supportedCurrencyContainer {
         margin-right: 0;
     }
 }

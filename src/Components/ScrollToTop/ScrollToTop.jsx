@@ -1,10 +1,12 @@
 import React, { useState } from "react";
 import "./ScrollToTop.css";
-import { FaArrowUp } from "react-icons/fa";
+import { IoMdArrowUp } from "react-icons/io";
 
 export default function ScrollToTop() {
+  // State to manage the visibility of the button
   const [isVisible, setIsVisible] = useState(false);
 
+  // Show the button if the scroll position is greater than 500px, otherwise hide it
   const handleScroll = () => {
     if (window.scrollY > 500) {
       setIsVisible(true);
@@ -15,6 +17,7 @@ export default function ScrollToTop() {
 
   window.onscroll = handleScroll;
 
+  // Function to scroll back to the top of the page
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
@@ -23,11 +26,12 @@ export default function ScrollToTop() {
   };
 
   return (
+    // Button to scroll to the top
     <button
       onClick={scrollToTop}
       className={`MR-scroll-to-top ${isVisible ? "MR-Scroll-show" : ""}`}
     >
-      <FaArrowUp className="MR-ScrollArrow" />
+      <IoMdArrowUp className="MR-ScrollArrow" />
     </button>
   );
 }

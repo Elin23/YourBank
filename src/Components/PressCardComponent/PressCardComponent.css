@@ -1,39 +1,48 @@
-.Press-Card-Component {
+.PressCardComponent {
   width: 49.060%;
   background-color: var(--black11-color);
   border: 1px solid var(--gray15-color);
   border-radius: 40px 40px 16px 16px;
   padding: 30px;
 }
-
-.Press-Card-Component img {
+.Af-imgBorder{
+  width: 100%;
+  height: 333px;
+  border-radius: 30px 30px 12px 12px;
+  overflow: hidden;
+}
+.PressCardComponent .Af-imgBorder img {
   width: 100%;
   border-radius: 30px 30px 12px 12px;
-  height: 333px;
+  height: 100%;
+  transition: 0.4s ;
   object-fit: cover;
 }
 
-.Press-Card-Content {
+.PressCardContent {
   margin-top: 51px;
   padding: 0 30px;
 }
+.PressCardComponent:hover .Af-imgBorder img{
+  transform: scale(1.22);
+}
 
-.Press-Card-Content h5 {
+.PressCardContent h5 {
   color: var(--white-color);
   margin-bottom: 0;
   transition: .3s ease-in-out;
 }
 
-.Press-Card-Component:hover .Press-Card-Content h5 {
+.PressCardComponent:hover .PressCardContent h5 {
   color: var(--green60-color);
 }
 
-.Press-Card-Content .et-card-info {
+.PressCardContent .ET-cardInfo {
   margin-top: 20px;
   width: max-content;
 }
 
-.Press-Card-Content .et-card-info span {
+.PressCardContent .ET-cardInfo span {
   background-color: var(--black10-color);
   color: var(--gray70-color);
   border-radius: 68px;
@@ -42,11 +51,11 @@
   margin-right: 10px;
 }
 
-.Press-Card-Content .et-card-info span:nth-child(2) {
+.PressCardContent .ET-cardInfo span:nth-child(2) {
   margin-right: 0;
 }
 
-.Press-Card-Content p {
+.PressCardContent p {
   color: var(--gray70-color);
   margin-top: 30px;
 }
@@ -54,38 +63,38 @@
 
 /* figma design */
 @media (max-width: 1919px) {
-  .Press-Card-Component {
+  .PressCardComponent {
     width: 49.21875%;
     padding: 24px;
   }
 
-  .Press-Card-Component img {
+  .PressCardComponent img {
     height: 277px;
   }
 
-  .Press-Card-Content {
+  .PressCardContent {
     margin-top: 40px;
     padding: 0 24px;
   }
 
-  .Press-Card-Content h5 {
+  .PressCardContent h5 {
     font-size: 20px;
     line-height: 30px;
   }
 
-  .Press-Card-Content .et-card-info {
+  .PressCardContent .ET-cardInfo {
     margin-top: 14px;
     height: 36px;
   }
 
-  .Press-Card-Content .et-card-info span {
+  .PressCardContent .ET-cardInfo span {
     font-size: 16px;
     line-height: 24px;
     padding: 7px 14px;
     margin-right: 6px;
   }
 
-  .Press-Card-Content p {
+  .PressCardContent p {
     margin-top: 24px;
     margin-bottom: 0;
     font-size: 16px;
@@ -95,50 +104,50 @@
 
 /* figma design */
 @media (max-width: 992px) {
-  .Press-Card-Component {
+  .PressCardComponent {
     width: 100%;
     padding: 20px;
   }
 
-  .Press-Card-Component img {
+  .PressCardComponent img {
     height: 206px;
   }
 
-  .Press-Card-Content {
+  .PressCardContent {
     margin-top: 30px;
     width: 100%;
     padding: 0;
   }
 
-  .Press-Card-Content h5 {
+  .PressCardContent h5 {
     font-size: 18px;
     line-height: 27px;
   }
 
-  .Press-Card-Content .et-card-info {
+  .PressCardContent .ET-cardInfo {
     margin-top: 10px;
     height: 33px;
   }
 
-  .Press-Card-Content .et-card-info span {
+  .PressCardContent .ET-cardInfo span {
     font-size: 14px;
     line-height: 21px;
     padding: 6px 12px;
   }
 
-  .Press-Card-Content p {
+  .PressCardContent p {
     font-size: 14px;
     line-height: 21px;
   }
 }
 
 @media (max-width: 389px) {
-  .Press-Card-Content h5 {
+  .PressCardContent h5 {
     font-size: 16px;
     line-height: 21px;
   }
 
-  .Press-Card-Content .et-card-info {
+  .PressCardContent .ET-cardInfo {
     display: flex;
     flex-direction: column;
     gap: 10px;

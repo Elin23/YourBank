@@ -1,7 +1,5 @@
 .AdSectionComponent {
     background-color: transparent;
-    padding-bottom: 7.8125%;
-    padding-top: 7.8125%;
 }
 
 .hw-AdSectionContent {
@@ -176,13 +174,7 @@
 }
 
 @media (max-width: 1919px) {
-
     /*for the 1440px width,1920 and more are the main design*/
-    .AdSectionComponent {
-        padding-bottom: 8.3333333%;
-        padding-top: 8.333333%;
-    }
-
     .hw-AdSectionContent {
         padding: 60px;
     }
@@ -287,11 +279,6 @@
 }
 
 @media (max-width: 768px) {
-    .AdSectionComponent {
-        padding-bottom: 80px;
-        padding-top: 80px;
-    }
-
     .hw-AdSectionContent {
         padding: 30px;
         gap: 24px;

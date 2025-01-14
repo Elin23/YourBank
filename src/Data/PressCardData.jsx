@@ -1,7 +1,7 @@
-import image_1 from '../assets/imgs/Releases/Image1.webp'
-import image_2 from '../assets/imgs/Releases/Image2.webp'
-import image_3 from '../assets/imgs/Releases/Image3.webp'
-import image_4 from '../assets/imgs/Releases/Image4.webp'
+import image_1 from '../assets/imgs/Releases/Image1.png'
+import image_2 from '../assets/imgs/Releases/Image2.png'
+import image_3 from '../assets/imgs/Releases/Image3.png'
+import image_4 from '../assets/imgs/Releases/Image4.png'
 
 const StoredPressCardData = localStorage.getItem("PressCardData");
 

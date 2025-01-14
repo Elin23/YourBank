@@ -1,5 +1,5 @@
 /* Styles for each individual job card */
-.MR-JobCardContainer {
+.MR-jobCardContainer {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -12,14 +12,14 @@
 }
 
 /* Styles for each upper part of job card */
-.MR-JobCard-Title {
+.MR-jobCardTitle {
   display: flex;
   flex-direction: column;
   gap: 14px;
 }
 
 /* Styles for each h3 in card */
-.MR-JobCardContainer h3 {
+.MR-jobCardContainer h3 {
   color: var(--white-color);
   font-weight: 600;
   line-height: 45px;
@@ -27,17 +27,19 @@
   transition: .3s ease-in-out;
 }
 
-.MR-JobCardContainer:hover h3 {
+/* Hover effect for h3 */
+.MR-jobCardContainer:hover h3 {
   color: var(--green60-color);
 }
 
 /* Styles for LocationDepartment-Block */
-.MR-JobCard-LocationDepartment {
+.MR-jobCardLocationDepartment {
   display: flex;
   gap: 10px;
 }
 
-.MR-JobCard-LocationDepartment span {
+/* Span styles inside Location and Department */
+.MR-jobCardLocationDepartment span {
   color: var(--gray70-color);
   background-color: rgba(26, 26, 26, 1);
   width: fit-content;
@@ -47,33 +49,35 @@
 }
 
 /* Styles for About This Job and Requirements & Qualifications */
-.MR-AboutrReq {
+.MR-aboutReqContainer {
   display: flex;
   flex-direction: column;
   gap: 40px;
   flex: 1;
 }
 
-.MR-JobCard-subtitle {
+/* Subtitle heading styles */
+.MR-jobCardSubtitle {
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
 
-.MR-JobCard-subtitle h4 {
+/* Subtitle heading styles */
+.MR-jobCardSubtitle h4 {
   color: var(--white-color);
   font-weight: 600;
   margin-bottom: 0px;
 }
 
 /* Styles for About This Job pargraph*/
-.MR-JobCard-subtitle p {
+.MR-jobCardSubtitle p {
   color: var(--gray70-color);
   margin-bottom: 0px;
 }
 
 /* Styles for Requirements & Qualifications points*/
-.MR-JobCard-subtitle ul {
+.MR-jobCardSubtitle ul {
   color: var(--gray70-color);
   list-style: none;
   padding-left: 0rem;
@@ -83,19 +87,21 @@
   margin-bottom: 0;
 }
 
-.MR-JobCard-subtitle ul li {
+/* List item styles */
+.MR-jobCardSubtitle ul li {
   display: flex;
   align-items: center;
   gap: 10px;
 }
 
-.MR-JobCard-subtitle ul li img {
+/* Icon styles for list items */
+.MR-jobCardSubtitle ul li img {
   width: 24px;
   height: 24px;
 }
 
 /* Styles for button*/
-.MR-JobCardContainer button {
+.MR-jobCardContainer button {
   color: var(--black11-color);
   background-color: var(--green60-color);
   width: fit-content;
@@ -108,71 +114,72 @@
   transition: transform 0.5s !important;
 }
 
-.MR-JobCardContainer button:hover {
+/* Hover effect for the button */
+.MR-jobCardContainer button:hover {
   background-color: var(--green70-color);
   transform: translateY(-5px);
 }
 
 /* Media query for screens smaller than 1919px */
 @media (max-width: 1919px) {
-  .MR-JobCardContainer {
+  .MR-jobCardContainer {
     gap: 40px;
     padding: 39px 40px;
   }
 
-  .MR-AboutrReq {
+  .MR-aboutReqContainer {
     gap: 40px;
   }
 
-  .MR-JobCard-Title {
+  .MR-jobCardTitle {
     gap: 10px;
   }
 
-  .MR-JobCardContainer h3 {
+  .MR-jobCardContainer h3 {
     font-size: 24px;
     line-height: 36px;
   }
 
-  .MR-JobCard-LocationDepartment {
+  .MR-jobCardLocationDepartment {
     gap: 8px;
   }
 
-  .MR-JobCard-LocationDepartment span {
+  .MR-jobCardLocationDepartment span {
     padding: 5px 13.5px;
     font-size: 16px;
     line-height: 24px;
   }
 
-  .MR-JobCard-subtitle {
+  .MR-jobCardSubtitle {
     gap: 16px;
   }
 
-  .MR-JobCard-subtitle h4 {
+  .MR-jobCardSubtitle h4 {
     font-size: 20px;
     line-height: 30px;
   }
 
-  .MR-JobCard-subtitle p {
+  .MR-jobCardSubtitle p {
     font-size: 16px;
     line-height: 24px;
   }
 
-  .MR-JobCard-subtitle ul {
+  .MR-jobCardSubtitle ul {
     font-size: 16px;
     line-height: 24px;
     gap: 14px;
   }
 
-  .MR-JobCard-subtitle ul li {
+  .MR-jobCardSubtitle ul li {
     gap: 8px;
   }
 
-  .MR-JobCard-subtitle ul li img {
+  .MR-jobCardSubtitle ul li img {
     width: 20px;
     height: 20px;
   }
 
-  .MR-JobCardContainer button {
+  .MR-jobCardContainer button {
     font-size: 14px;
     line-height: 21px;
     padding: 12px 20px;
@@ -181,41 +188,41 @@
 
 /* Media query for screens smaller than 1439px */
 @media (max-width: 1439px) {
-  .MR-JobCardContainer {
+  .MR-jobCardContainer {
     width: 48.5%;
     gap: 35px;
     padding: 35px;
   }
 
-  .MR-AboutrReq {
+  .MR-aboutReqContainer {
     gap: 35px;
   }
 
-  .MR-JobCardContainer h3 {
+  .MR-jobCardContainer h3 {
     font-size: 22px;
     line-height: 30px;
   }
 
-  .MR-JobCard-LocationDepartment {
+  .MR-jobCardLocationDepartment {
     display: flex;
     flex-direction: column;
   }
 
-  .MR-JobCard-LocationDepartment span {
+  .MR-jobCardLocationDepartment span {
     padding: 6px 12px;
     font-size: 14px;
   }
 
-  .MR-JobCard-subtitle {
+  .MR-jobCardSubtitle {
     gap: 14px;
   }
 
-  .MR-JobCard-subtitle h4 {
+  .MR-jobCardSubtitle h4 {
     font-size: 20px;
     line-height: 30px;
   }
 
-  .MR-JobCard-subtitle p {
+  .MR-jobCardSubtitle p {
     font-size: 14px;
     line-height: 21px;
   }
@@ -223,39 +230,39 @@
 
 /* Media query for screens smaller than 992px */
 @media (max-width: 992px) {
-  .MR-JobCardContainer {
+  .MR-jobCardContainer {
     width: 100%;
     gap: 30px;
     padding: 30px;
   }
 
-  .MR-AboutrReq {
+  .MR-aboutReqContainer {
     gap: 30px;
   }
 
-  .MR-JobCard-LocationDepartment {
+  .MR-jobCardLocationDepartment {
     gap: 6px;
   }
 
-  .MR-JobCard-LocationDepartment span {
+  .MR-jobCardLocationDepartment span {
     line-height: 21px;
     padding: 5px 9px;
   }
 
-  .MR-JobCard-subtitle {
+  .MR-jobCardSubtitle {
     gap: 10px;
   }
 
-  .MR-JobCardContainer h3 {
+  .MR-jobCardContainer h3 {
     font-size: 20px;
   }
 
-  .MR-JobCard-subtitle h4 {
+  .MR-jobCardSubtitle h4 {
     font-size: 18px;
     line-height: 27px;
   }
 
-  .MR-JobCard-subtitle ul {
+  .MR-jobCardSubtitle ul {
     gap: 14px;
     font-size: 14px;
     line-height: 21px;
@@ -264,48 +271,48 @@
 
 /* Media query for screens smaller than 540px */
 @media (max-width: 540px) {
-  .MR-JobCardContainer {
+  .MR-jobCardContainer {
     padding: 23.3px;
   }
 }
 
 /* Media query for screens smaller than 389px */
 @media (max-width: 389px) {
-  .MR-JobCardContainer {
+  .MR-jobCardContainer {
     gap: 25px;
   }
 
-  .MR-AboutrReq {
+  .MR-aboutReqContainer {
     gap: 25px;
   }
 
-  .MR-JobCard-LocationDepartment {
+  .MR-jobCardLocationDepartment {
     gap: 4px;
   }
 
-  .MR-JobCard-LocationDepartment span {
+  .MR-jobCardLocationDepartment span {
     font-size: 10px;
   }
 
-  .MR-JobCard-subtitle {
+  .MR-jobCardSubtitle {
     gap: 8px;
   }
 
-  .MR-JobCardContainer h3 {
+  .MR-jobCardContainer h3 {
     font-size: 14px;
     line-height: 21px;
   }
 
-  .MR-JobCard-subtitle p {
+  .MR-jobCardSubtitle p {
     font-size: 11px;
   }
 
-  .MR-JobCard-subtitle h4 {
+  .MR-jobCardSubtitle h4 {
     font-size: 13px;
     line-height: 21px;
   }
 
-  .MR-JobCard-subtitle ul {
+  .MR-jobCardSubtitle ul {
     gap: 10px;
     font-size: 11px;
     line-height: 19px;
