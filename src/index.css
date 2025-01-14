@@ -160,8 +160,6 @@
   border: 5px var(--gray15-color) solid;
   border-radius: 14px; 
 }
-
-
 .swal2-html-container, .swal2-title{
   color: white !important;
 }
@@ -182,6 +180,17 @@ div:where(.swal2-icon).swal2-question
 
 div:where(.swal2-icon).swal2-question{
   color: var(--green60-color);
+}
+.swal2-container::before { 
+  content: ''; 
+  position: fixed; 
+  top: 0; 
+  right: 0; 
+  bottom: 0; 
+  left: 0; 
+  background: inherit;
+  backdrop-filter: blur(3px);
+  z-index: -1; 
 }
 /** End style sweet Alert Model **/
 
