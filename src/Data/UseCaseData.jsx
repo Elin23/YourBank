@@ -9,7 +9,7 @@ import icon8 from "../assets/imgs/Home_icons/Subtract.png";
 
 export let UseCaseData = [
     {
-        properities: [
+        properties: [
             {
                 icon: icon1,
                 desc: "Managing Personal Finances"
@@ -43,7 +43,7 @@ export let UseCaseData = [
         ]
     },
     {
-        properities: [
+        properties: [
             {
                 icon: icon5,
                 desc: "Startups and Entrepreneurs"
