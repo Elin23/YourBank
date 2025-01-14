@@ -197,7 +197,7 @@
 /* Responsive styling for screens up to 540px */
 @media (max-width: 540px) {
     .hw-OurBenefitsCard {
-        padding: 24px;
+        padding: 23px;
     }
 
     .hw-OurBenefitsCardHeading .Af-img-father {

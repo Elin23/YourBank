@@ -46,7 +46,7 @@ export default function NavBarComponent() {
       icon: 'question',
       title: " Are you sure you want to log out?",
       scrollbarPadding: false,
-      heightAuto: false, 
+      heightAuto: false,
       showClass: {
         popup: `
           animate__animated
@@ -76,20 +76,20 @@ export default function NavBarComponent() {
       }
     });
   };
-  
- //handle the footer Links Navigation
- useEffect(() => {
-  const handleActivePathChange = () => {
-    const activePath = JSON.parse(localStorage.getItem('activePath'));
-    setActiveLink(activePath);
-  };
 
-  window.addEventListener('activePathChanged' , handleActivePathChange);
-  
-  return () => {
-    window.removeEventListener('activePathChanged' , handleActivePathChange)
-  }
-}, [])
+  //handle the footer Links Navigation
+  useEffect(() => {
+    const handleActivePathChange = () => {
+      const activePath = JSON.parse(localStorage.getItem('activePath'));
+      setActiveLink(activePath);
+    };
+
+    window.addEventListener('activePathChanged', handleActivePathChange);
+
+    return () => {
+      window.removeEventListener('activePathChanged', handleActivePathChange)
+    }
+  }, [])
 
   return (
     <>
@@ -115,11 +115,13 @@ export default function NavBarComponent() {
                 key={index}
                 className="f-18">
                 <NavLink
-                    to={item.path} end
-                    className={({ isActive }) => (isActive || activeLink == item.path ? "active-link" : "")}
-                    onClick={() => (setMenuOpen(!menuOpen), setActiveBtn(activeBtn === "sign up" ? "login" : "login")
-                    )}
-                  >
+                  to={item.path} end
+                  className={({ isActive }) => (isActive || activeLink == item.path ? "active-link" : "")}
+                  onClick={() => (setMenuOpen(!menuOpen), setActiveBtn(activeBtn === "sign up" ? "login" : "login"),
+                    localStorage.setItem('activePath', JSON.stringify(item.path))//set the active path in the local storage so the navbar would know when the path is changed
+                    , window.dispatchEvent(new Event('activePathChanged'))
+                  )}
+                >
                   {item.name}
                 </NavLink>
 

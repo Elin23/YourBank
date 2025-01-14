@@ -9,7 +9,7 @@
     margin-bottom: 150px;
 }
 
-.howWeProtctCardsContainer {
+.howWeProtectCardsContainer {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -47,7 +47,7 @@
 
 }
 
-.hwHowWEprotectGradient {
+.hwHowWeProtectGradient {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -94,7 +94,7 @@
 }
 
 @media (max-width:1919px) {
-    .howWeProtctCardsContainer {
+    .howWeProtectCardsContainer {
         width: 100%;
     }
 }
@@ -105,7 +105,7 @@
         margin-bottom: 120px;
     }
 
-    .howWeProtctCardsContainer {
+    .howWeProtectCardsContainer {
         top: 62px;
         height: 612px;
         gap: 20px;
@@ -130,24 +130,19 @@
     }
 }
 
-@media (max-width:1140px) {
+@media (max-width:1200px) {
     .howWeProtectBG {
         display: none;
     }
 
-    .howWeProtctCardsContainer {
+    .howWeProtectCardsContainer {
         position: relative;
     }
 }
 
 
 @media (max-width:992px){
-    .HW-howWeProtectYouContainer{
-        display: none;
-
-    }
-
-    .howWeProtctCardsContainer {
+    .howWeProtectCardsContainer {
         width: 100%;
         height: unset;
     }

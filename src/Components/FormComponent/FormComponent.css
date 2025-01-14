@@ -247,8 +247,12 @@
 .AA-form-section .AA-form-container .AA-form-container-bg form a {
     text-decoration: none;
 }
-.inValidInput{
-    color: #ff3333 !important;
+
+.ES-borderGreen{
+    border: 1.5px solid var(--green60-color) !important;
+}
+.ES-borderRed{
+    border: 1.5px solid rgb(181, 53, 53) !important;
 }
 /** laptop **/
 @media (max-width: 1919px) {
