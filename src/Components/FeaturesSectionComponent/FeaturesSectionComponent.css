@@ -2,11 +2,11 @@
   background-color: var(--black10-color);
 }
 
-.features-title {
+.featuresTitle {
   width: 81.202%;
 }
 
-.features-content {
+.featuresContent {
   display: flex;
   justify-content: space-between;
   align-items: start;
@@ -14,13 +14,13 @@
   column-gap: 30px;
 }
 
-.features-content .et-btns {
+.featuresContent .ET-btns {
   width: 19.298%;
   background-color: var(--black11-color);
   border-radius: 12px;
 }
 
-.features-content .et-btns button {
+.featuresContent .ET-btns button {
   width: 100%;
   border-radius: 100px;
   border: 1px solid var(--gray15-color);
@@ -28,28 +28,30 @@
   text-align: start;
   transition: .2s ease-in-out;
 }
-.features-content .et-btns button:not(.et-active-btn):hover {
+
+.featuresContent .ET-btns button:not(.ET-activeBtn):hover {
   background-color: var(--gray15-color);
 }
-.features-content .et-btns button:not(:last-child) {
+
+.featuresContent .ET-btns button:not(:last-child) {
   margin-bottom: 24px;
 }
 
-.et-btn {
+.ET-btn {
   background-color: transparent;
   color: var(--white-color);
 }
 
-.et-active-btn {
+.ET-activeBtn {
   color: var(--green60-color);
   background-color: var(--black10-color);
 }
 
-.features-cards {
+.featuresCards {
   width: 78.822%;
 }
 
-.features-cards .fading {
+.featuresCards .fading {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -58,106 +60,106 @@
 
 /* figma design */
 @media (max-width: 1919px) {
-  .features-title {
+  .featuresTitle {
     margin-bottom: 60px;
     width: 80.46875%;
   }
 
-  .features-content {
+  .featuresContent {
     column-gap: 20px;
   }
 
-  .features-content .et-btns {
+  .featuresContent .ET-btns {
     width: 19.14%;
     padding: 40px;
   }
 
-  .features-content .et-btns button {
+  .featuresContent .ET-btns button {
     font-size: 14px;
     line-height: 21px;
     padding: 13.3px 19px;
   }
 
-  .features-content .et-btns button:not(:last-child) {
+  .featuresContent .ET-btns button:not(:last-child) {
     margin-bottom: 20px;
   }
 
-  .features-cards {
+  .featuresCards {
     width: 79.296%;
   }
 
-  .features-cards .fading {
+  .featuresCards .fading {
     gap: 20px;
   }
 }
 
 @media (max-width: 1439px) {
-  .features-content .et-btns {
+  .featuresContent .ET-btns {
     width: 21.298%;
   }
 
-  .features-content .et-btns button {
+  .featuresContent .ET-btns button {
     font-size: 12px;
     padding: 14px 10px;
     text-align: center;
   }
 
-  .features-cards {
+  .featuresCards {
     width: 76.296%;
   }
 }
 
 @media (max-width: 1200px) {
-  .features-title {
+  .featuresTitle {
     width: 100%;
   }
 
-  .features-content .et-btns {
+  .featuresContent .ET-btns {
     width: 100%;
     display: flex;
     justify-content: space-between;
     gap: 20px;
   }
 
-  .features-cards {
+  .featuresCards {
     width: 100%;
     margin-top: 20px;
   }
 
-  .features-content .et-btns button {
+  .featuresContent .ET-btns button {
     width: 25%;
     font-size: 13px;
     text-align: center;
   }
 
-  .features-content .et-btns button:not(:last-child) {
+  .featuresContent .ET-btns button:not(:last-child) {
     margin-bottom: 0;
   }
 }
 
 /* figma design */
 @media (max-width: 768px) {
-  .features-content {
+  .featuresContent {
     flex-direction: column;
     overflow: hidden;
     flex-wrap: nowrap;
   }
 
-  .features-title {
+  .featuresTitle {
     margin-bottom: 50px;
     width: 100%;
   }
 
-  .features-content .et-btns {
+  .featuresContent .ET-btns {
     padding: 20px;
     overflow-x: scroll;
   }
 
-  .features-content .et-btns::-webkit-scrollbar {
+  .featuresContent .ET-btns::-webkit-scrollbar {
     display: none;
   }
 
-  .features-content .et-btns button {
+  .featuresContent .ET-btns button {
     display: flex;
     flex-shrink: 0;
     justify-content: center;

@@ -6,8 +6,8 @@ import { exportedPressCardData } from '../../Data/PressCardData'
 
 export default function PressReleasesSectionComponent() {
   return (
-    <section className="press-releases px-162 pb-150">
-      <div className="press-title mb-80">
+    <section className="pressReleases px-162 pb-150">
+      <div className="pressTitle mb-80">
         <TitleComponent
           title="Press Releases"
           desc="Stay updated with the latest happenings and exciting developments at YourBank through our press releases."
@@ -16,7 +16,7 @@ export default function PressReleasesSectionComponent() {
         />
       </div>
 
-      <div className="press-cards">
+      <div className="pressCards">
         {exportedPressCardData.map((e, index) => {
           return (
             <PressCardComponent

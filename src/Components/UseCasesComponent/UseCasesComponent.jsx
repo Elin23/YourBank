@@ -12,16 +12,16 @@ export default function UseCasesComponent({ reverse }) {
         <div className='Af-UseCasesComponentSide-1-card' data-aos="flip-right" data-aos-delay="200">
             <IconGradient
             button={false}
-            img={UseCaseData[reverse ? 1 : 0].properities[index].icon}
+            img={UseCaseData[reverse ? 1 : 0].properties[index].icon}
             />
-            <span>{UseCaseData[reverse ? 1 : 0].properities[index].desc}</span>
+            <span>{UseCaseData[reverse ? 1 : 0].properties[index].desc}</span>
         </div>
     );
 
     return (
         <>
             <div className={reverse ? 'Af-UseCasesComponentReverse ' : 'Af-UseCasesComponent'}>
-                <div className={reverse ? 'Af-UseCasesComponentSide-1Reverse ' : 'Af-UseCasesComponentSide-1'} data-aos="fade-left">
+                <div className={reverse ? 'Af-UseCasesComponentSide-1-Reverse ' : 'Af-UseCasesComponentSide-1'} data-aos="fade-left">
                     <div className='Af-cardTop'>
                         {renderCard(0)}
                         {renderCard(1)}
@@ -33,13 +33,13 @@ export default function UseCasesComponent({ reverse }) {
                 </div>
                 <div className='Af-UseCasesComponentSide-2'>
                     <div className='Af-UseCasesComponentSide-2-title'>
-                        <h4 className='' data-aos="fade-up">{UseCaseData[reverse ? 1 : 0].heading.title}</h4>
-                        <p className='' data-aos="fade-up" data-aos-delay="200">{UseCaseData[reverse ? 1 : 0].heading.desc}</p>
+                        <h4 className='fs-30 fw-500' data-aos="fade-up">{UseCaseData[reverse ? 1 : 0].heading.title}</h4>
+                        <p className='f-18 fw-300' data-aos="fade-up" data-aos-delay="200">{UseCaseData[reverse ? 1 : 0].heading.desc}</p>
                     </div>
                     <ScrollTrigger onEnter={() => setCounterState(true)} onExit={() => setCounterState(false)}>
-                        <div className='Af-UseCasesComponentSide-2-secondDiv'>
+                        <div className='Af-UseCasesComponentSide-2-rating'>
                             <div className='Af-rate'>
-                                {!reverse && <h3>
+                                {!reverse && <h3 className='f-58'>
                                     {counterState &&
                                         <CountUp
                                             start={0}
@@ -48,7 +48,7 @@ export default function UseCasesComponent({ reverse }) {
                                         </CountUp>
                                     }
                                     %</h3>}
-                                {reverse && <h3>
+                                {reverse && <h3 className='f-58'>
                                     {counterState &&
                                         <CountUp
                                             start={0}
@@ -61,9 +61,9 @@ export default function UseCasesComponent({ reverse }) {
                                 {!reverse && <p className='f-18 fw-300'>{UseCaseData[0].rating[0].desc}</p>}
                                 {reverse && <p className='f-18 fw-300'>{UseCaseData[1].rating[0].desc}</p>}
                             </div>
-                            <div className='Af-divBorder'></div>
+                            <div className='Af-line'></div>
                             <div className='Af-rate'>
-                                {!reverse && <h3>
+                                {!reverse && <h3 className='f-58'>
                                     {counterState &&
                                         <CountUp
                                             start={0}
@@ -73,7 +73,7 @@ export default function UseCasesComponent({ reverse }) {
                                     }
                                     %
                                 </h3>}
-                                {reverse && <h3>
+                                {reverse && <h3 className='f-58'>
                                     {counterState &&
                                         <CountUp
                                             start={0}
@@ -86,9 +86,9 @@ export default function UseCasesComponent({ reverse }) {
                                 {!reverse && <p>{UseCaseData[0].rating[1].desc}</p>}
                                 {reverse && <p>{UseCaseData[1].rating[1].desc}</p>}
                             </div>
-                            <div className='Af-divBorder'></div>
+                            <div className='Af-line'></div>
                             <div className='Af-rate'>
-                                {!reverse && <h3>
+                                {!reverse && <h3 className='f-58'>
                                     {counterState &&
                                         <CountUp
                                             start={0}
@@ -98,7 +98,7 @@ export default function UseCasesComponent({ reverse }) {
                                     }
                                     %
                                 </h3>}
-                                {reverse && <h3>
+                                {reverse && <h3 className='f-58'>
                                     {counterState &&
                                         <CountUp
                                             start={0}

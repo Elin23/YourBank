@@ -89,7 +89,7 @@
 
 /**style error message**/
 .AA-form-section .AA-form-container .AA-form-container-bg .AA-error {
-    color: var(--white-color);
+    color: red;
     padding: 10px 20px 0 20px;
     margin: 0;
 }

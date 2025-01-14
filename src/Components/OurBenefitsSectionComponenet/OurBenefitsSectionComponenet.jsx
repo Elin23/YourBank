@@ -1,20 +1,14 @@
-import React from 'react'
-import './OurBenefitsSectionComponenet.css'
-import TitleComponent from '../TitleComponent/TitleComponent'
-import OurBenefitsCardComponent from '../OurBenefitsCardComponent/OurBenefitsCardComponent'
-import {exportedData} from './../../Data/OurBenefitsCardData'
+import React from "react";
+import "./OurBenefitsSectionComponenet.css";
+import TitleComponent from "../TitleComponent/TitleComponent";
+import OurBenefitsCardComponent from "../OurBenefitsCardComponent/OurBenefitsCardComponent";
+import { exportedData } from "./../../Data/OurBenefitsCardData";
 
 export default function OurBenefitsSectionComponenet() {
-  const renderCardRow = (leftData, rightData) => (
-    <div className="hw-OurBenefitsCardsRow">
-      <OurBenefitsCardComponent left={true} data={leftData} />
-      <span className="hw-dashed-lines-vr"></span>
-      <OurBenefitsCardComponent left={false} data={rightData} />
-    </div>
-  );
-
   return (
     <section className="HW-OurBenefitsComponent px-162 pb-150">
+      {/* Display the section title and description */}
+
       <div className="title-head">
         <TitleComponent
           title={"Our Benefits"}
@@ -25,10 +19,19 @@ export default function OurBenefitsSectionComponenet() {
           fw={false}
         />
       </div>
+      {/* Render the cards */}
       <div className="HW-OurBenefitsCardsContainer">
-        {renderCardRow(exportedData[0], exportedData[1])}
+          <div className="hw-OurBenefitsCardsRow">
+            <OurBenefitsCardComponent left={true} data={exportedData[0]} />
+            <span className="hw-dashed-lines-vr"></span>
+            <OurBenefitsCardComponent left={false} data={exportedData[1]} />
+          </div>
         <span className="hw-dashed-lines-hr"></span>
-        {renderCardRow(exportedData[2], exportedData[3])}
+        <div className="hw-OurBenefitsCardsRow">
+            <OurBenefitsCardComponent left={false} data={exportedData[2]} />
+            <span className="hw-dashed-lines-vr"></span>
+            <OurBenefitsCardComponent left={true} data={exportedData[3]} />
+          </div>
       </div>
     </section>
   );

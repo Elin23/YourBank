@@ -76,20 +76,21 @@ export default function NavBarComponent() {
       }
     });
   };
-//handle the footer Links Navigation
-  useEffect(() => {
-    const handleActivePathChange = () => {
-      const activePath = JSON.parse(localStorage.getItem('activePath'));
-      setActiveLink(activePath);
-    };
-
-    window.addEventListener('activePathChanged' , handleActivePathChange);
-    
-    return () => {
-      window.removeEventListener('activePathChanged' , handleActivePathChange)
-    }
-  }, [])
   
+ //handle the footer Links Navigation
+ useEffect(() => {
+  const handleActivePathChange = () => {
+    const activePath = JSON.parse(localStorage.getItem('activePath'));
+    setActiveLink(activePath);
+  };
+
+  window.addEventListener('activePathChanged' , handleActivePathChange);
+  
+  return () => {
+    window.removeEventListener('activePathChanged' , handleActivePathChange)
+  }
+}, [])
+
   return (
     <>
       <nav className={`${scrolling ? "scrolled" : ""}`}>
