@@ -76,18 +76,18 @@ export default function NavBarComponent() {
       }
     });
   };
-  //handle the footer Links Navigation
+  
  //handle the footer Links Navigation
  useEffect(() => {
   const handleActivePathChange = () => {
-    const activePath = localStorage.getItem('activePath');
+    const activePath = JSON.parse(localStorage.getItem('activePath'));
     setActiveLink(activePath);
   };
 
-  window.addEventListener('activePathChanged', handleActivePathChange);
-
+  window.addEventListener('activePathChanged' , handleActivePathChange);
+  
   return () => {
-    window.removeEventListener('activePathChanged', handleActivePathChange)
+    window.removeEventListener('activePathChanged' , handleActivePathChange)
   }
 }, [])
 
