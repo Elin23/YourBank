@@ -130,7 +130,7 @@
     }
 }
 
-@media (max-width:1140px) {
+@media (max-width:1200px) {
     .howWeProtectBG {
         display: none;
     }
@@ -142,11 +142,6 @@
 
 
 @media (max-width:992px){
-    .HW-howWeProtectYouContainer{
-        display: none;
-
-    }
-
     .howWeProtctCardsContainer {
         width: 100%;
         height: unset;
