@@ -27,7 +27,7 @@ export default function HeroComponent() {
   const getExchangeRate = async () => {
     const API_KEY = import.meta.env.VITE_API_KEY; // Load API key from environment variables
     const API_URL = `https://v6.exchangerate-api.com/v6/${API_KEY}/pair/${fromCurrency}/${toCurrency}`;
-    
+
     setIsLoading(true);
     try {
       const response = await fetch(API_URL);
@@ -74,7 +74,7 @@ export default function HeroComponent() {
   return (
     <>
       <div className='es-heroContainer px-162 pb-150'>
-         {/* Left Section */}
+        {/* Left Section */}
         <div className='es-heroLeftContent' data-aos="zoom-in" data-aos-duration="2000">
           <div className='es-subTitle'>
             <img src={tickIcon} alt="tick-icon" />
@@ -90,15 +90,22 @@ export default function HeroComponent() {
           </div>
           {!isLogin && ( // Show "Open Account" button only if not logged in
             <div className="es-heroBtn f-18">
-              <Link to='/signUp'>Open Account</Link>
+              <Link
+                to='/signUp'
+                onClick={() => {
+                  localStorage.setItem("activeHref", "/signUp")
+                  window.dispatchEvent(new Event("activeHrefChanged"))
+                }}>
+                Open Account
+              </Link>
             </div>
           )}
 
         </div>
 
-         {/* Right Section: Contains transaction and exchange-related features*/}
+        {/* Right Section: Contains transaction and exchange-related features*/}
         <div className="es-rightSide" data-aos="zoom-in" data-aos-duration="2000">
-           {/* Monthly Income Section */}
+          {/* Monthly Income Section */}
           <div className="es-monthlyIncome">
             <div className="es-icon">
               <img src={plus} alt="plus Icon" />
