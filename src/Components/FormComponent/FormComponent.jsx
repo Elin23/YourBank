@@ -49,9 +49,16 @@ export default function FormComponent({ action }) {
   const validateInput = (id, value) => {
     let message = "";
     if (id === "firstName" || id === "lastName") {
-      message = NameRegex.test(value) ? `${id.charAt(0).toUpperCase() + id.slice(1)} is valid` : (value.length > 0 ? `${id.charAt(0).toUpperCase() + id.slice(1)} not valid` : "");
+      message =
+        NameRegex.test(value) && value.length <= 7
+          ? `${id.charAt(0).toUpperCase() + id.slice(1)} is valid`
+          : value.length > 0
+          ? `${
+              id.charAt(0).toUpperCase() + id.slice(1)
+            } not valid ,  must be less or equal 7 characters`
+          : "";
     } else if (id === "email") {
-      message = emailRegex.test(value) ? "Valid email address" : (value.length > 0 ? "Invalid email address" : "");
+      message = emailRegex.test(value) ? "Valid email address"  : (value.length > 0 ? "Invalid email address" : "");
     } else if (id === "password" && action === "signup") {
       message = passwordRegex.test(value) ? "Password is valid" : (value.length > 0 ? "Password must be at least 8 characters long and include both letters and numbers" : "");
     }
