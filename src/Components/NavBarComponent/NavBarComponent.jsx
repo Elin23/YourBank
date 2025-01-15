@@ -44,7 +44,6 @@ export default function NavBarComponent() {
       title: " Are you sure you want to log out?",
       scrollbarPadding: false,
       heightAuto: false,
-      heightAuto: false,
       showClass: {
         popup: `
           animate__animated
@@ -74,7 +73,6 @@ export default function NavBarComponent() {
       }
     });
   };
-
   //handle the footer Links Navigation
   useEffect(() => {
     const handleActivePathChange = () => {
@@ -114,7 +112,7 @@ export default function NavBarComponent() {
                 className="f-18">
                 <NavLink
                   to={item.path} end
-                  className={({ isActive }) => (isActive || activeLink == item.path ? "active-link" : "")}
+                  className={({ isActive }) => (isActive || activeLink == item.path ? "activeLink" : "")}
                   onClick={() => (setMenuOpen(!menuOpen), setActiveBtn(activeBtn === "sign up" ? "login" : "login"),
                     localStorage.setItem('activePath', JSON.stringify(item.path))//set the active path in the local storage so the navbar would know when the path is changed
                     , window.dispatchEvent(new Event('activePathChanged'))
