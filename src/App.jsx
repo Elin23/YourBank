@@ -15,6 +15,7 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import ScrollToTop from "./Components/ScrollToTop/ScrollToTop";
 import GiftComponent from './Components/GiftComponent/GiftComponent';
+import ForgetPaswwordComponent from './Components/ForgetPaswwordComponent/ForgetPaswwordComponent';
 
 function App() {
   // State for new user
@@ -81,6 +82,7 @@ function App() {
           <Route path="/security" element={<Security />} />
           <Route path="/login" element={<Login />} />
           <Route path="/signUp" element={<SignUp />} />
+          <Route path="/forgetPassword/:id" element={<ForgetPaswwordComponent />} />
         </Route>
       </Routes>
       {isNewUser && isVisible && <GiftComponent />}

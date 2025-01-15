@@ -1,13 +1,15 @@
 
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState ,useRef } from "react";
 import "./FormComponent.css";
 import TitleComponent from "../TitleComponent/TitleComponent";
 import { SocialLoginData } from "../../Data/SocialLoginData";
 import { Link, useNavigate } from "react-router-dom";
 import IconGradient from "../IconGradient/IconGradient";
 import image from "../../assets/imgs/AbstractDesign4.png";
+import emailjs from 'emailjs-com';
 
 export default function FormComponent({ action }) {
+
   const navigate = useNavigate();
   const title = action === "login" ? "Login" : "Sign Up";
   const desc =
@@ -68,6 +70,44 @@ export default function FormComponent({ action }) {
       `,
     },
   });
+
+  
+  const handleForgetPassword = (e) => {
+    if(state.email.length > 0 
+      && regexMap.email.test(state.email)){
+    e.preventDefault();
+      const templateParams = {
+        to_name: state.email,
+        to_email: state.email,
+        support_email: 'yourBank@gmail.com',
+        link : `http://localhost:5173/YourBank/#/forgetPassword/alaa.assas1997@gmail.com`
+      };
+      emailjs
+        .send(
+          "service_6ohgsus",
+          "template_ngckjbi",
+          templateParams,
+          "hEUeyD-6XETPzATzO"
+        )
+        .then(
+          (result) => {
+            console.log(`Email sent to ${state.email}: ${result.text}`);
+          },
+          (error) => {
+            console.error(
+              `Failed to send email to ${user.email}: ${error.text}`
+            );
+          }
+        );
+      }
+      else{
+        Toast.fire({
+          icon: "error",
+          title:
+            "please Enter your Email.",
+        });
+      }
+  };
 
   const validateInput = (id, value) => {
     const messageMap = {
@@ -350,7 +390,7 @@ export default function FormComponent({ action }) {
               </div>
             </div>
             {action === "login" ? (
-              <Link className="AA-forget-pass-btn f-18 fw-400" to="#">
+              <Link className="AA-forget-pass-btn f-18 fw-400" to="#" onClick={handleForgetPassword}>
                 Forgot Password?
               </Link>
             ) : (
