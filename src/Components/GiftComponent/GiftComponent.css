@@ -2,14 +2,8 @@
   position: fixed;
   left: 10px;
   bottom: 0px;
-  transition: 0.5s;
-  transform: rotate(50dg);
   width: 90px;
   animation: bounce 1s infinite;
-}
-
-.giftIcon:hover {
-  transform: scale(1.2);
 }
 
 .custom-title {
