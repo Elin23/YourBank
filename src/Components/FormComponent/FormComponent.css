@@ -114,8 +114,8 @@
 .AA-form-section .AA-form-container .AA-form-container-bg .AA-input,
 .AA-form-section .AA-form-container .AA-form-container-bg .AA-password-input {
     color: var(--white-color);
-    background-color: #1A1A1A;
-    border: 1px solid #262626;
+    background-color: var(--gray10-color);
+    border: 1px solid var(--gray15-color);
     padding: 23.341px;
     border-radius: 88px;
     width: 100%;
@@ -248,12 +248,6 @@
     text-decoration: none;
 }
 
-.ES-borderGreen{
-    border: 1.5px solid var(--green60-color) !important;
-}
-.ES-borderRed{
-    border: 1.5px solid rgb(181, 53, 53) !important;
-}
 /** laptop **/
 @media (max-width: 1919px) {
     .AA-form-section {
