@@ -146,7 +146,9 @@ export default function NavBarComponent() {
               </>
             ) : (
               <>
-                <span className="userName f-18">{userName}</span>
+                <Link className={'f-18'}>
+                  {userName}
+                </Link>
                 <Link className={`f-18 ET-bgGreen`} onClick={handleLogout}>
                   Logout
                 </Link>
