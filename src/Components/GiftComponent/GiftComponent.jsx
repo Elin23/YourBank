@@ -13,11 +13,13 @@ export default function GiftComponent() {
     const storedIsNewUser = localStorage.getItem("isNewUser");
     setIsNewUser(storedIsNewUser === null || storedIsNewUser === "true");
 
+    // Function to handle storage change
     const handleStorageChange = () => {
       const isNewUser = localStorage.getItem("isNewUser");
       setIsNewUser(isNewUser === "true");
     };
 
+    // Add event listener for storage changes
     window.addEventListener("storage", handleStorageChange);
 
     return () => {
@@ -25,6 +27,7 @@ export default function GiftComponent() {
     };
   }, []);
 
+  //  add Fireworks animation
   useEffect(() => {
     if (showFireworks) {
       const container = fireworkContainerRef.current;
@@ -40,7 +43,7 @@ export default function GiftComponent() {
           particles: 50,
           trace: 3,
           explosion: 5,
-          autoresize: true,
+          autoReSize: true,
           brightness: { min: 50, max: 80 },
           decay: { min: 0.015, max: 0.03 },
           boundaries: {
@@ -69,10 +72,10 @@ export default function GiftComponent() {
     }
   }, [showFireworks]);
 
+  // Function to handle gift click
   const handleGiftClick = () => {
     localStorage.setItem("isNewUser", "false");
     setIsNewUser(false);
-
     setShowFireworks(true);
 
     Swal.fire({
@@ -81,7 +84,6 @@ export default function GiftComponent() {
       imageAlt: "gift image",
       title: "Congratulations!",
       text: "You’ve won $50 as a reward for signing up!",
-      // background: "#1C1C1C",
       customClass: {
         title: "custom-title",
         confirmButton: "custom-confirm-btn",
@@ -123,7 +125,7 @@ export default function GiftComponent() {
         <img
           src={giftImage}
           alt="gift image"
-          className="gift-icon"
+          className="giftIcon"
           onClick={handleGiftClick}
         />
       )}

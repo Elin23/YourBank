@@ -52,6 +52,7 @@ export default function FormComponent({ action }) {
     timer: 4000,
     scrollbarPadding: false,
     heightAuto: false,
+    heightAuto: false,
     showClass: {
       popup: `
         animate__animated

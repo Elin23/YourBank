@@ -17,15 +17,15 @@ import ScrollToTop from "./Components/ScrollToTop/ScrollToTop";
 import GiftComponent from './Components/GiftComponent/GiftComponent';
 
 function App() {
- // State for new user
+  // State for new user
   const [isNewUser, setIsNewUser] = useState(false);
   // State for visibility
-  const [isVisible, setIsVisible] = useState(true); 
-  
+  const [isVisible, setIsVisible] = useState(true);
+
   /* The isVisible state variable is necessary
-   to ensure that the user does not lose access to their special gift
-   when they log out without opening it.
-   By managing the visibility of the gift based on this state, we can maintain the user's
+  to ensure that the user does not lose access to their special gift
+  when they log out without opening it.
+  By managing the visibility of the gift based on this state, we can maintain the user's
   experience and ensure that the gift remains available for them when they return. */
 
   useEffect(() => {

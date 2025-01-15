@@ -58,6 +58,8 @@
   gap: 30px;
 }
 
+/* start responsive */
+
 /* figma design */
 @media (max-width: 1919px) {
   .featuresTitle {
