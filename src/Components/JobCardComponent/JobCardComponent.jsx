@@ -1,6 +1,7 @@
 import "./JobCardComponent.css";
 import Icon3 from "../../assets/imgs/careers_icons/icon3.png";
-import { jsPDF } from "jspdf";
+// import companyLogo from "../../assets/imgs/logo.png";
+// import { jsPDF } from "jspdf";
 
 export default function JobCardComponent({
   Title,
@@ -9,42 +10,67 @@ export default function JobCardComponent({
   jobDescription,
   Requirements,
 }) {
-  const handleApply = () => {
-    const doc = new jsPDF();
+  // const handleApply = () => {
+  //   // Retrieve user data from localStorage
+  //   const storedUser = JSON.parse(localStorage.getItem("user") || "{}"); // Default to empty object if null
+  //   const firstName = storedUser.firstName || "First Name";
+  //   const lastName = storedUser.lastName || "Last Name";
+  //   const email = storedUser.email || "Email";
+  //   const phone = storedUser.phone || "Phone Number";
 
-    doc.setFontSize(20);
-    doc.text("Job Application Form", 10, 10);
+  //   const doc = new jsPDF();
 
-    doc.setFontSize(16);
-    doc.text("Position: " + Title, 10, 30);
-    doc.text("Location: " + location, 10, 40);
-    doc.text("Department: " + Department, 10, 50);
+  //   // Add company logo
+  //   const imgData = companyLogo; 
+  //   doc.addImage(imgData, "PNG", 5, 5, 25, 10);
 
-    doc.setFontSize(14);
-    doc.text("About This Job:", 10, 70);
-    doc.setFontSize(12);
-    doc.text(jobDescription, 10, 80, { maxWidth: 190 });
+  //   // Title and header
+  //   doc.setFontSize(20);
+  //   doc.setTextColor(40, 40, 100);
+  //   doc.text("Job Application Form", 70, 30);
 
-    doc.setFontSize(14);
-    doc.text("Requirements & Qualifications:", 10, 110);
-    if (Array.isArray(Requirements)) {
-      Requirements.forEach((req, index) => {
-        doc.text(`- ${req}`, 10, 120 + index * 10);
-      });
-    }
+  //   // Job details
+  //   doc.setFontSize(16);
+  //   doc.setTextColor(0, 0, 0);
+  //   doc.text("Position: " + Title, 10, 50);
+  //   doc.text("Location: " + location, 10, 60);
+  //   doc.text("Department: " + Department, 10, 70);
 
-    doc.setFontSize(16);
-    doc.text("Applicant Information", 10, 150);
+  //   // Job description
+  //   doc.setFontSize(14);
+  //   doc.setTextColor(40, 40, 100);
+  //   doc.text("About This Job:", 10, 90);
+  //   doc.setFontSize(12);
+  //   doc.setTextColor(0, 0, 0);
+  //   doc.text(jobDescription, 10, 100, { maxWidth: 190 });
 
-    doc.setFontSize(12);
-    doc.text("Name: ____________________________", 10, 170);
-    doc.text("Email: ____________________________", 10, 180);
-    doc.text("Phone: ____________________________", 10, 190);
-    doc.text("Resume Link: _____________________", 10, 200);
-    doc.text("Cover Letter: ____________________", 10, 210);
+  //   // Requirements
+  //   doc.setFontSize(14);
+  //   doc.setTextColor(40, 40, 100);
+  //   doc.text("Requirements & Qualifications:", 10, 130);
+  //   if (Array.isArray(Requirements)) {
+  //     Requirements.forEach((req, index) => {
+  //       doc.setTextColor(0, 0, 0);
+  //       doc.text(`- ${req}`, 10, 140 + index * 10);
+  //     });
+  //   }
 
-    doc.save(`${Title}_Application_Form.pdf`);
-  };
+  //   // Applicant information
+  //   doc.setFontSize(16);
+  //   doc.setTextColor(40, 40, 100);
+  //   doc.text("Applicant Information", 10, 190);
+
+  //   doc.setFontSize(12);
+  //   doc.setTextColor(0, 0, 0);
+  //   doc.text(`First Name: ${firstName}`, 10, 200);
+  //   doc.text(`Last Name: ${lastName}`, 10, 210);
+  //   doc.text(`Email: ${email}`, 10, 220);
+  //   doc.text(`Phone: ${phone}`, 10, 230);
+  //   doc.text("Resume Link: _____________________", 10, 240);
+  //   doc.text("Cover Letter: ____________________", 10, 250);
+
+  //   doc.save(`${Title}_Application_Form.pdf`);
+  // };
 
   return (
     <>

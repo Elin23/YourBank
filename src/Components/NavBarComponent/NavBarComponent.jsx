@@ -13,8 +13,8 @@ export default function NavBarComponent() {
   const [scrolling, setScrolling] = useState(false);
   const [isLogin, setIsLogin] = useState(false);
   const [activeBtn, setActiveBtn] = useState("login");
-  const [activeIndex, setActiveIndex] = useState(0);
-  const [userName, setUserName] = useState(""); // add
+  // const [activeIndex, setActiveIndex] = useState(0);
+  const [userName, setUserName] = useState(""); 
   const [activeLink, setActiveLink] = useState('')
 
   useEffect(() => {
