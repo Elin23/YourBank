@@ -44,7 +44,7 @@ export default function FormComponent({ action }) {
     password: /(?=.*[a-z])(?=.*[0-9])(?=.{8,})/,
   };
 
-  const [passwordVisibility , setPasswordVisibility] = useState({
+  const [passwordVisibility, setPasswordVisibility] = useState({
     icon: "show",
     type: "password"
   });
@@ -126,7 +126,7 @@ export default function FormComponent({ action }) {
           message = regexMap[id].test(value)
             ? ``
             : `${messageMap[id]} not valid`;
-          if((id === "firstName" || id === "lastName") && value.length > 7)
+          if ((id === "firstName" || id === "lastName") && value.length > 7)
             message = `${messageMap[id]} must be maximum 7 chars`;
           if (id === "password" && !regexMap[id].test(value)) {
             message =
@@ -152,7 +152,7 @@ export default function FormComponent({ action }) {
       passwordVisibility.type === "password"
         ? { icon: "hide", type: "text" }
         : { icon: "show", type: "password" }
-    ); 
+    );
   };
 
   const submitForm = (event) => {
@@ -231,7 +231,7 @@ export default function FormComponent({ action }) {
     if (
       state.email.length > 0 &&
       state.password.length > 0 &&
-      state.firstName.length > 0  && state.firstName.length < 8 &&
+      state.firstName.length > 0 && state.firstName.length < 8 &&
       state.lastName.length > 0 && state.lastName.length < 8 &&
       regexMap.email.test(state.email) &&
       regexMap.password.test(state.password) &&
@@ -314,9 +314,8 @@ export default function FormComponent({ action }) {
                       <input
                         id={field}
                         className="AA-input f-18 fw-300"
-                        placeholder={`Enter ${
-                          field.charAt(0).toUpperCase() + field.slice(1)
-                        }`}
+                        placeholder={`Enter ${field.charAt(0).toUpperCase() + field.slice(1)
+                          }`}
                         value={state[field]}
                         onChange={handleInputChange}
                         required
@@ -324,9 +323,8 @@ export default function FormComponent({ action }) {
                     </div>
                     {/* error message */}
                     <p
-                      className={`AA-error ${
-                        messages[field].length === 0 ? "AA-hide" : "AA-show"
-                      }`}
+                      className={`AA-error ${messages[field].length === 0 ? "AA-hide" : "AA-show"
+                        }`}
                     >
                       {messages[field]}
                     </p>
@@ -350,9 +348,8 @@ export default function FormComponent({ action }) {
                 </div>
                 {/* error message */}
                 <p
-                  className={`AA-error ${
-                    messages.email.length === 0 ? "AA-hide" : "AA-show"
-                  }`}
+                  className={`AA-error ${messages.email.length === 0 ? "AA-hide" : "AA-show"
+                    }`}
                 >
                   {messages.email}
                 </p>
@@ -371,19 +368,17 @@ export default function FormComponent({ action }) {
                   />
                   <span className="AA-icon-pass" onClick={handleToggle}>
                     <i
-                      className={`eye-icon ${
-                        passwordVisibility.icon === "show"
+                      className={`eye-icon ${passwordVisibility.icon === "show"
                           ? "fa-solid fa-eye"
                           : "fa-regular fa-eye-slash"
-                      }`}
+                        }`}
                     ></i>
                   </span>
                 </div>
                 {/* error message */}
                 <p
-                  className={`AA-error ${
-                    messages.password.length === 0 ? "AA-hide" : "AA-show"
-                  }`}
+                  className={`AA-error ${messages.password.length === 0 ? "AA-hide" : "AA-show"
+                    }`}
                 >
                   {messages.password}
                 </p>
@@ -405,7 +400,11 @@ export default function FormComponent({ action }) {
             <Link
               className="AA-custom-btn f-18 fw-400 AA-custom-btn AA-bg-btn-gray-15 AA-btn-white"
               to={action === "login" ? "/signUp" : "/login"}
-            >
+              onClick={() => {
+                const activeHref = action === "login" ? "/signUp" : "/login"
+                localStorage.setItem("activeHref", activeHref)
+                window.dispatchEvent(new Event("activeHrefChanged"))
+              }}>
               {action === "login" ? "Sign Up" : "Login"}
             </Link>
             {/* login socials btn */}

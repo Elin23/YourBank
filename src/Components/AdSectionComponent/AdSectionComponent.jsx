@@ -89,7 +89,12 @@ export default function AdSectionComponent({ fixedContent }) {
 
         {!isLogin && (
           <button className="hw-AdSecleft">
-            <Link to={'/signUp'}>
+            <Link
+              to="/signUp"
+              onClick={() => {
+                localStorage.setItem("activeHref", "/signUp")
+                window.dispatchEvent(new Event("activeHrefChanged"))
+              }}>
               Open Account
             </Link>
           </button>
