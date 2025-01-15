@@ -13,7 +13,7 @@ export default function ForgetPasswordComponent() {
   });
 
   const handleResetPassword = () => {
-    const passwordRegex = /(?=.*[a-z])(?=.*[0-9])(?=.{8,})/;
+    const passwordRegex = /(?=.*[a-z])(?=.*[0-9])(?=.{8,})/; // 
 
     // Check if passwords match
     if (state.newPassword !== state.confirmPassword) {
