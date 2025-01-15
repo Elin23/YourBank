@@ -165,21 +165,21 @@
 }
 div:where(.swal2-icon).swal2-success [class^=swal2-success-line],
 div:where(.swal2-container) button:where(.swal2-styled):where(.swal2-confirm){
-  background-color: var(--green60-color);
+  background-color: var(--green60-color) !important;
 }
 
 div:where(.swal2-container) button:where(.swal2-styled):where(.swal2-confirm){
-  color: var(--black-color);
+  color: var(--black-color) !important;
 }
 
 div:where(.swal2-icon).swal2-success .swal2-success-ring,
 div:where(.swal2-icon).swal2-question
 {
-  border-color: var(--green60-color) ;
+  border-color: var(--green60-color) !important;
 }
 
 div:where(.swal2-icon).swal2-question{
-  color: var(--green60-color);
+  color: var(--green60-color) !important;
 }
 .swal2-container::before { 
   content: ''; 
