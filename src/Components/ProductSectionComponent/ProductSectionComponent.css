@@ -112,16 +112,16 @@
 }
 
 @media (max-width: 540px) {
-    .AM-product-sec .AM-title-comp .desc {
-        max-width: 358px;
-    }
+    /* .AM-product-sec .AM-title-comp .desc {
+        max-width: 338px;
+    } */
 
 }
 
 
 @media (max-width: 389px) {
-    .AM-product-sec .AM-title-comp .desc {
-        max-width: 280px;
-    }
+    /* .AM-product-sec .AM-title-comp .desc {
+        max-width: 338px;
+    } */
 
 }

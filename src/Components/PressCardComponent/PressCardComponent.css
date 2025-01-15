@@ -4,27 +4,31 @@
   border: 1px solid var(--gray15-color);
   border-radius: 40px 40px 16px 16px;
   padding: 30px;
+
 }
-.Af-imgBorder{
+
+.Af-imgBorder {
   width: 100%;
   height: 333px;
   border-radius: 30px 30px 12px 12px;
   overflow: hidden;
 }
+
 .PressCardComponent .Af-imgBorder img {
   width: 100%;
   border-radius: 30px 30px 12px 12px;
   height: 100%;
-  transition: 0.4s ;
+  transition: 0.4s;
   object-fit: cover;
+}
+
+.PressCardComponent:hover .Af-imgBorder img {
+  transform: scale(1.22);
 }
 
 .PressCardContent {
   margin-top: 51px;
   padding: 0 30px;
-}
-.PressCardComponent:hover .Af-imgBorder img{
-  transform: scale(1.22);
 }
 
 .PressCardContent h5 {
@@ -60,6 +64,7 @@
   margin-top: 30px;
 }
 
+/* start responsive */
 
 /* figma design */
 @media (max-width: 1919px) {
@@ -68,13 +73,13 @@
     padding: 24px;
   }
 
-  .PressCardComponent img {
+  .PressCardComponent .Af-imgBorder {
     height: 277px;
   }
 
   .PressCardContent {
     margin-top: 40px;
-    padding: 0 24px;
+    padding: 0 23.7px;
   }
 
   .PressCardContent h5 {
@@ -106,10 +111,10 @@
 @media (max-width: 992px) {
   .PressCardComponent {
     width: 100%;
-    padding: 20px;
+    padding: 19.8px;
   }
 
-  .PressCardComponent img {
+  .PressCardComponent .Af-imgBorder {
     height: 206px;
   }
 

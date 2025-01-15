@@ -89,7 +89,7 @@
 
 /**style error message**/
 .AA-form-section .AA-form-container .AA-form-container-bg .AA-error {
-    color: var(--white-color);
+    color: red;
     padding: 10px 20px 0 20px;
     margin: 0;
 }
@@ -128,11 +128,10 @@
     gap: 30px;
 }
 
-/***style password input **/
+/***style input with inside icon **/
 .AA-form-section .AA-form-container .AA-form-container-bg .AA-input-group {
     width: 100%;
     position: relative;
-    display: inline-block;
 }
 
 .AA-form-section .AA-form-container .AA-form-container-bg .eye-icon {
@@ -176,10 +175,10 @@
 
 .AA-bg-btn-gray-15 {
     background: var(--gray15-color);
-    border: 1px solid var(--gray20-color);
+    border: 1px solid var(--gray20-color) !important;
 }
 
-.AA-a-btn-white {
+.AA-btn-white {
     color: var(--white-color);
 }
 
@@ -369,7 +368,7 @@
 }
 
 /**tablet**/
-@media (max-width: 993px) {
+@media (max-width: 1200px) {
     .AA-form-section {
         padding-top: 138px;
     }
@@ -378,6 +377,10 @@
     .AA-form-section .AA-form-container .AA-form-container-bg .AA-inputs-row {
         flex-wrap: wrap;
         gap: 20px;
+        width: 100%;
+    }
+
+    .AA-form-section .AA-form-container .AA-form-container-bg .AA-custom-btn {
         width: 100%;
     }
 }
@@ -447,7 +450,6 @@
 
     /**style btn (login - signup) in form **/
     .AA-form-section .AA-form-container .AA-form-container-bg .AA-custom-btn {
-        width: 100%;
         margin-bottom: 8.0536%;
     }
 }

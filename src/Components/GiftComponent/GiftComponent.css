@@ -1,4 +1,4 @@
-.gift-icon {
+.giftIcon {
   position: fixed;
   left: 10px;
   bottom: 0px;
@@ -8,7 +8,7 @@
   animation: bounce 1s infinite;
 }
 
-.gift-icon:hover {
+.giftIcon:hover {
   transform: scale(1.2);
 }
 
@@ -30,6 +30,8 @@
   width: 100px !important;
 }
 
+
+/* start animation */
 @keyframes bounceIn {
   0% {
     transform: scale(0.5);

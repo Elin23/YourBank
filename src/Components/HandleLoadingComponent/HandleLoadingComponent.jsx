@@ -9,9 +9,9 @@ export default function HandleLoadingComponent() {
   useEffect(() => {
     const handleLoad = () => {
       setTimeout(() => {
-        AOS.init(); //add
-        AOS.refresh(); //add
-        setLoading(false); //add
+        AOS.init(); 
+        AOS.refresh(); 
+        setLoading(false); 
       }, 2000);
     };
     if (document.readyState === "complete") {
@@ -24,7 +24,6 @@ export default function HandleLoadingComponent() {
   return (
     <>
       {loading && <LoaderComponent />}
-      {/* add */}
       {!loading && (
         <div>
           <Outlet />

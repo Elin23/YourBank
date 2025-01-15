@@ -47,8 +47,7 @@ export default function FeaturesSectionComponent() {
             return (
               <button
                 key={index}
-                className={`fw-400 f-18 ${activeBtn == btn.filter ? "ET-activeBtn" : "ET-btn"
-                  }`}
+                className={`fw-400 f-18 ${activeBtn == btn.filter ? "ET-activeBtn" : "ET-btn"}`}
                 onClick={() => activeTab(btn.filter)}
               >
                 {btn.txt}

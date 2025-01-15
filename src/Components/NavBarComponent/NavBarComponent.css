@@ -6,44 +6,38 @@ nav {
     width: 83.125%;
     height: 95px;
     padding: 20px 34px;
+    border: 1px solid var(--gray15-color);
     border-radius: 100px;
     position: fixed;
     top: 50px;
-    z-index: 1000;
     left: 8.4375%;
-    border: 1px solid var(--gray15-color);
+    z-index: 1000;
     transition: top 0.8s ease, width 0.8s ease;
 }
 
-nav .user-name {
+nav .userName {
     color: var(--white-color);
     font-weight: 500;
     margin-right: 20px;
     margin-bottom: 10px;
 }
 
-.nav-logo {
+.navLogo {
     width: 155px;
     height: 40px;
 }
 
-.responsive-nav {
+.responsiveNav {
     display: flex;
     align-items: center;
     justify-content: space-between;
     width: 62.1073298%;
 }
 
-.responsive-logo {
+.responsiveLogo {
     display: none;
 }
 
-.responsive-nav ul {
-    display: flex;
-    margin-bottom: 0;
-    list-style: none;
-    padding-left: 0;
-}
 
 nav.scrolled {
     padding: 22px 8.5%;
@@ -53,14 +47,14 @@ nav.scrolled {
     border-radius: 0px;
 }
 
-.open-nav-btn {
+.openNavBtn {
     background-color: var(--green60-color);
     border-radius: 82px;
     padding: 6px 14px;
     display: none;
 }
 
-.close-nav-btn {
+.closeNavBtn {
     font-size: 45px;
     color: var(--white-color);
     margin-top: 40px;
@@ -68,39 +62,46 @@ nav.scrolled {
     transition: 1s;
 }
 
-.close-nav-btn:hover {
+.closeNavBtn:hover {
     color: var(--green60-color);
 }
 
-.close-nav-btn:active {
+.closeNavBtn:active {
     transform: rotate(180deg);
 }
 
-.responsive-nav ul li a {
+.responsiveNav ul {
+    display: flex;
+    margin-bottom: 0;
+    list-style: none;
+    padding-left: 0;
+}
+
+.responsiveNav ul li a {
     text-decoration: none;
     color: var(--white-color);
     border-radius: 82px;
-    padding: 12px 24px;
+    padding: 13.5px 24px;
     transition: 0.5s;
 }
 
-.responsive-nav ul li a:not(.active-link):hover,
-.et-nav-btns a:hover {
+.responsiveNav ul li a:not(.activeLink):hover,
+.ET-navBtns a:hover {
     color: var(--green60-color);
 }
 
-.active-link {
+.activeLink {
     background-color: var(--gray15-color);
 }
 
-.et-nav-btns a {
+.ET-navBtns a {
     text-decoration: none;
     color: #ffffff;
-    padding: 14px 30px;
+    padding: 15px 30px;
     transition: 0.3s;
 }
 
-.et-nav-btns a.et-bg-green {
+.ET-navBtns a.ET-bgGreen {
     background-color: var(--green60-color);
     border-radius: 82px;
     color: var(--black11-color);
@@ -118,13 +119,13 @@ nav.scrolled {
         top: 30px;
     }
 
-    .nav-logo {
+    .navLogo {
         width: 116.87px;
         height: 30px;
     }
 
-    .responsive-nav ul li a {
-        padding: 10px 18px;
+    .responsiveNav ul li a {
+        padding: 11px 18px;
         font-size: 14px;
         line-height: 21px;
     }
@@ -133,17 +134,17 @@ nav.scrolled {
         padding: 14px 5.5%;
     }
 
-    .et-bg-green {
+    .ET-bgGreen {
         padding: 12px 24px;
     }
 
-    .et-nav-btns a {
-        padding: 12px 24px;
+    .ET-navBtns a {
+        padding: 13px 24px;
         font-size: 14px;
         line-height: 21px;
     }
 
-    nav .user-name {
+    nav .userName {
         font-size: 14px;
         line-height: 21px;
         margin-right: 10px;
@@ -151,7 +152,7 @@ nav.scrolled {
 }
 
 @media (max-width: 1200px) {
-    .responsive-nav ul {
+    .responsiveNav ul {
         margin-left: -50px;
     }
 }
@@ -165,12 +166,12 @@ nav.scrolled {
         top: 40px;
     }
 
-    .nav-logo {
+    .navLogo {
         width: 101.29px;
         height: 26px;
     }
 
-    .responsive-nav {
+    .responsiveNav {
         background-color: var(--black11-color);
         flex-direction: column;
         justify-content: center;
@@ -183,47 +184,46 @@ nav.scrolled {
         transition: transform 1s ease-in-out;
     }
 
-    .responsive-nav.open {
+    .responsiveNav.open {
         transform: translateY(0)
     }
 
-    .responsive-logo.responsive-nav-logo {
+    .responsiveLogo.responsiveNavLogo {
         display: block;
     }
 
-    .close-nav-btn.open-menu {
+    .closeNavBtn.openMenu {
         display: flex;
     }
 
-    .responsive-nav ul {
+    .responsiveNav ul {
         flex-direction: column;
         align-items: center;
         margin-top: 50px;
         margin-left: 0;
     }
 
-    .responsive-nav ul li {
+    .responsiveNav ul li {
         margin-bottom: 30px;
         font-size: 18px;
     }
 
-    .open-nav-btn {
+    .openNavBtn {
         display: flex;
     }
 
-    nav .user-name {
+    nav .userName {
         margin-right: 0;
     }
 
-    .et-nav-btns {
+    .ET-navBtns {
         display: flex;
         flex-direction: column;
         margin-top: 30px;
     }
 
-    .et-nav-btns a {
+    .ET-navBtns a {
         text-align: center;
         margin-bottom: 25px;
     }
 }
-

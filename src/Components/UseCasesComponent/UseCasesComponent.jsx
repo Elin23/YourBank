@@ -12,9 +12,9 @@ export default function UseCasesComponent({ reverse }) {
         <div className='Af-UseCasesComponentSide-1-card' data-aos="flip-right" data-aos-delay="200">
             <IconGradient
             button={false}
-            img={UseCaseData[reverse ? 1 : 0].properities[index].icon}
+            img={UseCaseData[reverse ? 1 : 0].properties[index].icon}
             />
-            <span>{UseCaseData[reverse ? 1 : 0].properities[index].desc}</span>
+            <span>{UseCaseData[reverse ? 1 : 0].properties[index].desc}</span>
         </div>
     );
 
