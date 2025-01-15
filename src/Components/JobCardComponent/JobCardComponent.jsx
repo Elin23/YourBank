@@ -60,7 +60,7 @@ export default function JobCardComponent({
         {/* Apply button */}
 
         <div>
-          <button className="f-18" data-aos="flip-right" data-aos-delay="500">
+          <button className="f-18" data-aos="fade-right" data-aos-delay="200">
             Apply Now
           </button>
         </div>

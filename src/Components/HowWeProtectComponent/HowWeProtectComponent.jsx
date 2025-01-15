@@ -4,6 +4,7 @@ import "./HowWeProtectComponent.css";
 import OurBenefitsCardComponent from "../OurBenefitsCardComponent/OurBenefitsCardComponent";
 import { exportedHowWeProtectData } from "./../../Data/HowWeProtectDATA";
 export default function HowWeProtectComponent() {
+  //a function to render the cards passing them the data from the file.
   const renderBenefitsCards = () => {
     return exportedHowWeProtectData.map((data, index) => (
       <OurBenefitsCardComponent key={index} data={data} />
@@ -11,6 +12,7 @@ export default function HowWeProtectComponent() {
   };
   return (
     <section className="HowWeProtectComponent px-162 pb-150">
+      {/* rendering the title of the section */}
       <TitleComponent
         title={"How We Protect You"}
         desc={
@@ -19,13 +21,13 @@ export default function HowWeProtectComponent() {
         highlightedWords={["Protect You"]}
         fw={true}
       />
-      <div className="HW-howWeProtectYouContainer">
-        <div className="howWeProtectBG">
-          <div className="hwHowWeProtectGradient"></div>
-          <div className="hw-HowWeBlendBG"></div>
+    <div className="HW-howWeProtectYouContainer">
+        <div className="howWeProtectBG">{/*the background of the Section it has two childs:*/}
+          <div className="hwHowWeProtectGradient"></div>{/*for the gradient*/}
+          <div className="hw-HowWeBlendBG"></div>{/*for the blend image*/}
         </div>
         <div className="howWeProtectCardsContainer">
-          <div className="howProtectRow">
+          <div className="howProtectRow">{/*render two cards on each row*/}
             {renderBenefitsCards().slice(0, 2)}
           </div>
           <div className="howProtectRow">

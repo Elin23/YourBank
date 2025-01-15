@@ -95,11 +95,8 @@
 
 @media (max-width:1919px) {
     .howWeProtectCardsContainer {
-        width: 100%;
+        width: 90%;
     }
-}
-
-@media (max-width:1440px) {
     .HW-howWeProtectYouContainer {
         margin-top: 58px;
         margin-bottom: 120px;
@@ -113,10 +110,11 @@
 
     .howProtectRow {
         gap: 20px;
+        width: 97.21%;
     }
 
     .howWeProtectBG {
-        width: 100%;
+        width: 99.127%;
         height: 549px;
     }
 
