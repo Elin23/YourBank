@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
-import surprise from "../../assets/imgs/surprise.png";
+import surprise from "../../assets/imgs/surprise.webp";
 import giftImage from "../../assets/imgs/gift.svg";
 import Fireworks from "fireworks-js";
 import "./GiftComponent.css";

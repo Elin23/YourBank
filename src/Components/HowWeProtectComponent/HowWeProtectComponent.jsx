@@ -23,10 +23,10 @@ export default function HowWeProtectComponent() {
       />
       <div className="HW-howWeProtectYouContainer">
         <div className="howWeProtectBG">
-          <div className="hwHowWEprotectGradient"></div>
+          <div className="hwHowWeProtectGradient"></div>
           <div className="hw-HowWeBlendBG"></div>
         </div>
-        <div className="howWeProtctCardsContainer">
+        <div className="howWeProtectCardsContainer">
           <div className="howProtectRow">
             {renderBenefitsCards().slice(0, 2)}
           </div>
