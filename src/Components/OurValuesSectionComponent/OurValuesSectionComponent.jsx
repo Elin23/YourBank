@@ -19,7 +19,7 @@ export default function OurValuesSectionComponent() {
       {/* display Value Cards Components */}
       <div className="ES-valuesCardsContainer d-flex align-items-center flex-wrap">
         {exportedValueCardData.map((card, index) => {
-          return <ValueCardComponent data={card} index={index}/>;
+          return <ValueCardComponent data={card} key={index}/>;
         })}
       </div>
     </div>

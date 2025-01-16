@@ -84,7 +84,7 @@ export default function FooterComponent() {
                                 className='hw-menu-link'
                                 onClick={() => {
                                     setActivePath(item.path),
-                                    localStorage.setItem('activePath' , JSON.stringify(item.path))//set the active path in the local storage so the navbar would know when the path is changed
+                                        localStorage.setItem('activePath', JSON.stringify(item.path))//set the active path in the local storage so the navbar would know when the path is changed
                                     window.dispatchEvent(new Event('activePathChanged'));//trigger an event that the navBar will listen to.
                                 }}>
                                 {item.name}
@@ -94,8 +94,8 @@ export default function FooterComponent() {
                 </ul>
                 <span className="hw-lineGray"></span>
                 <div className="hw-Contacts">
-                    {FooterLinkData.map((link) => (
-                        <div data-aos="fade-up">
+                    {FooterLinkData.map((link, index) => (
+                        <div data-aos="fade-up" key={index}>
                             <div className="hw-Contacts-icon">
                                 <img src={link.img} alt={link.alt} />
                             </div>

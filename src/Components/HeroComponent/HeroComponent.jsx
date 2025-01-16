@@ -127,6 +127,7 @@ export default function HeroComponent() {
               ].map((box, index) => (
                 <TransactionBox
                   key={index}
+                  id={index}
                   name={box.name}
                   amount={box.amount}
                   opacityClass={box.opacityClass}
