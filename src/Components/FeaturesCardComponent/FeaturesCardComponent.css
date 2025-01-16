@@ -1,6 +1,6 @@
 .featuresCard {
   width: 48.8%;
-  padding: 49.34px;
+  padding: 50px;
   border-radius: 12px;
   border: 1px solid var(--gray15-color);
   background-color: var(--black11-color);
@@ -27,6 +27,7 @@
   color: var(--gray70-color);
   margin-top: 30px;
   margin-bottom: 0;
+  width: 520px
 }
 
 /* start responsive */
@@ -35,7 +36,7 @@
 @media (max-width: 1919px) {
   .featuresCard {
     width: 49.014%;
-    padding: 39.34px;
+    padding: 40px;
   }
 
   .ET-cardTitle span {
@@ -51,6 +52,7 @@
     font-size: 16px;
     line-height: 24px;
     margin-top: 24px;
+    width: 100%;
   }
 }
 
@@ -69,7 +71,7 @@
 /* figma design */
 @media (max-width: 768px) {
   .featuresCard {
-    padding: 29.34px;
+    padding: 30px;
   }
 
   .ET-cardTitle span {
