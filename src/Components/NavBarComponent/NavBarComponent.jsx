@@ -12,7 +12,11 @@ export default function NavBarComponent() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolling, setScrolling] = useState(false);
   const [isLogin, setIsLogin] = useState(false);
-  const [activeBtn, setActiveBtn] = useState("login");
+  const [activeBtn, setActiveBtn] = useState(
+    (JSON.parse(localStorage.getItem("activePath")) || "") === "/signUp"
+      ? "sign up"
+      : "login"
+  );
   const [userName, setUserName] = useState("");
   const [activeLink, setActiveLink] = useState('')
 
@@ -73,27 +77,16 @@ export default function NavBarComponent() {
       }
     });
   };
-  // handle the "sign up" and "log in" buttons in form component 
-  useEffect(() => {
-    const handleActiveHrefChange = () => {
-      const activeHref = localStorage.getItem("activeHref");
-      const activeBtnFromStorage = activeLink == "/signUp" ? "sign up" : "login";
-      setActiveLink(activeHref);
-      setActiveBtn(!activeBtnFromStorage)
-    };
-
-    window.addEventListener('activeHrefChanged', handleActiveHrefChange);
-
-    return () => {
-      window.removeEventListener('activeHrefChanged', handleActiveHrefChange)
-    }
-  }, [])
 
   //handle the footer Links Navigation
   useEffect(() => {
     const handleActivePathChange = () => {
       const activePath = JSON.parse(localStorage.getItem('activePath'));
-      setActiveLink(activePath);
+      if(activePath === "/signUp")
+        setActiveBtn("sign up");
+      else
+        setActiveBtn("login");
+      setActiveLink(activePath); 
     };
 
     window.addEventListener('activePathChanged', handleActivePathChange);
@@ -131,7 +124,7 @@ export default function NavBarComponent() {
                   className={({ isActive }) => (isActive || activeLink == item.path ? "activeLink" : "")}
                   onClick={() => (
                     setMenuOpen(!menuOpen),
-                    setActiveBtn(activeBtn === "sign up" ? "login" : "login"),
+                    setActiveBtn("login"),
                     localStorage.setItem('activePath', JSON.stringify(item.path))//set the active path in the local storage so the navbar would know when the path is changed
                     , window.dispatchEvent(new Event('activePathChanged'))
                   )}
@@ -149,8 +142,10 @@ export default function NavBarComponent() {
                   to={"/signup"}
                   className={`f-18 ${activeBtn === "sign up" || activeLink === "/signUp" ? "ET-bgGreen" : ""}`}
                   onClick={() =>
-                  (setActiveBtn(activeBtn === "sign up" ? "sign up" : "sign up"),
-                    setActiveLink(activeLink == "/login" ? "/signUp" : "/signUp"),
+                  (setActiveBtn("sign up"),
+                    setActiveLink("/signUp"),
+                    localStorage.setItem('activePath', JSON.stringify("/signUp"))//set the active path in the local storage so the navbar would know when the path is changed
+                    , window.dispatchEvent(new Event('activePathChanged')),
                     setMenuOpen(!menuOpen))}>
                   Sign up
                 </Link>
@@ -158,8 +153,10 @@ export default function NavBarComponent() {
                   to={"/login"}
                   className={`f-18 ${activeBtn === "login" || activeLink === "/login" ? "ET-bgGreen" : ""}`}
                   onClick={() =>
-                  (setActiveBtn(activeBtn === "login" ? "login" : "login"),
-                    setActiveLink(activeLink == "/signUp" ? "/login" : "/login"),
+                  (setActiveBtn("login"),
+                    setActiveLink("/login"),
+                    localStorage.setItem('activePath', JSON.stringify("/login"))//set the active path in the local storage so the navbar would know when the path is changed
+                    , window.dispatchEvent(new Event('activePathChanged')), 
                     setMenuOpen(!menuOpen))}>
                   Login
                 </Link>
