@@ -11,13 +11,33 @@ export default function ForgetPasswordComponent() {
     newPassword: "",
     confirmPassword: "",
   });
+  const Toast = Swal.mixin({
+    showConfirmButton: false,
+    timer: 4000,
+    scrollbarPadding: false,
+    heightAuto: false,
+    showClass: {
+      popup: `
+        animate__animated
+        animate__fadeInUp
+        animate__faster
+      `,
+    },
+    hideClass: {
+      popup: `
+        animate__animated
+        animate__fadeOutDown
+        animate__faster
+      `,
+    },
+  });
 
   const handleResetPassword = () => {
     const passwordRegex = /(?=.*[a-z])(?=.*[0-9])(?=.{8,})/; // 
 
     // Check if passwords match
     if (state.newPassword !== state.confirmPassword) {
-      Swal.fire({
+      Toast.fire({
         icon: "error",
         title: "Passwords do not match",
         text: "Please make sure both passwords match.",
@@ -26,7 +46,7 @@ export default function ForgetPasswordComponent() {
     }
     // Check if password meets the criteria
     if (!passwordRegex.test(state.newPassword)) {
-      Swal.fire({
+      Toast.fire({
         icon: "error",
         title: "Weak Password",
         text: "Your password must be at least 8 characters long and include at least one lowercase letter and one number.",
@@ -40,7 +60,7 @@ export default function ForgetPasswordComponent() {
     if (userIndex !== -1) {
       users[userIndex].password = state.newPassword;
       localStorage.setItem("users", JSON.stringify(users));
-      Swal.fire({
+      Toast.fire({
         icon: "success",
         title: "Password Reset",
         text: "Your password has been successfully reset.",
