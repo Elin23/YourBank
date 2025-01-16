@@ -1,3 +1,4 @@
+/* the container */
 .Af-UseCasesComponent {
     display: flex;
     align-items: center;
@@ -7,7 +8,7 @@
     margin-bottom: 60px;
     overflow: hidden;
 }
-
+/* the reverse container */
 .Af-UseCasesComponentReverse {
     display: flex;
     align-items: center;
@@ -34,7 +35,7 @@
     background-position: top left;
     border-radius: 20px;
 }
-
+/* side 1 reverse*/
 .Af-UseCasesComponentSide-1-Reverse {
     width: 46.86%;
     display: flex;
@@ -49,7 +50,7 @@
     background-position: top right;
     border-radius: 20px;
 }
-
+/* The upper section of the card */
 .Af-cardTop {
     width: 100%;
     height: 222px;
@@ -58,7 +59,7 @@
     align-items: center;
     gap: 20px;
 }
-
+/* The lower section of the card */
 .Af-cardBottom {
     width: 100%;
     height: 192px;
@@ -67,7 +68,7 @@
     align-items: center;
     gap: 20px;
 }
-
+/* the small card */
 .Af-UseCasesComponentSide-1-card {
     display: flex;
     align-items: center;
@@ -87,7 +88,7 @@
     text-align: center;
     font-size: 20px;
 }
-
+/* for icon */
 .Af-UseCasesComponentSide-1-card .Af-img-father {
     padding: 10px;
     width: 78px;
@@ -125,7 +126,7 @@
 .Af-UseCasesComponentSide-2-title p {
     color: var(--gray70-color);
 }
-
+/* number section */
 .Af-UseCasesComponentSide-2-rating {
     display: flex;
     justify-content: space-between;
@@ -133,8 +134,7 @@
     flex-wrap: wrap;
     width: 100%;
 }
-
-
+/* dashed line */
 .Af-line {
     width: 1px;
     height: 146px;

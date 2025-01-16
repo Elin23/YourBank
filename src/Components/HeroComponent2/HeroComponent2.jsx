@@ -9,11 +9,14 @@ export default function HeroComponent2({ image, head, disc, light, bool }) {
                 className=' Af-HeroComponent2' 
                 data-aos="zoom-in" 
                 data-aos-duration="2000">
+                    {/* heading dev */}
                     <div 
                     data-aos="zoom-in" 
                     data-aos-duration="2000"
                     className={bool ? 'Af-HeroComponent2-heading-about' : 'Af-HeroComponent2-heading'}>
+                        {/* bool for this text */}
                         {bool && <h4 className='Af-About-h4'>Welcome to YourBank</h4>}
+                        {/* title component */}
                         <TitleComponent
                             title={head}
                             desc={disc}
@@ -21,6 +24,7 @@ export default function HeroComponent2({ image, head, disc, light, bool }) {
                             fw={false}
                         />
                     </div>
+                    {/* image side */}
                     <img 
                     src={image} 
                     alt="HeroImg" 

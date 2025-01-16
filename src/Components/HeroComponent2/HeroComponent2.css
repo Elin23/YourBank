@@ -1,10 +1,11 @@
+/* the father */
 .Af-HeroComponent2-father {
     padding-top: 198px;
     padding-left: 8.28%;
     padding-right: 8.43%;
     background-color: var(--black10-color);
 }
-
+/* the container */
 .Af-HeroComponent2 {
     background-color: var(--black11-color);
     background-image: url('../../assets/imgs/AbstractDesign4.png');
@@ -17,7 +18,7 @@
     display: flex;
     justify-content: space-between;
 }
-
+/* heading for careers, security pages */
 .Af-HeroComponent2-heading {
     z-index: 3;
     height: max-content;
@@ -31,7 +32,7 @@
     margin-top: -1px;
 
 }
-
+/* heading for about page */
 .Af-HeroComponent2-heading-about {
     z-index: 3;
     height: max-content;
@@ -44,14 +45,14 @@
     margin-right: -260px;
     margin-top: -2px;
 }
-
+/* text in top of about heading */
 .Af-About-h4 {
     font-size: 20px !important;
     line-height: 30px !important;
     font-weight: 400 !important;
     color: var(--white-color);
 }
-
+/* heading title */
 .Af-HeroComponent2-heading .title,
 .Af-HeroComponent2-heading-about .title {
     font-size: 58px !important;
@@ -72,7 +73,7 @@
         line-height: 75.4px !important;
     }
 }
-
+/* heading description */
 .Af-HeroComponent2-heading .desc,
 .Af-HeroComponent2-heading-about .desc {
     font-size: 18px !important;
