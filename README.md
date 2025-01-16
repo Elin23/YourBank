@@ -25,7 +25,7 @@ YourBank is a digital banking platform designed for users seeking an efficient a
 
 ## Features
 
-- **Login and sign-up functionality:**.
+- **Login and sign-up functionality:**
   - Displays user’s name and a logout button after successful login.
   - Persistent data storage for user sessions.
 
@@ -44,6 +44,14 @@ YourBank is a digital banking platform designed for users seeking an efficient a
 - **Dynamic User Interface:**
   - Aesthetic and interactive front-end components.
 
+- **Password Reset Simulation:**
+  - Fully functional password reset process using EmailJS API to send a reset link to the user’s email.
+  - The reset link redirects to the password reset page on our platform, where the user can update their password successfully.
+  - Updates are stored securely in local storage.
+
+- **Job Application PDF Generation:**
+  - On clicking "Apply Now" in the Job Openings section, a PDF job application is dynamically generated.
+
 ---
 
 ## Technologies Used
@@ -52,7 +60,8 @@ YourBank is a digital banking platform designed for users seeking an efficient a
 - **CSS:** For styling and responsiveness.
 - **JavaScript:** For functionality and API integration.
 - **Local Storage:** For storing user session data.
-- **API Integration:** For real-time currency conversion functionality.
+- **EmailJS API:** For email-based password reset functionality.
+- **PDF Libraries:** For generating job application PDFs.
 
 ---
 
@@ -75,6 +84,9 @@ YourBank is a digital banking platform designed for users seeking an efficient a
 
 6. **Signup:**
    - Registration page for new users.
+
+7. **Password Reset:**
+   - Users can reset their password via the link sent to their email using EmailJS.
 
 ---
 
@@ -112,13 +124,23 @@ YourBank is a digital banking platform designed for users seeking an efficient a
 
 ## API Integration
 
-YourBank uses an external currency converter API to provide real-time exchange rates. Ensure that your `.env` file is configured with the correct API key:
+YourBank uses external APIs to provide key functionalities:
+
+- **Currency Converter:** Real-time exchange rates through [Exchangerate API](https://www.exchangerate-api.com).
+- **Password Reset:** [EmailJS](https://dashboard.emailjs.com/) API for sending password reset links to users.
+
+### Configuration
+
+Ensure your `.env` file is set up with the following keys:
 
 ```env
-VITE_API_KEY=your_api_key_here
+VITE_API_KEY=your_currency_api_key_here
+VITE_EMAILJS_SERVICE_ID=your_emailjs_service_id
+VITE_EMAILJS_TEMPLATE_ID=your_emailjs_template_id
+VITE_EMAILJS_USER_ID=your_emailjs_user_id
 ```
 
-For more information about the API, visit [Exchangerate API](https://www.exchangerate-api.com).
+For more details on obtaining these keys, refer to the respective API documentation.
 
 ---
 
@@ -129,11 +151,13 @@ YourBank leverages local storage for:
 - Storing user session data.
 - Simulating user information storage locally.
 - Maintaining user preferences across sessions.
+- Storing password reset confirmation.
 
 ### Example:
 
 - Upon login, the user’s name and login status are saved in local storage.
 - The logout button clears this data, ensuring session security.
+- After resetting the password, the updated credentials are securely stored in local storage.
 
 ---
 

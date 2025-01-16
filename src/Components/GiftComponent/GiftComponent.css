@@ -1,15 +1,9 @@
-.gift-icon {
+.giftIcon {
   position: fixed;
   left: 10px;
   bottom: 0px;
-  transition: 0.5s;
-  transform: rotate(50dg);
   width: 90px;
   animation: bounce 1s infinite;
-}
-
-.gift-icon:hover {
-  transform: scale(1.2);
 }
 
 .custom-title {
@@ -30,6 +24,8 @@
   width: 100px !important;
 }
 
+
+/* start animation */
 @keyframes bounceIn {
   0% {
     transform: scale(0.5);

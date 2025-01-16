@@ -1,10 +1,10 @@
 import React from 'react'
 import TransIcon from '../../assets/imgs/Home_icons/Vector2.png'
 import './TransactionBox.css'
-export default function TransactionBox({ name, amount, opacityClass, key }) {
+export default function TransactionBox({ id, name, amount, opacityClass }) {
     return (
         <>
-            <div className={`es-transBox ${opacityClass}`} id={key}>
+            <div className={`es-transBox ${opacityClass}`} id={id}>
                 <div className="es-transBoxLeft">
                     <div className="es-icon">
                         <img src={TransIcon} alt="Transaction Icon" />

@@ -5,7 +5,7 @@ export default function PressCardComponent({ image, title, location, date, desc 
   return (
     <>
       <div className="PressCardComponent">
-      <div className='Af-imgBorder'> 
+        <div className='Af-imgBorder'>
           <img src={image} alt="image card" data-aos="zoom-in" />
         </div>
         <div className="PressCardContent" data-aos="fade-up">

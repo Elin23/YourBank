@@ -125,7 +125,7 @@
     transition: right .4s, width .4s, left .4s;
 }
 
-.hw-menu-link:hover::before{
+.hw-menu-link:hover::before {
     width: 100%;
     left: 0;
 }

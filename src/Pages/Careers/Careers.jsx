@@ -6,26 +6,23 @@ import OurValuesSectionComponent from '../../Components/OurValuesSectionComponen
 import JobComponent from "../../Components/JobComponent/JobComponent";
 import OurBenefitsSectionComponenet from '../../Components/OurBenefitsSectionComponenet/OurBenefitsSectionComponenet'
 import AdSectionComponent from '../../Components/AdSectionComponent/AdSectionComponent'
-import {AdSecData} from './../../Data/AdSectionData'
 
 export default function Careers() {
   return (
     <>
-    <HeroComponent2 
-    bool={false}
-    image={IMG1} 
-    head={"Welcome to YourBank Careers!"} 
-    light={"YourBank"}
-    disc={"Join our team and embark on a rewarding journey in the banking industry. At YourBank, we are committed to fostering a culture of excellence and providing opportunities for professional growth. With a focus on innovation, customer service, and integrity, we strive to make a positive impact in the lives of our customers and communities. Join us today and be a part of our mission to shape the future of banking."} 
-    />
-      <OurValuesSectionComponent/>
+      <HeroComponent2
+        bool={false}
+        image={IMG1}
+        head={"Welcome to YourBank Careers!"}
+        light={"YourBank"}
+        disc={"Join our team and embark on a rewarding journey in the banking industry. At YourBank, we are committed to fostering a culture of excellence and providing opportunities for professional growth. With a focus on innovation, customer service, and integrity, we strive to make a positive impact in the lives of our customers and communities. Join us today and be a part of our mission to shape the future of banking."}
+      />
+      <OurValuesSectionComponent />
       <OurBenefitsSectionComponenet />
       <FAQSectionComponent />
       <JobComponent />
-      <AdSectionComponent DATA={AdSecData[1]}/>
-  </>
-
-
+      <AdSectionComponent fixedContent={false} />
+    </>
   )
 }
 

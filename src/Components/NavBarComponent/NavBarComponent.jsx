@@ -13,8 +13,7 @@ export default function NavBarComponent() {
   const [scrolling, setScrolling] = useState(false);
   const [isLogin, setIsLogin] = useState(false);
   const [activeBtn, setActiveBtn] = useState("login");
-  const [activeIndex, setActiveIndex] = useState(0);
-  const [userName, setUserName] = useState(""); // add
+  const [userName, setUserName] = useState("");
   const [activeLink, setActiveLink] = useState('')
 
   useEffect(() => {
@@ -22,7 +21,6 @@ export default function NavBarComponent() {
     if (StoredUser) {
       setIsLogin(true);
       setUserName(StoredUser.userName);
-      // add
       console.log(userName);
     } else {
       setUserName("");
@@ -41,7 +39,6 @@ export default function NavBarComponent() {
   }, []);
 
   const handleLogout = (event) => {
-
     Swal.fire({
       icon: 'question',
       title: " Are you sure you want to log out?",
@@ -72,10 +69,25 @@ export default function NavBarComponent() {
         window.dispatchEvent(new Event('loginStatusChanged'));
         localStorage.setItem("isVisible", false);
         window.dispatchEvent(new Event('StatusVisibleChanged'));
-        setUserName(""); //add
+        setUserName("");
       }
     });
   };
+  // handle the "sign up" and "log in" buttons in form component 
+  useEffect(() => {
+    const handleActiveHrefChange = () => {
+      const activeHref = localStorage.getItem("activeHref");
+      const activeBtnFromStorage = activeLink == "/signUp" ? "sign up" : "login";
+      setActiveLink(activeHref);
+      setActiveBtn(!activeBtnFromStorage)
+    };
+
+    window.addEventListener('activeHrefChanged', handleActiveHrefChange);
+
+    return () => {
+      window.removeEventListener('activeHrefChanged', handleActiveHrefChange)
+    }
+  }, [])
 
   //handle the footer Links Navigation
   useEffect(() => {
@@ -98,12 +110,12 @@ export default function NavBarComponent() {
           <img
             src={nav_logo}
             alt="logo"
-            className="nav-logo" />
+            className="navLogo" />
         </Link>
-        <div className={`responsive-nav ${menuOpen ? "open" : ""}`}>
+        <div className={`responsiveNav ${menuOpen ? "open" : ""}`}>
           <Link
             to="/"
-            className={`responsive-logo ${menuOpen ? "responsive-nav-logo" : ""
+            className={`responsiveLogo ${menuOpen ? "responsiveNavLogo" : ""
               }`}
             onClick={() => setMenuOpen(!menuOpen)}
           >
@@ -116,8 +128,10 @@ export default function NavBarComponent() {
                 className="f-18">
                 <NavLink
                   to={item.path} end
-                  className={({ isActive }) => (isActive || activeLink == item.path ? "active-link" : "")}
-                  onClick={() => (setMenuOpen(!menuOpen), setActiveBtn(activeBtn === "sign up" ? "login" : "login"),
+                  className={({ isActive }) => (isActive || activeLink == item.path ? "activeLink" : "")}
+                  onClick={() => (
+                    setMenuOpen(!menuOpen),
+                    setActiveBtn(activeBtn === "sign up" ? "login" : "login"),
                     localStorage.setItem('activePath', JSON.stringify(item.path))//set the active path in the local storage so the navbar would know when the path is changed
                     , window.dispatchEvent(new Event('activePathChanged'))
                   )}
@@ -128,48 +142,51 @@ export default function NavBarComponent() {
               </li>
             ))}
           </ul>
-          <div className="et-nav-btns">
+          <div className="ET-navBtns">
             {isLogin == false ? (
               <>
                 <Link
                   to={"/signup"}
-                  className={`f-18 ${activeBtn === "sign up" ? "et-bg-green" : ""}`}
+                  className={`f-18 ${activeBtn === "sign up" || activeLink === "/signUp" ? "ET-bgGreen" : ""}`}
                   onClick={() =>
                   (setActiveBtn(activeBtn === "sign up" ? "sign up" : "sign up"),
+                    setActiveLink(activeLink == "/login" ? "/signUp" : "/signUp"),
                     setMenuOpen(!menuOpen))}>
                   Sign up
                 </Link>
                 <Link
                   to={"/login"}
-                  className={`f-18 ${activeBtn === "login" ? "et-bg-green" : ""}`}
+                  className={`f-18 ${activeBtn === "login" || activeLink === "/login" ? "ET-bgGreen" : ""}`}
                   onClick={() =>
                   (setActiveBtn(activeBtn === "login" ? "login" : "login"),
+                    setActiveLink(activeLink == "/signUp" ? "/login" : "/login"),
                     setMenuOpen(!menuOpen))}>
                   Login
                 </Link>
               </>
             ) : (
               <>
-                {/* add*/}
-                <span className="user-name f-18">{userName}</span>
-                <Link className={`f-18 et-bg-green`} onClick={handleLogout}>
+                <Link className={'f-18'}>
+                  {userName}
+                </Link>
+                <Link className={`f-18 ET-bgGreen`} onClick={handleLogout}>
                   Logout
                 </Link>
               </>
             )}
           </div>
           <FaXmark
-            className={`close-nav-btn ${menuOpen ? "open-menu" : ""}`}
+            className={`closeNavBtn ${menuOpen ? "openMenu" : ""}`}
             onClick={() => setMenuOpen(!menuOpen)}
           />
         </div>
         <img
           src={menu}
           alt="bars icon"
-          className="open-nav-btn"
+          className="openNavBtn"
           onClick={() => setMenuOpen(!menuOpen)}
         />
-      </nav>
+      </nav >
     </>
   );
 }
