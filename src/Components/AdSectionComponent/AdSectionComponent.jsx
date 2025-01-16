@@ -43,14 +43,10 @@ export default function AdSectionComponent({ fixedContent }) {
   }, []);
 
   return (
-    <div className="AdSectionComponent px-162 pb-150">
-      <div
-        className="hw-AdSectionContent"
-        data-aos="zoom-in"
-        data-aos-delay="200"
-      >
-        <img src={adSecBg} className="hw-AdSecBg" />
-        <img src={toRightDown} className="toRightDown" />
+    <div className='AdSectionComponent px-162 pb-150'>
+      <div className="hw-AdSectionContent" data-aos="zoom-in" data-aos-delay="200">
+        {/* <img src={adSecBg} className='hw-AdSecBg' /> */}
+        <img src={toRightDown} className='toRightDown' />
         <div className="hw-AdSecRight">
           {AdSecData.map((e, index) => {
             if (fixedContent) {

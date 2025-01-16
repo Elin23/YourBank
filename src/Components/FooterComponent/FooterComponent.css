@@ -113,8 +113,7 @@
     position: relative;
 }
 
-.hw-menu-link::before,
-.hw-Contacts a::before {
+.hw-menu-link::before {
     content: '';
     width: 0;
     height: 2px;
@@ -126,8 +125,7 @@
     transition: right .4s, width .4s, left .4s;
 }
 
-.hw-menu-link:hover::before,
-.hw-Contacts a:hover::before {
+.hw-menu-link:hover::before {
     width: 100%;
     left: 0;
 }

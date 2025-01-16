@@ -123,7 +123,7 @@ export default function JobCardComponent({
 
           <button
             className="f-18"
-            data-aos="flip-right"
+            data-aos="fade-right"
             data-aos-delay="500"
             onClick={handleApply}
           >

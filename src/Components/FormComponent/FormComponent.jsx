@@ -1,13 +1,15 @@
 
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState ,useRef } from "react";
 import "./FormComponent.css";
 import TitleComponent from "../TitleComponent/TitleComponent";
 import { SocialLoginData } from "../../Data/SocialLoginData";
 import { Link, useNavigate } from "react-router-dom";
 import IconGradient from "../IconGradient/IconGradient";
 import image from "../../assets/imgs/AbstractDesign4.png";
+import emailjs from 'emailjs-com';
 
 export default function FormComponent({ action }) {
+
   const navigate = useNavigate();
   const title = action === "login" ? "Login" : "Sign Up";
   const desc =
@@ -52,7 +54,6 @@ export default function FormComponent({ action }) {
     timer: 4000,
     scrollbarPadding: false,
     heightAuto: false,
-    heightAuto: false,
     showClass: {
       popup: `
         animate__animated
@@ -68,6 +69,59 @@ export default function FormComponent({ action }) {
       `,
     },
   });
+
+  const handleForgetPassword = (e) => {
+    e.preventDefault();
+    if (state.email.length > 0 && regexMap.email.test(state.email)) {
+      const users = JSON.parse(localStorage.getItem("users")) || [];
+      const user = users.find((user) => user.email === state.email);
+  
+      if (user) {
+        const baseURL = window.location.origin;
+        const templateParams = {
+          to_name: state.email,
+          to_email: state.email,
+          support_email: import.meta.env.VITE_SUPPORT_EMAIL,
+          link: `${baseURL}/YourBank/#/forgetPassword/${state.email}`,
+        };
+  
+        emailjs
+          .send(
+            import.meta.env.VITE_EMAILJS_SERVICE_ID,
+            import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+            templateParams,
+            import.meta.env.VITE_EMAILJS_USER_ID
+          )
+          .then(
+            (result) => {
+              console.log(`Email sent to ${state.email}: ${result.text}`);
+              Toast.fire({
+                icon: "success",
+                title: "A reset link has been sent to your email.",
+              });
+            },
+            (error) => {
+              console.error(`Failed to send email to ${state.email}: ${error.text}`);
+              Toast.fire({
+                icon: "error",
+                title: "Failed to send email. Please try again later.",
+              });
+            }
+          );
+      } else {
+        Toast.fire({
+          icon: "error",
+          title: "The email you entered is not registered. Please try again.",
+        });
+      }
+    } else {
+      Toast.fire({
+        icon: "error",
+        title: "Please enter a valid email address.",
+      });
+    }
+  };
+  
 
   const validateInput = (id, value) => {
     const messageMap = {
@@ -155,7 +209,7 @@ export default function FormComponent({ action }) {
         Toast.fire({
           icon: "error",
           title:
-            "Oops! The username or password you entered doesn't match our records. Please double-check and try again.",
+            "Oops! The email or password you entered doesn't match our records. Please double-check and try again.",
         });
       } else {
         //login successfully
@@ -345,7 +399,7 @@ export default function FormComponent({ action }) {
               </div>
             </div>
             {action === "login" ? (
-              <Link className="AA-forget-pass-btn f-18 fw-400" to="#">
+              <Link className="AA-forget-pass-btn f-18 fw-400" to="#" onClick={handleForgetPassword}>
                 Forgot Password?
               </Link>
             ) : (
