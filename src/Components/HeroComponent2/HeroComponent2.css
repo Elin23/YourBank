@@ -62,8 +62,8 @@
     animation: moveGradient 5s infinite linear;
     background: linear-gradient(90deg, #caff33, #E4E4E7, #d8ff66, #fff);
     background-size: 200%;
-    background-clip: text;
     -webkit-background-clip: text;
+    background-clip: text;
     color: transparent;
 
 
@@ -207,19 +207,19 @@
 
 @media (max-width: 540px) {
     .Af-HeroComponent2 {
-        width: 357px;
+        width: 100%;
         margin: 0 auto;
         padding: 14px;
     }
 
     .Af-HeroComponent2 img {
-        width: 329px;
+        width: 100%;
         height: 253px;
     }
 
     .Af-HeroComponent2-heading,
     .Af-HeroComponent2-heading-about {
-        width: 329px;
+        width: 100%;
         padding: 24.1px;
         margin-right: 0;
         margin-top: -50px;
@@ -246,18 +246,15 @@
 
 @media (max-width: 389px) {
     .Af-HeroComponent2 {
-        width: 290px;
         padding: 10px;
     }
 
     .Af-HeroComponent2 img {
-        width: 275px;
         height: 253px;
     }
 
     .Af-HeroComponent2-heading,
     .Af-HeroComponent2-heading-about {
-        width: 275px;
         padding: 14px;
         margin-right: 0;
         margin-top: -50px;
