@@ -19,8 +19,8 @@ export default function Careers() {
       />
       <OurValuesSectionComponent />
       <OurBenefitsSectionComponenet />
-      <FAQSectionComponent />
       <JobComponent />
+      <FAQSectionComponent />
       <AdSectionComponent fixedContent={false} />
     </>
   )
