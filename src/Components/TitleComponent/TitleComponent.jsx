@@ -17,7 +17,11 @@ export default function TitleComponent({ title, desc, highlightedWords, fw }) {
   };
 
   return (
+<<<<<<< HEAD
     <div className="AM-title-comp"  data-aos="fade-up" data-aos-delay="200">
+=======
+    <div className="AM-title-comp" data-aos="fade-up" data-aos-delay="200">
+>>>>>>> a79e48ad6c7629bed57cbeaebbaeb37e2cd182fa
       <h3 className={`title fs-48 ${fw ? "fw-400 " : "fw-500 "}`}>
         {highlightText(title)}
       </h3>
