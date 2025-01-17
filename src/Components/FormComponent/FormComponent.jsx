@@ -70,43 +70,58 @@ export default function FormComponent({ action }) {
     },
   });
 
-  
   const handleForgetPassword = (e) => {
-    if(state.email.length > 0 
-      && regexMap.email.test(state.email)){
     e.preventDefault();
-      const templateParams = {
-        to_name: state.email,
-        to_email: state.email,
-        support_email: 'yourBank@gmail.com',
-        link : `http://localhost:5173/YourBank/#/forgetPassword/alaa.assas1997@gmail.com`
-      };
-      emailjs
-        .send(
-          "service_6ohgsus",
-          "template_ngckjbi",
-          templateParams,
-          "hEUeyD-6XETPzATzO"
-        )
-        .then(
-          (result) => {
-            console.log(`Email sent to ${state.email}: ${result.text}`);
-          },
-          (error) => {
-            console.error(
-              `Failed to send email to ${user.email}: ${error.text}`
-            );
-          }
-        );
-      }
-      else{
+    if (state.email.length > 0 && regexMap.email.test(state.email)) {
+      const users = JSON.parse(localStorage.getItem("users")) || [];
+      const user = users.find((user) => user.email === state.email);
+  
+      if (user) {
+        const baseURL = window.location.origin;
+        const templateParams = {
+          to_name: state.email,
+          to_email: state.email,
+          support_email: import.meta.env.VITE_SUPPORT_EMAIL,
+          link: `${baseURL}/YourBank/#/forgetPassword/${state.email}`,
+        };
+  
+        emailjs
+          .send(
+            import.meta.env.VITE_EMAILJS_SERVICE_ID,
+            import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+            templateParams,
+            import.meta.env.VITE_EMAILJS_USER_ID
+          )
+          .then(
+            (result) => {
+              console.log(`Email sent to ${state.email}: ${result.text}`);
+              Toast.fire({
+                icon: "success",
+                title: "A reset link has been sent to your email.",
+              });
+            },
+            (error) => {
+              console.error(`Failed to send email to ${state.email}: ${error.text}`);
+              Toast.fire({
+                icon: "error",
+                title: "Failed to send email. Please try again later.",
+              });
+            }
+          );
+      } else {
         Toast.fire({
           icon: "error",
-          title:
-            "please Enter your Email.",
+          title: "The email you entered is not registered. Please try again.",
         });
       }
+    } else {
+      Toast.fire({
+        icon: "error",
+        title: "Please enter a valid email address.",
+      });
+    }
   };
+  
 
   const validateInput = (id, value) => {
     const messageMap = {
@@ -194,7 +209,7 @@ export default function FormComponent({ action }) {
         Toast.fire({
           icon: "error",
           title:
-            "Oops! The username or password you entered doesn't match our records. Please double-check and try again.",
+            "Oops! The email or password you entered doesn't match our records. Please double-check and try again.",
         });
       } else {
         //login successfully
