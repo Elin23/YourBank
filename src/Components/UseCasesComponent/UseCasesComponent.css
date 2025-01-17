@@ -377,6 +377,16 @@
         line-height: 21px;
         font-weight: 300;
     }
+    .Af-UseCasesComponentSide-2-rating{
+        gap:30px;
+    }
+    .Af-rate h3 {
+        line-height: 60px;
+        margin-bottom: 0;
+    }
+    .Af-rate p {
+        margin-bottom: 0;
+    }
 }
 
 @media(max-width:389px) {
