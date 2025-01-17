@@ -1,7 +1,9 @@
 .HowWeProtectComponent {
     background-color: var(--black10-color);
 }
-
+.HowWeProtectComponent .AM-title-comp{
+    width: 81.32%;
+}
 .HW-howWeProtectYouContainer {
     position: relative;
     z-index: 10;
@@ -101,7 +103,9 @@
         margin-top: 58px;
         margin-bottom: 120px;
     }
-
+    .HowWeProtectComponent .AM-title-comp{
+        width: 80.46%;
+    }
     .howWeProtectCardsContainer {
         top: 62px;
         height: 612px;
@@ -145,7 +149,9 @@
         width: 100%;
         height: unset;
     }
-
+    .HowWeProtectComponent .AM-title-comp{
+        width: 100%;
+    }
     .howProtectRow {
         flex-direction: column;
     }
