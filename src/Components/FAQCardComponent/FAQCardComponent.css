@@ -57,7 +57,9 @@
 /* Responsive styles for screens with max-width: 1439px */
 @media (max-width: 1439px) {
   .MR-faqCard {
-    width: 48%;}}
+    width: 48%;
+  }
+}
 
 /* Responsive styles for small screens less than 992px) */
 @media (max-width: 992px) {
