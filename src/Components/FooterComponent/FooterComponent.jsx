@@ -106,8 +106,8 @@ export default function FooterComponent() {
                 <span className="hw-lineGray"></span>
                 <div className="hw-footerBottom">
                     <SocialFooterComponent icons={socialIcons} />
-                    <span className='f-18' data-aos="fade-up">YourBank All Rights Reserved</span>
-                    <div className="hw-footerPrivacy" data-aos="fade-up">
+                    <span className='f-18'>YourBank All Rights Reserved</span>
+                    <div className="hw-footerPrivacy">
                         <Link to={''} className='f-18'>Privacy Policy</Link>
                         <span className="lineF"></span>
                         <Link to={''} className='f-18'>Terms Of Service</Link>

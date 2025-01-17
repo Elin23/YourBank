@@ -93,8 +93,8 @@ export default function HeroComponent() {
               <Link
                 to='/signUp'
                 onClick={() => {
-                  localStorage.setItem("activeHref", "/signUp")
-                  window.dispatchEvent(new Event("activeHrefChanged"))
+                  localStorage.setItem("activePath", JSON.stringify("/signUp"))
+                  window.dispatchEvent(new Event("activePathChanged"))
                 }}>
                 Open Account
               </Link>
