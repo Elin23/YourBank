@@ -373,7 +373,7 @@ export default function FormComponent({ action }) {
                 <div className="AA-input-group">
                   <input
                     id="password"
-                    className="AA-password-input f-18 fw-300"
+                    className="AA-input f-18 fw-300"
                     type={passwordVisibility.type}
                     value={state.password}
                     placeholder="Enter your Password"
