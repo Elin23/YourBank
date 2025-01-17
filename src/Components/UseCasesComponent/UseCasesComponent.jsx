@@ -7,7 +7,7 @@ import IconGradient from '../IconGradient/IconGradient'
 
 export default function UseCasesComponent({ reverse }) {
     const [counterState, setCounterState] = useState(false)
-
+    // function for shortening
     const renderCard = (index) => (
         <div className='Af-UseCasesComponentSide-1-card' data-aos="flip-right" data-aos-delay="200">
             <IconGradient
@@ -20,22 +20,29 @@ export default function UseCasesComponent({ reverse }) {
 
     return (
         <>
+        {/* side 1 */}
+        {/* The value reverse to reverse the component */}
             <div className={reverse ? 'Af-UseCasesComponentReverse ' : 'Af-UseCasesComponent'}>
                 <div className={reverse ? 'Af-UseCasesComponentSide-1-Reverse ' : 'Af-UseCasesComponentSide-1'} data-aos="fade-left">
+                    {/* The upper section of the card */}
                     <div className='Af-cardTop'>
                         {renderCard(0)}
                         {renderCard(1)}
                     </div>
+                    {/* The lower section of the card  */}
                     <div className='Af-cardBottom'>
                         {renderCard(2)}
                         {renderCard(3)}
                     </div>
                 </div>
+                {/* side 2 */}
                 <div className='Af-UseCasesComponentSide-2'>
+                    {/* side 2 title */}
                     <div className='Af-UseCasesComponentSide-2-title'>
                         <h4 className='fs-30 fw-500' data-aos="fade-up">{UseCaseData[reverse ? 1 : 0].heading.title}</h4>
                         <p className='f-18 fw-300' data-aos="fade-up" data-aos-delay="200">{UseCaseData[reverse ? 1 : 0].heading.desc}</p>
                     </div>
+                    {/* Addition for counter from react-scroll-trigger and react-countup library */}
                     <ScrollTrigger onEnter={() => setCounterState(true)} onExit={() => setCounterState(false)}>
                         <div className='Af-UseCasesComponentSide-2-rating'>
                             <div className='Af-rate'>
@@ -61,7 +68,10 @@ export default function UseCasesComponent({ reverse }) {
                                 {!reverse && <p className='f-18 fw-300'>{UseCaseData[0].rating[0].desc}</p>}
                                 {reverse && <p className='f-18 fw-300'>{UseCaseData[1].rating[0].desc}</p>}
                             </div>
-                            <div className='Af-line'></div>
+                            
+                            <div className='Af-line'>
+                                {/* Dashed line */}
+                            </div>
                             <div className='Af-rate'>
                                 {!reverse && <h3 className='f-58'>
                                     {counterState &&
@@ -86,7 +96,9 @@ export default function UseCasesComponent({ reverse }) {
                                 {!reverse && <p>{UseCaseData[0].rating[1].desc}</p>}
                                 {reverse && <p>{UseCaseData[1].rating[1].desc}</p>}
                             </div>
-                            <div className='Af-line'></div>
+                            <div className='Af-line'>
+                            {/* Dashed line */}
+                            </div>
                             <div className='Af-rate'>
                                 {!reverse && <h3 className='f-58'>
                                     {counterState &&
@@ -113,6 +125,7 @@ export default function UseCasesComponent({ reverse }) {
                             </div>
                         </div>
                     </ScrollTrigger>
+                    {/* button */}
                     <div className='Af-UseCasesComponentSide-2-button'>
                         <button className='Af-Btn'>Learn More</button>
                     </div>

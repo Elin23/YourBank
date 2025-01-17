@@ -1,5 +1,5 @@
 
-import React, { useEffect, useState ,useRef } from "react";
+import React, {useState} from "react";
 import "./FormComponent.css";
 import TitleComponent from "../TitleComponent/TitleComponent";
 import { SocialLoginData } from "../../Data/SocialLoginData";
@@ -416,8 +416,8 @@ export default function FormComponent({ action }) {
               to={action === "login" ? "/signUp" : "/login"}
               onClick={() => {
                 const activeHref = action === "login" ? "/signUp" : "/login"
-                localStorage.setItem("activeHref", activeHref)
-                window.dispatchEvent(new Event("activeHrefChanged"))
+                localStorage.setItem("activePath", JSON.stringify(activeHref))
+                window.dispatchEvent(new Event("activePathChanged"))
               }}>
               {action === "login" ? "Sign Up" : "Login"}
             </Link>

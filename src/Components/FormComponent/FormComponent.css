@@ -6,7 +6,6 @@
 .AA-pb-40 {
     padding-bottom: 3.898%;
 }
-
 /** for form padding **/
 .AA-px-297 {
     padding-left: 15.46875%;
@@ -120,7 +119,11 @@
     border-radius: 88px;
     width: 100%;
 }
-
+.AA-form-section .AA-form-container .AA-form-container-bg .AA-input:focus,
+.AA-form-section .AA-form-container .AA-form-container-bg .AA-password-input:focus{
+    outline: none;
+    border: 1px solid var(--white-color);
+} 
 /**style row of inputs**/
 .AA-form-section .AA-form-container .AA-form-container-bg .AA-inputs-row {
     width: 100%;
@@ -138,7 +141,6 @@
     color: var(--gray35-color);
     position: absolute;
     font-size: 1.25rem;
-    position: absolute;
     top: 50%;
     right: 22px;
     /* Adjust this value to control the icon's position */

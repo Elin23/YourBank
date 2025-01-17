@@ -5,8 +5,10 @@ import "./UseCasesSectionComponent.css";
 export default function UseCasesSectionComponent() {
   return (
     <>
+    {/* usecases section component container */}
       <div className="px-162 pb-150 Af-UseCasesSectionComponent">
         <div className="Af-UseCasesSectionComponent-title mb-80">
+          {/* title component */}
           <TitleComponent
             title="Use Cases"
             desc={
@@ -16,6 +18,7 @@ export default function UseCasesSectionComponent() {
             fw={false}
           />
         </div>
+        {/* The value reverse to reverse the component */}
         <div>
           <UseCasesComponent reverse={false} />
           <UseCasesComponent reverse={true} />

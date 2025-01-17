@@ -100,15 +100,15 @@ export default function JobCardComponent({
             <h4 className="fs-24">About This Job</h4>
             <p className="f-18 fw-300">{jobDescription}</p>
           </div>
-          <div className="MR-jobCardSubtitle">
+          <div className="MR-jobCardSubtitle" data-aos="fade-right">
             <h4 className="fs-24">Requirements & Qualifications</h4>
             <ul className="fw-300 f-18">
               {Array.isArray(Requirements) &&
                 Requirements.map((req, index) => (
                   <li
                     key={index}
-                    data-aos="fade-up"
-                    data-aos-delay={index * 100}
+                    // data-aos="fade-up"
+                    // data-aos-delay={index * 100}
                   >
                     <img src={Icon3} alt="icon" />
                     {req}
@@ -123,8 +123,8 @@ export default function JobCardComponent({
 
           <button
             className="f-18"
-            data-aos="fade-right"
-            data-aos-delay="500"
+            // data-aos="fade-right"
+            // data-aos-delay="500"
             onClick={handleApply}
           >
             Apply Now
