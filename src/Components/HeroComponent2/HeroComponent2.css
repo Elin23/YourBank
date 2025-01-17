@@ -62,8 +62,8 @@
     animation: moveGradient 5s infinite linear;
     background: linear-gradient(90deg, #caff33, #E4E4E7, #d8ff66, #fff);
     background-size: 200%;
-    background-clip: text;
     -webkit-background-clip: text;
+    background-clip: text;
     color: transparent;
 
 
