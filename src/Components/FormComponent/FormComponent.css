@@ -110,18 +110,37 @@
     padding-bottom: 2.923%;
 }
 
-.AA-form-section .AA-form-container .AA-form-container-bg .AA-input {
-    color: var(--white-color);
+.AA-form-section .AA-form-container .AA-form-container-bg .AA-input-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
     background-color: var(--gray10-color);
     border: 1px solid var(--gray15-color);
     padding: 23.341px;
     border-radius: 88px;
     width: 100%;
+    position: relative;
 }
+
+.AA-form-section .AA-form-container .AA-form-container-bg .AA-input {
+    color: var(--white-color);
+    background-color: transparent;
+    border: none;
+    outline: none;
+    width: 100%;
+}
+
 .AA-form-section .AA-form-container .AA-form-container-bg .AA-input:focus{
     outline: none;
-    border: 1px solid var(--white-color);
 } 
+
+.AA-input:-webkit-autofill, .AA-input:-webkit-autofill:hover, .AA-input:-webkit-autofill:focus {
+    -webkit-box-shadow: 0 0 0px 1000px var(--gray10-color)white inset,!important; 
+    box-shadow: 0 0 0px 1000px var(--gray10-color) inset; 
+    -webkit-text-fill-color: var(--white-color); /* Adjust text color as needed */ 
+    transition: background-color 5000s ease-in-out 0s;
+}
+
 /**style row of inputs**/
 .AA-form-section .AA-form-container .AA-form-container-bg .AA-inputs-row {
     width: 100%;
@@ -130,19 +149,10 @@
 }
 
 /***style input with inside icon **/
-.AA-form-section .AA-form-container .AA-form-container-bg .AA-input-group {
-    width: 100%;
-    position: relative;
-}
 
 .AA-form-section .AA-form-container .AA-form-container-bg .eye-icon {
     color: var(--gray35-color);
-    position: absolute;
     font-size: 1.25rem;
-    top: 50%;
-    right: 22px;
-    /* Adjust this value to control the icon's position */
-    transform: translateY(-50%);
     cursor: pointer;
 }
 
@@ -331,10 +341,13 @@
     }
 
     /**style inputs**/
+    .AA-form-section .AA-form-container .AA-form-container-bg .AA-input-group {
+        padding: 19.5px;
+    }
+
     .AA-form-section .AA-form-container .AA-form-container-bg .AA-input {
         font-size: 16px;
         line-height: 24px;
-        padding: 19.5px;
     }
 
     /***style continue p***/
@@ -421,7 +434,7 @@
     }
 
     /**style form input**/
-    .AA-form-section .AA-form-container .AA-form-container-bg .AA-input{
+    .AA-form-section .AA-form-container .AA-form-container-bg .AA-input-group{
         padding: 15.5px;
     }
 
