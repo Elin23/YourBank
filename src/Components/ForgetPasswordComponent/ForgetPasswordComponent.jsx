@@ -77,10 +77,9 @@ export default function ForgetPasswordComponent() {
   return (
     <section className="ES-form-section px-162 d-flex flex-column gap-4">
       <TitleComponent
-        title={"Welcome to YourBank.."}
-        desc={`Forgot your password? No worries! Simply enter your registered email address and follow the instructions to create a new password. For your security, ensure your new password is strong and unique.
-               We take your privacy seriously. All password resets are encrypted and handled securely to protect your account.
-               If you encounter any issues, please contact our support team for assistance`}
+        title={"Welcome to YourBank..Reset Your Password"}
+        desc={`Forgot your password? No worries!. For your security, ensure your new password is strong and unique.
+               We take your privacy seriously. All password resets are encrypted and handled securely to protect your account.`}
         highlightedWords={["YourBank.."]}
         fw={false}
       />
